@@ -7,3 +7,7 @@ paginate: 5
 
 markdown: rdiscount
 permalink: /:title/
+
+pygments: true
+safe: true
+auto: true
