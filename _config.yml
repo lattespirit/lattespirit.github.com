@@ -1,0 +1,9 @@
+name: "Lattespirit"
+description: "Lattespirit"
+
+url: "http://lattespirit.github.io"
+
+paginate: 5 
+
+markdown: rdiscount
+permalink: /:title/
