@@ -3,7 +3,7 @@ description: "Lattespirit"
 
 url: "http://lattespirit.github.io"
 
-paginate: 5 
+paginate: 20
 
 markdown: rdiscount
 permalink: /:title/

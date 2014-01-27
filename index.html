@@ -3,7 +3,7 @@ layout: default
 title: Lattespirit
 ---
 
-{% for post in site.posts limit: 20 %}
+{% for post in site.posts limit: 20%}
 	<ul class="unstyled">
 		<li>
 			<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>&nbsp&nbsp
@@ -11,8 +11,6 @@ title: Lattespirit
 		</li>
 	</ul>
 {% endfor %}
-<div class="row-fluid">
-  <div class="span6 offset3">
     <div class="pagination">
       <ul>
         {% if paginator.previous_page %}
@@ -43,5 +41,3 @@ title: Lattespirit
         {% endif %}
       </ul>
     </div>
-  </div>
-</div>
