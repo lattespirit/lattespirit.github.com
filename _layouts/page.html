@@ -11,6 +11,10 @@
       body {
         padding-top: 60px;
       }
+
+      .page {
+        margin: 0 160px;
+      }
     </style>
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -27,7 +31,7 @@ ript>
   <div class="container">
     <div class="row">
       <div class="span6 offset3">
-        <h2 class="muted">{{ page.title}}</h2>
+        <h2 class="muted">Lattespirit</h2>
         <ul class="nav nav-tabs">
           <li class="pull-right"><a href="/about">About</a></li>
           <li class="pull-right"><a href="/guestbook">Guestbook</a></li>
@@ -37,6 +41,15 @@ ript>
 
     <div class="span6 offset3">
       {{content}}
+      <center>
+          <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="disabled" {% endunless %} >上一篇</a>
+          &nbsp;&nbsp;&nbsp;
+          <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="disabled" {% endunless %} >下一篇</a>
+      </center>
+    </div>
+
+    <div class="span6 offset3">
+      {% include comments.md %}
     </div>
 
     <div class="span6 offset3">
