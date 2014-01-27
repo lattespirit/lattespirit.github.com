@@ -3,15 +3,21 @@ layout: default
 title: Lattespirit
 ---
 
-{% for post in site.posts limit: 20%}
-	<ul class="unstyled">
-		<li>
-			<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>&nbsp&nbsp
-			<a href="{{post.url}}">{{post.title}}</a>
-		</li>
-	</ul>
+{% for post in paginator.posts limit: 20%}
+  <ul class="unstyled">
+      {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+    {% if year != y %}
+      {% assign year = y %}
+      <li><h4>{{ y }}</h4></li>
+    {% endif %}
+    <li>
+      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>&nbsp&nbsp
+      <a href="{{post.url}}">{{post.title}}</a>
+    </li>
+  </ul>
 {% endfor %}
-    <div class="pagination">
+
+    <div class="pagination page">
       <ul>
         {% if paginator.previous_page %}
           {% if paginator.previous_page == 1 %}
