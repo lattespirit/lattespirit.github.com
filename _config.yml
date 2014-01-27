@@ -1,13 +1,10 @@
 name: "Lattespirit"
 description: "Lattespirit"
-
 url: "http://lattespirit.github.io"
-
 paginate: 20
-
 markdown: rdiscount
+duoshuo: lattespirit
 permalink: /:title/
-
 pygments: true
 safe: true
 auto: true
