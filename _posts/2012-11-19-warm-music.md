@@ -4,8 +4,10 @@ title: 温馨音乐
 ---
 
 <a href="http://www.lattespirit.com/wp-content/uploads/2012/11/labixiaoxin.jpg"><img src="http://www.lattespirit.com/wp-content/uploads/2012/11/labixiaoxin.jpg" alt="" title="labixiaoxin" width="600" height="450" class="aligncenter size-full wp-image-263" /></a>
+
+<embed src="http://www.tudou.com/v/sz6x4jn3AY8/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="570" height="180">
+
 会永远记住给我们童年带来无限欢乐的一家人
-<embed src="http://www.tudou.com/v/sz6x4jn3AY8/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="637" height="180">
 
 点击上面的播放按钮，听听这段旋律，是不是让你感到熟悉和温馨，并勾起你童年的回忆了呢？
 

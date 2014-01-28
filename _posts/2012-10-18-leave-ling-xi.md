@@ -4,6 +4,7 @@ title: 离开灵犀
 ---
 
 <a href="http://www.lattespirit.com/wp-content/uploads/2012/10/P1240753.jpg"><img class="aligncenter size-large wp-image-151" title="话剧社成员" src="http://www.lattespirit.com/wp-content/uploads/2012/10/P1240753.jpg" alt="" width="900" height="675" /></a>
+
 图片中的俊男靓女系灵犀话剧社成员
 
 是时候离开灵犀了。

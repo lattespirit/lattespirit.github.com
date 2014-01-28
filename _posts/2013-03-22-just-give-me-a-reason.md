@@ -3,8 +3,10 @@ layout: post
 title: Just Give me A Reason
 ---
 
-<embed src="http://player.yinyuetai.com/video/player/630585/v_0.swf" quality="high" width="637" height="334" align="middle"  allowScriptAccess="sameDomain" allowfullscreen="true" type="application/x-shockwave-flash"></embed>
-[author]歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。[/author]
+<embed src="http://player.yinyuetai.com/video/player/630585/v_0.swf" quality="high" width="570" height="334" align="middle"  allowScriptAccess="sameDomain" allowfullscreen="true" type="application/x-shockwave-flash"></embed>
+
+
+歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。
 初听这首歌，欣赏起伏变化得合适的节奏，高潮部分的旋律也容易让人记住。
 
 歌曲是男女合唱，听了十多遍后看了歌词，才理解其中的意思。歌曲中男女的歌唱更像是在对话，也难怪当时 P!nk 坚持邀请好友共同完成合唱的版本，这样才会让歌曲更加动听。
