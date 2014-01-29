@@ -3,8 +3,8 @@ layout: post
 title: 说说寒假
 ---
 
-<a href="http://www.lattespirit.com/wp-content/uploads/2013/02/harvesttime.jpg"><img src="http://www.lattespirit.com/wp-content/uploads/2013/02/harvesttime.jpg" alt="" title="harvesttime" width="600" height="375" class="aligncenter size-full wp-image-422" /></a>
-]这张图片名为"Harvest Time"。
+<img src="../assets/harvesttime.jpg" alt="" title="harvesttime" width="600" height="375" class="aligncenter size-full wp-image-422" />
+这张图片名为"Harvest Time"。
 明天的火车，这个寒假该收尾。
 
 不想说有很多事没做，有很多想法没有实现，没有遗憾，还是生活么？只不想过于强调而已。

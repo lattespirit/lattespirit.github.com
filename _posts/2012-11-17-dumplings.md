@@ -3,7 +3,7 @@ layout: post
 title: 饺子
 ---
 
-<a href="http://www.lattespirit.com/wp-content/uploads/2012/11/together.jpg"><img class="aligncenter size-full wp-image-247" title="together" src="http://www.lattespirit.com/wp-content/uploads/2012/11/together.jpg" alt="" width="600" height="450" /></a>
+<img class="aligncenter size-full wp-image-247" title="together" src="../assets/together.jpg" alt="" width="600" height="450" />
 
 记录一下。
 

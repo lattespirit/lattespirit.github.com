@@ -3,7 +3,7 @@ layout: post
 title: 温馨音乐
 ---
 
-<a href="http://www.lattespirit.com/wp-content/uploads/2012/11/labixiaoxin.jpg"><img src="http://www.lattespirit.com/wp-content/uploads/2012/11/labixiaoxin.jpg" alt="" title="labixiaoxin" width="600" height="450" class="aligncenter size-full wp-image-263" /></a>
+<img src="../assets/labixiaoxin.jpg" alt="" title="labixiaoxin" width="600" height="450" class="aligncenter size-full wp-image-263" />
 
 <embed src="http://www.tudou.com/v/sz6x4jn3AY8/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="570" height="180">
 
