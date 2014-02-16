@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Lattespirit</title>
+    <title>{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lattespirit">
+    <meta name="description" content="{{ site.description }}">
 
     <link href="/css/bootstrap.css" rel="stylesheet">
     <style>
@@ -35,36 +35,24 @@ ript>
   <div class="container">
     <div class="row">
       <div class="span6 offset3">
-        <h2 class="muted">MicroBlog24.0</h2>
+        <h2 class="muted">{{ page.title }}</h2>
         <ul class="nav nav-tabs">
           <li class="pull-right"><a href="/about">About</a></li>
           <li class="pull-right"><a href="/guestbook">Guestbook</a></li>
-          <li class="pull-right"><a href="http://www.lattespirit.com">Home</a></li>
+          <li class="pull-right"><a href="{{ site.url }}">Home</a></li>
         </ul>
       </div>
     </div>
 
     <div class="row">
       <div class="span6 offset3">
-        <p>昨天下午考完一场试。</p>
-
-<p>很多次考试中，很多时间都用来思考考试外的事情，激愤的话用不着说太多，两三句话总结就是：</p>
-
-<ol>
-    <li>态度决定一切</li>
-    <li>自己想要什么自己清楚，想要就去争取</li>
-    <li>“垃圾的制度制造出来的只能是垃圾”</li>
-</ol>
-
-
-<p>想说一下第三点总结，这句话出自《海贼王》，特地加了双引号，具体不记得是谁说的了，原意指的不是制度，而是海军，在这里稍微改动一下。</p>
-
+        {{content}}
+          <span class="pull-right">Created on {{ page.date | date:"%Y-%m-%d" }}</span>
         <center>
-            <a  href="/yichangdianying/" class="pageNav"  >上一篇</a>
+            <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="disabled" {% endunless %} >上一篇</a>
             &nbsp;&nbsp;&nbsp;
-            <a  href="/microblog25/" class="pageNav"  >下一篇</a>
+            <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="disabled" {% endunless %} >下一篇</a>
         </center>
-<span class="pull-right">Created on 2013-05-26</span>
 	<!-- JiaThis Button BEGIN -->
           <div class="jiathis_style_24x24">
           	<a class="jiathis_button_tsina"></a>
@@ -79,23 +67,7 @@ ript>
 
     <div class="row duoshuo">
       <div class="span6 offset3">
-        
-	
-	<div class="ds-thread" />
-		
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"lattespirit"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-
-
+        {% include comments.md %}
       </div>
     </div>
 
