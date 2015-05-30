@@ -11,7 +11,6 @@
 			<item>
 				<title>{{ post.title }}</title>
 				<description>{{ post.description }}</description>
-				<content>{{ post.content | xml_escape }}</content>
 				<date>{{ post.date | date: "%Y-%m-%d" }}</date>
 				<link>{{ site.url }}{{ post.url }}</link>
 			</item>
