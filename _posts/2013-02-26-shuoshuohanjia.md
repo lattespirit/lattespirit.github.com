@@ -1,9 +1,10 @@
 ---
 layout: post
 title: 说说寒假
+description: 明天的火车，这个寒假该收尾。
 ---
 
-<img src="../assets/harvesttime.jpg" alt="" title="harvesttime" width="600" height="375" class="aligncenter size-full wp-image-422" />
+<img src="{{ site.url }}/assets/harvesttime.jpg" alt="" title="harvesttime" width="600" height="375" class="aligncenter size-full wp-image-422" />
 这张图片名为"Harvest Time"。
 明天的火车，这个寒假该收尾。
 

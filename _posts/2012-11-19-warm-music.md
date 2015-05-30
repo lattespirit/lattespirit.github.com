@@ -1,9 +1,10 @@
 ---
 layout: post
 title: 温馨音乐
+description: 会永远记住给我们童年带来无限欢乐的一家人
 ---
 
-<img src="../assets/labixiaoxin.jpg" alt="" title="labixiaoxin" width="600" height="450" class="aligncenter size-full wp-image-263" />
+<img src="{{ site.url }}/assets/labixiaoxin.jpg" alt="" title="labixiaoxin" width="600" height="450" class="aligncenter size-full wp-image-263" />
 
 <embed src="http://www.tudou.com/v/sz6x4jn3AY8/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="570" height="180">
 
