@@ -1,81 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.name }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ site.description }}">
-
-    <link href="http://www.lattespirit.com/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px;
-      }
-
-      .page {
-        margin: 0 160px;
-      }
-      
-      .duoshuo {
-        margin-top: 20px;
-      }
-    </style>
-    <link href="http://www.lattespirit.com/css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
-ript>
-    <![endif]-->
-  </head>
-
-  <body>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="span6 offset3">
-        <h2 class="muted">{{ page.title }}</h2>
-        <ul class="nav nav-tabs">
-          <li class="pull-right"><a href="http://www.lattespirit.com/about/">About</a></li>
-          <li class="pull-right"><a href="http://www.lattespirit.com/guestbook/">Guestbook</a></li>
-          <li class="pull-right"><a href="{{ site.url }}">Home</a></li>
-        </ul>
+---
+layout: default
+---
+      <div class="row">
+        <div class="span6 offset3">
+          {{content}}
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="span6 offset3">
-        {{content}}
-      </div>
-    </div>
 
     <div class="row duoshuo">
       <div class="span6 offset3">
         {% include comments.md %}
       </div>
     </div>
-
-    <div class="row">
-      <div class="span6 offset3">
-        <hr>
-        <footer>
-          <center>
-            <p>Powered by <a href="http://www.jekyllrb.com">Jekyll</a> @ <a href="https://github.com">Github</a> | © 2012 - 2015 | <a href="http://www.lattespirit.com">Lattespirit</a> </p>
-          </center>
-        </footer>
-      </div>
-    </div>
-
-  </div>   <!-- /container -->
-   
-
-  <!-- Le javascript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-  <script src="http://www.lattespirit.com/js/bootstrap.js"></script>
-  <script src="http://www.lattespirit.com/js/bootstrap.min.js"></script>
-
-  </body>
-</html>
