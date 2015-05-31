@@ -3,6 +3,8 @@ layout: default
 title: Lattespirit
 ---
 
+<div class="row">
+  <div class="span6 offset3">
 {% for post in paginator.posts limit: 20%}
   <ul class="unstyled">
       {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
@@ -47,3 +49,5 @@ title: Lattespirit
         {% endif %}
       </ul>
     </div>
+  </div>
+</div>
