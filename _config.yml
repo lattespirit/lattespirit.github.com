@@ -4,6 +4,7 @@ url: "http://www.lattespirit.com"
 paginate: 20
 markdown: rdiscount
 duoshuo: lattespirit
+disqus: lattespirit
 permalink: /:title/
 pygments: true
 safe: true
