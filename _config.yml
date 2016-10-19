@@ -6,6 +6,6 @@ markdown: rdiscount
 duoshuo: lattespirit
 disqus: lattespirit
 permalink: /:title/
-pygments: true
+highlighter: rouge
 safe: true
 auto: true
