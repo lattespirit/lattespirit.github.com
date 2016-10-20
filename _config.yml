@@ -2,7 +2,7 @@ name: "Lattespirit"
 description: "Lattespirit"
 url: "http://www.lattespirit.com"
 paginate: 20
-markdown: rdiscount
+markdown: kramdown
 duoshuo: lattespirit
 disqus: lattespirit
 permalink: /:title/
