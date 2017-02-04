@@ -1,29 +1,30 @@
 ---
 layout: default
 ---
-    <div class="row">
-      <div class="span6 offset3">
-        {{content}}
-        <center>
-            <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="disabled" {% endunless %} >上一篇</a>
-            &nbsp;&nbsp;&nbsp;
-            <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="disabled" {% endunless %} >下一篇</a>
-        </center>
-<span class="pull-right">Created on {{ page.date | date:"%Y-%m-%d" }}</span>
-	<!-- JiaThis Button BEGIN -->
-          <div class="jiathis_style_24x24">
-          	<a class="jiathis_button_tsina"></a>
-          	<a class="jiathis_button_weixin"></a>
-          	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-          	<a class="jiathis_counter_style"></a>
-          </div>
-          <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=undefined" charset="utf-8"></script>
-          <!-- JiaThis Button END -->
-      </div>
-    </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    {{ content }}
+    <nav>
+      <ul class="pager">
+        {% if page.previous %}
+            <li><a href="{{ page.previous.url }}">上篇</a></li>
+        {% else %}
+            <li class="disabled"><a href="">未始</a></li>
+        {% endif %}
 
-    <div class="row disqus">
-      <div class="span6 offset3">
-        {% include comments.md %}
-      </div>
-    </div>
+        &nbsp;&nbsp;&nbsp;
+
+        {% if page.next %}
+            <li><a href="{{ page.next.url }}">下篇</a></li>
+        {% else %}
+            <li class="disabled"><a href="">煮酒中</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    <p class="text-right">Created on <strong>{{ page.date | date:"%Y-%m-%d" }}</strong></p>
+  </div>
+</div>
+
+<div class="row disqus">
+  <div class="col-md-6 col-md-offset-3"></div>
+</div>

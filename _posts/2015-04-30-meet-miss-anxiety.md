@@ -3,7 +3,11 @@ layout: post
 title: 我的早更女友
 description: 观看如题的电影后，可以说是把郭在容的女友三部曲看完了。
 ---
-<img src="{{ site.url }}/assets/meet-miss-anxiety.jpg" alt="Meet Miss Anxiety"/>
+<center>
+    <img class="img-responsive" src="{{ site.url }}/assets/meet-miss-anxiety.jpg" alt="Meet Miss Anxiety"/>
+</center>
+
+<br>
 
 观看如题的电影后，可以说是把郭在容的女友三部曲看完了。
 

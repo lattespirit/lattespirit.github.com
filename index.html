@@ -2,52 +2,48 @@
 layout: default
 title: Lattespirit
 ---
-
 <div class="row">
-  <div class="span6 offset3">
-{% for post in paginator.posts limit: 20%}
-  <ul class="unstyled">
-      {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
-    {% if year != y %}
-      {% assign year = y %}
-      <li><h4>{{ y }}</h4></li>
-    {% endif %}
-    <li>
-      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>&nbsp&nbsp
-      <a href="http://www.lattespirit.com{{post.url}}">{{post.title}}</a>
-    </li>
-  </ul>
-{% endfor %}
-
-    <div class="pagination pagination-centered">
-      <ul>
-        {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-          <li><a href="/">Prev</a></li>
-          {% else %}
-          <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
-          {% endif %}
-        {% else %}
-        <li><span class="disabled">Prev</span></li>
+  <div class="col-md-6 col-md-offset-3">
+      {% for post in site.posts limit: 20 %}
+        <ul class="list-unstyled">
+        {% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}
+        {% if year != y %}
+            {% assign year = y %}
+            <li><h4>{{ y }}</h4></li>
         {% endif %}
-        {% if paginator.page == 1 %}
-        <li><span class="active">1</span></li>
-        {% else %}
-        <li><a href="/">1</a></li>
-        {% endif %}
-        {% for count in (2..paginator.total_pages) %}
-          {% if count == paginator.page %}
-          <li><span class="active">{{ count }}</span></li>
-          {% else %}
-          <li><a href="/page{{ count }}">{{ count }}</a></li>
-          {% endif %}
-        {% endfor %}
-        {% if paginator.next_page %}
-        <li><a href="/page{{ paginator.next_page }}">Next</a></li>
-        {% else %}
-        <li><span class="disabled">Next</span></li>
-        {% endif %}
+        <li>
+          <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>&nbsp&nbsp
+          <a href="{{ site.url }}{{ post.url }}">{{post.title}}</a>
+        </li>
       </ul>
-    </div>
+    {% endfor %}
   </div>
+
+  {% if total_pages > 1 %}
+    <div class="col-md-6 col-md-offset-3">
+      <center>
+        <nav aria-label="Page navination">
+          <ul class="pagination">
+            {% if paginator.previous_page %}
+                <li><a href="/page{{ paginator.previous_page }}">&laquo;</a></li>
+            {% else %}
+                <li><span class="disabled">&laquo;</span></li>
+            {% endif %}
+            {% for count in (2..paginator.total_pages) %}
+              {% if count == paginator.page %}
+                <li><span class="active">{{ count }}</span></li>
+              {% else %}
+                <li><a href="/page{{ count }}">{{ count }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if paginator.next_page %}
+              <li><a href="/page{{ paginator.next_page }}">&raquo;</a></li>
+            {% else %}
+              <li><span class="disabled">&raquo;</span></li>
+            {% endif %}
+          </ul>
+        </nav>
+      </center>
+    </div>
+  {% endif %}
 </div>

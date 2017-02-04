@@ -4,7 +4,9 @@ title: 饺子
 description: 记录一下。
 ---
 
-<img class="aligncenter size-full wp-image-247" title="together" src="{{ site.url }}/assets/together.jpg" alt="" width="600" height="450" />
+<center>
+    <img class="img-responsive" title="together" src="{{ site.url }}/assets/together.jpg" alt="" />
+</center>
 
 记录一下。
 

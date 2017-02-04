@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
-      <div class="row">
-        <div class="span6 offset3">
-          {{content}}
-        </div>
-      </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    {{ content }}
+  </div>
+</div>
 
+{% if page.commentable == true %}
     <div class="row disqus">
-      <div class="span6 offset3">
+      <div class="col-md-6 col-md-offset-3">
         {% include comments.md %}
       </div>
     </div>
+{% endif %}
