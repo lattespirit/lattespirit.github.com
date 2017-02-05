@@ -25,16 +25,20 @@ title: Lattespirit
         <nav aria-label="Page navination">
           <ul class="pagination">
             {% if paginator.previous_page %}
-                <li><a href="/page{{ paginator.previous_page }}">&laquo;</a></li>
+                {% if paginator.page == 2 %}
+                  <li><a href="{{ site.url }}">&laquo;</a></li>
+                {% else %}
+                  <li><a href="/page{{ paginator.previous_page }}">&laquo;</a></li>
+                {% endif %}
             {% else %}
                 <li><span class="disabled">&laquo;</span></li>
             {% endif %}
 
             {% for page in (1..paginator.total_pages) %}
-              {% if page == paginator.page %}
-                <li class="active">{{ page }}</li>
-              {% elsif page == 1 %}
+              {% if page == 1 %}
                 <li class="active"><a href="{{ site.url }}">1</a></li>
+              {% elsif page == paginator.page %}
+                <li class="active"><a href="/page{{ page }}">{{ page }}</a></li>
               {% else %}
                 <li><a href="/page{{ page }}">{{ page }}</a></li>
               {% endif %}
