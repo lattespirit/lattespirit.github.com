@@ -35,7 +35,7 @@ title: Lattespirit
             {% endif %}
 
             {% for page in (1..paginator.total_pages) %}
-              {% if page == 1 %}
+              {% if paginator.page == 1 %}
                 <li class="active"><a href="{{ site.url }}">1</a></li>
               {% elsif page == paginator.page %}
                 <li class="active"><a href="/page{{ page }}">{{ page }}</a></li>
