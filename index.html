@@ -34,9 +34,9 @@ title: Lattespirit
               {% if page == paginator.page %}
                 <li class="active">{{ page }}</li>
               {% elsif page == 1 %}
-                <li class="active"><a href="{{ site.url }}"></a>1</li>
+                <li class="active"><a href="{{ site.url }}">1</a></li>
               {% else %}
-                <li><a href="/page{{ count }}">{{ page }}</a></li>
+                <li><a href="/page{{ page }}">{{ page }}</a></li>
               {% endif %}
             {% endfor %}
             {% if paginator.next_page %}
