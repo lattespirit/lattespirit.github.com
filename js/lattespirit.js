@@ -1,6 +1,34 @@
-function renderSearch(docObject) {
-    $('.ls-input').bind('input propertychange', function() {
-        var keyword = docObject.val().trim().toLowerCase();
+$(document).ready(function () {
+
+    $('.ls-input').focus();
+
+    // Control Search Modal
+    var isModalOpened = false;
+
+    button = $('#search-modal');
+
+    button.on('show.bs.modal', function (e) {
+        isModalOpened = true;
+        $('.form-control').focus();
+    })
+
+    button.on('hidden.bs.modal', function (e) {
+        isModalOpened = false;
+    })
+
+    $(this).on('keyup', function(e) {
+        var tag = e.target.tagName.toLowerCase();
+        if (e.which === 83 && tag != 'input') {
+            if (! isModalOpened) {
+                button.modal('show');
+            }
+        }
+    });
+
+    // Dispaly Search Result
+    $('.form-control').bind('input propertychange', function() {
+
+        var keyword = $(this).val().trim().toLowerCase();
 
         $.ajax({
             url: '/search.json',
@@ -8,19 +36,19 @@ function renderSearch(docObject) {
         })
         .done(function(data) {
             var items = [],
-                columns = ['title', 'content'],
-                selected = [];
+                selected = [],
+                columns = ['title', 'content'];
             for (i in columns) {
                 var column = columns[i];
 
                 for (j in data) {
-                    var article = data[j],
-                        search = subStr = article[column].toLowerCase(),
-                        list = '',
+                    var list = '',
+                        fussyCount = 0,
+                        article = data[j],
                         isKeywordExists = false,
-                        isTitleNotSelected = false,
                         isFussySearchable = false,
-                        fussyCount = 0;
+                        isTitleNotSelected = false,
+                        search = subStr = article[column].toLowerCase();
 
                     if (search.indexOf(keyword) >= 0) { isKeywordExists = true; }
                     if (selected.indexOf(article.title) < 0) { isTitleNotSelected = true; }
@@ -43,7 +71,7 @@ function renderSearch(docObject) {
                     ) {
                         var pushItem = new Object();
                             pushItem.title = article.title;
-                            pushItem.description = article.description;
+                            pushItem.content = article.content;
                             pushItem.url = article.url
 
                         items.push(pushItem);
@@ -62,41 +90,10 @@ function renderSearch(docObject) {
 
             for (index in items) {
                 item = items[index];
-                list += '<li><a href="' + item.url + '">' + item.title + '</li>';
+                list += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
             }
 
-            $('.s-ul').empty().html(list);
+            $('.media-body').empty().html(list);
         });
     });
-}
-
-function controlModal(docObject) {
-    var isModalOpened = false;
-
-    modal = $('#search-modal');
-
-    modal.on('show.bs.modal', function (e) {
-        isModalOpened = true;
-    })
-
-    modal.on('hidden.bs.modal', function (e) {
-        isModalOpened = false;
-    })
-
-    docObject.on('keyup', function(e) {
-        var tag = e.target.tagName.toLowerCase();
-        if (e.which === 83 && tag != 'input') {
-            if (! isModalOpened) {
-                modal.modal('show');
-            }
-        }
-    });
-}
-
-$(document).ready(function () {
-    // Control Search Modal
-    controlModal($(this));
-
-    // Dispaly Search Result
-    renderSearch($(this));
 });

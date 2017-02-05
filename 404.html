@@ -2,70 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Lattespirit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ site.description }}">
-
-    <link href="http://www.lattespirit.com/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px;
-      }
-
-      .page {
-        margin: 0 160px;
-      }
-    </style>
-    <link href="http://www.lattespirit.com/css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
-ript>
-    <![endif]-->
+    <title>Oops, 404 - Lattespirit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Lattespirit">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-
   <body>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="span6 offset3">
-        <h2 class="muted">Lattespirit</h2>
-        <ul class="nav nav-tabs">
-          <li class="pull-right"><a href="http://www.lattespirit.com/about/">About</a></li>
-          <li class="pull-right"><a href="http://www.lattespirit.com/guestbook/">Guestbook</a></li>
-          <li class="pull-right"><a href="http://www.lattespirit.com">Home</a></li>
-        </ul>
+    <div class="container">
+      <div class="row" style="margin-bottom: 1em;">
+        <!-- For Devices that Larger than Mobile -->
+        <div class="hidden-xs col-md-6 col-md-offset-3">
+          <h2 class="text-muted">Oops, 404</h2>
+          <ul class="nav nav-tabs">
+            <li class="pull-right"><a href="http://www.lattespirit.com/about/">About</a></li>
+            <li class="pull-right"><a href="http://www.lattespirit.com/guestbook/">Guestbook</a></li>
+            <li class="pull-right"><a href="http://www.lattespirit.com/">Home</a></li>
+          </ul>
+        </div>
+        <!-- For Mobile -->
+        <nav class="visible-xs navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ls-navbar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="http://www.lattespirit.com"><strong>Oops, 404</strong></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="ls-navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://www.lattespirit.com">Home</a></li>
+                <li><a href="http://www.lattespirit.com/guestbook/">Guestbook</a></li>
+                <li><a href="http://www.lattespirit.com/search/">Search</a></li>
+                <li><a href="http://www.lattespirit.com/about/">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <center><h1>Oops, 404</h1></center>
+        </div>
       </div>
-
-  <div class="row">
-    <div class="span7 offset3">
-     <iframe scrolling='no' frameborder='0' src='http://yibo.iyiyun.com/js/yibo404/key/1' width='100%' height='550' style='display:block;'></iframe>
+      <!-- Control Button -->
+      <button type="button" data-toggle="modal" data-target="#search-modal" style="display: none"></button>
+      <!-- Search Modal -->
+      <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-title">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="border-bottom-color: transparent">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+              <center>
+              <label><h3>搜索那些碎念 - Lattespirit</h3></label>
+              </center>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+                <input type="text" class="form-control" placeholder="活动一下手指...">
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="media">
+                <div class="media-body"></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <p class="text-center">Powered by <a href="http://www.lattespirit.com" target="_blank"><strong>@Lattespirit</strong></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <hr>
+          <footer>
+            <center>
+            <p>Powered by <a href="http://www.jekyllrb.com">Jekyll</a> @ <a href="https://github.com">Github</a> | © 2012 - 2017 | <a href="http://www.lattespirit.com">Lattespirit</a> </p>
+            </center>
+          </footer>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="span6 offset3">
-      <hr>
-      <footer>
-        <center>
-          <p>Powered by <a href="http://www.jekyllrb.com">Jekyll</a> @ <a href="https://github.com">Github</a> | © 2012 - 2015 | <a href="http://www.lattespirit.com">Lattespirit</a> </p>
-        </center>
-      </footer>
-    </div>
-
-    </div>
-  </div>   <!-- /container -->
-   
-
-  <!-- Le javascript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-  <script src="http://www.lattespirit.com/js/bootstrap.js"></script>
-  <script src="http://www.lattespirit.com/js/bootstrap.min.js"></script>
-
+    
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://www.lattespirit.com/js/lattespirit.js"></script>
   </body>
 </html>

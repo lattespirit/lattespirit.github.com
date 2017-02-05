@@ -4,7 +4,7 @@ title: Lattespirit
 ---
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-      {% for post in site.posts limit: 20 %}
+      {% for post in paginator.posts limit: 20 %}
         <ul class="list-unstyled">
         {% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}
         {% if year != y %}
