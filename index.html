@@ -35,18 +35,19 @@ title: Lattespirit
             {% endif %}
 
             {% for page in (1..paginator.total_pages) %}
-              {% if paginator.page == 1 %}
+              {% if page == paginator.page %}
+                {% if paginator.page == 1 %}
+                  <li class="active"><a href="{{ site.url }}">1</a></li>
+                {% else %}
+                  <li class="active"><a href="/page{{ page }}">{{ page }}</a></li>
+                {% endif %}
+              {% elsif page == 1 %}
                 <li class="active"><a href="{{ site.url }}">1</a></li>
-              {% elsif page == paginator.page %}
-                <li class="active"><a href="/page{{ page }}">{{ page }}</a></li>
               {% else %}
-                  {% if page == 1 %}
-                    <li><a href="{{ site.url }}">1</a></li>
-                  {% else %}
-                    <li><a href="/page{{ page }}">{{ page }}</a></li>
-                  {% endif %}
+                <li><a href="/page{{ page }}">{{ page }}</a></li>
               {% endif %}
             {% endfor %}
+
             {% if paginator.next_page %}
               <li><a href="/page{{ paginator.next_page }}">&raquo;</a></li>
             {% else %}
