@@ -80,17 +80,21 @@ $(document).ready(function () {
                 }
             }
 
-            for (index in items) {
-                item = items[index];
-                if (item.title.toLowerCase() == keyword) {
-                    var fullMatchKeyword = items.splice(index, 1);
-                    items.unshift(fullMatchKeyword[0]);
+            if (items.length > 0) {
+                for (index in items) {
+                    item = items[index];
+                    if (item.title.toLowerCase() == keyword) {
+                        var fullMatchKeyword = items.splice(index, 1);
+                        items.unshift(fullMatchKeyword[0]);
+                    }
                 }
-            }
 
-            for (index in items) {
-                item = items[index];
-                list += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
+                for (index in items) {
+                    item = items[index];
+                    list += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
+                }
+            } else {
+                list = '<center><h3>糟糕，没有找到搜索结果</h3></center>';
             }
 
             $('.media-body').empty().html(list);
