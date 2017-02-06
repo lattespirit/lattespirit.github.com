@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     button = $('#search-modal');
 
-    button.on('show.bs.modal', function (e) {
+    button.on('shown.bs.modal', function (e) {
         isModalOpened = true;
         $('.form-control').focus();
     })
