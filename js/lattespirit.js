@@ -94,14 +94,6 @@ $(document).ready(function () {
 
     });
 
-    // Hide Search Navbar on Mobile when focusout 
-    $('.ls-nav-search-input').focusout(function() {
-        $('#ls-nav-default').removeClass('ls-hide-nav');
-        $('#ls-nav-search').addClass('ls-hide-nav');
-
-        $('.ls-nav-search-well').hide();
-    });
-
     // Hide Search Navbar on Mobile when hide-search-button hit 
     $('#ls-hide-search-button').click(function() {
         $('#ls-nav-default').removeClass('ls-hide-nav');
