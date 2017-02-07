@@ -1,0 +1,26 @@
+.ls-about-small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+}
+
+.ls-about-dl {
+    margin-left: -80px;
+}
+
+.ls-nav-search-form {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    border-top: hidden;
+    border-bottom: hidden;
+}
+
+.ls-hide-nav {
+    display: none!important;
+}
+
+.ls-nav-search-well {
+    margin: -5px 50px 0 50px;
+}
+

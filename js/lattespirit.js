@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    $('.ls-input').focus();
+    // Focus on input in Search Page
+    $('.ls-search-page-input').focus();
 
     // Control Search Modal
     var isModalOpened = false;
@@ -25,19 +26,109 @@ $(document).ready(function () {
         }
     });
 
-    // Dispaly Search Result
-    $('.form-control').bind('input propertychange', function() {
+    // Dispaly Modal Search Result
+    $('.ls-modal-search-input').bind('input propertychange', function() {
+        $.fn.generateSearchResult($(this), function(searchResult) {
 
-        var keyword = $(this).val().trim().toLowerCase();
+            var display = '';
+            if (searchResult.length > 0) {
+                for (index in searchResult) {
+                    item = searchResult[index];
+                    display += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
+                }
+            } else {
+                display = '<center><h3>糟糕，没有找到搜索结果</h3></center>';
+            }
+
+            $('.media-body').empty().html(display);
+        });
+    });
+
+    // Display Search-Page Search Result
+    $('.ls-search-page-input').bind('input propertychange', function() {
+        $.fn.generateSearchResult($(this), function(searchResult) {
+
+            var display = '';
+            if (searchResult.length > 0) {
+                for (index in searchResult) {
+                    item = searchResult[index];
+                    display += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
+                }
+            } else {
+                display = '<center><h3>糟糕，没有找到搜索结果</h3></center>';
+            }
+
+            $('.media-body').empty().html(display);
+        });
+    });
+
+
+    // Display Navbar Search Result
+    $('.ls-nav-search-input').bind('input propertychange', function() {
+        $.fn.generateSearchResult($(this), function(searchResult) {
+            var display = '';
+            if (searchResult.length > 0) {
+                for (index in searchResult) {
+                    item = searchResult[index];
+                    display += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
+                }
+            } else {
+                display = '<h4 class="text-center">糟糕，没有找到搜索结果</h4><hr>';
+            }
+
+            $('.ls-nav-search-data').empty().html(display);
+        });
+
+        if ($(this).val() != '') {
+            $('.ls-nav-search-well').show();
+        }
+    });
+    
+
+    // Show Search Navbar on Mobile when search button hit
+    $('#ls-show-search-nav-button').click(function() {
+        $('#ls-nav-default').addClass('ls-hide-nav');
+        $('#ls-nav-search').removeClass('ls-hide-nav');
+
+        $('.ls-nav-search-input').focus();
+
+    });
+
+    // Hide Search Navbar on Mobile when focusout 
+    $('.ls-nav-search-input').focusout(function() {
+        $('#ls-nav-default').removeClass('ls-hide-nav');
+        $('#ls-nav-search').addClass('ls-hide-nav');
+
+        $('.ls-nav-search-well').hide();
+    });
+
+    // Hide Search Navbar on Mobile when hide-search-button hit 
+    $('#ls-hide-search-button').click(function() {
+        $('#ls-nav-default').removeClass('ls-hide-nav');
+        $('#ls-nav-search').addClass('ls-hide-nav');
+
+        $('.ls-nav-search-well').hide();
+    });
+
+    // Add stylesheet to about page according to window width
+    if ($(window).width() >= 768) {
+        $('#ls-about-dl').addClass('ls-about-dl');
+    }
+
+    // Generate Search Result
+    $.fn.generateSearchResult = function (inputObject, callback) {
+
+        var searchResult = [];
+        var keyword = inputObject.val().trim().toLowerCase();
 
         $.ajax({
             url: '/search.json',
             dataType: 'json',
         })
         .done(function(data) {
-            var items = [],
-                selected = [],
+            var selected = [],
                 columns = ['title', 'content'];
+
             for (i in columns) {
                 var column = columns[i];
 
@@ -52,7 +143,6 @@ $(document).ready(function () {
 
                     if (search.indexOf(keyword) >= 0) { isKeywordExists = true; }
                     if (selected.indexOf(article.title) < 0) { isTitleNotSelected = true; }
-
 
                     for (var l = 0; l < keyword.length; l++) {
                         var position = subStr.indexOf(keyword[l]);
@@ -74,30 +164,23 @@ $(document).ready(function () {
                             pushItem.content = article.content;
                             pushItem.url = article.url
 
-                        items.push(pushItem);
+                        searchResult.push(pushItem);
                         selected.push(article.title);
                     }
                 }
             }
 
-            if (items.length > 0) {
-                for (index in items) {
-                    item = items[index];
+            if (searchResult.length > 0) {
+                for (index in searchResult) {
+                    item = searchResult[index];
                     if (item.title.toLowerCase() == keyword) {
-                        var fullMatchKeyword = items.splice(index, 1);
-                        items.unshift(fullMatchKeyword[0]);
+                        var fullMatchKeyword = searchResult.splice(index, 1);
+                        searchResult.unshift(fullMatchKeyword[0]);
                     }
                 }
-
-                for (index in items) {
-                    item = items[index];
-                    list += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
-                }
-            } else {
-                list = '<center><h3>糟糕，没有找到搜索结果</h3></center>';
             }
 
-            $('.media-body').empty().html(list);
+            callback(searchResult);
         });
-    });
+    }
 });

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/lattespirit.css">
   </head>
   <body>
     <div class="container">
@@ -15,13 +16,17 @@
           <h2 class="text-muted">{{ page.title }}</h2>
           <ul class="nav nav-tabs">
             <li class="pull-right"><a href="{{ site.url }}/about/">About</a></li>
+            <li class="pull-right visible-sm"><a href="{{ site.url }}/search/">Search</a></li>
             <li class="pull-right"><a href="{{ site.url }}/guestbook/">Guestbook</a></li>
             <li class="pull-right"><a href="{{ site.url }}/">Home</a></li>
           </ul>
         </div>
+        <!-- For Devices that Larger than Mobile - End -->
 
         <!-- For Mobile -->
-        <nav class="visible-xs navbar navbar-default">
+
+        <!-- Show Mobile Normal Nav -->
+        <nav class="visible-xs navbar navbar-default" id="ls-nav-default">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -31,6 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              <button class="navbar-toggle" style="border-color: transparent;"><span class="glyphicon glyphicon-search" id="ls-show-search-nav-button" aria-hidden="true"></span></button>
               <a class="navbar-brand" href="{{ site.url }}"><strong>{{ page.title }}</strong></a>
             </div>
 
@@ -39,14 +45,41 @@
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ site.url }}">Home</a></li>
                 <li><a href="{{ site.url }}/guestbook/">Guestbook</a></li>
-                <li><a href="{{ site.url }}/search/">Search</a></li>
                 <li><a href="{{ site.url }}/about/">About</a></li>
               </ul>
             </div>
           </div>
         </nav>
 
+        <!-- Show Mobile Search Nav -->
+        <nav class="visible-xs navbar navbar-default ls-hide-nav" id="ls-nav-search">
+          <div class="container-fluid">
+            <form class="navbar-form ls-nav-search-form" role="search">
+              <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </div>
+                      <input type="text" class="form-control ls-nav-search-input" placeholder="活动一下手指...">
+                      <div class="input-group-addon" style="background-color: #fff;">
+                          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="ls-hide-search-button"></span>
+                      </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </nav>
+        <div class="well ls-nav-search-well" style="display: none;">
+            <div class="ls-nav-search-data"></div>
+            <footer style="margin-bottom: -10px;">
+                <p class="text-center">Powered by <a href="{{ site.url }}" target="_blank"><strong>@Lattespirit</strong></a></p>
+            </footer>
+        </div>
+
+        <!-- For Mobile - End -->
+
       </div>
+
       {{ content }}
 
       <!-- Control Button -->
@@ -67,7 +100,7 @@
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
-                <input type="text" class="form-control" placeholder="活动一下手指...">
+                <input type="text" class="form-control ls-modal-search-input" placeholder="活动一下手指...">
               </div>
             </div>
             <div class="modal-body">
