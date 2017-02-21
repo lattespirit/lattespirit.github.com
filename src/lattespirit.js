@@ -1,157 +1,136 @@
 import 'jquery';
 import 'bootstrap';
 
-$(document).ready(function () {
-
-    // Focus on input in Search Page
-    $('.ls-search-page-input').focus();
-
-    // Control Search Modal
-    let isModalOpened = false;
-
-    let button = $('#search-modal');
-
-    button.on('shown.bs.modal', function (e) {
-        isModalOpened = true;
-        $('.form-control').focus();
-    })
-
-    button.on('hidden.bs.modal', function (e) {
-        isModalOpened = false;
-    })
-
-    $(this).on('keyup', function(e) {
-        let tag = e.target.tagName.toLowerCase();
-        if (e.which === 83 && tag != 'input') {
-            if (! isModalOpened) {
-                button.modal('show');
-            }
-        }
-    });
-
-    // Dispaly Modal Search Result
-    $('.ls-modal-search-input').bind('input propertychange', function() {
-        $.fn.generateSearchResult($(this), function(searchResult) {
-
-            let index = 0,
-                item = '',
-                display = '';
-            if (searchResult.length > 0) {
-                for (index in searchResult) {
-                    item = searchResult[index];
-                    display += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
-                }
-            } else {
-                display = '<center><h3>糟糕，没有找到搜索结果</h3></center>';
-            }
-
-            $('.media-body').empty().html(display);
-        });
-    });
-
-    // Display Search-Page Search Result
-    $('.ls-search-page-input').bind('input propertychange', function() {
-        $.fn.generateSearchResult($(this), function(searchResult) {
-
-            let index = 0,
-                item = '',
-                display = '';
-            if (searchResult.length > 0) {
-                for (index in searchResult) {
-                    item = searchResult[index];
-                    display += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
-                }
-            } else {
-                display = '<center><h3>糟糕，没有找到搜索结果</h3></center>';
-            }
-
-            $('.media-body').empty().html(display);
-        });
-    });
-
-
-    // Display Navbar Search Result
-    $('.ls-nav-search-input').bind('input propertychange', function() {
-        $.fn.generateSearchResult($(this), function(searchResult) {
-            let index = 0,
-                item = '',
-                display = '';
-            if (searchResult.length > 0) {
-                for (index in searchResult) {
-                    item = searchResult[index];
-                    display += '<h4 class="media-heading"><h4><a href="' + item.url + '" target="_blank">' + item.title+ '</a></h4><hr>';
-                }
-            } else {
-                display = '<h4 class="text-center">糟糕，没有找到搜索结果</h4><hr>';
-            }
-
-            $('.ls-nav-search-data').empty().html(display);
-        });
-
-        if ($(this).val() != '') {
-            $('.ls-nav-search-well').show();
-        }
-    });
-    
-
-    // Show Search Navbar on Mobile when search button hit
-    $('#ls-show-search-nav-button').click(function() {
-        $('#ls-nav-default').addClass('ls-hide-nav');
-        $('#ls-nav-search').removeClass('ls-hide-nav');
-
-        $('.ls-nav-search-input').focus();
-
-    });
-
-    // Hide Search Navbar on Mobile when hide-search-button hit 
-    $('#ls-hide-search-button').click(function() {
-        $('#ls-nav-default').removeClass('ls-hide-nav');
-        $('#ls-nav-search').addClass('ls-hide-nav');
-
-        $('.ls-nav-search-well').hide();
-    });
-
-    // Add stylesheet to about page according to window width
-    if ($(window).width() >= 768) {
-        $('#ls-about-dl').addClass('ls-about-dl');
+class Lattespirit
+{
+    constructor() {
+        this.initConfig();
+        this.handleBehavior();
+        this.handleSearch();
     }
 
-    // Generate Search Result
-    $.fn.generateSearchResult = function (inputObject, callback) {
+    initConfig() {
+        this.isModalOpened = false; // Set Modal Closed as default
+    }
 
-        let searchResult = [];
+    handleBehavior() {
+         this.handleInputBoxInSearchPage();
+         this.handleSearchModal();
+         this.handleAboutPageByDevice();
+         this.handleMobileSearchNavbar();
+    }
+
+    // =========================HandleBehavior Start=========================
+    handleInputBoxInSearchPage() {
+        $('.ls-search-page-input').focus();
+    }
+
+    handleSearchModal() {
+        $('#search-modal').on('shown.bs.modal', function (e) {
+            this.isModalOpened = true;
+            $('.form-control').focus();
+        })
+
+        $('#search-modal').on('hidden.bs.modal', function (e) {
+            this.isModalOpened = false;
+        })
+
+        $(document).on('keyup', function(e) {
+            let tag = e.target.tagName.toLowerCase();
+            if (
+                e.which === 83 
+                && tag != 'input'
+                && (! this.isModalOpened)
+                ) 
+            {
+                $('#search-modal').modal('show');
+            }
+        });
+    }
+
+    handleAboutPageByDevice() {
+        // Add stylesheet to about page according to window width
+        if ($(window).width() >= 768) {
+            $('#ls-about-dl').addClass('ls-about-dl');
+        }
+    }
+
+    handleMobileSearchNavbar() {
+        // Show Search Navbar on Mobile when search button hit
+        $('#ls-show-search-nav-button').click(function() {
+            $('#ls-nav-default').addClass('ls-hide-nav');
+            $('#ls-nav-search').removeClass('ls-hide-nav');
+
+            $('.ls-nav-search-input').focus();
+
+        });
+
+        // Hide Search Navbar on Mobile when hide-search-button hit 
+        $('#ls-hide-search-button').click(function() {
+            $('#ls-nav-default').removeClass('ls-hide-nav');
+            $('#ls-nav-search').addClass('ls-hide-nav');
+
+            $('.ls-nav-search-well').hide();
+        });
+    }
+    // =========================HandleBehavior End=========================
+
+    handleSearch() {
+        let _this = this;
+        // Dispaly Modal Search Result
+        $('.ls-modal-search-input').bind('input propertychange', function() {
+            _this.generateSearchResult($(this), 'h4', function(display) {
+                $('.media-body').empty().html(display);
+            });
+        });
+
+        // Display Search-Page Search Result
+        $('.ls-search-page-input').bind('input propertychange', function() {
+            _this.generateSearchResult($(this), 'h4', function(display) {
+                $('.media-body').empty().html(display);
+            });
+        });
+
+        // Display Navbar Search Result
+        $('.ls-nav-search-input').bind('input propertychange', function() {
+            _this.generateSearchResult($(this), 'h4', function(display) {
+                $('.ls-nav-search-data').empty().html(display);
+            });
+
+            if ($(this).val() != '') {
+                $('.ls-nav-search-well').show();
+            }
+        });
+    }
+
+    generateSearchResult(inputObject, wrapper, additional) {
+        let selectedArticles = [];
         let keyword = inputObject.val().trim().toLowerCase();
+        let _this = this;
 
         $.ajax({
             url: '/search.json',
             dataType: 'json',
         })
-        .done(function(data) {
-            let i = '',
-                j = '',
-                l = '',
-                index = 0,
-                selected = [],
-                columns = ['title', 'content'];
+        .done(function(articles) {
+            let display = '',
+                selectedTitle = [];
 
-            for (i in columns) {
-                let column = columns[i];
+            ['title', 'content'].forEach(function(column) {
 
-                for (j in data) {
-                    let list = '',
-                        fussyCount = 0,
-                        article = data[j],
+                articles.forEach(function(article) {
+                    let fussyCount = 0,
+                        isNotSelected = false,
                         isKeywordExists = false,
                         isFussySearchable = false,
-                        isTitleNotSelected = false,
-                        search = article[column].toLowerCase(),
+                        body = article[column].toLowerCase(),
                         subStr = article[column].toLowerCase();
 
-                    if (search.indexOf(keyword) >= 0) { isKeywordExists = true; }
-                    if (selected.indexOf(article.title) < 0) { isTitleNotSelected = true; }
+                    if (body.includes(keyword)) { isKeywordExists = true; }
+                    if (! selectedTitle.includes(article.title)) { isNotSelected = true; }
 
-                    for (let l = 0; l < keyword.length; l++) {
-                        let position = subStr.indexOf(keyword[l]);
+                    for (let charIndex = 0; charIndex < keyword.length; charIndex++) {
+                        let position = subStr.indexOf(keyword[charIndex]);
                         if (position >= 0) {
                             fussyCount++;
                             subStr = subStr.substr(position + 1);
@@ -163,31 +142,54 @@ $(document).ready(function () {
                     if (
                         (isKeywordExists || isFussySearchable)
                         &&
-                        isTitleNotSelected
+                        isNotSelected
                     ) {
-                        let pushItem = new Object();
-                            pushItem.title = article.title;
-                            pushItem.content = article.content;
-                            pushItem.url = article.url
-
-                        searchResult.push(pushItem);
-                        selected.push(article.title);
+                        selectedTitle.push(article.title);
+                        selectedArticles.push(article);
                     }
-                }
-            }
+                });
+            });
 
-            if (searchResult.length > 0) {
-                let item = '';
-                for (index in searchResult) {
-                    item = searchResult[index];
-                    if (item.title.toLowerCase() == keyword) {
-                        let fullMatchKeyword = searchResult.splice(index, 1);
-                        searchResult.unshift(fullMatchKeyword[0]);
-                    }
-                }
-            }
+            selectedArticles = _this.raiseUpFullMatchKeywordArticle(selectedArticles, keyword);
 
-            callback(searchResult);
+            display = _this.generateDisplay(selectedArticles, wrapper);
+
+            additional(display);
         });
     }
-});
+
+    raiseUpFullMatchKeywordArticle(selectedArticles, keyword) {
+        if (selectedArticles.length > 0) {
+            let index = 0,
+                selectedArticle = '';
+            for (index in selectedArticles) {
+                selectedArticle = selectedArticles[index];
+                if (selectedArticle.title.toLowerCase() == keyword) {
+                    let fullMatchKeyword = selectedArticles.splice(index, 1);
+                    selectedArticles.unshift(fullMatchKeyword[0]);
+                }
+            }
+        }
+
+        return selectedArticles;
+    }
+
+    generateDisplay(selectedArticles, wrapper) {
+        let index = 0,
+            display = '',
+            selectedArticle = '';
+        if (selectedArticles.length > 0) {
+            for (index in selectedArticles) {
+                selectedArticle = selectedArticles[index];
+                display += `<${wrapper} class="media-heading"><h4><a href="${selectedArticle.url}" target="_blank">${selectedArticle.title}</a></${wrapper}><hr>`;
+            }
+        } else {
+            display = `<${wrapper} class="text-center">糟糕，没有找到搜索结果</${wrapper}><br>`;
+        }
+
+        return display;
+    }
+
+}
+
+(new Lattespirit);

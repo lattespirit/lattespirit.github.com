@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: './src/lattespirit.js',
   output: {
-    filename: 'lattespirit-test.js',
+    filename: 'lattespirit.js',
     path: path.resolve(__dirname, 'js')
   },
 
