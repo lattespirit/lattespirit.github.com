@@ -12892,9 +12892,6 @@ var Lattespirit = function () {
                         if (body.includes(keyword)) {
                             isKeywordExists = true;
                         }
-                        if (!selectedTitle.includes(article.title)) {
-                            isNotSelected = true;
-                        }
 
                         for (var charIndex = 0; charIndex < keyword.length; charIndex++) {
                             var position = subStr.indexOf(keyword[charIndex]);
@@ -12908,14 +12905,20 @@ var Lattespirit = function () {
                             isFussySearchable = true;
                         }
 
-                        if ((isKeywordExists || isFussySearchable) && isNotSelected) {
+                        if (!selectedTitle.includes(article.title)) {
+                            isNotSelected = true;
+                        }
+
+                        if (isNotSelected && (isKeywordExists || isFussySearchable)) {
                             selectedTitle.push(article.title);
                             selectedArticles.push(article);
                         }
                     });
                 });
 
-                selectedArticles = _this.raiseUpFullMatchKeywordArticle(selectedArticles, keyword);
+                selectedArticles = _this.raiseUpFullMatchContentArticle(selectedArticles, keyword);
+
+                selectedArticles = _this.raiseUpFullMatchTitleArticle(selectedArticles, keyword);
 
                 display = _this.generateDisplay(selectedArticles, wrapper);
 
@@ -12923,14 +12926,31 @@ var Lattespirit = function () {
             });
         }
     }, {
-        key: 'raiseUpFullMatchKeywordArticle',
-        value: function raiseUpFullMatchKeywordArticle(selectedArticles, keyword) {
+        key: 'raiseUpFullMatchContentArticle',
+        value: function raiseUpFullMatchContentArticle(selectedArticles, keyword) {
             if (selectedArticles.length > 0) {
                 var index = 0,
                     selectedArticle = '';
                 for (index in selectedArticles) {
                     selectedArticle = selectedArticles[index];
-                    if (selectedArticle.title.toLowerCase() == keyword) {
+                    if (selectedArticle.content.toLowerCase().includes(keyword)) {
+                        var fullMatchKeyword = selectedArticles.splice(index, 1);
+                        selectedArticles.unshift(fullMatchKeyword[0]);
+                    }
+                }
+            }
+
+            return selectedArticles;
+        }
+    }, {
+        key: 'raiseUpFullMatchTitleArticle',
+        value: function raiseUpFullMatchTitleArticle(selectedArticles, keyword) {
+            if (selectedArticles.length > 0) {
+                var index = 0,
+                    selectedArticle = '';
+                for (index in selectedArticles) {
+                    selectedArticle = selectedArticles[index];
+                    if (selectedArticle.title.toLowerCase().includes(keyword)) {
                         var fullMatchKeyword = selectedArticles.splice(index, 1);
                         selectedArticles.unshift(fullMatchKeyword[0]);
                     }
