@@ -114,83 +114,56 @@ class Lattespirit
         })
         .done(function(articles) {
             let display = '',
-                selectedTitle = [];
+                selectedTitle = [],
+                titlefullMatchScore = 7,
+                contentfullMatchScore = 3,
+                titleFussySearchableScore = 4,
+                contentFussySearchableScore = 1;
 
-            ['title', 'content'].forEach(function(column) {
+            articles = articles.map(function(article) {
+                let titleFussyCount = 0,
+                    contentFussyCount = 0,
+                    title = article.title.toLowerCase(),
+                    content = article.content.toLowerCase();
 
-                articles.forEach(function(article) {
-                    let fussyCount = 0,
-                        isNotSelected = false,
-                        isKeywordExists = false,
-                        isFussySearchable = false,
-                        body = article[column].toLowerCase(),
-                        subStr = article[column].toLowerCase();
+                if (title.includes(keyword)) { article.score += titlefullMatchScore; }
 
-                    if (body.includes(keyword)) { isKeywordExists = true; }
+                if (content.includes(keyword)) { article.score += contentfullMatchScore; }
 
-                    for (let charIndex = 0; charIndex < keyword.length; charIndex++) {
-                        let position = subStr.indexOf(keyword[charIndex]);
-                        if (position >= 0) {
-                            fussyCount++;
-                            subStr = subStr.substr(position + 1);
-                        }
+                for (let charIndex = 0; charIndex < keyword.length; charIndex++) {
+                    let titlePosition = title.indexOf(keyword[charIndex]),
+                        contentPosition = content.indexOf(keyword[charIndex]);
+                    if (titlePosition >= 0) {
+                        titleFussyCount++;
+                        title = title.substr(titlePosition + 1);
                     }
 
-                    if (fussyCount == keyword.length) { isFussySearchable = true; }
-
-                    if (! selectedTitle.includes(article.title)) { isNotSelected = true; }
-
-                    if (
-                        isNotSelected
-                        &&
-                        (isKeywordExists || isFussySearchable)
-                    ) {
-                        selectedTitle.push(article.title);
-                        selectedArticles.push(article);
+                    if (contentPosition >= 0) {
+                        contentFussyCount++;
+                        content = content.substr(contentPosition + 1);
                     }
-                });
+                }
+
+                if (titleFussyCount == keyword.length) { article.score += titleFussySearchableScore }
+
+                if (contentFussyCount == keyword.length) { article.score += contentFussySearchableScore }
+
+                return article;
+
             });
 
-            selectedArticles = _this.raiseUpFullMatchContentArticle(selectedArticles, keyword);
-            
-            selectedArticles = _this.raiseUpFullMatchTitleArticle(selectedArticles, keyword);
+            articles = articles.filter(function(article) {
+                return article.score > 0;
+            })
 
-            display = _this.generateDisplay(selectedArticles, wrapper);
+            articles = articles.sort(function(preArticle, nextArticle) {
+                return nextArticle.score - preArticle.score;
+            })
+
+            display = _this.generateDisplay(articles, wrapper);
 
             additional(display);
         });
-    }
-
-    raiseUpFullMatchContentArticle(selectedArticles, keyword) {
-        if (selectedArticles.length > 0) {
-            let index = 0,
-                selectedArticle = '';
-            for (index in selectedArticles) {
-                selectedArticle = selectedArticles[index];
-                if (selectedArticle.content.toLowerCase().includes(keyword)) {
-                    let fullMatchKeyword = selectedArticles.splice(index, 1);
-                    selectedArticles.unshift(fullMatchKeyword[0]);
-                }
-            }
-        }
-
-        return selectedArticles;
-    }
-
-    raiseUpFullMatchTitleArticle(selectedArticles, keyword) {
-        if (selectedArticles.length > 0) {
-            let index = 0,
-                selectedArticle = '';
-            for (index in selectedArticles) {
-                selectedArticle = selectedArticles[index];
-                if (selectedArticle.title.toLowerCase().includes(keyword)) {
-                    let fullMatchKeyword = selectedArticles.splice(index, 1);
-                    selectedArticles.unshift(fullMatchKeyword[0]);
-                }
-            }
-        }
-
-        return selectedArticles;
     }
 
     generateDisplay(selectedArticles, wrapper) {

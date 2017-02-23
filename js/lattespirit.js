@@ -12877,87 +12877,63 @@ var Lattespirit = function () {
                 dataType: 'json'
             }).done(function (articles) {
                 var display = '',
-                    selectedTitle = [];
+                    selectedTitle = [],
+                    titlefullMatchScore = 7,
+                    contentfullMatchScore = 3,
+                    titleFussySearchableScore = 4,
+                    contentFussySearchableScore = 1;
 
-                ['title', 'content'].forEach(function (column) {
+                articles = articles.map(function (article) {
+                    var titleFussyCount = 0,
+                        contentFussyCount = 0,
+                        title = article.title.toLowerCase(),
+                        content = article.content.toLowerCase();
 
-                    articles.forEach(function (article) {
-                        var fussyCount = 0,
-                            isNotSelected = false,
-                            isKeywordExists = false,
-                            isFussySearchable = false,
-                            body = article[column].toLowerCase(),
-                            subStr = article[column].toLowerCase();
+                    if (title.includes(keyword)) {
+                        article.score += titlefullMatchScore;
+                    }
 
-                        if (body.includes(keyword)) {
-                            isKeywordExists = true;
+                    if (content.includes(keyword)) {
+                        article.score += contentfullMatchScore;
+                    }
+
+                    for (var charIndex = 0; charIndex < keyword.length; charIndex++) {
+                        var titlePosition = title.indexOf(keyword[charIndex]),
+                            contentPosition = content.indexOf(keyword[charIndex]);
+                        if (titlePosition >= 0) {
+                            titleFussyCount++;
+                            title = title.substr(titlePosition + 1);
                         }
 
-                        for (var charIndex = 0; charIndex < keyword.length; charIndex++) {
-                            var position = subStr.indexOf(keyword[charIndex]);
-                            if (position >= 0) {
-                                fussyCount++;
-                                subStr = subStr.substr(position + 1);
-                            }
+                        if (contentPosition >= 0) {
+                            contentFussyCount++;
+                            content = content.substr(contentPosition + 1);
                         }
+                    }
 
-                        if (fussyCount == keyword.length) {
-                            isFussySearchable = true;
-                        }
+                    if (titleFussyCount == keyword.length) {
+                        article.score += titleFussySearchableScore;
+                    }
 
-                        if (!selectedTitle.includes(article.title)) {
-                            isNotSelected = true;
-                        }
+                    if (contentFussyCount == keyword.length) {
+                        article.score += contentFussySearchableScore;
+                    }
 
-                        if (isNotSelected && (isKeywordExists || isFussySearchable)) {
-                            selectedTitle.push(article.title);
-                            selectedArticles.push(article);
-                        }
-                    });
+                    return article;
                 });
 
-                selectedArticles = _this.raiseUpFullMatchContentArticle(selectedArticles, keyword);
+                articles = articles.filter(function (article) {
+                    return article.score > 0;
+                });
 
-                selectedArticles = _this.raiseUpFullMatchTitleArticle(selectedArticles, keyword);
+                articles = articles.sort(function (preArticle, nextArticle) {
+                    return nextArticle.score - preArticle.score;
+                });
 
-                display = _this.generateDisplay(selectedArticles, wrapper);
+                display = _this.generateDisplay(articles, wrapper);
 
                 additional(display);
             });
-        }
-    }, {
-        key: 'raiseUpFullMatchContentArticle',
-        value: function raiseUpFullMatchContentArticle(selectedArticles, keyword) {
-            if (selectedArticles.length > 0) {
-                var index = 0,
-                    selectedArticle = '';
-                for (index in selectedArticles) {
-                    selectedArticle = selectedArticles[index];
-                    if (selectedArticle.content.toLowerCase().includes(keyword)) {
-                        var fullMatchKeyword = selectedArticles.splice(index, 1);
-                        selectedArticles.unshift(fullMatchKeyword[0]);
-                    }
-                }
-            }
-
-            return selectedArticles;
-        }
-    }, {
-        key: 'raiseUpFullMatchTitleArticle',
-        value: function raiseUpFullMatchTitleArticle(selectedArticles, keyword) {
-            if (selectedArticles.length > 0) {
-                var index = 0,
-                    selectedArticle = '';
-                for (index in selectedArticles) {
-                    selectedArticle = selectedArticles[index];
-                    if (selectedArticle.title.toLowerCase().includes(keyword)) {
-                        var fullMatchKeyword = selectedArticles.splice(index, 1);
-                        selectedArticles.unshift(fullMatchKeyword[0]);
-                    }
-                }
-            }
-
-            return selectedArticles;
         }
     }, {
         key: 'generateDisplay',
