@@ -3,7 +3,6 @@ description: "Lattespirit"
 url: "https://www.lattespirit.com"
 paginate: 20
 markdown: kramdown
-duoshuo: lattespirit
 disqus: lattespirit
 permalink: /:title/
 highlighter: rouge

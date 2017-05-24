@@ -154,11 +154,13 @@ class Lattespirit
 
             articles = articles.filter(function(article) {
                 return article.score > 0;
-            })
+            });
 
             articles = articles.sort(function(preArticle, nextArticle) {
                 return nextArticle.score - preArticle.score;
-            })
+            });
+
+            console.log(articles);
 
             display = _this.generateDisplay(articles, wrapper);
 
