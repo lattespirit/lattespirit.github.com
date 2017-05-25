@@ -160,8 +160,6 @@ class Lattespirit
                 return nextArticle.score - preArticle.score;
             });
 
-            console.log(articles);
-
             display = _this.generateDisplay(articles, wrapper);
 
             additional(display);
