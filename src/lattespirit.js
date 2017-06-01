@@ -5,9 +5,9 @@ class Lattespirit
 {
     constructor() {
         this.initConfig();
+        this.refreshArticles();
         this.handleBehavior();
         this.handleSearch();
-        this.refreshArticles();
     }
 
     initConfig() {
