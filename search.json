@@ -1,13 +1,16 @@
 ---
 ---
-[
-    {% for post in site.posts %}
-    {
-      "title"    : "{{ post.title }}",
-      "url"     : "{{ site.url }}{{ post.url }}",
-      "content": {{ post.content | jsonify }},
-      "score": 0
-    }
-    {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-]
+{
+    "posts": [
+        {% for post in site.posts %}
+        {
+          "title"    : "{{ post.title }}",
+          "url"     : "{{ site.url }}{{ post.url }}",
+          "content": {{ post.content | strip_html | jsonify }},
+          "score": 0
+        }
+        {% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ],
+    "lastModified": "{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}"
+}

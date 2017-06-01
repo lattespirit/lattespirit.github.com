@@ -7,6 +7,7 @@ class Lattespirit
         this.initConfig();
         this.handleBehavior();
         this.handleSearch();
+        this.refreshArticles();
     }
 
     initConfig() {
@@ -104,66 +105,59 @@ class Lattespirit
     }
 
     generateSearchResult(inputObject, wrapper, additional) {
-        let selectedArticles = [];
-        let keyword = inputObject.val().trim().toLowerCase();
-        let _this = this;
+        let display = '',
+            articles = [],
+            selectedTitle = [],
+            selectedArticles = [],
+            titlefullMatchScore = 7,
+            contentfullMatchScore = 3,
+            titleFussySearchableScore = 4,
+            contentFussySearchableScore = 1,
+            keyword = inputObject.val().trim().toLowerCase();
 
-        $.ajax({
-            url: '/search.json',
-            dataType: 'json',
-        })
-        .done(function(articles) {
-            let display = '',
-                selectedTitle = [],
-                titlefullMatchScore = 7,
-                contentfullMatchScore = 3,
-                titleFussySearchableScore = 4,
-                contentFussySearchableScore = 1;
+        articles = JSON.parse(localStorage.getItem('posts'));
+        articles = articles.map(function(article) {
+            let titleFussyCount = 0,
+                contentFussyCount = 0,
+                title = article.title.toLowerCase(),
+                content = article.content.toLowerCase();
 
-            articles = articles.map(function(article) {
-                let titleFussyCount = 0,
-                    contentFussyCount = 0,
-                    title = article.title.toLowerCase(),
-                    content = article.content.toLowerCase();
+            if (title.includes(keyword)) { article.score += titlefullMatchScore; }
 
-                if (title.includes(keyword)) { article.score += titlefullMatchScore; }
+            if (content.includes(keyword)) { article.score += contentfullMatchScore; }
 
-                if (content.includes(keyword)) { article.score += contentfullMatchScore; }
-
-                for (let charIndex = 0; charIndex < keyword.length; charIndex++) {
-                    let titlePosition = title.indexOf(keyword[charIndex]),
-                        contentPosition = content.indexOf(keyword[charIndex]);
-                    if (titlePosition >= 0) {
-                        titleFussyCount++;
-                        title = title.substr(titlePosition + 1);
-                    }
-
-                    if (contentPosition >= 0) {
-                        contentFussyCount++;
-                        content = content.substr(contentPosition + 1);
-                    }
+            for (let charIndex = 0; charIndex < keyword.length; charIndex++) {
+                let titlePosition = title.indexOf(keyword[charIndex]),
+                    contentPosition = content.indexOf(keyword[charIndex]);
+                if (titlePosition >= 0) {
+                    titleFussyCount++;
+                    title = title.substr(titlePosition + 1);
                 }
 
-                if (titleFussyCount == keyword.length) { article.score += titleFussySearchableScore }
+                if (contentPosition >= 0) {
+                    contentFussyCount++;
+                    content = content.substr(contentPosition + 1);
+                }
+            }
 
-                if (contentFussyCount == keyword.length) { article.score += contentFussySearchableScore }
+            if (titleFussyCount == keyword.length) { article.score += titleFussySearchableScore }
 
-                return article;
+            if (contentFussyCount == keyword.length) { article.score += contentFussySearchableScore }
 
-            });
-
-            articles = articles.filter(function(article) {
-                return article.score > 0;
-            });
-
-            articles = articles.sort(function(preArticle, nextArticle) {
-                return nextArticle.score - preArticle.score;
-            });
-
-            display = _this.generateDisplay(articles, wrapper);
-
-            additional(display);
+            return article;
         });
+
+        articles = articles.filter(function(article) {
+            return article.score > 0;
+        });
+
+        articles = articles.sort(function(preArticle, nextArticle) {
+            return nextArticle.score - preArticle.score;
+        });
+
+        display = this.generateDisplay(articles, wrapper);
+
+        additional(display);
     }
 
     generateDisplay(selectedArticles, wrapper) {
@@ -182,6 +176,41 @@ class Lattespirit
         return display;
     }
 
+    refreshArticles() {
+        let articles = [];
+        articles = localStorage.getItem('posts');
+        if (! articles) {
+            this.articles();
+        } else {
+            this.articlesExpired();
+        }
+    }
+
+    articles() {
+        $.ajax({
+            url: '/search.json',
+            dataType: 'json',
+        })
+        .done(function(data) {
+            localStorage.setItem('posts', JSON.stringify(data.posts));
+            localStorage.setItem('lastModified', data.lastModified);
+        });
+    }
+
+    articlesExpired() {
+        $.ajax({
+            url: '/search.json',
+            dataType: 'json',
+        })
+        .done(function(data) {
+            let lastModified = data.lastModified;
+            let cachedLastModified = localStorage.getItem('lastModified');
+            if (Date.parse(lastModified) > Date.parse(cachedLastModified)) {
+                localStorage.setItem('posts', JSON.stringify(data.posts));
+                localStorage.setItem('lastModified', data.lastModified);
+            }
+        });
+    }
 }
 
 (new Lattespirit);
