@@ -83,6 +83,10 @@ class Lattespirit
             _this.generateSearchResult($(this), 'h4', function(display) {
                 $('.media-body').empty().html(display);
             });
+
+            if (! $(this).val()) {
+                $('.media-body').empty();
+            }
         });
 
         // Display Search-Page Search Result
@@ -98,9 +102,7 @@ class Lattespirit
                 $('.ls-nav-search-data').empty().html(display);
             });
 
-            if ($(this).val() != '') {
-                $('.ls-nav-search-well').show();
-            }
+            ($(this).val() != '') ? $('.ls-nav-search-well').show() : $('.ls-nav-search-well').hide();
         });
     }
 
@@ -145,13 +147,11 @@ class Lattespirit
             if (contentFussyCount == keyword.length) { article.score += contentFussySearchableScore }
 
             return article;
-        });
-
-        articles = articles.filter(function(article) {
+        })
+        .filter(function(article) {
             return article.score > 0;
-        });
-
-        articles = articles.sort(function(preArticle, nextArticle) {
+        })
+        .sort(function(preArticle, nextArticle) {
             return nextArticle.score - preArticle.score;
         });
 
