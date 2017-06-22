@@ -170,7 +170,9 @@ class Lattespirit
                 display += `<${wrapper} class="media-heading"><h4><a href="${selectedArticle.url}" target="_blank">${selectedArticle.title}</a></${wrapper}><hr>`;
             }
         } else {
-            display = `<${wrapper} class="text-center">糟糕，没有找到搜索结果</${wrapper}><br>`;
+            display = `<${wrapper} class="text-center">匆匆的<strong>搜索结果</strong>转眼已消逝</${wrapper}><br>
+            <${wrapper} class="text-center">有几多青春美丽</${wrapper}><br><br>
+            `;
         }
 
         return display;
