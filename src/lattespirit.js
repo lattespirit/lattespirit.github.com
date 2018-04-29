@@ -1,6 +1,8 @@
 import 'jquery';
 import 'bootstrap';
 
+require('./lattespirit.css');
+
 class Lattespirit
 {
     constructor() {
