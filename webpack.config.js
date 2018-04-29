@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var inProduction = (process.env.NODE_ENV === 'production');
 
 module.exports = {
   entry: './src/lattespirit.js',
@@ -17,6 +18,11 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
+      },
+
+      {
+        test: /\.css$/,
+        loader: 'css-loader'
       }
     ]
   },
@@ -27,9 +33,14 @@ module.exports = {
          jQuery: "jquery",
          "window.jQuery": "jquery"
      }),
-      new webpack.optimize.UglifyJsPlugin({
-        comments: false
-      })
   ]
 
 };
+
+if (inProduction) {
+  module.exports.plugins.push(
+      new webpack.optimize.UglifyJsPlugin({
+        comments: false
+      })
+  );
+}
