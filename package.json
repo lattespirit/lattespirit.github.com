@@ -12,6 +12,7 @@
     "cross-env": "^5.1",
     "css-loader": "^0.28.11",
     "jquery": "v3",
+    "style-loader": "^0.21.0",
     "webpack": "^2.2.1"
   }
 }
