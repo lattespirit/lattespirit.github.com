@@ -1,61 +1,86 @@
----
-layout: default
-title: Lattespirit
----
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-      {% for post in paginator.posts limit: 20 %}
-        <ul class="list-unstyled">
-        {% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}
-        {% if year != y %}
-            {% assign year = y %}
-            <li><h4>{{ y }}</h4></li>
-        {% endif %}
-        <li>
-          <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>&nbsp&nbsp
-          <a href="{{ site.url }}{{ post.url }}">{{post.title}}</a>
-        </li>
-      </ul>
-    {% endfor %}
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="css/lattespirit.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <style type="text/css"></style>
+  </head>
+  <body style="font-family: 'Nunito', sans-serif">
+    <div class="fixed bg-cover min-w-full min-h-full -z-1" style="background-image: url('assets/background.jpg')"></div>
 
-  {% if paginator.total_pages > 1 %}
-    <div class="col-md-6 col-md-offset-3">
-      <center>
-        <nav aria-label="Page navination">
-          <ul class="pagination">
-            {% if paginator.previous_page %}
-                {% if paginator.page == 2 %}
-                  <li><a href="{{ site.url }}">&laquo;</a></li>
-                {% else %}
-                  <li><a href="/page{{ paginator.previous_page }}">&laquo;</a></li>
-                {% endif %}
-            {% else %}
-                <li><span class="disabled">&laquo;</span></li>
-            {% endif %}
+    <header class="flex justify-between items-center w-72 h-20 x:w-86 mx-auto">
+      <a class="text-white inline-block text-xl x:text-2xl font-extrabold" href="/">Lattespirit</a>
 
-            {% for page in (1..paginator.total_pages) %}
-              {% if page == paginator.page %}
-                {% if paginator.page == 1 %}
-                  <li class="active"><a href="{{ site.url }}">1</a></li>
-                {% else %}
-                  <li class="active"><a href="/page{{ page }}">{{ page }}</a></li>
-                {% endif %}
-              {% elsif page == 1 %}
-                <li><a href="{{ site.url }}">1</a></li>
-              {% else %}
-                <li><a href="/page{{ page }}">{{ page }}</a></li>
-              {% endif %}
-            {% endfor %}
+      <div class="flex justify-center items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-4 h-4 x:w-6 x:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </div>
 
-            {% if paginator.next_page %}
-              <li><a href="/page{{ paginator.next_page }}">&raquo;</a></li>
-            {% else %}
-              <li><span class="disabled">&raquo;</span></li>
-            {% endif %}
-          </ul>
-        </nav>
-      </center>
+      <div class="hidden lg:block">
+        <a class="text-white inline-block mr-6" href="/">Home</a>
+        <a class="text-white inline-block mr-6" href="/archives">Archives</a>
+        <a class="text-white inline-block mr-6" href="/testimonials">Testimonials</a>
+        <a class="text-white inline-block mr-6" href="/about">About</a>
+      </div>
+    </header>
+
+    <div class="w-72 x:w-86 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85">
+      <div class="px-6 pt-4">
+        <h1 class="font-bold text-xl x:text-2xl">Rerum consequatur officia quam.</h1>
+        <p class="mt-2 text-gray-darkest text-sm x:text-base">Veniam pariatur autem assumenda laboriosam dolor dolorem quo voluptatem
+         omnis libero necessitatibus corporis voluptates dolorem error eveniet quia
+        sed ut voluptates mollitia est deleniti...</p>
+      </div>
+      <div class="flex px-6 py-5 justify-between items-center">
+        <span class="text-gray-darkest">2019-10-10</span>
+        <a href="#" class="inline-block bg-purple-light rounded text-gray-lighter text-sm x:text-base px-2 py-1">Read More</a>
+      </div>
     </div>
-  {% endif %}
-</div>
+
+    <div class="w-72 x:w-86 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden">
+      <img class="w-full h-40" src="/assets/microblog37-04.jpg">
+      <div class="px-6 pt-4">
+        <h1 class="font-bold text-xl x:text-2xl">Rerum consequatur officia quam.</h1>
+        <p class="mt-2 text-gray-darkest text-sm x:text-base">Veniam pariatur autem assumenda laboriosam dolor dolorem quo voluptatem
+         omnis libero necessitatibus</p>
+      </div>
+      <div class="flex px-6 py-5 justify-between items-center">
+        <span class="text-gray-darkest">2019-10-10</span>
+        <a href="#" class="inline-block bg-purple-light rounded text-gray-lighter text-sm x:text-base px-2 py-1">Read More</a>
+      </div>
+    </div>
+
+    <div class="flex w-72 x:w-86 h-8 x:h-10 mt-12 mx-auto">
+      <div class="flex justify-center items-center w-8 h-8 x:w-10 x:h-10 rounded-full bg-gray-lighter opacity-85">
+        <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 1L1 5l4 4" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="flex justify-center items-center mx-auto rounded-full bg-gray-lighter opacity-85">
+        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mx-4 mr-2 text-sm x:text-base justify-center items-center">1</a>
+        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-2 text-sm x:text-base justify-center items-center">2</a>
+        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-2 text-sm x:text-base justify-center items-center bg-purple-light rounded-full text-white">3</a>
+        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-2 text-sm x:text-base justify-center items-center">4</a>
+        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-4 text-sm x:text-base justify-center items-center">5</a>
+      </div>
+
+      <div class="flex justify-center items-center w-8 h-8 x:w-10 x:h-10 rounded-full bg-gray-lighter opacity-85">
+        <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 9l4-4-4-4" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+
+    <footer class="w-72 x:w-86 mx-auto mt-18 text-white text-xs x:text-base">
+      <p class="text-center">
+        Image from <a href="#" class="text-pink-dark">Febin_Raj</a>
+      </p>
+      <p class="text-center mt-3">
+        Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-pink-dark">Jekyll</a> @ <a href="https://github.com" target="_blank" class="text-pink-dark">Github</a>
+      </p>
+      <p class="text-center my-3">
+        © 2012 - 2019 | Design with ❤️ by <a href="#" class="text-pink-dark">Lattespirit</a>
+      </p>
+    </footer>
+  </body>
+</html>
