@@ -12,14 +12,14 @@
   <body style="font-family: 'Nunito', sans-serif">
     <div class="fixed bg-cover min-w-full min-h-full -z-1" style="background-image: url('assets/background.jpg')"></div>
 
-    <header class="flex justify-between items-center w-72 h-20 x:w-86 mx-auto">
+    <header class="flex justify-between items-center w-72 py-6 x:w-84 sm:w-100 md:w-140 lg:w-180 mx-auto">
       <a class="text-white inline-block text-xl x:text-2xl font-extrabold" href="/">Lattespirit</a>
 
-      <div class="flex justify-center items-center">
+      <div class="flex justify-center items-center md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-4 h-4 x:w-6 x:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </div>
 
-      <div class="hidden lg:block">
+      <div class="hidden md:block self-end">
         <a class="text-white inline-block mr-6" href="/">Home</a>
         <a class="text-white inline-block mr-6" href="/archives">Archives</a>
         <a class="text-white inline-block mr-6" href="/testimonials">Testimonials</a>
@@ -27,56 +27,58 @@
       </div>
     </header>
 
-    <div class="w-72 x:w-86 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85">
+    <div class="w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85">
       <div class="px-6 pt-4">
-        <h1 class="font-bold text-xl x:text-2xl">Rerum consequatur officia quam.</h1>
-        <p class="mt-2 text-gray-darkest text-sm x:text-base">Veniam pariatur autem assumenda laboriosam dolor dolorem quo voluptatem
+        <h1 class="font-bold text-xl">Rerum consequatur officia quam.</h1>
+        <p class="mt-2 text-gray-darkest text-sm x:text-base md:text-sm">Veniam pariatur autem assumenda laboriosam dolor dolorem quo voluptatem
          omnis libero necessitatibus corporis voluptates dolorem error eveniet quia
         sed ut voluptates mollitia est deleniti...</p>
       </div>
-      <div class="flex px-6 py-5 justify-between items-center">
-        <span class="text-gray-darkest">2019-10-10</span>
-        <a href="#" class="inline-block bg-purple-light rounded text-gray-lighter text-sm x:text-base px-2 py-1">Read More</a>
+      <div class="flex px-6 pt-4 pb-3 justify-between items-center">
+        <span class="text-gray-darkest text-sm">2019-10-10</span>
+        <a href="#" class="inline-block bg-purple-light rounded text-gray-lighter text-xs x:text-sm px-2 py-1 text-center">Read More</a>
       </div>
     </div>
 
-    <div class="w-72 x:w-86 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden">
-      <img class="w-full h-40" src="/assets/microblog37-04.jpg">
-      <div class="px-6 pt-4">
-        <h1 class="font-bold text-xl x:text-2xl">Rerum consequatur officia quam.</h1>
-        <p class="mt-2 text-gray-darkest text-sm x:text-base">Veniam pariatur autem assumenda laboriosam dolor dolorem quo voluptatem
-         omnis libero necessitatibus</p>
-      </div>
-      <div class="flex px-6 py-5 justify-between items-center">
-        <span class="text-gray-darkest">2019-10-10</span>
-        <a href="#" class="inline-block bg-purple-light rounded text-gray-lighter text-sm x:text-base px-2 py-1">Read More</a>
+    <div class="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden">
+      <div class="h-40 md:w-80 md:h-auto bg-cover" style="background-image: url('assets/microblog37-04.jpg')"></div>
+      <div>
+          <div class="px-6 pt-4">
+            <h1 class="font-bold text-xl">Rerum consequatur officia quam.</h1>
+            <p class="mt-2 text-gray-darkest text-sm x:text-base md:text-sm">Veniam pariatur autem assumenda laboriosam dolor dolorem quo voluptatem
+             omnis libero necessitatibus</p>
+          </div>
+          <div class="flex px-6 pt-4 pb-3 justify-between items-center">
+            <span class="text-gray-darkest text-sm">2019-10-10</span>
+            <a href="#" class="inline-block bg-purple-light rounded text-gray-lighter text-xs x:text-sm px-2 py-1 text-center">Read More</a>
+          </div>
       </div>
     </div>
 
-    <div class="flex w-72 x:w-86 h-8 x:h-10 mt-12 mx-auto">
-      <div class="flex justify-center items-center w-8 h-8 x:w-10 x:h-10 rounded-full bg-gray-lighter opacity-85">
+    <div class="flex justify-center w-72 x:w-84 sm:w-100 h-8 mt-12 mx-auto">
+      <div class="flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85">
         <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 1L1 5l4 4" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
 
-      <div class="flex justify-center items-center mx-auto rounded-full bg-gray-lighter opacity-85">
-        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mx-4 mr-2 text-sm x:text-base justify-center items-center">1</a>
-        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-2 text-sm x:text-base justify-center items-center">2</a>
-        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-2 text-sm x:text-base justify-center items-center bg-purple-light rounded-full text-white">3</a>
-        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-2 text-sm x:text-base justify-center items-center">4</a>
-        <a href="#" class="flex inline-block w-6 h-6 x:w-8 x:h-8 mr-4 text-sm x:text-base justify-center items-center">5</a>
+      <div class="flex justify-center items-center mx-4 rounded-full bg-gray-lighter opacity-85">
+        <a href="#" class="flex inline-block w-6 h-6 mx-4 mr-2 text-sm x:text-base justify-center items-center">1</a>
+        <a href="#" class="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center">2</a>
+        <a href="#" class="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center bg-purple-light rounded-full text-white">3</a>
+        <a href="#" class="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center">4</a>
+        <a href="#" class="flex inline-block w-6 h-6 mr-4 text-sm x:text-base justify-center items-center">5</a>
       </div>
 
-      <div class="flex justify-center items-center w-8 h-8 x:w-10 x:h-10 rounded-full bg-gray-lighter opacity-85">
+      <div class="flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85">
         <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 9l4-4-4-4" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
     </div>
 
-    <footer class="w-72 x:w-86 mx-auto mt-18 text-white text-xs x:text-base">
+    <footer class="w-72 x:w-84 sm:w-100 mx-auto mt-18 text-white text-xs x:text-base">
       <p class="text-center">
-        Image from <a href="#" class="text-pink-dark">Febin_Raj</a>
+        Image from <a href="https://dribbble.com/febinraj" target="_blank" class="text-pink-dark">Febin_Raj</a>
       </p>
       <p class="text-center mt-3">
-        Powered by <a href="https://jekyllrb.com/" target="_blank" class="text-pink-dark">Jekyll</a> @ <a href="https://github.com" target="_blank" class="text-pink-dark">Github</a>
+        Powered by <a href="https://jekyllrb.com" target="_blank" class="text-pink-dark">Jekyll</a> @ <a href="https://github.com" target="_blank" class="text-pink-dark">Github</a>
       </p>
       <p class="text-center my-3">
         © 2012 - 2019 | Design with ❤️ by <a href="#" class="text-pink-dark">Lattespirit</a>
