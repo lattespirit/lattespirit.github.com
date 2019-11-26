@@ -27,41 +27,37 @@
       </div>
     </header>
 
-    <p class="text-lg text-white text-center">What People Said...</p>
+    <p class="text-xl text-white text-center sm:text-2xl sm:font-bold sm:mt-4 lg:mt-12">What People Said...</p>
 
-    <div class="relative bg-gray w-52 h-88 mx-auto mt-8 rounded-lg">
-        <div class="absolute z-10 bg-gray-light w-60 h-84 inset-0 mt-4 rounded-lg -inset-x-4"></div>
-        <div class="absolute z-20 bg-gray-lighter w-68 h-80 inset-0 mt-8 rounded-lg -inset-x-8">
-            <div class="flex justify-center mt-6">
+    <div class="relative bg-gray w-52 h-88 lg:w-80 lg:h-112 mx-auto mt-8 lg:mt-12 rounded-lg">
+        <div class="absolute z-10 bg-gray-light w-60 h-84 lg:w-88 lg:h-108 inset-0 mt-4 rounded-lg -inset-x-4"></div>
+        <div class="absolute z-20 bg-gray-lighter w-68 h-80 lg:w-96 lg:h-104 inset-0 mt-8 rounded-lg -inset-x-8">
+            <div class="flex justify-center mt-6 lg:mt-10">
                 <svg width="34" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.444 24.146v-4.289c.639-.678 4.647-2.208 4.667-4.288.01-1.109-.225-3.49-4.667-3.51L2.611 1.144h10.5C12.81 19.627 9.885 23.845 1.444 24.146zM20.889 24.146v-4.289c.638-.678 4.647-2.208 4.667-4.288.01-1.109-.226-3.49-4.667-3.51l1.167-10.916h10.5c-.303 18.484-3.227 22.702-11.667 23.003z" fill="#4F239F" stroke="#4F239F" stroke-width="1.56" stroke-linejoin="round"/></svg>
             </div>
 
-            <p class="text-center text-sm mx-6 mt-6 text-gray-darkest">Nventore et aliquam in assumenda corrupti eos est id et quis corporis molestiae distinctio et et quo est esse.</p>
+            <p class="text-center text-sm lg:text-lg mx-6 lg:mx-10 mt-6 lg:mt-10 text-gray-darkest">Nventore et aliquam in assumenda corrupti eos est id et quis corporis molestiae distinctio et et quo est esse.</p>
 
-            <p class="text-center text-sm mx-6 mt-4 text-gray-darkest">Consectetur adipisicing elit. Dignissimos, soluta?</p>
+            <p class="text-center text-sm lg:text-lg mx-6 lg:mx-10 mt-4 lg:mt-10 text-gray-darkest">Consectetur adipisicing elit. Dignissimos, soluta?</p>
         </div>
 
-        <div class="absolute z-30 flex flex-col justify-center w-68 h-8 inset-0 rounded-lg mt-68 -inset-x-8 text-center">
-            <p class="text-sm font-bold">Tony Tony Chopper</p>
-            <p class="text-xs text-gray-darker">Tony Tony Chopper</p>
+        <div class="absolute z-30 flex flex-col justify-center w-68 h-8 lg:w-96 lg:h-80 inset-0 rounded-lg mt-68 lg:mt-52 -inset-x-8 text-center">
+            <p class="text-sm lg:text-base font-bold">Tony Tony Chopper</p>
+            <p class="text-xs lg:text-base text-gray-darker mt-1">Pet</p>
         </div>
 
-        <div class="absolute z-40 flex justify-center w-68 h-16 inset-0 rounded-lg mt-80 -inset-x-8">
-            <div class="w-16 h-16 rounded-full bg-blue-500 bg-center bg-cover" style="background-image: url('/assets/46.jpg')"></div>
-        </div>
-    </div>
-
-    <div class="flex justify-between w-56 h-6 mx-auto mt-8">
-        <div class="bg-purple-light rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><path d="M15 18l-6-6 6-6"/></svg>
-        </div>
-
-        <div class="bg-purple-light rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><path d="M9 18l6-6-6-6"/></svg>
+        <div class="absolute z-40 flex justify-center w-68 h-16 lg:w-96 lg:h-20 inset-0 rounded-lg mt-80 lg:mt-102 -inset-x-8">
+            <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-blue-500 bg-center bg-cover" style="background-image: url('/assets/46.jpg')"></div>
         </div>
     </div>
 
-    <footer class="w-72 x:w-84 sm:w-100 mx-auto mt-12 text-white text-xs x:text-base">
+    <div class="flex justify-between w-56 h-6 mx-auto mt-8 sm:w-96 sm:-mt-42 lg:w-128 lg:-mt-56">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left inline-block w-6 h-6 lg:w-7 lg:h-7  bg-purple-light rounded-full text-white"><polyline points="15 18 9 12 15 6"></polyline></svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right inline-block w-6 h-6 lg:w-7 lg:h-7  bg-purple-light rounded-full text-white"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </div>
+
+    <footer class="w-72 x:w-84 sm:w-100 mx-auto mt-18 text-white text-xs x:text-base sm:fixed sm:bottom-0 sm:w-full sm:text-center">
       <p class="text-center">
         Image from <a href="https://dribbble.com/febinraj" target="_blank" class="text-pink-dark">Febin_Raj</a>
       </p>
