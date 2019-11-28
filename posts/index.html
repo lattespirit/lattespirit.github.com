@@ -12,7 +12,7 @@
   <body style="font-family: 'Nunito', sans-serif">
     <div class="fixed bg-cover min-w-full min-h-full -z-1" style="background-image: url('/assets/background.jpg')"></div>
 
-    <header class="flex justify-between items-center w-72 py-6 x:w-84 sm:w-100 md:w-140 lg:w-180 mx-auto">
+    <header class="flex justify-between items-center py-6 box">
       <a class="text-white inline-block text-xl x:text-2xl font-extrabold" href="/">Lattespirit</a>
 
       <div class="flex justify-center items-center md:hidden">
@@ -27,28 +27,35 @@
       </div>
     </header>
 
-    <div class="flex flex-col items-center mx-3 mt-4 md:w-140 md:mx-auto bg-gray-lighter opacity-85 rounded-lg">
+    <div class="flex flex-col items-center box mt-4 bg-gray-lighter opacity-85 rounded-lg">
         <p class="text-lg x:text-xl font-bold mt-4">Facere ea consequatur.</p>
         <p class="text-sm x:text-base text-gray-darkest mt-1">2019-11-12</p>
-        <div class="mx-4">
-            <p class="my-4">Tempora a vero consequatur quia fuga vitae et. Maxime accusamus beatae expedita ducimus quia nihil quasi. Esse a dolores blanditiis dolore delectus magnam. Aut adipisci repudiandae architecto illo qui odio.</p>
-            <img class="rounded-lg my-4" src="/assets/14.jpg">
-            <p class="my-4">Rerum rerum quos est quisquam. Vitae ad est consequatur consequatur unde rem et. Facilis ad voluptatem et non quod enim. Est consequuntur deserunt doloribus voluptatem.</p>
-            <p class="my-4">Accusamus in et dolorem et nisi. Iure sit deserunt et et placeat nisi. Fugiat non esse sint et ipsum porro mollitia. Perspiciatis id quas sit labore omnis.
+        <div class="mx-4 md:mx-8">
+            <p class="my-4 md:my-6">Tempora a vero consequatur quia fuga vitae et. Maxime accusamus beatae expedita ducimus quia nihil quasi. Esse a dolores blanditiis dolore delectus magnam. Aut adipisci repudiandae architecto illo qui odio.</p>
+            <img class="rounded-lg my-4 md:my-6 mx-auto shadow-lg" src="/assets/14.jpg">
+            <p class="my-4 md:my-6">Rerum rerum quos est quisquam. Vitae ad est consequatur consequatur unde rem et. Facilis ad voluptatem et non quod enim. Est consequuntur deserunt doloribus voluptatem.</p>
+            <p class="my-4 md:my-6">Accusamus in et dolorem et nisi. Iure sit deserunt et et placeat nisi. Fugiat non esse sint et ipsum porro mollitia. Perspiciatis id quas sit labore omnis.
 
             Quos consectetur ad voluptates soluta est. Sapiente dolores est sunt aliquam reicidis consequatur. Consequatur fugit nam et  praesentium aut quisquam. Distinctio ab dicta earum inventore laboriosam sequi. Deserunt fugit facere officiis dolor earum vero. Et ipsam eligendi consequuntur ut
             dignissimos veritatis.</p>
         </div>
     </div>
 
-    <div class="flex justify-between h-6 mx-6 x:mx-10 mt-8">
-        <div class="flex items-center w-24 text-sm h-8 bg-gray-lighter hover:bg-purple-light hover:text-white opacity-85 rounded-full">
+    <div class="flex justify-between x:justify-center h-6 box mt-8">
+        <div class="flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light hover:text-white opacity-85 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left w-4 h-4 inline-block mx-3"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
             <p>Prev</p>
         </div>
-        <div class="flex justify-end items-center w-24 text-sm h-8 bg-gray-lighter hover:bg-purple-light hover:text-white opacity-85 rounded-full">
+        <div class="flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light hover:text-white opacity-85 rounded-full">
             <p>Next</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right w-4 h-4 inline-block mx-3"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+        </div>
+    </div>
+
+    <div class="box mt-20">
+        <textarea class="w-full bg-gray-lighter rounded-lg h-40 placeholder-gray-darker" placeholder="Add Comment"></textarea>
+        <div class="flex justify-center items-center mt-6 ml-auto rounded-lg w-20 py-1 bg-purple-light text-white text-sm">
+            POST
         </div>
     </div>
 

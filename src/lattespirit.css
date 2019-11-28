@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
+
+.box {
+  @apply w-72 mx-auto;
+}
+
+@screen x {
+    .box {
+        @apply w-84;
+    }
+}
+
+@screen sm {
+    .box {
+        @apply w-100;
+    }
+}
+
+@screen md {
+    .box {
+        @apply w-140;
+    }
+}
+
+@screen lg {
+    .box {
+        @apply w-180;
+    }
+}
+
 @tailwind utilities;
