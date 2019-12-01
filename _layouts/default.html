@@ -1,131 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{{ page.title }} - {{ site.name }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row" style="margin-bottom: 1em;">
-        <!-- For Devices that Larger than Mobile -->
-        <div class="hidden-xs col-md-6 col-md-offset-3">
-          <h2 class="text-muted">{{ page.title }}</h2>
-          <ul class="nav nav-tabs">
-            <li class="pull-right"><a href="{{ site.url }}/about/">About</a></li>
-            <li class="pull-right hidden-xs hidden-lg"><a href="{{ site.url }}/search/">Search</a></li>
-            <li class="pull-right"><a href="{{ site.url }}/guestbook/">Guestbook</a></li>
-            <li class="pull-right"><a href="{{ site.url }}/">Home</a></li>
-          </ul>
+<html lang="en" {% if page.isFullPage %}class="h-full"{% endif %}>
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{{ page.title }} - {{ site.name }}{% endif %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="{{ site.description }}">
+        <link rel="stylesheet" href="{{ site.url }}/css/lattespirit.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    <body class="flex flex-col h-full" style="font-family: 'Nunito', sans-serif">
+        <div class="fixed bg-cover min-w-full min-h-full -z-1" style="background-image: url('/assets/background.jpg')"></div>
+        <div class="flex flex-col min-w-full min-h-full">
+            {% include header.html %}
+
+            {{ content }}
+
+            {% include footer.html %}
         </div>
-        <!-- For Devices that Larger than Mobile - End -->
-
-        <!-- For Mobile -->
-
-        <!-- Show Mobile Normal Nav -->
-        <nav class="visible-xs navbar navbar-default" id="ls-nav-default">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ls-navbar-collapse" aria-expanded="false" style="margin-top: 12px;">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <button class="navbar-toggle" style="border-color: transparent;"><span class="glyphicon glyphicon-search" id="ls-show-search-nav-button" aria-hidden="true"></span></button>
-              <a class="navbar-brand" href="{{ page.url }}" style="margin-top: 5px;"><strong>{{ page.title }}</strong></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="ls-navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li {% if page.title == 'Lattespirit' %} class="active" {% endif %}><a href="{{ site.url }}">Home</a></li>
-                <li {% if page.title == 'Guestbook' %} class="active" {% endif %}><a href="{{ site.url }}/guestbook/">Guestbook</a></li>
-                <li {% if page.title == 'About' %} class="active" {% endif %}><a href="{{ site.url }}/about/">About</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <!-- Show Mobile Search Nav -->
-        <nav class="visible-xs navbar navbar-default ls-hide-nav" id="ls-nav-search">
-          <div class="container-fluid">
-            <form class="navbar-form ls-nav-search-form" role="search">
-              <div class="form-group">
-                  <div class="input-group">
-                      <div class="input-group-addon">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </div>
-                      <input type="text" class="form-control ls-nav-search-input" placeholder="活动一下手指...">
-                      <div class="input-group-addon" style="background-color: #fff;">
-                          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="ls-hide-search-button"></span>
-                      </div>
-                  </div>
-              </div>
-            </form>
-          </div>
-        </nav>
-        <div class="well ls-nav-search-well" style="display: none;">
-            <div class="ls-nav-search-data"></div>
-            <footer style="margin-bottom: -10px;">
-                <p class="text-center">Search by <a href="{{ site.url }}" target="_blank"><strong>@Lattespirit</strong></a></p>
-            </footer>
-        </div>
-
-        <!-- For Mobile - End -->
-
-      </div>
-
-      {{ content }}
-
-      <!-- Control Button -->
-      <button type="button" data-toggle="modal" data-target="#search-modal" style="display: none"></button>
-
-      <!-- Search Modal -->
-      <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-title">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header" style="border-bottom-color: transparent">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-              <center>
-                <label><h3>搜索那些碎念 - Lattespirit</h3></label>
-              </center>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
-                <input type="text" class="form-control ls-modal-search-input" placeholder="活动一下手指...">
-              </div>
-            </div>
-            <div class="modal-body">
-              <div class="media">
-                <div class="media-body"></div>
-              </div>
-            </div>
-            <div class="modal-footer">
-                <p class="text-center">Search by <a href="{{ site.url }}" target="_blank"><strong>@Lattespirit</strong></a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <hr>
-          <footer>
-            <center>
-            <p>Powered by <a href="http://www.jekyllrb.com">Jekyll</a> @ <a href="https://github.com">Github</a> | © 2012 - {{ "now" | date: "%Y" }} | <a href="{{ site.url }}">Lattespirit</a> </p>
-            </center>
-          </footer>
-        </div>
-      </div>
-    </div>
-
-      <script src="{{ site.url }}/js/lattespirit.js"></script>
     </body>
-  </html>
+</html>
