@@ -1,32 +1,46 @@
 ---
 layout: default
 ---
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    {{ content }}
-    <nav>
-      <ul class="pager">
-        {% if page.previous %}
-            <li><a href="{{ page.previous.url }}">上篇</a></li>
-        {% else %}
-            <li class="disabled"><a href="">未始</a></li>
-        {% endif %}
-
-        &nbsp;&nbsp;&nbsp;
-
-        {% if page.next %}
-            <li><a href="{{ page.next.url }}">下篇</a></li>
-        {% else %}
-            <li class="disabled"><a href="">未央</a></li>
-        {% endif %}
-      </ul>
-    </nav>
-    <p class="text-right">Created on <strong>{{ page.date | date:"%Y-%m-%d" }}</strong></p>
-  </div>
+<div class="flex flex-col items-center box mt-4 p-2 md:p-4 bg-gray-lighter opacity-85 rounded-lg">
+    <p class="text-lg x:text-xl font-bold mt-4">{{ page.title }}</p>
+    <p class="text-sm x:text-base text-gray-darkest my-2">{{ page.date | date: "%Y-%m-%d" }}</p>
+    <div class="text-sm md:text-base mx-4 md:mx-8">
+        {{ page.content }}
+    </div>
 </div>
 
-<div class="row disqus">
-  <div class="col-md-6 col-md-offset-3">
-      {% include comments.md %}
-  </div>
+<div class="flex justify-between x:justify-center h-6 box mt-8">
+    {% if page.previous %}
+        {% assign previous_url = page.previous.url %}
+        {% assign previous_text = "上篇" %}
+        {% assign previous_class = "cursor-pointer" %}
+    {% else %}
+        {% assign previous_url = "#" %}
+        {% assign previous_text = "未始" %}
+        {% assign previous_class = "cursor-not-allowed" %}
+    {% endif %}
+    {% if page.next %}
+        {% assign next_url = page.next.url %}
+        {% assign next_text = "下篇" %}
+        {% assign next_class = "cursor-pointer" %}
+    {% else %}
+        {% assign next_url = "#" %}
+        {% assign next_text = "未央" %}
+        {% assign next_class = "cursor-not-allowed" %}
+    {% endif %}
+    <a class="inline-block {{ previous_class }} flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full" href="{{ previous_url }}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left w-4 h-4 stroke-current inline-block mx-3"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+        <p>{{ previous_text }}</p>
+    </a>
+    <a class="inline-block {{ next_class }} flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full" href="{{ next_url }}">
+        <p>{{ next_text }}</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right w-4 h-4 stroke-current inline-block mx-3"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+    </a>
+</div>
+
+<div class="box mt-20">
+    <textarea class="w-full bg-gray-lighter rounded-lg h-40 placeholder-gray-darker" placeholder="Add Comment"></textarea>
+    <div class="flex justify-center items-center mt-6 ml-auto rounded-lg w-20 py-1 bg-purple-light text-white text-sm">
+        POST
+    </div>
 </div>
