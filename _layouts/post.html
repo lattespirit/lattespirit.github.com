@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="flex flex-col items-center box mt-4 p-2 md:p-4 bg-gray-lighter opacity-85 rounded-lg">
-    <p class="text-lg x:text-xl font-bold mt-4">{{ page.title }}</p>
+    <p class="text-lg x:text-xl md:text-2xl font-bold mt-4">{{ page.title }}</p>
     <p class="text-sm x:text-base text-gray-darkest my-2">{{ page.date | date: "%Y-%m-%d" }}</p>
-    <div class="text-sm md:text-base mx-4 md:mx-8">
+    <div class="text-sm md:text-base mx-4 md:mx-8 paragraph">
         {{ page.content }}
     </div>
 </div>

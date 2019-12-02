@@ -29,4 +29,8 @@
     }
 }
 
+.paragraph p {
+    @apply my-4
+}
+
 @tailwind utilities;
