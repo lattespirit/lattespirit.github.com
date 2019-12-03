@@ -1,6 +1,6 @@
-var path = require('path');
-var webpack = require('webpack');
-var inProduction = (process.env.NODE_ENV === 'production');
+const path = require('path');
+const webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   entry: './src/lattespirit.js',
@@ -8,39 +8,20 @@ module.exports = {
     filename: 'lattespirit.js',
     path: path.resolve(__dirname, 'js')
   },
-
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
-        }
-      },
-
-      {
-        test: /\.css$/,
-        loader: ['style-loader', 'css-loader']
+        test: /\.vue$/,
+        loader: 'vue-loader'
       }
     ]
   },
-
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
   plugins: [
-      new webpack.ProvidePlugin({
-         $: "jquery",
-         jQuery: "jquery",
-         "window.jQuery": "jquery"
-     }),
+    new VueLoaderPlugin()
   ]
-
 };
-
-if (inProduction) {
-  module.exports.plugins.push(
-      new webpack.optimize.UglifyJsPlugin({
-        comments: false
-      })
-  );
-}

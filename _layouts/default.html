@@ -10,12 +10,14 @@
     </head>
     <body class="flex flex-col h-full" style="font-family: 'Nunito', sans-serif">
         <div class="fixed bg-cover min-w-full min-h-full -z-1" style="background-image: url('/assets/background.jpg')"></div>
-        <div class="flex flex-col min-w-full min-h-full">
+        <div id="app" class="flex flex-col min-w-full min-h-full">
             {% include header.html %}
 
             {{ content }}
 
             {% include footer.html %}
         </div>
+
+        <script type="text/javascript" src="/js/lattespirit.js"></script>
     </body>
 </html>
