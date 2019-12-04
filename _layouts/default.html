@@ -5,7 +5,7 @@
         <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{{ page.title }} - {{ site.name }}{% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="description" content="{{ site.description }}">
-        <link rel="stylesheet" href="{{ site.url }}/css/lattespirit.css">
+        <link rel="stylesheet" href="{{ site.url }}/dist/lattespirit.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     </head>
     <body class="flex flex-col h-full" style="font-family: 'Nunito', sans-serif">
@@ -18,6 +18,6 @@
             {% include footer.html %}
         </div>
 
-        <script type="text/javascript" src="/js/lattespirit.js"></script>
+        <script type="text/javascript" src="{{ site.url }}/dist/lattespirit.js"></script>
     </body>
 </html>

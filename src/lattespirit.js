@@ -1,3 +1,4 @@
+import './lattespirit.css';
 import Vue from "vue";
 
 const files = require.context('./', true, /\.vue$/i)
