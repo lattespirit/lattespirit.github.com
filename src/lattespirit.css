@@ -33,4 +33,8 @@
     @apply my-4
 }
 
+.typography-nav {
+    @apply font-bold border-b-2 border-black;
+}
+
 @tailwind utilities;

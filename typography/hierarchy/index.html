@@ -1,0 +1,31 @@
+---
+layout: typography
+title: Hierarchy
+headings:
+  - name: Heading 9 (xs)
+    class: xs
+  - name: Heading 8 (sm)
+    class: sm
+  - name: Heading 7 (base)
+    class: base
+  - name: Heading 6 (xl)
+    class: xl
+  - name: Heading 5 (2xl)
+    class: 2xl
+  - name: Heading 4 (3xl)
+    class: 3xl
+  - name: Heading 3 (4xl)
+    class: 4xl
+  - name: Heading 2 (5xl)
+    class: 5xl
+  - name: Heading 1 (6xl)
+    class: 6xl
+---
+
+<div class="hidden md:block text-3xl font-bold my-2">Hierarchy</div>
+
+<div class="my-4 md:my-8">
+    {% for heading in page.headings %}
+        <p class="text-{{ heading.class }}">{{ heading.name }}</p>
+    {% endfor %}
+</div>
