@@ -1,8 +1,23 @@
+---
+navs:
+  - title: Typography
+    name: Logos
+    path: typography
+  - title: Colors
+    name: Colors
+    path: typography/colors
+  - title: Typeface
+    name: Typeface
+    path: typography/typeface
+  - title: Hierarchy
+    name: Hierarchy
+    path: typography/hierarchy
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{% if page.title == 'Typography' %}{{ Typography }}{% else %}{{ page.title }} - Typography{% endif %}</title>
+        <title>{% if page.title == 'Typography' %}Typography{% else %}{{ page.title }} - Typography{% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="description" content="{{ site.description }}">
         <link rel="stylesheet" href="{{ site.url }}/dist/lattespirit.css">
@@ -14,18 +29,11 @@
         </div>
         <div class="md:flex px-4 md:px-0">
             <div class="flex justify-between md:block md:w-20 my-4">
-                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Typography" %}{{ "typography-nav" }}{% endif %}'>
-                    <a class="md:px-8" href="{{ site.url }}/typography">Logos</a>
-                </div>
-                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Colors" %}{{ "typography-nav" }}{% endif %}'>
-                    <a class="md:px-8" href="{{ site.url }}/typography/colors">Colors</a>
-                </div>
-                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Typeface" %}{{ "typography-nav" }}{% endif %}'>
-                    <a class="md:px-8" href="{{ site.url }}/typography/typeface">Typeface</a>
-                </div>
-                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Hierarchy" %}{{ "typography-nav" }}{% endif %}'>
-                    <a class="md:px-8" href="{{ site.url }}/typography/hierarchy">Hierarchy</a>
-                </div>
+                {% for nav in layout.navs %}
+                    <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == nav.title %}{{ "typography-nav" }}{% endif %}'>
+                        <a class="md:px-8" href="{{ site.url }}/{{ nav.path }}">{{ nav.name }}</a>
+                    </div>
+                {% endfor %}
             </div>
             <div class="w-72 x:w-80 md:w-200 mx-auto md:mx-0 md:px-12 lg:px-20">
                 {{ content }}
