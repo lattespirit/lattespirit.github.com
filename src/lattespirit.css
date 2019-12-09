@@ -34,7 +34,13 @@
 }
 
 .typography-nav {
-    @apply font-bold border-b-2 border-black;
+    @apply font-bold border-b-2 border-purple-light;
+}
+
+@screen md {
+    .typography-nav {
+        @apply border-l-2;
+    }
 }
 
 @tailwind utilities;

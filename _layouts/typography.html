@@ -9,28 +9,26 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     </head>
     <body class="flex flex-col h-full" style="font-family: 'Nunito', sans-serif">
-        <div class="px-4 py-6 md:px-8">
-            <div>
-                <a href="{{ site.url }}" class="text-2xl md:text-3xl font-bold">Lattespirit</a>
-            </div>
-            <div class="md:flex">
-                <ul class="flex justify-between md:block md:w-20 my-4">
-                    <li class='md:py-8 md:border-0 md:text-lg {% if page.title == "Typography" %}{{ "typography-nav" }}{% endif %}'>
-                        <a href="{{ site.url }}/typography">Logos</a>
-                    </li>
-                    <li class='md:py-8 md:border-0 md:text-lg {% if page.title == "Colors" %}{{ "typography-nav" }}{% endif %}'>
-                        <a href="{{ site.url }}/typography/colors">Colors</a>
-                    </li>
-                    <li class='md:py-8 md:border-0 md:text-lg {% if page.title == "Typeface" %}{{ "typography-nav" }}{% endif %}'>
-                        <a href="{{ site.url }}/typography/typeface">Typeface</a>
-                    </li>
-                    <li class='md:py-8 md:border-0 md:text-lg {% if page.title == "Hierarchy" %}{{ "typography-nav" }}{% endif %}'>
-                        <a href="{{ site.url }}/typography/hierarchy">Hierarchy</a>
-                    </li>
-                </ul>
-                <div class="w-72 x:w-80 md:w-200 mx-auto md:mx-0 md:px-12 lg:px-20">
-                    {{ content }}
+        <div class="px-4 py-4 md:px-8">
+            <a href="{{ site.url }}" class="text-2xl md:text-3xl font-bold">Lattespirit</a>
+        </div>
+        <div class="md:flex px-4 md:px-0">
+            <div class="flex justify-between md:block md:w-20 my-4">
+                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Typography" %}{{ "typography-nav" }}{% endif %}'>
+                    <a class="md:px-8" href="{{ site.url }}/typography">Logos</a>
                 </div>
+                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Colors" %}{{ "typography-nav" }}{% endif %}'>
+                    <a class="md:px-8" href="{{ site.url }}/typography/colors">Colors</a>
+                </div>
+                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Typeface" %}{{ "typography-nav" }}{% endif %}'>
+                    <a class="md:px-8" href="{{ site.url }}/typography/typeface">Typeface</a>
+                </div>
+                <div class='md:py-8 md:border-b-0 md:border-l-2 md:text-lg {% if page.title == "Hierarchy" %}{{ "typography-nav" }}{% endif %}'>
+                    <a class="md:px-8" href="{{ site.url }}/typography/hierarchy">Hierarchy</a>
+                </div>
+            </div>
+            <div class="w-72 x:w-80 md:w-200 mx-auto md:mx-0 md:px-12 lg:px-20">
+                {{ content }}
             </div>
         </div>
     </body>

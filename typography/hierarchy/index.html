@@ -22,8 +22,6 @@ headings:
     class: 6xl
 ---
 
-<div class="hidden md:block text-3xl font-bold my-2">Hierarchy</div>
-
 <div class="my-4 md:my-8">
     {% for heading in page.headings %}
         <p class="text-{{ heading.class }}">{{ heading.name }}</p>
