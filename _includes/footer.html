@@ -1,4 +1,4 @@
-<footer class="mx-auto mt-18 text-white text-xs x:text-base mt-auto">
+<footer class="mx-auto mt-18 text-white text-xs x:text-base {% if page.isFullPage %}mt-auto{% else %}mt-12{% endif %}">
   <p class="text-center">
     Image from <a href="https://dribbble.com/febinraj" target="_blank" class="text-pink-dark">Febin_Raj</a>
   </p>
@@ -8,7 +8,7 @@
         <span class="invisible md:visible">&nbsp|&nbsp</span>
       </p>
       <p class="text-center my-3">
-        © 2012 - 2019 | Design with ❤️ by <a href="#" class="text-pink-dark">Lattespirit</a>
+        © 2012 - 2019 | Design with ❤️ by <a href="{{ site.url }}" class="text-pink-dark">Lattespirit</a>
       </p>
   </div>
 </footer>
