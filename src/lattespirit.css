@@ -5,6 +5,10 @@
   @apply w-72 mx-auto;
 }
 
+.flickity-prev-next-button {
+  @apply w-4 h-4 !important;
+}
+
 @screen x {
     .box {
         @apply w-84;
@@ -20,6 +24,10 @@
 @screen md {
     .box {
         @apply w-140;
+    }
+
+    .flickity-prev-next-button {
+      @apply w-8 h-8 !important;
     }
 }
 

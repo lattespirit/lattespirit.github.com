@@ -4,9 +4,8 @@ title: 说说寒假
 description: 明天的火车，这个寒假该收尾。
 ---
 
-<center>
-    <img class="img-responsive" src="{{ site.url }}/assets/harvesttime.jpg" alt="" title="harvesttime" />
-</center>
+<img class="mx-auto" src="{{ site.url }}/assets/harvesttime.jpg" alt="" title="harvesttime" />
+
 这张图片名为"Harvest Time"。
 明天的火车，这个寒假该收尾。
 

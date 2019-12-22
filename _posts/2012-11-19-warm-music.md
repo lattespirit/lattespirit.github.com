@@ -4,11 +4,9 @@ title: 温馨音乐
 description: 会永远记住给我们童年带来无限欢乐的一家人
 ---
 
-<center>
-    <img class="img-responsive" src="{{ site.url }}/assets/labixiaoxin.jpg" alt="" title="labixiaoxin" />
-</center>
+<img class="mx-auto" src="{{ site.url }}/assets/labixiaoxin.jpg" alt="" title="labixiaoxin" />
 
-<embed src="http://www.tudou.com/v/sz6x4jn3AY8/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="555px">
+<embed src="http://www.tudou.com/v/sz6x4jn3AY8/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="555px" class="mx-auto">
 
 会永远记住给我们童年带来无限欢乐的一家人
 

@@ -4,9 +4,7 @@ title: 饺子
 description: 记录一下。
 ---
 
-<center>
-    <img class="img-responsive" title="together" src="{{ site.url }}/assets/together.jpg" alt="" />
-</center>
+<img class="mx-auto" title="together" src="{{ site.url }}/assets/together.jpg" alt="together" />
 
 记录一下。
 

@@ -4,9 +4,7 @@ title: 离开灵犀
 description: 图片中的俊男靓女系灵犀话剧社成员
 ---
 
-<center>
-    <img class="img-responsive" title="话剧社成员" src="{{ site.url }}/assets/leavelingxi.jpg" alt=""/>
-</center>
+<img class="mx-auto" title="话剧社成员" src="{{ site.url }}/assets/leavelingxi.jpg" alt="leavelingxi"/>
 
 图片中的俊男靓女系灵犀话剧社成员
 
