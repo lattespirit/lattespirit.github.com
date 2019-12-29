@@ -31,6 +31,23 @@ title: Lattespirit
 
 <!-- Paginator -->
 {% if paginator.total_pages > 1 %}
+
+    {% for page in (1..paginator.total_pages) %}
+        <!-- Caculate previous page url -->
+        {% assign previous = "/" %}
+        {% if paginator.previous_page %}
+            {% if paginator.page != 2 %}
+                {% assign previous = "/page" | append: paginator.previous_page %}
+            {% endif %}
+        {% endif %}
+
+        <!-- Caculate next page url -->
+        {% assign next = "#" %}
+        {% if paginator.next_page %}
+            {% assign next = "/page" | append: paginator.next_page %}
+        {% endif %}
+    {% endfor %}
+
     <div class="flex justify-center w-72 x:w-84 sm:w-100 h-8 mt-12 mx-auto">
         <a class="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85" href="{{ previous }}">
             <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,14 +64,6 @@ title: Lattespirit
                     {% assign page_url = "/page" | append: page %}
                 {% endif %}
 
-                <!-- Caculate previous page url -->
-                {% assign previous = "/" %}
-                {% if paginator.previous_page %}
-                    {% if paginator.page != 2 %}
-                        {% assign previous = "/page" | append: paginator.previous_page %}
-                    {% endif %}
-                {% endif %}
-
                 {% if page == paginator.page %}
                     <a href="{{ page_url }}" class="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center bg-purple-light rounded-full text-white">{{ page }}</a>
                 {% else %}
@@ -65,15 +74,17 @@ title: Lattespirit
         </div>
 
         {% if paginator.next_page %}
-            <a class="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85">
+            <a class="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85" href="{{ next }}">
                 <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 9l4-4-4-4" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
         {% else %}
-            <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 9l4-4-4-4" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
+            <a class="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-darker opacity-85 cursor-not-allowed">
+                <svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9l4-4-4-4" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
         {% endif %}
     </div>
 {% endif %}
