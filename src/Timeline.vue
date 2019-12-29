@@ -1,19 +1,19 @@
 <template>
-  <div class="w-76 md:w-100 lg:w-200 mx-auto x:w-auto md:mx-auto x:mx-6 mt-16">
-    <p class="my-10 lg:mt-20 text-white text-center text-xl lg:text-3xl font-bold">这些年</p>
+  <div class="w-76 md:w-100 lg:w-200 mx-auto x:w-auto md:mx-auto x:mx-6 my-16">
+    <p class="text-white text-center text-xl lg:text-3xl font-bold">时间线</p>
     <div class="hidden lg:flex justify-between items-center mt-16">
       <div class="flex flex-col w-80">
         <p class="text-white text-left text-3xl font-bold">{{ selected.date }}</p>
         <div
           class="w-full flex-grow bg-gray-lighter lg:bg-transparent opacity-85 rounded-lg text-gray-darkest lg:text-white text-sm lg:text-base px-4 py-2 lg:p-0 lg:mt-4"
         >
-          <p class="text-left font-bold">{{ selected.content }}</p>
+          <p class="text-left font-bold" v-html="selected.content"></p>
         </div>
       </div>
       <div class="flex w-100 h-80">
         <div class="relative w-80" v-if="selected.date == '2012-07-25'">
           <img
-            class="absolute bottom-0 rounded"
+            class="absolute bottom-0 rounded object-contain"
             :src="this.site + '/assets/about/v1.png'"
             alt="v1"
             style="animation: v1 2s linear 1s infinite alternate both;"
@@ -30,7 +30,7 @@
             style="animation: v1 2s linear 1s infinite alternate both;"
           />
         </div>
-        <div class="flex flex-col relative w-50 red" v-else-if="selected.date == '2019-12-29'">
+        <div class="flex flex-col relative w-50 red" v-else-if="selected.date == '2020-01-01'">
           <Fireworks />
           <img
             class="absolute bottom-0 rounded"
@@ -57,12 +57,13 @@
     </div>
 
     <div class="lg:flex lg:justify-between text-white">
-      <div class="flex mt-4" v-for="event in events" :key="event.content">
+      <div class="flex mt-4" v-for="event in events" :key="event.date">
         <div class="lg:hidden flex w-full">
           <span class="w-28 text-white text-xs text-left x:mr-4">{{ event.date }}</span>
           <div
             class="w-full flex-grow bg-gray-lighter opacity-85 rounded-lg text-xs text-left text-gray-darkest px-4 py-2"
-          >{{ event.content }}</div>
+            v-html="event.content"
+          ></div>
         </div>
         <div
           class="hidden lg:flex flex-col justify-center items-center w-32 mt-8 py-4 rounded-lg cursor-default font-bold"
@@ -114,7 +115,7 @@ export default {
           month: "07",
           day: "25",
           content:
-            "前身域名 lattespirit.com.cn，后转成 lattespirit.com，博客首次由 WordPress 建成上线",
+            "前身域名 lattespirit.com.cn，一年之后转成 lattespirit.com，博客第一次由 WordPress 驱动上线",
           selected: true
         },
         {
@@ -142,16 +143,16 @@ export default {
           month: "02",
           day: "04",
           content:
-            "博客前端框架 Bootstrap 版本升级至 v3，优化导航栏区分移动端和 PC 端，并在整站增加搜索功能，按下 s 键调出搜索框",
+            "博客前端框架 Bootstrap 版本升级至 v3，优化导航栏区分移动端和 PC 端，并增加整站搜索功能，按下 <span class='px-1 bg-pink-dark text-white rounded'>s</span> 键调出搜索框",
           selected: false,
           asset: "/assets/about/bootstrap.svg"
         },
         {
-          date: "2019-12-29",
-          year: "2019",
-          month: "12",
-          day: "29",
-          content: "重构整站 UI，v3.0 上线",
+          date: "2020-01-01",
+          year: "2020",
+          month: "01",
+          day: "01",
+          content: "重构整站 UI，v3.0 上线，增加 <a class='text-pink-dark font-bold' href='/testimonials'>Testimonials</a>, <a class='text-pink-dark font-bold' href='/uses' >Uses</a> 页面",
           selected: false,
           asset: "/assets/about/v3.png"
         }

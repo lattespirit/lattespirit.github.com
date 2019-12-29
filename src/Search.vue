@@ -1,5 +1,5 @@
 <template>
-  <div v-if="opened" class="absolute inset-0 w-full h-full">
+  <div v-if="opened" class="fixed w-full h-full" style="top: 0vh;">
     <div class="relative mt-6 sm:mt-8 lg:mt-20">
       <div class="absolute box inset-x-0 z-10">
         <div class="flex items-center">
@@ -19,16 +19,19 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             class="w-6 h-6 sm:w-8 sm:h-8 stroke-current text-white feather feather-x-circle"
-            @click="opened = false"
+            @click="close()"
           >
             <circle cx="12" cy="12" r="10" />
             <line x1="15" y1="9" x2="9" y2="15" />
             <line x1="9" y1="9" x2="15" y2="15" />
           </svg>
-
         </div>
 
-        <div v-if="keyword.length > 0" class="w-full bg-white rounded-lg mt-4 sm:mt-8 px-4 overflow-y-auto">
+        <div
+          v-if="keyword.length > 0"
+          class="w-full bg-white rounded-lg mt-4 sm:mt-8 px-4 overflow-y-scroll"
+          style="max-height: 60vh;"
+        >
           <div
             class="flex justify-between items-center mx-2 sm:mx-4 my-2 py-2 border-b last:border-b-0 border-gray-light"
             v-for="post in posts"
@@ -46,7 +49,8 @@
           </div>
           <div v-if="posts.length == 0" class="rounded-lg my-6 text-sm sm:text-base text-center">
             <p>
-              匆匆的<span class="font-bold text-purple-dark">搜索结果</span>转眼已消逝
+              匆匆的
+              <span class="font-bold text-purple-dark">搜索结果</span>转眼已消逝
             </p>
             <p class="mt-4">有几多青春美丽</p>
           </div>
@@ -64,7 +68,7 @@
     </div>
     <button
       class="fixed inset-0 w-full h-full bg-black opacity-50 outline-none cursor-default"
-      @click="opened = false"
+      @click="close()"
     ></button>
   </div>
 </template>
@@ -80,9 +84,13 @@ export default {
 
     this.fetchJson();
   },
-  updated() {
-    if (this.opened) {
-      this.$refs.input.focus();
+  watch: {
+    opened() {
+      this.$nextTick(function() {
+        if (this.opened) {
+          this.$refs.input.focus();
+        }
+      });
     }
   },
   computed: {
@@ -118,11 +126,11 @@ export default {
     handleEscape() {
       const handleEscape = e => {
         if (e.key === "Esc" || e.key === "Escape") {
-          this.opened = false;
+          this.close();
         }
 
         if (e.key === "s") {
-          this.opened = true;
+          this.open();
         }
       };
 
@@ -136,6 +144,12 @@ export default {
       axios
         .get("/search.json")
         .then(response => (this.articles = response.data.posts));
+    },
+    open() {
+      this.opened = true;
+    },
+    close() {
+      this.opened = false;
     }
   }
 };
