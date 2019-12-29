@@ -1,6 +1,6 @@
 <template>
   <div class="w-76 md:w-100 lg:w-200 mx-auto x:w-auto md:mx-auto x:mx-6 my-16">
-    <p class="text-white text-center text-xl lg:text-3xl font-bold">时间线</p>
+    <p class="text-white text-center text-xl lg:text-3xl font-bold">这些年</p>
     <div class="hidden lg:flex justify-between items-center mt-16">
       <div class="flex flex-col w-80">
         <p class="text-white text-left text-3xl font-bold">{{ selected.date }}</p>
@@ -30,7 +30,7 @@
             style="animation: v1 2s linear 1s infinite alternate both;"
           />
         </div>
-        <div class="flex flex-col relative w-50 red" v-else-if="selected.date == '2020-01-01'">
+        <div class="flex flex-col relative w-50 red" v-else-if="selected.date == '2019-12-29'">
           <Fireworks />
           <img
             class="absolute bottom-0 rounded"
@@ -115,7 +115,7 @@ export default {
           month: "07",
           day: "25",
           content:
-            "前身域名 lattespirit.com.cn，一年之后转成 lattespirit.com，博客第一次由 WordPress 驱动上线",
+            "前身域名 lattespirit.com.cn，一年之后转成 <span class='text-pink-dark font-bold underline'>lattespirit.com</span>，博客第一次由 WordPress 驱动上线",
           selected: true
         },
         {
@@ -148,11 +148,11 @@ export default {
           asset: "/assets/about/bootstrap.svg"
         },
         {
-          date: "2020-01-01",
-          year: "2020",
-          month: "01",
-          day: "01",
-          content: "重构整站 UI，v3.0 上线，增加 <a class='text-pink-dark font-bold' href='/testimonials'>Testimonials</a>, <a class='text-pink-dark font-bold' href='/uses' >Uses</a> 页面",
+          date: "2019-12-29",
+          year: "2019",
+          month: "12",
+          day: "29",
+          content: "重构整站 UI，v3.0 上线，增加 <a class='text-pink-dark font-bold underline' href='/testimonials'>Testimonials</a>, <a class='text-pink-dark font-bold underline' href='/uses' >Uses</a> 和 <a class='text-pink-dark font-bold underline' href='/typography'>Typography</a>(可通过右键点击头部 Logo 进入) 页面",
           selected: false,
           asset: "/assets/about/v3.png"
         }

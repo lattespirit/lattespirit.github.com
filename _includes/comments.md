@@ -1,6 +1,6 @@
 {% if site.disqus %}
 	{% if page.id %}
-	<div id="disqus_thread"></div>
+        <Disqus />
 	{% endif %}	
 <script>
     var disqus_config = function () {
