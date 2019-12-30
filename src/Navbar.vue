@@ -3,7 +3,7 @@
     <a
       class="text-white inline-block text-xl x:text-2xl font-extrabold cursor-default"
       href="/"
-      @contextmenu="toTyography($event)"
+      @contextmenu="toTypography($event)"
     >Lattespirit</a>
 
     <div class="flex justify-center items-center md:hidden">
@@ -66,7 +66,7 @@
 <script>
 export default {
   methods: {
-    toTyography(event) {
+    toTypography(event) {
       window.location.href = "/typography";
       event.preventDefault();
     }

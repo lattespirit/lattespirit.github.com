@@ -10,7 +10,6 @@ import "flickity-imagesloaded";
 import "flickity/dist/flickity.min.css";
 
 export default {
-  props: ['imaegs'],
   mounted() {
     this.flkty = new Flickity(this.$refs.carousel, {
       cellAlign: "left",
