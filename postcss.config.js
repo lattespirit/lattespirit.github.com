@@ -2,6 +2,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
     './_site/**/*.html',
     './_site/**/*.vue',
+    './_site/dist/lattespirit.js',
   ],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 })

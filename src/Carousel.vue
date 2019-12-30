@@ -11,17 +11,11 @@ import "flickity/dist/flickity.min.css";
 
 export default {
   mounted() {
-    this.flkty = new Flickity(this.$refs.carousel, {
-      cellAlign: "left",
-      contain: true,
+    new Flickity(this.$refs.carousel, {
+      autoPlay: true,
       pageDots: false,
-      imagesLoaded: true
+      imagesLoaded: true,
     });
   },
-  data() {
-    return {
-      flkty: null
-    };
-  }
 };
 </script>
