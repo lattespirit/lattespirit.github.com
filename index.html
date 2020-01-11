@@ -7,7 +7,7 @@ title: Lattespirit
 {% for post in paginator.posts limit: 20 %}
     <div class="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden">
         {% if post.thumbnail %}
-        <div class="flex-none h-40 md:w-36 md:h-auto bg-cover"
+        <div class="flex-none min-w-1/4 h-40 md:h-auto bg-cover"
             style="background-image: url('{{ site.url }}/{{ post.thumbnail }}')"></div>
         {% endif %}
         <div class="w-full p-4 md:p-6">
