@@ -3,6 +3,6 @@ import Layout from "../components/layout"
 
 export default () => (
     <Layout>
-        <h1>Home Page</h1>
+        <h1>Uses Page</h1>
     </Layout>
 );
