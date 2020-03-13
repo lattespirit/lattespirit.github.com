@@ -1,15 +1,15 @@
 module.exports = {
-    "siteMetadata": {
-        "title": `Lattespirit`
+  siteMetadata: {
+    title: `Lattespirit`
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      }
     },
-    plugins: [
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `src`,
-                path: `${__dirname}/src/`,
-            },
-        },
-        `gatsby-transformer-remark`
-    ]
-}
+    `gatsby-transformer-remark`
+  ]
+};
