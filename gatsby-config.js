@@ -7,6 +7,9 @@ module.exports = {
     title: `Lattespirit`
   },
   plugins: [
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,7 +17,6 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
