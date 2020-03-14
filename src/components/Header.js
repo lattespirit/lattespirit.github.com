@@ -1,12 +1,6 @@
 import React from "react";
 import { useStaticQuery, Link, graphql } from "gatsby";
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-);
-
 export default () => {
   const data = useStaticQuery(
     graphql`
@@ -20,16 +14,44 @@ export default () => {
     `
   );
   return (
-    <header style={{ marginBottom: `1.5rem` }}>
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h1 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h1>
+    <header className="flex justify-between items-center box py-6">
+      <Link
+        to="/"
+        className="text-white inline-block text-xl x:text-2xl font-semibold cursor-default"
+      >
+        {data.site.siteMetadata.title}
       </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/archives">Archives</ListLink>
-        <ListLink to="/testimonials">Testimonials</ListLink>
-        <ListLink to="/about">About</ListLink>
-      </ul>
+      <div className="flex justify-center items-center md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-white w-6 h-6 feather feather-menu"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </div>
+
+      <div className="hidden md:block self-end">
+        <a className="text-white inline-block mr-6" href="/">
+          Home
+        </a>
+        <a className="text-white inline-block mr-6" href="/archives">
+          Archives
+        </a>
+        <a className="text-white inline-block mr-6" href="/testimonials">
+          Testimonials
+        </a>
+        <a className="text-white inline-block mr-6" href="/about">
+          About
+        </a>
+      </div>
     </header>
   );
 };

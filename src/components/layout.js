@@ -1,13 +1,19 @@
-import React from "react"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import React from "react";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Background from "../images/background.jpg";
 
 export default ({ children }) => (
-    <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-        <Header />
+  <div>
+    <img
+      className="fixed bg-cover min-w-full min-h-full -z-1"
+      src={Background}
+    />
 
-        {children}
+    <Header />
 
-        <Footer />
-    </div >
-)
+    <div className="mb-20">{children}</div>
+
+    <Footer />
+  </div>
+);
