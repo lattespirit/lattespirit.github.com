@@ -39,6 +39,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               slug
               date
             }
+            frontmatter {
+              title
+            }
           }
         }
       }
@@ -54,12 +57,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = result.data.allMarkdownRemark.edges;
   const numPages = Math.ceil(posts.length / postsPerPage);
 
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node }, index) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/post.js`),
       context: {
-        slug: node.fields.slug
+        slug: node.fields.slug,
+        title: node.frontmatter.title,
+        prev: index === posts.length - 1 ? null : posts[index + 1].node,
+        next: index === 0 ? null : posts[index - 1].node
       }
     });
   });
