@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { Link, graphql } from "gatsby";
 
 export default ({ data }) => (
@@ -10,7 +10,10 @@ export default ({ data }) => (
           <div className="flex py-2" key={node.id}>
             <p className="mr-4">{node.fields.date}</p>
             <p>
-              <Link className="text-purple-dark" to={node.fields.slug}>
+              <Link
+                className="text-purple-dark no-underline font-semibold"
+                to={node.fields.slug}
+              >
                 {node.frontmatter.title}
               </Link>
             </p>

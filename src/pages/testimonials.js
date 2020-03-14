@@ -1,6 +1,5 @@
 import React from "react";
-import Layout from "../components/layout";
-import LanternD from "../images/testimonials/LanternD.png";
+import Layout from "../components/Layout";
 
 export default () => (
   <Layout>
@@ -36,8 +35,13 @@ export default () => (
       </p>
       <div className="absolute inset-x-0 -bottom-8">
         <div className="flex flex-col justify-center rounded-lg text-center">
-          <p className="text-sm md:text-xl font-bold">
-            <a href="https://dlyang.me" target="_blank">
+          <p className="text-sm md:text-xl font-semibold">
+            <a
+              className="text-black no-underline"
+              href="https://dlyang.me"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               LanternD
             </a>
           </p>
@@ -47,16 +51,15 @@ export default () => (
         </div>
 
         <div className="flex justify-center rounded-lg">
-          <div
-            class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover"
-            style={{ backgroundImage: `url(${LanternD})` }}
+          <a
+            href="https://dlyang.me"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover bg-red-500"
+            style={{ backgroundImage: `url("/testimonials/LanternD.png")` }}
           >
-            <a
-              href="https://dlyang.me"
-              target="_blank"
-              className="inline-block w-full h-full"
-            ></a>
-          </div>
+            <span></span>
+          </a>
         </div>
       </div>
     </div>

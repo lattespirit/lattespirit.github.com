@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "gatsby";
 
 export default () => (
   <footer className="mx-auto text-white text-xs x:text-base mt-auto">
     <p className="text-center">
       Image from{" "}
       <a
+        className="no-underline"
         href="https://dribbble.com/febinraj"
         target="_blank"
-        className="text-pink-dark"
+        rel="noopener noreferrer"
       >
         Febin_Raj
       </a>
@@ -17,22 +17,32 @@ export default () => (
       <p className="text-center">
         Powered by{" "}
         <a
+          className="no-underline"
           href="https://jekyllrb.com"
           target="_blank"
-          className="text-pink-dark"
+          rel="noopener noreferrer"
         >
           Jekyll
         </a>{" "}
         @{" "}
-        <a href="https://github.com" target="_blank" className="text-pink-dark">
+        <a
+          className="no-underline"
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Github
         </a>
-        <span className="invisible md:visible">{}</span>
       </p>
       <p className="text-center my-3">
-        © 2012 - 2020 | Design with ❤️ by
-        <a href="https://lattespirit.com" className="text-pink-dark">
-          <Link to="/">Lattespirit</Link>
+        {" "}
+        © 2012 - 2020 | Design with{" "}
+        <span role="img" aria-label="love">
+          ❤️
+        </span>{" "}
+        by{" "}
+        <a className="no-underline" href="https://lattespirit.com">
+          Lattespirit
         </a>
       </p>
     </div>

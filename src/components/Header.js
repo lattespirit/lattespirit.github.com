@@ -17,7 +17,7 @@ export default () => {
     <header className="flex justify-between items-center box py-6">
       <Link
         to="/"
-        className="text-white inline-block text-xl x:text-2xl font-semibold cursor-default"
+        className="text-white inline-block text-xl x:text-2xl font-semibold cursor-default no-underline"
       >
         {data.site.siteMetadata.title}
       </Link>
@@ -39,16 +39,22 @@ export default () => {
       </div>
 
       <div className="hidden md:block self-end">
-        <a className="text-white inline-block mr-6" href="/">
+        <a className="text-white inline-block mr-6 no-underline" href="/">
           Home
         </a>
-        <a className="text-white inline-block mr-6" href="/archives">
+        <a
+          className="text-white inline-block mr-6 no-underline"
+          href="/archives"
+        >
           Archives
         </a>
-        <a className="text-white inline-block mr-6" href="/testimonials">
+        <a
+          className="text-white inline-block mr-6 no-underline"
+          href="/testimonials"
+        >
           Testimonials
         </a>
-        <a className="text-white inline-block mr-6" href="/about">
+        <a className="text-white inline-block mr-6 no-underline" href="/about">
           About
         </a>
       </div>

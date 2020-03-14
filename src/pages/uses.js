@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import uses from "../content/uses.yaml";
 
 export default () => (
@@ -44,6 +44,7 @@ export default () => (
                       <img
                         className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center bg-cover ml-2 lg:ml-8"
                         src={"/uses/" + item.image}
+                        alt={item.image}
                       />
                     )}
                   </div>

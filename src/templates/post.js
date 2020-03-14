@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Layout from "../components/layout";
-import Disqus from "../components/disqus";
+import Layout from "../components/Layout";
+import Disqus from "../components/Disqus";
 
 export default ({ data, pageContext }) => {
   const post = data.markdownRemark;
@@ -11,10 +11,10 @@ export default ({ data, pageContext }) => {
   const prevUri = prev ? prev.fields.slug : post.fields.slug;
   const nextUri = next ? next.fields.slug : post.fields.slug;
   const prevClass =
-    "inline-block flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full cursor-" +
+    "inline-block flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-" +
     (prev ? "pointer" : "not-allowed");
   const nextClass =
-    "inline-block flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full cursor-" +
+    "inline-block flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-" +
     (next ? "pointer" : "not-allowed");
   return (
     <Layout>

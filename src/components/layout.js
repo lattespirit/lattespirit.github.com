@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import Background from "../images/background.jpg";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default ({ children }) => (
   <div>
     <img
       className="fixed bg-cover min-w-full min-h-full -z-1"
-      src={Background}
+      alt="background"
+      src={"/background.jpg"}
     />
 
     <Header />

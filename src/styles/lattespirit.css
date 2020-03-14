@@ -6,6 +6,16 @@ body {
     @apply flex flex-col h-full;
 }
 
+a,
+strong,
+span {
+    @apply text-pink-dark;
+}
+
+a {
+    @apply underline;
+}
+
 .box {
     @apply w-72 mx-auto;
 }
