@@ -3,3 +3,6 @@ node_modules/
 _site/
 .jekyll-metadata
 gsap-bonus.tgz
+.cache/
+.env
+.env.development

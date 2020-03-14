@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import Disqus from "../components/disqus";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -10,6 +11,9 @@ export default ({ data }) => {
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+      <Disqus
+        disqus={{ slug: post.fields.slug, title: post.frontmatter.title }}
+      />
     </Layout>
   );
 };
@@ -20,6 +24,10 @@ export const query = graphql`
       html
       frontmatter {
         title
+      }
+      fields {
+        slug
+        date
       }
     }
   }
