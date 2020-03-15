@@ -4,25 +4,19 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 
 export default ({ data }) => {
+  let titleYear = "";
   return (
     <Layout>
       <Head title="Archives" />
       <div className="flex flex-col box mt-4 p-6 md:p-10 bg-gray-lighter opacity-85 rounded-lg">
         {data.allMarkdownRemark.edges.map(({ node }, index) => {
-          const firstYear =
-            index === 0 ? new Date(node.fields.date).getFullYear() : "";
           const postYear = new Date(node.fields.date).getFullYear();
-          const titleYear =
-            index === 0
-              ? firstYear
-              : postYear !== titleYear
-              ? postYear
-              : firstYear;
-          return (
+
+          const Title = (
             <React.Fragment>
-              {titleYear === postYear && (
+              {titleYear !== postYear && (
                 <p className="text-lg md:text-xl font-bold first:mt-0 my-2">
-                  {titleYear}
+                  {postYear}
                 </p>
               )}
               <div className="flex py-2" key={node.id}>
@@ -38,6 +32,11 @@ export default ({ data }) => {
               </div>
             </React.Fragment>
           );
+          if (titleYear !== postYear) {
+            titleYear = postYear;
+          }
+
+          return Title;
         })}
       </div>
     </Layout>
