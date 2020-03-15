@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "../components/Head";
 import Typography from "../components/Typography";
 
 export default () => {
@@ -40,6 +41,7 @@ export default () => {
   ];
   return (
     <Typography>
+      <Head title="Colors" />
       <div className="flex justify-between flex-wrap w-64 mx-auto md:mx-0 mt-6">
         {blackAndWhite.map(color => {
           return (

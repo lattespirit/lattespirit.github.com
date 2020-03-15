@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "../components/Head";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Disqus from "../components/Disqus";
@@ -18,6 +19,7 @@ export default ({ data, pageContext }) => {
     (next ? "pointer" : "not-allowed");
   return (
     <Layout>
+      <Head title={post.frontmatter.title} />
       <div
         className="flex flex-col items-center box mt-4 p-2 md:p-4 rounded-lg"
         style={{ backgroundColor: "rgba(237, 242, 247, 0.85)" }}

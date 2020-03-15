@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
+import Head from "../components/Head";
 import Layout from "../components/Layout";
 
 export default () => (
   <Layout>
+    <Head title="404" />
     <div className="flex flex-col justify-center items-center box mt-16 x:mt-28 sm:mt-36">
       <p className="text-white font-semibold text-6xl md:text-9xl tracking-widest">
         404

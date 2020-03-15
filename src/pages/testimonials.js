@@ -1,8 +1,10 @@
 import React from "react";
+import Head from "../components/Head";
 import Layout from "../components/Layout";
 
 export default () => (
   <Layout>
+    <Head title="Testimonials" />
     <p className="text-xl text-white text-center text-2xl md:text-3xl font-bold mt-4 md:mt-8">
       What People Said...
     </p>

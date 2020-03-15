@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "../components/Head";
 import Typography from "../components/Typography";
 
 export default () => {
@@ -16,6 +17,7 @@ export default () => {
 
   return (
     <Typography>
+      <Head title="Hierachy" />
       <div className="my-4 md:my-8">
         {headings.map(heading => {
           return (

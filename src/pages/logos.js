@@ -1,8 +1,10 @@
 import React from "react";
+import Head from "../components/Head";
 import Typography from "../components/Typography";
 
 export default () => (
   <Typography>
+    <Head title="Logos" />
     <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-white rounded-lg shadow-xl">
       <img src="/typography/logo-black.svg" alt="logo-black" />
     </div>

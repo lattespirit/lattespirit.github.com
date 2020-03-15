@@ -1,9 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Head from "../components/Head";
 import uses from "../content/uses.yaml";
+import Layout from "../components/Layout";
 
 export default () => (
   <Layout>
+    <Head title="Uses" />
     <div className="box mt-4">
       <div className="p-4 sm:p-6 md:px-12 bg-gray-lighter opacity-85 rounded-lg">
         <p className="text-xl lg:text-2xl font-bold text-center">装备</p>

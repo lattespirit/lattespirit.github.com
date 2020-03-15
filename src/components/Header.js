@@ -6,10 +6,6 @@ class Header extends Component {
     open: false
   };
 
-  toggle = () => {
-    this.setState({ open: !this.state.open });
-  };
-
   open = () => {
     this.setState({ open: true });
   };
@@ -18,12 +14,18 @@ class Header extends Component {
     this.setState({ open: false });
   };
 
+  toTypography = e => {
+    window.location.href = "/logos";
+    e.preventDefault();
+  };
+
   render() {
     return (
       <header className="flex justify-between items-center box py-6">
         <Link
           to="/"
           className="text-white inline-block text-xl x:text-2xl font-semibold cursor-default no-underline"
+          onContextMenu={this.toTypography}
         >
           Lattespirit
         </Link>
