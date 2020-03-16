@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { globalHistory } from "@reach/router";
 
 export default ({ children }) => {
   const menus = [
@@ -34,7 +35,7 @@ export default ({ children }) => {
         <div className="flex justify-between md:block md:w-20 my-4">
           {menus.map(menu => {
             const classes =
-              window.location.pathname === menu.path
+              globalHistory.location.pathname === menu.path
                 ? "md:py-8 md:border-b-0 md:border-l-2 md:text-lg typography-nav"
                 : "md:py-8 md:border-b-0 md:border-l-2 md:text-lg";
             return (

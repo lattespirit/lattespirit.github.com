@@ -65,7 +65,10 @@ export default () => {
           >
             {colorful.colors.map(color => {
               return (
-                <div className="flex flex-col items-center mt-4">
+                <div
+                  className="flex flex-col items-center mt-4"
+                  key={color.name}
+                >
                   <div
                     className={`w-24 h-24 rounded-full shadow-lg bg-${color.class}`}
                   ></div>
