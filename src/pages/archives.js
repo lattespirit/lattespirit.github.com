@@ -9,11 +9,11 @@ export default ({ data }) => {
     <Layout>
       <Head title="Archives" />
       <div className="flex flex-col box mt-4 p-6 md:p-10 bg-gray-lighter opacity-85 rounded-lg">
-        {data.allMarkdownRemark.edges.map(({ node }, index) => {
+        {data.allMdx.edges.map(({ node }) => {
           const postYear = new Date(node.fields.date).getFullYear();
 
           const Title = (
-            <React.Fragment>
+            <React.Fragment key={node.id}>
               {titleYear !== postYear && (
                 <p className="text-lg md:text-xl font-bold first:mt-0 my-2">
                   {postYear}
@@ -24,7 +24,7 @@ export default ({ data }) => {
                 <p>
                   <Link
                     className="text-purple-dark no-underline font-semibold"
-                    to={node.fields.slug}
+                    to={"/" + node.fields.slug}
                   >
                     {node.frontmatter.title}
                   </Link>
@@ -45,7 +45,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: fields___date, order: DESC }) {
+    allMdx(sort: { fields: fields___date, order: DESC }) {
       totalCount
       edges {
         node {

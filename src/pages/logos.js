@@ -6,26 +6,26 @@ export default () => (
   <Typography>
     <Head title="Logos" />
     <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-white rounded-lg shadow-xl">
-      <img src="/typography/logo-black.svg" alt="logo-black" />
+      <img src="/images/typography/logo-black.svg" alt="logo-black" />
     </div>
 
     <div className="flex justify-end my-2">
       <a
         className="px-2 py-1 text-xs font-bold bg-white hover:bg-purple-dark text-black hover:text-white border border-gray rounded-full no-underline"
-        href="/typography/logo-black.svg"
+        href="/images/typography/logo-black.svg"
       >
         logo-black.svg
       </a>
     </div>
 
     <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-black rounded-lg shadow-xl">
-      <img src="/typography/logo-white.svg" alt="logo-white" />
+      <img src="/images/typography/logo-white.svg" alt="logo-white" />
     </div>
 
     <div className="flex justify-end mt-2 mb-4 md:mb-8">
       <a
         className="px-2 py-1 text-xs font-bold bg-white hover:bg-purple-dark text-black hover:text-white border border-gray rounded-full no-underline"
-        href="/typography/logo-white.svg"
+        href="/images/typography/logo-white.svg"
       >
         logo-white.svg
       </a>

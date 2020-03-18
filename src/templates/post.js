@@ -3,9 +3,11 @@ import Head from "../components/Head";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Disqus from "../components/Disqus";
+import { MDXProvider } from "@mdx-js/react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 export default ({ data, pageContext }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
   const { prev, next } = pageContext;
   const prevText = prev ? "上篇" : "未始";
   const nextText = next ? "下篇" : "未央";
@@ -30,10 +32,11 @@ export default ({ data, pageContext }) => {
         <p className="text-sm x:text-base text-gray-darkest my-2">
           {post.fields.date}
         </p>
-        <div
-          className="text-sm md:text-base mx-4 md:mx-8 paragraph"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className="text-sm md:text-base mx-4 md:mx-8 paragraph">
+          <MDXProvider>
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </MDXProvider>
+        </div>
       </div>
 
       <div className="flex justify-between x:justify-center h-6 box mt-8">
@@ -48,8 +51,8 @@ export default ({ data, pageContext }) => {
             strokeLinejoin="round"
             className="feather feather-chevrons-left w-4 h-4 stroke-current inline-block mx-3"
           >
-            <polyline points="11 17 6 12 11 7"></polyline>
-            <polyline points="18 17 13 12 18 7"></polyline>
+            <polyline points="11 17 6 12 11 7" />
+            <polyline points="18 17 13 12 18 7" />
           </svg>
           <p>{prevText}</p>
         </Link>
@@ -65,8 +68,8 @@ export default ({ data, pageContext }) => {
             strokeLinejoin="round"
             className="feather feather-chevrons-right w-4 h-4 stroke-current inline-block mx-3"
           >
-            <polyline points="13 17 18 12 13 7"></polyline>
-            <polyline points="6 17 11 12 6 7"></polyline>
+            <polyline points="13 17 18 12 13 7" />
+            <polyline points="6 17 11 12 6 7" />
           </svg>
         </Link>
       </div>
@@ -79,8 +82,8 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
       }
