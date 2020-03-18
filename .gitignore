@@ -6,3 +6,4 @@ gsap-bonus.tgz
 .cache/
 .env
 .env.development
+public/

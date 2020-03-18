@@ -40,7 +40,7 @@ export default ({ data, pageContext }) => {
       </div>
 
       <div className="flex justify-between x:justify-center h-6 box mt-8">
-        <Link className={prevClass} to={prevUri}>
+        <Link className={prevClass} to={"/" + prevUri}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ export default ({ data, pageContext }) => {
           </svg>
           <p>{prevText}</p>
         </Link>
-        <Link className={nextClass} to={nextUri}>
+        <Link className={nextClass} to={"/" + nextUri}>
           <p>{nextText}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
