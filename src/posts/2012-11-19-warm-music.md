@@ -2,12 +2,10 @@
 layout: post
 title: 温馨音乐
 description: 会永远记住给我们童年带来无限欢乐的一家人
-thumbnail: /post/labixiaoxin.jpg
+thumbnail: /images/post/labixiaoxin.jpg
 ---
 
-<img class="mx-auto" src="/post/labixiaoxin.jpg" alt="" title="labixiaoxin" />
-
-<embed src="http://www.tudou.com/v/sz6x4jn3AY8/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="555px" class="mx-auto">
+<img class="mx-auto" src="/images/post/labixiaoxin.jpg" alt="" title="labixiaoxin" />
 
 会永远记住给我们童年带来无限欢乐的一家人
 

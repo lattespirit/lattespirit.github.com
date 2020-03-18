@@ -2,10 +2,10 @@
 layout: post
 title: 说说寒假
 description: 明天的火车，这个寒假该收尾。
-thumbnail: /post/harvesttime.jpg
+thumbnail: /images/post/harvesttime.jpg
 ---
 
-<img class="mx-auto" src="/post/harvesttime.jpg" alt="" title="harvesttime" />
+<img class="mx-auto" src="/images/post/harvesttime.jpg" alt="" title="harvesttime" />
 
 这张图片名为"Harvest Time"。
 明天的火车，这个寒假该收尾。

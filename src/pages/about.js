@@ -8,7 +8,7 @@ export default () => (
     <div className="w-64 mx-auto x:w-auto x:mx-10 mt-10 lg:flex lg:flex-row-reverse lg:w-180 lg:mx-auto">
       <img
         className="w-20 h-20 lg:w-40 lg:h-40 mx-auto rounded-full object-cover object-center shadow-2xl lg:mr-0"
-        src="/lattespirit.jpg"
+        src="/images/lattespirit.jpg"
         alt="lattespirit"
       />
       <div className="mt-4 md:w-80 mx-auto lg:w-100">

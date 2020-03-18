@@ -2,10 +2,10 @@
 layout: post
 title: 离开灵犀
 description: 图片中的俊男靓女系灵犀话剧社成员
-thumbnail: /post/leavelingxi.jpg
+thumbnail: /images/post/leavelingxi.jpg
 ---
 
-<img class="mx-auto" title="话剧社成员" src="/post/leavelingxi.jpg" alt="leavelingxi"/>
+<img class="mx-auto" title="话剧社成员" src="/images/post/leavelingxi.jpg" alt="leavelingxi"/>
 
 图片中的俊男靓女系灵犀话剧社成员
 

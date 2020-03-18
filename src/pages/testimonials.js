@@ -31,7 +31,7 @@ export default () => (
         This static website template by Lattespirit is just FANTASTIC! The
         responsive design hosts all the devices, either PC or tablet, or phones,
         like a charm, which delivers my/your/the blog content in a seamless and
-        consistent way. I’m really into the corner-rounded and flat element
+        consistent way. I'm really into the corner-rounded and flat element
         design. I believe that this modern template will bring a fresh,
         harmonious, and impressive feeling to your readers or customers as well.
       </p>
@@ -58,7 +58,9 @@ export default () => (
             target="_blank"
             rel="noopener noreferrer"
             className="block w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover bg-red-500"
-            style={{ backgroundImage: `url("/testimonials/LanternD.png")` }}
+            style={{
+              backgroundImage: `url("/images/testimonials/LanternD.png")`
+            }}
           >
             <span></span>
           </a>

@@ -2,10 +2,10 @@
 layout: post
 title: 饺子
 description: 记录一下。
-thumbnail: /post/together.jpg
+thumbnail: /images/post/together.jpg
 ---
 
-<img class="mx-auto" title="together" src="/post/together.jpg" alt="together" />
+<img class="mx-auto" title="together" src="/images/post/together.jpg" alt="together" />
 
 记录一下。
 
