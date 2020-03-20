@@ -4,23 +4,29 @@ import React, { Component } from "react";
 import "slick-carousel/slick/slick-theme.css";
 
 function NextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick, onKeyDown } = props;
   return (
     <div
       className={`${className} mr-8 md:mr-12`}
       style={{ ...style }}
       onClick={onClick}
+      onKeyDown={onKeyDown}
+      role="link"
+      tabIndex={0}
     />
   );
 }
 
 function PrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick, onKeyDown } = props;
   return (
     <div
       className={`${className} ml-8 md:ml-12 z-10`}
       style={{ ...style }}
       onClick={onClick}
+      onKeyDown={onKeyDown}
+      role="link"
+      tabIndex={0}
     />
   );
 }

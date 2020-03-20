@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "../components/Head";
 import Layout from "../components/Layout";
+import Timeline from "../components/Timeline";
+import Disqus from "../components/Disqus";
 
 export default () => (
   <Layout>
@@ -83,5 +85,9 @@ export default () => (
         </div>
       </div>
     </div>
+
+    <Timeline />
+
+    <Disqus disqus={{ slug: "about", title: "About" }} />
   </Layout>
 );

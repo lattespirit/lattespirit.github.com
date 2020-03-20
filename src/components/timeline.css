@@ -1,0 +1,41 @@
+@keyframes general {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes v1 {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transform: translate(80px, -70px) rotate(20deg) skew(20deg);
+    }
+    100% {
+        box-shadow: 0 50px 5px rgba(0, 0, 0, 0.1);
+        transform: translate(80px, -90px) rotate(20deg) skew(20deg);
+    }
+}
+
+@keyframes figma {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transform: translate(80px, -30px) rotate(20deg) skew(20deg);
+    }
+    100% {
+        box-shadow: 0 50px 5px rgba(0, 0, 0, 0.1);
+        transform: translate(80px, -60px) rotate(20deg) skew(20deg);
+    }
+}
+
+@keyframes typography {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transform: translate(160px, -110px) rotate(20deg) skew(20deg);
+    }
+    100% {
+        box-shadow: 0 50px 5px rgba(0, 0, 0, 0.1);
+        transform: translate(160px, -80px) rotate(20deg) skew(20deg);
+    }
+}

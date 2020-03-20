@@ -14,6 +14,10 @@ class Header extends Component {
     this.setState({ open: false });
   };
 
+  keydown = () => {
+    return;
+  };
+
   toTypography = e => {
     window.location.href = "/logos";
     e.preventDefault();
@@ -26,12 +30,16 @@ class Header extends Component {
           to="/"
           className="text-white inline-block text-xl x:text-2xl font-semibold cursor-default no-underline"
           onContextMenu={this.toTypography}
+          onKeyDown={this.keydown}
         >
           Lattespirit
         </Link>
         <div
           className="flex justify-center items-center md:hidden"
           onClick={this.open}
+          onKeyDown={this.keydown}
+          role="link"
+          tabIndex={0}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +88,9 @@ class Header extends Component {
             <div
               className="flex justify-between items-center box py-6"
               onClick={this.close}
+              onKeyDown={this.keydown}
+              role="link"
+              tabIndex={0}
             >
               <a
                 className="invisible text-white inline-block text-xl x:text-2xl font-extrabold"
