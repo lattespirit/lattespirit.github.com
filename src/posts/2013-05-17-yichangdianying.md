@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 一场电影
 description: 看了一场电影。
 ---

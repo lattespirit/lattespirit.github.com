@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 骑行龙胜
 description: 时隔一年，又和阿猫开始了骑行之旅。
 ---

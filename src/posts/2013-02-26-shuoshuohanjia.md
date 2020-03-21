@@ -1,13 +1,13 @@
 ---
-layout: post
 title: 说说寒假
 description: 明天的火车，这个寒假该收尾。
 thumbnail: /images/post/harvesttime.jpg
 ---
 
-<img class="mx-auto" src="/images/post/harvesttime.jpg" alt="" title="harvesttime" />
+<img class="mx-auto rounded-lg" src="/images/post/harvesttime.jpg" alt="" title="harvesttime" />
 
 这张图片名为"Harvest Time"。
+
 明天的火车，这个寒假该收尾。
 
 不想说有很多事没做，有很多想法没有实现，没有遗憾，还是生活么？只不想过于强调而已。

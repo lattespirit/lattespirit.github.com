@@ -1,10 +1,7 @@
 ---
-layout: post
 title: Just Give me A Reason
 description: 歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。初听这首歌，欣赏起伏变化得合适的节奏，高潮部分的旋律也容易让人记住。
 ---
-
-<embed class="w-60 sm:w-auto mx-auto" src="https://player.yinyuetai.com/video/player/630585/v_0.swf" quality="high" width="555" height="334" align="middle"  allowScriptAccess="sameDomain" allowfullscreen="true" type="application/x-shockwave-flash" />
 
 歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。初听这首歌，欣赏起伏变化得合适的节奏，高潮部分的旋律也容易让人记住。
 

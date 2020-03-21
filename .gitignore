@@ -1,9 +1,7 @@
 node_modules/
 .DS_Store
-_site/
-.jekyll-metadata
 gsap-bonus.tgz
 .cache/
-.env
+.env.production
 .env.development
 public/

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 母亲节
 description: 母亲节，祝老妈节日快乐。
 ---

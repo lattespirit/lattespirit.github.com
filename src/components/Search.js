@@ -173,7 +173,7 @@ class Search extends Component {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="w-6 h-6 sm:w-8 sm:h-8 stroke-current text-white feather feather-x-circle"
-                onClick={this.clearKeyword}
+                onClick={this.close}
               >
                 <circle cx="12" cy="12" r="10" />
                 <line x1="15" y1="9" x2="9" y2="15" />

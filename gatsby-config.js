@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    url: `https://www.lattespirit.com`,
+    url: process.env.SITE_URL,
     title: `Lattespirit`,
     description: `Lattespirit Blog`
   },
@@ -47,6 +47,13 @@ module.exports = {
           require(`tailwindcss`)(`./tailwind.config.js`),
           require(`autoprefixer`)
         ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        develop: false,
+        tailwind: true
       }
     }
   ]
