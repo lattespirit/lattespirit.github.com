@@ -4,7 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Lattespirit`
+    url: `https://www.lattespirit.com`,
+    title: `Lattespirit`,
+    description: `Lattespirit Blog`
   },
   plugins: [
     `gatsby-transformer-remark`,
