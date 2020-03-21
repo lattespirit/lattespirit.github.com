@@ -5,7 +5,7 @@
         "watch": "npm run dev -- --watch",
         "watch-prod": "npm run production -- --watch",
         "develop": "GATSBY_ENV=development gatsby develop",
-        "deploy": "gatsby build && gh-pages -d public"
+        "deploy": "gatsby build && gh-pages -d public -b master"
     },
     "dependencies": {
         "@mdx-js/mdx": "^1.5.7",
