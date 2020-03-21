@@ -4,7 +4,8 @@
         "production": "cross-env NODE_ENV=production webpack",
         "watch": "npm run dev -- --watch",
         "watch-prod": "npm run production -- --watch",
-        "develop": "GATSBY_ENV=development gatsby develop"
+        "develop": "GATSBY_ENV=development gatsby develop",
+        "deploy": "gatsby build && gh-pages -d public"
     },
     "dependencies": {
         "@mdx-js/mdx": "^1.5.7",
