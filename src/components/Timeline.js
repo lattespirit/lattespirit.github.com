@@ -1,5 +1,6 @@
 import "./timeline.css";
 import React, { Component } from "react";
+import NewTag from "../components/NewTag";
 import Events from "../content/events.json";
 import Fireworks from "../components/Fireworks";
 
@@ -14,7 +15,8 @@ class Timeline extends Component {
         ...event,
         year: year,
         month: month,
-        day: day
+        day: day,
+        isNew: Date.now() - new Date(event.date) < 24 * 3600 * 30 * 1000
       };
     });
     this.state = { events: events, selected: Events[0] };
@@ -149,12 +151,15 @@ class Timeline extends Component {
                   />
                 </div>
                 <div
-                  className={
+                  className={`hidden relative lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold ${
                     event.selected
-                      ? "hidden lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold text-purple-light bg-gray-light"
-                      : "hidden lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold text-white bg-purple-light"
-                  }
+                      ? "text-purple-light bg-gray-light"
+                      : "text-white bg-purple-light"
+                  }`}
                 >
+                  {event.isNew && (
+                    <NewTag className="absolute px-1 top-0 right-0 mt-2 mr-2 text-xs" />
+                  )}
                   <span
                     className={
                       event.selected

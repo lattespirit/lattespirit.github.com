@@ -25,7 +25,7 @@
     },
     {
         "date": "2019-12-29",
-        "content": "重构整站 UI，v3.0 上线，增加 <a class='text-pink-dark font-bold underline' href='/testimonials'>Testimonials</a>, <a class='text-pink-dark font-bold underline' href='/uses' >Uses</a> 和 <a class='text-pink-dark font-bold underline' href='/typography'>Typography</a>(可通过右键点击头部 Logo 进入) 页面",
+        "content": "重构整站 UI，v3.0 上线，增加 <a class='text-pink-dark font-bold underline' href='/testimonials'>Testimonials</a>, <a class='text-pink-dark font-bold underline' href='/uses' >Uses</a> 和 <a class='text-pink-dark font-bold underline' href='/logos'>Typography</a>(可通过右键点击头部 Logo 进入) 页面",
         "asset": "/images/about/v3-figma.png",
         "selected": false
     },

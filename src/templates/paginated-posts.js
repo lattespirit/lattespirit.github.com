@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby";
 import React, { Component } from "react";
+import NewTag from "../components/NewTag";
 import Layout from "../components/Layout";
 
 export default class PaginatedPosts extends Component {
@@ -35,20 +36,26 @@ export default class PaginatedPosts extends Component {
                   }}
                 ></div>
               )}
-              <div className="w-full p-4 md:p-6">
+              <div className="w-full p-4 py-6 md:p-6">
                 <div>
-                  <Link
-                    className="no-underline font-semibold text-black text-xl"
-                    to={"/" + node.fields.slug}
-                  >
-                    {node.frontmatter.title}
-                  </Link>
+                  <div className="flex justify-between items-center">
+                    <Link
+                      className="no-underline font-semibold text-black text-xl"
+                      to={"/" + node.fields.slug}
+                    >
+                      {node.frontmatter.title}
+                    </Link>
+                    {Date.now() - new Date(node.fields.date) <
+                      24 * 3600 * 15 * 1000 && (
+                      <NewTag className="px-2 py-1 text-xs" />
+                    )}
+                  </div>
                   <p className="mt-2 text-gray-darkest text-sm x:text-base md:text-sm">
                     {node.frontmatter.description}
                   </p>
                 </div>
                 <div className="flex justify-between items-center mt-6">
-                  <span className="text-gray-darkest text-sm">
+                  <span className="text-purple-light font-bold text-sm">
                     {node.fields.date}
                   </span>
                   <Link

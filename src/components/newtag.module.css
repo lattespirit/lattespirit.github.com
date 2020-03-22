@@ -1,0 +1,16 @@
+.newtag {
+    background: #f14b90;
+    transition: 1s;
+    animation: breath 2s linear infinite alternate;
+}
+
+@keyframes breath {
+    0% {
+        box-shadow: 0 0 5px #f14b90;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #f14b90, 0 0 25px #f14b90, 0 0 50px #f14b90,
+            0 0 200px #f14b90;
+    }
+}
