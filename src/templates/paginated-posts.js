@@ -1,23 +1,20 @@
-import { graphql, Link } from "gatsby";
-import React, { Component } from "react";
-import NewTag from "../components/NewTag";
-import Layout from "../components/Layout";
+/* eslint-disable react/prop-types */
+import { graphql, Link } from 'gatsby';
+import React, { Component } from 'react';
+import NewTag from '../components/NewTag';
+import Layout from '../components/Layout';
 
-export default class PaginatedPosts extends Component {
+class PaginatedPosts extends Component {
   render() {
-    const posts = this.props.data.allMdx.edges;
-    const {
-      currentPage,
-      hasNextPage,
-      hasPreviousPage,
-      pageCount
-    } = this.props.data.allMdx.pageInfo;
+    const { data } = this.props;
+    const { edges: posts, pageInfo } = data.allMdx;
+    const { currentPage, hasNextPage, hasPreviousPage, pageCount } = pageInfo;
 
     const previousUri =
-      hasPreviousPage && currentPage !== 2 ? "/page/" + (currentPage - 1) : "/";
+      hasPreviousPage && currentPage !== 2 ? `/page/${currentPage - 1}` : '/';
     const nextUri = hasNextPage
-      ? "/page/" + (currentPage + 1)
-      : "/page/" + currentPage;
+      ? `/page/${currentPage + 1}`
+      : `/page/${currentPage}`;
 
     return (
       <Layout>
@@ -32,16 +29,16 @@ export default class PaginatedPosts extends Component {
                 <div
                   className="flex-none min-w-1/4 h-40 md:h-auto bg-cover"
                   style={{
-                    backgroundImage: `url("${node.frontmatter.thumbnail}")`
+                    backgroundImage: `url("${node.frontmatter.thumbnail}")`,
                   }}
-                ></div>
+                />
               )}
               <div className="w-full p-4 py-6 md:p-6">
                 <div>
                   <div className="flex justify-between items-center">
                     <Link
                       className="no-underline font-semibold text-black text-xl"
-                      to={"/" + node.fields.slug}
+                      to={`/${node.fields.slug}`}
                     >
                       {node.frontmatter.title}
                     </Link>
@@ -60,7 +57,7 @@ export default class PaginatedPosts extends Component {
                   </span>
                   <Link
                     className="inline-block bg-purple-light rounded text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline"
-                    to={"/" + node.fields.slug}
+                    to={`/${node.fields.slug}`}
                   >
                     Read More
                   </Link>
@@ -94,7 +91,7 @@ export default class PaginatedPosts extends Component {
               return currentPage === i + 1 ? (
                 <Link
                   key={i}
-                  to={i === 0 ? "/" : "/page/" + (i + 1)}
+                  to={i === 0 ? '/' : `/page/${i + 1}`}
                   className="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center bg-purple-light text-white rounded-full no-underline"
                 >
                   {i + 1}
@@ -102,7 +99,7 @@ export default class PaginatedPosts extends Component {
               ) : (
                 <Link
                   key={i}
-                  to={i === 0 ? "/" : "/page/" + (i + 1)}
+                  to={i === 0 ? '/' : `/page/${i + 1}`}
                   className="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center text-black no-underline"
                 >
                   {i + 1}
@@ -164,3 +161,5 @@ export const PaginatedPostsQuery = graphql`
     }
   }
 `;
+
+export default PaginatedPosts;

@@ -1,10 +1,14 @@
-import { Link } from "gatsby";
-import React, { Component } from "react";
+import { Link } from 'gatsby';
+import React, { Component } from 'react';
 
 class Header extends Component {
-  state = {
-    open: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false,
+    };
+  }
 
   open = () => {
     this.setState({ open: true });
@@ -14,16 +18,15 @@ class Header extends Component {
     this.setState({ open: false });
   };
 
-  keydown = () => {
-    return;
-  };
+  keydown = () => {};
 
-  toTypography = e => {
-    window.location.href = "/logos";
+  toTypography = (e) => {
+    window.location.href = '/logos';
     e.preventDefault();
   };
 
   render() {
+    const { open } = this.state;
     return (
       <header className="flex justify-between items-center box py-6">
         <Link
@@ -80,7 +83,7 @@ class Header extends Component {
             About
           </Link>
         </div>
-        {this.state.open && (
+        {open && (
           <div
             className="fixed w-full h-full max-h-full inset-0 bg-purple-dark z-10"
             v-if="isNavBarOpened"

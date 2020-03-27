@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "../components/Head";
-import Layout from "../components/Layout";
+import React from 'react';
+import Head from '../components/Head';
+import Layout from '../components/Layout';
 
 export default () => (
   <Layout>
@@ -8,8 +8,8 @@ export default () => (
     <p className="text-xl text-white text-center text-2xl md:text-3xl font-bold mt-4 md:mt-8">
       What People Said...
     </p>
-    <div className="bg-gray w-52 h-4 md:w-80 mx-auto mt-8 md:mt-12 rounded-t-lg"></div>
-    <div className="bg-gray-light w-60 h-4 md:w-88 mx-auto rounded-t-lg"></div>
+    <div className="bg-gray w-52 h-4 md:w-80 mx-auto mt-8 md:mt-12 rounded-t-lg" />
+    <div className="bg-gray-light w-60 h-4 md:w-88 mx-auto rounded-t-lg" />
     <div className="relative bg-gray-lighter w-68 md:w-96 mx-auto pt-8 pb-32 md:pb-40 rounded-lg mb-20 sm:mb-0">
       <div className="flex justify-center">
         <svg
@@ -59,10 +59,10 @@ export default () => (
             rel="noopener noreferrer"
             className="block w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover bg-red-500"
             style={{
-              backgroundImage: `url("/images/testimonials/LanternD.png")`
+              backgroundImage: `url("/images/testimonials/LanternD.png")`,
             }}
           >
-            <span></span>
+            <span />
           </a>
         </div>
       </div>

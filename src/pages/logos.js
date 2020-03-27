@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "../components/Head";
-import Typography from "../components/Typography";
+import React from 'react';
+import Head from '../components/Head';
+import Typography from '../components/Typography';
 
 export default () => (
   <Typography>

@@ -1,39 +1,41 @@
-import React, { Component } from "react";
-import { DiscussionEmbed } from "disqus-react";
-import axios from "axios";
+/* eslint-disable react/prop-types */
+import React, { Component } from 'react';
+import { DiscussionEmbed } from 'disqus-react';
+import axios from 'axios';
 
 class Disqus extends Component {
-  state = {};
-
   constructor(props) {
     super(props);
     this.state = {
       loaded: false,
-      message: "Disqus 评论框加载中。。。",
+      message: 'Disqus 评论框加载中。。。',
       config: {
         shortname: process.env.GATSBY_DISQUS_NAME,
         config: {
           identifier: props.disqus.slug,
-          title: props.disqus.title
-        }
-      }
+          title: props.disqus.title,
+        },
+      },
     };
   }
 
   componentDidMount() {
     axios
-      .get("https://disqus.com/next/config.json")
-      .then(response => this.setState({ loaded: response.status === 200 }))
+      .get('https://disqus.com/next/config.json')
+      .then((response) => this.setState({ loaded: response.status === 200 }))
       .catch(() =>
-        this.setState({ message: "朋友，加载 Disqus 评论框就差那一步了 :)" })
+        this.setState({ message: '朋友，加载 Disqus 评论框就差那一步了 :)' })
       );
   }
 
   renderDisqus = () => {
-    return <DiscussionEmbed {...this.state.config} />;
+    const { config } = this.state;
+
+    return <DiscussionEmbed {...config} />;
   };
 
   renderMessage = () => {
+    const { message } = this.state;
     return (
       <p
         className="flex justify-center items-center border-purple-light text-purple-light text-xs md:text-base text-center rounded"
@@ -52,17 +54,16 @@ class Disqus extends Component {
           <line x1="12" y1="16" x2="12" y2="12" />
           <line x1="12" y1="8" x2="12.01" y2="8" />
         </svg>
-        <span className="text-purple-light font-bold">
-          {this.state.message}
-        </span>
+        <span className="text-purple-light font-bold">{message}</span>
       </p>
     );
   };
 
   render() {
+    const { loaded } = this.state;
     return (
       <div className="box mt-20 p-4 md:p-6 bg-gray-lighter opacity-85 rounded-lg">
-        {this.state.loaded ? this.renderDisqus() : this.renderMessage()}
+        {loaded ? this.renderDisqus() : this.renderMessage()}
       </div>
     );
   }

@@ -1,28 +1,30 @@
-import React from "react";
-import { Link } from "gatsby";
-import { globalHistory } from "@reach/router";
+/* eslint-disable react/prop-types */
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
+import { Link } from 'gatsby';
+import { globalHistory } from '@reach/router';
 
 export default ({ children }) => {
   const menus = [
     {
-      name: "Logos",
-      path: "/logos"
+      name: 'Logos',
+      path: '/logos',
     },
     {
-      name: "Colors",
-      path: "/colors"
+      name: 'Colors',
+      path: '/colors',
     },
     {
-      name: "Typeface",
-      path: "/typeface"
+      name: 'Typeface',
+      path: '/typeface',
     },
     {
-      name: "Hierachy",
-      path: "/hierachy"
-    }
+      name: 'Hierachy',
+      path: '/hierachy',
+    },
   ];
   return (
-    <React.Fragment>
+    <>
       <div className="px-4 py-4 md:px-8">
         <Link
           to="/"
@@ -33,11 +35,11 @@ export default ({ children }) => {
       </div>
       <div className="md:flex px-4 md:px-0">
         <div className="flex justify-between md:block md:w-20 my-4">
-          {menus.map(menu => {
+          {menus.map((menu) => {
             const classes =
               globalHistory.location.pathname === menu.path
-                ? "md:py-8 md:border-b-0 md:border-l-2 md:text-lg typography-nav"
-                : "md:py-8 md:border-b-0 md:border-l-2 md:text-lg";
+                ? 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg typography-nav'
+                : 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg';
             return (
               <div className={classes} key={menu.path}>
                 <Link
@@ -54,6 +56,6 @@ export default ({ children }) => {
           {children}
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };

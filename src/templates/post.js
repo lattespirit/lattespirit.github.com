@@ -1,30 +1,31 @@
-import React from "react";
-import Head from "../components/Head";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Disqus from "../components/Disqus";
-import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Head from '../components/Head';
+import Layout from '../components/Layout';
+import Disqus from '../components/Disqus';
 
 export default ({ data, pageContext }) => {
   const post = data.mdx;
   const { prev, next } = pageContext;
-  const prevText = prev ? "上篇" : "未始";
-  const nextText = next ? "下篇" : "未央";
+  const prevText = prev ? '上篇' : '未始';
+  const nextText = next ? '下篇' : '未央';
   const prevUri = prev ? prev.fields.slug : post.fields.slug;
   const nextUri = next ? next.fields.slug : post.fields.slug;
-  const prevClass =
-    "inline-block flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-" +
-    (prev ? "pointer" : "not-allowed");
-  const nextClass =
-    "inline-block flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-" +
-    (next ? "pointer" : "not-allowed");
+  const prevClass = `inline-block flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-${
+    prev ? 'pointer' : 'not-allowed'
+  }`;
+  const nextClass = `inline-block flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-${
+    next ? 'pointer' : 'not-allowed'
+  }`;
   return (
     <Layout>
       <Head title={post.frontmatter.title} />
       <div
         className="flex flex-col items-center box mt-4 p-2 md:p-4 rounded-lg"
-        style={{ backgroundColor: "rgba(237, 242, 247, 0.85)" }}
+        style={{ backgroundColor: 'rgba(237, 242, 247, 0.85)' }}
       >
         <p className="text-lg x:text-xl md:text-2xl font-bold mt-4">
           {post.frontmatter.title}
@@ -40,7 +41,7 @@ export default ({ data, pageContext }) => {
       </div>
 
       <div className="flex justify-between x:justify-center h-6 box mt-8">
-        <Link className={prevClass} to={"/" + prevUri}>
+        <Link className={prevClass} to={`/${prevUri}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -56,7 +57,7 @@ export default ({ data, pageContext }) => {
           </svg>
           <p>{prevText}</p>
         </Link>
-        <Link className={nextClass} to={"/" + nextUri}>
+        <Link className={nextClass} to={`/${nextUri}`}>
           <p>{nextText}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"

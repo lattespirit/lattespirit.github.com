@@ -1,8 +1,8 @@
-import React from "react";
-import Head from "../components/Head";
-import Layout from "../components/Layout";
-import Timeline from "../components/Timeline";
-import Disqus from "../components/Disqus";
+import React from 'react';
+import Head from '../components/Head';
+import Layout from '../components/Layout';
+import Timeline from '../components/Timeline';
+import Disqus from '../components/Disqus';
 
 export default () => (
   <Layout>
@@ -21,7 +21,7 @@ export default () => (
           Developer, Fake Designer
         </p>
         <p className="text-white text-sm mt-4">
-          头像来源于{" "}
+          头像来源于{' '}
           <a
             className="text-pink-dark underline"
             href="https://http.cat"
@@ -29,8 +29,8 @@ export default () => (
             rel="noopener noreferrer"
           >
             HTTP Cats
-          </a>{" "}
-          代表{" "}
+          </a>{' '}
+          代表{' '}
           <a
             className="text-pink-dark underline"
             href="https://http.cat/307"
@@ -38,7 +38,7 @@ export default () => (
             rel="noopener noreferrer"
           >
             307
-          </a>{" "}
+          </a>{' '}
           状态码的猫，当时学到该状态码时遇到的，一用就用了好久，后来才知道她是
           <a
             className="text-pink-dark underline"
@@ -75,8 +75,8 @@ export default () => (
           </p>
           <p className="text-gray-light text-sm lg:text-base mt-4">
             <span className="text-pink-dark">拿铁精神</span>
-            的意思，拥有拿铁精神的人，性情随和，热爱生活，不需要丰富的物质，追求自由和内心的满足，这是我对{" "}
-            <span className="text-pink-dark">lattespirit</span>{" "}
+            的意思，拥有拿铁精神的人，性情随和，热爱生活，不需要丰富的物质，追求自由和内心的满足，这是我对{' '}
+            <span className="text-pink-dark">lattespirit</span>{' '}
             的理解，也希望这样生活。本博只用于个人对生活的一些记录，并不是介绍拿铁或者讲述如何泡咖啡，只是单纯地被这样的精神吸引。
           </p>
           <p className="text-gray-light text-sm lg:text-base mt-4">
@@ -88,6 +88,6 @@ export default () => (
 
     <Timeline />
 
-    <Disqus disqus={{ slug: "about", title: "About" }} />
+    <Disqus disqus={{ slug: 'about', title: 'About' }} />
   </Layout>
 );

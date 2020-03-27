@@ -1,8 +1,9 @@
-import React from "react";
-import Head from "../components/Head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Search from "../components/Search";
+/* eslint-disable react/prop-types */
+import React from 'react';
+import Head from './Head';
+import Header from './Header';
+import Footer from './Footer';
+import Search from './Search';
 
 export default ({ children }) => (
   <div>
@@ -10,7 +11,7 @@ export default ({ children }) => (
     <img
       className="fixed bg-cover min-w-full min-h-full -z-1"
       alt="background"
-      src={"/images/background.jpg"}
+      src="/images/background.jpg"
     />
 
     <Header />

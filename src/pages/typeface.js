@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "../components/Head";
-import Typography from "../components/Typography";
+import React from 'react';
+import Head from '../components/Head';
+import Typography from '../components/Typography';
 
 export default () => {
   return (
@@ -16,12 +16,12 @@ export default () => {
           strokeLinejoin="round"
           className="w-4 h-4 sm:w-6 sm:h-6 mx-2 sm:mx-4 feather feather-info"
         >
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="16" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12.01" y2="8" />
         </svg>
         <span>
-          Proudly using{" "}
+          Proudly using{' '}
           <a
             className="text-purple-light font-semibold"
             href="https://fonts.google.com/specimen/Nunito"
@@ -29,7 +29,7 @@ export default () => {
             rel="noopener noreferrer"
           >
             Nunito
-          </a>{" "}
+          </a>{' '}
           font
         </span>
       </p>

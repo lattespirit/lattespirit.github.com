@@ -1,10 +1,11 @@
-import React from "react";
-import Head from "../components/Head";
-import { Link, graphql } from "gatsby";
-import Layout from "../components/Layout";
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Head from '../components/Head';
+import Layout from '../components/Layout';
 
 export default ({ data }) => {
-  let titleYear = "";
+  let titleYear = '';
   return (
     <Layout>
       <Head title="Archives" />
@@ -24,7 +25,7 @@ export default ({ data }) => {
                 <p>
                   <Link
                     className="text-purple-dark no-underline font-semibold"
-                    to={"/" + node.fields.slug}
+                    to={`/${node.fields.slug}`}
                   >
                     {node.frontmatter.title}
                   </Link>

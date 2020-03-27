@@ -1,69 +1,71 @@
 @tailwind base;
 @tailwind components;
 
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
 body {
-    font-family: Nunito, sans-serif;
-    @apply flex flex-col h-full;
+  font-family: Nunito, sans-serif;
+  @apply flex flex-col h-full;
 }
 
 a,
 strong,
 span {
-    @apply text-pink-dark;
+  @apply text-pink-dark;
 }
 
 a {
-    @apply underline;
+  @apply underline;
 }
 
 .box {
-    @apply w-72 mx-auto;
+  @apply w-72 mx-auto;
 }
 
 .flickity-prev-next-button {
-    @apply w-4 h-4 !important;
+  @apply w-4 h-4 !important;
 }
 
 @screen x {
-    .box {
-        @apply w-84;
-    }
+  .box {
+    @apply w-84;
+  }
 }
 
 @screen sm {
-    .box {
-        @apply w-100;
-    }
+  .box {
+    @apply w-100;
+  }
 }
 
 @screen md {
-    .box {
-        @apply w-140;
-    }
+  .box {
+    @apply w-140;
+  }
 
-    .flickity-prev-next-button {
-        @apply w-8 h-8 !important;
-    }
+  .flickity-prev-next-button {
+    @apply w-8 h-8 !important;
+  }
 }
 
 @screen lg {
-    .box {
-        @apply w-180;
-    }
+  .box {
+    @apply w-180;
+  }
 }
 
 .paragraph p {
-    @apply my-4;
+  @apply my-4;
 }
 
 .typography-nav {
-    @apply font-bold border-b-2 border-purple-light;
+  @apply font-bold border-b-2 border-purple-light;
 }
 
 @screen md {
-    .typography-nav {
-        @apply border-l-2;
-    }
+  .typography-nav {
+    @apply border-l-2;
+  }
 }
 
 @tailwind utilities;

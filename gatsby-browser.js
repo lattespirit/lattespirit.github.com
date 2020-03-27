@@ -1,1 +1,1 @@
-import "./src/styles/lattespirit.css";
+import './src/styles/lattespirit.css';

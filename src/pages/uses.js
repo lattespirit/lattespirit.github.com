@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "../components/Head";
-import uses from "../content/uses.yaml";
-import Layout from "../components/Layout";
+import React from 'react';
+import Head from '../components/Head';
+import uses from '../content/uses.yaml';
+import Layout from '../components/Layout';
 
 export default () => (
   <Layout>
@@ -13,19 +13,19 @@ export default () => (
           欢迎来到我的使用装备页面，这里记录了我日常中用到的硬件与软件。
         </p>
 
-        {uses.areas.map(area => {
+        {uses.areas.map((area) => {
           return (
             <div className="my-4" key={area.name}>
               <p className="text-lg font-bold py-2 border-b-2 border-purple-light">
                 {area.name}
               </p>
-              {area.items.map(item => {
+              {area.items.map((item) => {
                 const itemClass =
                   item.description && item.link
-                    ? "text-purple-light text-sm md:text-lg font-bold"
-                    : "text-purple-light text-sm md:text-lg";
+                    ? 'text-purple-light text-sm md:text-lg font-bold'
+                    : 'text-purple-light text-sm md:text-lg';
                 const itemTitle = item.link ? (
-                  <a class="text-purple-light" href={item.link}>
+                  <a className="text-purple-light" href={item.link}>
                     {item.title}
                   </a>
                 ) : (
@@ -47,7 +47,7 @@ export default () => (
                     {item.image && (
                       <img
                         className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center bg-cover ml-2 lg:ml-8"
-                        src={"/images/uses/" + item.image}
+                        src={`/images/uses/${item.image}`}
                         alt={item.image}
                       />
                     )}
