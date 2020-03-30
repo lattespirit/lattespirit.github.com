@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { graphql, Link } from 'gatsby';
 import React, { Component } from 'react';
+import Img from 'gatsby-image';
 import NewTag from '../components/NewTag';
 import Layout from '../components/Layout';
 
@@ -25,12 +26,10 @@ class PaginatedPosts extends Component {
               className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden"
               key={node.fields.slug}
             >
-              {node.frontmatter.thumbnail && (
-                <div
-                  className="flex-none min-w-1/4 h-40 md:h-auto bg-cover"
-                  style={{
-                    backgroundImage: `url("${node.frontmatter.thumbnail}")`,
-                  }}
+              {node.frontmatter.featuredImage && (
+                <Img
+                  className="flex-none min-w-1/4 h-40 md:h-auto"
+                  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
                 />
               )}
               <div className="w-full p-4 py-6 md:p-6">
@@ -148,7 +147,13 @@ export const PaginatedPostsQuery = graphql`
           frontmatter {
             title
             description
-            thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 2000) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+              }
+            }
           }
         }
       }

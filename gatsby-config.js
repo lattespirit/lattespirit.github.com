@@ -1,64 +1,72 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
-    title: `Lattespirit`,
-    description: `Lattespirit Blog`
+    title: 'Lattespirit',
+    description: 'Lattespirit Blog',
   },
   plugins: [
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: [`.md`, `.mdx`]
-      }
+        extensions: ['.md', '.mdx'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
+      },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`
-      }
+        name: 'posts',
+        path: `${__dirname}/src/posts`,
+      },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/static/images`
-      }
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
     },
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
-          require(`tailwindcss`)(`./tailwind.config.js`),
-          require(`autoprefixer`)
-        ]
-      }
+          require('tailwindcss')('./tailwind.config.js'),
+          require('autoprefixer'),
+        ],
+      },
     },
     {
-      resolve: `gatsby-plugin-purgecss`,
+      resolve: 'gatsby-plugin-purgecss',
       options: {
         develop: true,
         tailwind: true,
         ignore: [
-          "node_modules/slick-carousel/slick/slick-theme.css",
-          "node_modules/slick-carousel/slick/slick.css"
-        ]
-      }
-    }
-  ]
+          'node_modules/slick-carousel/slick/slick-theme.css',
+          'node_modules/slick-carousel/slick/slick.css',
+        ],
+      },
+    },
+  ],
 };

@@ -1,7 +1,7 @@
 ---
 title: 离开灵犀
 description: 图片中的俊男靓女系灵犀话剧社成员
-thumbnail: /images/post/leavelingxi.jpg
+featuredImage: ../images/post/leavelingxi.jpg
 ---
 
 <img class="mx-auto rounded-lg" title="话剧社成员" src="/images/post/leavelingxi.jpg" alt="Leave Ling Xi"/>

@@ -47,7 +47,7 @@ export default () => (
                     {item.image && (
                       <img
                         className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center bg-cover ml-2 lg:ml-8"
-                        src={`/images/uses/${item.image}`}
+                        src={`../images/uses/${item.image}`}
                         alt={item.image}
                       />
                     )}

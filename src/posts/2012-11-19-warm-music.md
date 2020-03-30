@@ -1,7 +1,7 @@
 ---
 title: 温馨音乐
 description: 会永远记住给我们童年带来无限欢乐的一家人
-thumbnail: /images/post/labixiaoxin.jpg
+featuredImage: ../images/post/labixiaoxin.jpg
 ---
 
 <img class="mx-auto rounded-lg" src="/images/post/labixiaoxin.jpg" alt="" title="labixiaoxin" />

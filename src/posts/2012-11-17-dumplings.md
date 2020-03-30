@@ -1,7 +1,7 @@
 ---
 title: 饺子
 description: 记录一下。
-thumbnail: /images/post/together.jpg
+featuredImage: ../images/post/together.jpg
 ---
 
 <img class="mx-auto rounded-lg" title="together" src="/images/post/together.jpg" alt="together" />

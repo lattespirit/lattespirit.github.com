@@ -1,7 +1,7 @@
 ---
 title: 说说寒假
 description: 明天的火车，这个寒假该收尾。
-thumbnail: /images/post/harvesttime.jpg
+featuredImage: ../images/post/harvesttime.jpg
 ---
 
 <img class="mx-auto rounded-lg" src="/images/post/harvesttime.jpg" alt="" title="harvesttime" />

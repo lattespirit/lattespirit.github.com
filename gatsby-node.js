@@ -1,11 +1,11 @@
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === "Mdx") {
-    const filename = createFilePath({ node, getNode, basePath: "posts" });
+  if (node.internal.type === 'Mdx') {
+    const filename = createFilePath({ node, getNode, basePath: 'posts' });
 
     const [, date, title] = filename.match(
       /^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/
@@ -13,14 +13,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     createNodeField({
       node,
-      name: "date",
-      value: date
+      name: 'date',
+      value: date,
     });
 
     createNodeField({
       node,
-      name: "slug",
-      value: title
+      name: 'slug',
+      value: title,
     });
   }
 };
@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `);
 
   if (result.errors) {
-    reporter.panicOnBuild("Error while running GraphQL query.");
+    reporter.panicOnBuild('Error while running GraphQL query.');
     return;
   }
 
@@ -57,26 +57,26 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   posts.forEach(({ node }, index) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve("./src/templates/post.js"),
+      component: path.resolve('./src/templates/post.js'),
       context: {
         slug: node.fields.slug,
         title: node.frontmatter.title,
         prev: index === posts.length - 1 ? null : posts[index + 1].node,
-        next: index === 0 ? null : posts[index - 1].node
-      }
+        next: index === 0 ? null : posts[index - 1].node,
+      },
     });
   });
 
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? "/" : `/page/${i + 1}`,
-      component: path.resolve("./src/templates/paginated-posts.js"),
+      path: i === 0 ? '/' : `/page/${i + 1}`,
+      component: path.resolve('./src/templates/paginated-posts.js'),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
         numPages,
-        currentPage: i + 1
-      }
+        currentPage: i + 1,
+      },
     });
   });
 };
