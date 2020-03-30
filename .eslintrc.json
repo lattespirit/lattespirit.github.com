@@ -26,19 +26,11 @@
   "rules": {
     "prettier/prettier": [
       "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 80
-      }
+      { "trailingComma": "es5", "singleQuote": true, "printWidth": 80 }
     ],
-    "quotes": ["error", "single"],
-    "react/jsx-filename-extension": [1, {
-      "extensions": [".js", ".jsx"]
-    }],
-    "react/button-has-type": ["error", {
-      "reset": true
-    }],
+    "quotes": ["error", "single", "avoid-escape"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/button-has-type": ["error", { "reset": true }],
     "react/no-unescaped-entities": ["off"],
     "react/no-array-index-key": ["off"],
     "react/prefer-stateless-function": ["off"],
@@ -48,6 +40,9 @@
       "ForInStatement",
       "LabeledStatement",
       "WithStatement"
-    ]
+    ],
+    "global-require": ["off"],
+    "import/no-unresolved": ["off"],
+    "import/no-extraneous-dependencies": ["off"]
   }
 }

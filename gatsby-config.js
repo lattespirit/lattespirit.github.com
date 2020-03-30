@@ -68,5 +68,29 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Lattespirit',
+        short_name: 'Lattespirit',
+        start_url: '/',
+        background_color: '#F14B90',
+        theme_color: '#21067A',
+        display: 'standalone',
+        icon: 'src/images/lattespirit-rounded.png',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: [
+          '/',
+          '/archives/',
+          '/testimonials/',
+          '/uses/',
+          '/about/',
+        ],
+      },
+    },
   ],
 };

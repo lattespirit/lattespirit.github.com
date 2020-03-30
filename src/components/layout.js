@@ -9,7 +9,7 @@ export default ({ children }) => (
   <div>
     <Head />
     <img
-      className="fixed bg-cover min-w-full min-h-full -z-1"
+      className="fixed object-cover min-w-full min-h-full -z-1"
       alt="background"
       src="/images/background.jpg"
     />
