@@ -155,7 +155,7 @@ class Timeline extends Component {
                 />
               </div>
               <div
-                className={`hidden relative lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold ${
+                className={`hidden transition-transform duration-500 transform hover:scale-115 relative lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold ${
                   event.selected
                     ? 'text-purple-light bg-gray-light'
                     : 'text-white bg-purple-light'
