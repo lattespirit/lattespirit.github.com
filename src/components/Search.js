@@ -82,14 +82,6 @@ class Search extends Component {
 
     const bloggers = [
       {
-        name: 'Lattespirit',
-        url: 'https://www.lattespirit.com/about',
-        isPrioritized: true,
-        avatar: '../images/lattespirit.jpg',
-        alt: 'Lattespirit',
-        description: 'Blogger / Developer / Fake Designer',
-      },
-      {
         name: 'LanternD',
         url: 'https://dlyang.me',
         isPrioritized: true,
