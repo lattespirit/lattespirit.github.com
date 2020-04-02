@@ -78,8 +78,35 @@ class Search extends Component {
 
     const { originPosts } = this.state;
 
+    const fusePosts = new Fuse(originPosts, options).search(this.keyword());
+
+    const bloggers = [
+      {
+        name: 'Lattespirit',
+        url: 'https://www.lattespirit.com/about',
+        isPrioritized: true,
+        avatar: '../images/lattespirit.jpg',
+        alt: 'Lattespirit',
+        description: 'Blogger / Developer / Fake Designer',
+      },
+      {
+        name: 'LanternD',
+        url: 'https://dlyang.me',
+        isPrioritized: true,
+        avatar: '../images/testimonials/LanternD.png',
+        alt: 'LanternD',
+        description: 'Blog Enthusiast / DIYer / Cat Lover',
+      },
+    ];
+
+    bloggers.forEach((blogger) => {
+      if (blogger.name.toLowerCase().includes(this.keyword().toLowerCase())) {
+        fusePosts.unshift(blogger);
+      }
+    });
+
     this.setState({
-      renderedPosts: new Fuse(originPosts, options).search(this.keyword()),
+      renderedPosts: fusePosts,
     });
   }
 
@@ -106,6 +133,32 @@ class Search extends Component {
     const { renderedPosts } = this.state;
 
     return renderedPosts.map((post) => {
+      if (post.isPrioritized) {
+        return (
+          <div
+            className="flex items-center mx-2 sm:mx-4 my-2 py-2 border-b last:border-b-0 border-gray-light"
+            key={post.name}
+          >
+            {' '}
+            <div className="w-16 h-16">
+              <img
+                className="w-full h-full rounded-full"
+                src={post.avatar}
+                alt={post.alt}
+              />
+            </div>
+            <div className="ml-4 flex flex-col justify-between items-start">
+              <a className="text-lg font-bold no-underline" href={post.url}>
+                {post.name}
+              </a>
+              <span className="text-sm text-pink-light">
+                {post.description}
+              </span>
+            </div>
+          </div>
+        );
+      }
+
       return (
         <div
           className="flex justify-between items-center mx-2 sm:mx-4 my-2 py-2 border-b last:border-b-0 border-gray-light"
@@ -113,7 +166,7 @@ class Search extends Component {
         >
           <div className="w-40 sm:w-auto">
             <a
-              className="text-sm sm:text-base text-left font-bold block"
+              className="block text-sm sm:text-base text-left font-bold no-underline"
               href={post.url}
             >
               {post.title}
@@ -141,7 +194,7 @@ class Search extends Component {
 
           <hr className="mt-8 text-purple-dark" />
           <p className="my-4 text-sm text-center">
-            Search by
+            Search by{' '}
             <a
               className="text-purple-dark font-bold"
               href="https://fusejs.io"

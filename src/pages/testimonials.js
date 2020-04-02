@@ -75,7 +75,7 @@ export default () => {
               rel="noopener noreferrer"
             >
               <Img
-                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover bg-red-500"
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover bg-purple-dark"
                 fluid={data.file.childImageSharp.fluid}
               />
             </a>
