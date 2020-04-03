@@ -60,7 +60,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
-        develop: true,
+        develop: false,
         tailwind: true,
         ignore: [
           'node_modules/slick-carousel/slick/slick-theme.css',

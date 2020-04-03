@@ -27,6 +27,22 @@ class Header extends Component {
 
   render() {
     const { open } = this.state;
+    const mdMenus = [
+      { title: 'Home', url: '/' },
+      { title: 'Archives', url: '/archives' },
+      { title: 'Testimonials', url: '/testimonials' },
+      { title: 'About', url: '/about' },
+    ];
+
+    const smMenus = [
+      { title: 'Home', url: '/' },
+      { title: 'Archives', url: '/archives' },
+      { title: 'Uses', url: '/uses' },
+      { title: 'Testimonials', url: '/testimonials' },
+      { title: 'Typography', url: '/logos' },
+      { title: 'About', url: '/about' },
+    ];
+
     return (
       <header className="flex justify-between items-center box py-6">
         <Link
@@ -61,27 +77,16 @@ class Header extends Component {
         </div>
 
         <div className="hidden md:block self-end">
-          <Link className="text-white inline-block mr-6 no-underline" to="/">
-            Home
-          </Link>
-          <Link
-            className="text-white inline-block mr-6 no-underline"
-            to="/archives"
-          >
-            Archives
-          </Link>
-          <Link
-            className="text-white inline-block mr-6 no-underline"
-            to="/testimonials"
-          >
-            Testimonials
-          </Link>
-          <Link
-            className="text-white inline-block mr-6 no-underline"
-            to="/about"
-          >
-            About
-          </Link>
+          {mdMenus.map((menu) => {
+            return (
+              <Link
+                className="text-white inline-block pl-6 no-underline"
+                to={menu.url}
+              >
+                {menu.title}
+              </Link>
+            );
+          })}
         </div>
         {open && (
           <div
@@ -115,30 +120,16 @@ class Header extends Component {
               </svg>
             </div>
             <div className="w-20 mx-auto text-center">
-              <Link to="/" className="block text-white py-4 no-underline">
-                Home
-              </Link>
-              <Link
-                to="/archives"
-                className="block text-white py-4 no-underline"
-              >
-                Archives
-              </Link>
-              <Link to="/uses" className="block text-white py-4 no-underline">
-                Uses
-              </Link>
-              <Link
-                to="/testimonials"
-                className="block text-white py-4 no-underline"
-              >
-                Testimonials
-              </Link>
-              <Link to="/logos" className="block text-white py-4 no-underline">
-                Typography
-              </Link>
-              <Link to="/about" className="block text-white py-4 no-underline">
-                About
-              </Link>
+              {smMenus.map((menu) => {
+                return (
+                  <Link
+                    to={menu.url}
+                    className="block text-white py-4 no-underline"
+                  >
+                    {menu.title}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}
