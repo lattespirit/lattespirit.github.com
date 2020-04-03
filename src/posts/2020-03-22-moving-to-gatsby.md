@@ -9,4 +9,4 @@ description: 年初重整 UI 时，意识到 Jekyll 进行页面热更新的痛�
 
 Gatsby 里数据的获取主要通过 **GraphQL**，没有接触过的话还是需要花点时间了解。这次重构中，大部分的时间都是用在处理文章数据和图片上，也正是依靠官方详细的文档和丰富的插件系统，目前所遇到的问题都能顺利解决，并且只用了不到半个月的时间就完成了迁移，这过程中了解到不少新的概念。很圆满。
 
-接下来就是追求性能上的优化，提升浏览的体验，看到官方的 <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-offline" target="_blank">Offline Plugin</a> 似乎有点意思。
+接下来就是追求性能上的优化，提升浏览的体验，看到官方的 <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-offline" target="_blank">Offline Plugin</a> 似乎有点意思(**现已添加**)。

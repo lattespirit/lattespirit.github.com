@@ -4,7 +4,7 @@ description: 观看如题的电影后，可以说是把郭在容的女友三部�
 featuredImage: ../images/post/meet-miss-anxiety.jpg
 ---
 
-<img class="mx-auto rounded-lg mb-6" src="/images/post/meet-miss-anxiety.jpg" alt="Meet Miss Anxiety"/>
+![我的早更女友](/images/post/meet-miss-anxiety.jpg)
 
 观看如题的电影后，可以说是把郭在容的女友三部曲看完了。
 

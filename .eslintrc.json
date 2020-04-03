@@ -43,6 +43,8 @@
     ],
     "global-require": ["off"],
     "import/no-unresolved": ["off"],
-    "import/no-extraneous-dependencies": ["off"]
+    "import/no-extraneous-dependencies": ["off"],
+    "jsx-a11y/alt-text": ["off"],
+    "jsx-a11y/heading-has-content": ["off"]
   }
 }

@@ -4,7 +4,7 @@ description: 会永远记住给我们童年带来无限欢乐的一家人
 featuredImage: ../images/post/labixiaoxin.jpg
 ---
 
-<img class="mx-auto rounded-lg" src="/images/post/labixiaoxin.jpg" alt="" title="labixiaoxin" />
+![蜡笔小新](/images/post/labixiaoxin.jpg)
 
 会永远记住给我们童年带来无限欢乐的一家人
 

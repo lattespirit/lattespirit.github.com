@@ -6,6 +6,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 import Disqus from '../components/Disqus';
+import UI from '../components/UI';
+import Carousel from '../components/Carousel';
 
 export default ({ data, pageContext }) => {
   const post = data.mdx;
@@ -34,7 +36,7 @@ export default ({ data, pageContext }) => {
           {post.fields.date}
         </p>
         <div className="text-sm md:text-base mx-4 md:mx-8 paragraph">
-          <MDXProvider>
+          <MDXProvider components={{ ...UI, Carousel }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
         </div>

@@ -4,7 +4,7 @@ description: 记录一下。
 featuredImage: ../images/post/together.jpg
 ---
 
-<img class="mx-auto rounded-lg" title="together" src="/images/post/together.jpg" alt="together" />
+![together](/images/post/together.jpg)
 
 记录一下。
 

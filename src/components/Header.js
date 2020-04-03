@@ -82,6 +82,7 @@ class Header extends Component {
               <Link
                 className="text-white inline-block pl-6 no-underline"
                 to={menu.url}
+                key={menu.title}
               >
                 {menu.title}
               </Link>
@@ -123,8 +124,9 @@ class Header extends Component {
               {smMenus.map((menu) => {
                 return (
                   <Link
-                    to={menu.url}
                     className="block text-white py-4 no-underline"
+                    to={menu.url}
+                    key={menu.title}
                   >
                     {menu.title}
                   </Link>

@@ -4,9 +4,9 @@ description: 明天的火车，这个寒假该收尾。
 featuredImage: ../images/post/harvesttime.jpg
 ---
 
-<img class="mx-auto rounded-lg" src="/images/post/harvesttime.jpg" alt="" title="harvesttime" />
+![Harvest Time](/images/post/harvesttime.jpg)
 
-这张图片名为"Harvest Time"。
+这张图片名为 **Harvest Time**。
 
 明天的火车，这个寒假该收尾。
 
