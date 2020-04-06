@@ -19,6 +19,8 @@ const H1 = (props) => (
   <h1 className="font-bold text-6xl text-purple-dark" {...props} />
 );
 
+const P = (props) => <p className="leading-relaxed" {...props} />;
+
 const Img = (props) => <img className="mx-auto rounded-lg" {...props} />;
 
 const UI = {
@@ -28,6 +30,7 @@ const UI = {
   h3: H3,
   h2: H2,
   h1: H1,
+  p: P,
   img: Img,
 };
 
