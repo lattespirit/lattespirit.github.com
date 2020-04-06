@@ -91,7 +91,7 @@ class Header extends Component {
         </div>
         {open && (
           <div
-            className="fixed w-full h-full max-h-full inset-0 bg-purple-dark z-10"
+            className="fixed w-full h-full max-h-full inset-0 bg-purple-dark z-20"
             v-if="isNavBarOpened"
           >
             <div
