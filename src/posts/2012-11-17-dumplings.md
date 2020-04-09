@@ -4,7 +4,7 @@ description: 记录一下。
 featuredImage: ../images/post/together.jpg
 ---
 
-![together](/images/post/together.jpg)
+![together](../images/post/together.jpg)
 
 记录一下。
 

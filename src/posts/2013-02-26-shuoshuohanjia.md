@@ -4,7 +4,7 @@ description: 明天的火车，这个寒假该收尾。
 featuredImage: ../images/post/harvesttime.jpg
 ---
 
-![Harvest Time](/images/post/harvesttime.jpg)
+![Harvest Time](../images/post/harvesttime.jpg)
 
 这张图片名为 **Harvest Time**。
 

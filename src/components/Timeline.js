@@ -1,14 +1,17 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-danger */
 import './timeline.css';
 import React, { Component } from 'react';
-import NewTag from './NewTag';
-import Events from '../content/events.json';
+import { graphql, StaticQuery } from 'gatsby';
 import Fireworks from './Fireworks';
+import NewTag from './NewTag';
 
 class Timeline extends Component {
-  constructor() {
-    super();
-    const events = Events.map((event) => {
+  constructor(props) {
+    super(props);
+    const { edges } = props.data.allEventsJson;
+    const events = edges.map((node) => {
+      const { node: event } = node;
       const datePattern = /^(\d{4})-(\d{2})-(\d{2})$/;
       const [, year, month, day] = datePattern.exec(event.date);
       return {
@@ -19,7 +22,14 @@ class Timeline extends Component {
         isNew: Date.now() - new Date(event.date) < 24 * 3600 * 30 * 1000,
       };
     });
-    this.state = { events, selected: Events[0] };
+    this.v1 = props.data.v1;
+    this.v2 = props.data.v2;
+    this.disqus = props.data.disqus;
+    this.bootstrap = props.data.bootstrap;
+    this.typography = props.data.typography;
+    this.figma = props.data.figma;
+    this.gatsby = props.data.gatsby;
+    this.state = { events, selected: events[0] };
   }
 
   select = (hovered) => {
@@ -52,7 +62,7 @@ class Timeline extends Component {
       <div className="flex justify-center items-center w-full h-full">
         <img
           className="w-60"
-          src={selected.asset}
+          src={selected.image.path.publicURL}
           alt="About"
           style={{ animation: 'general 1s linear 0s infinite alternate both' }}
         />
@@ -61,13 +71,11 @@ class Timeline extends Component {
   };
 
   imageOfFirstLaunch = () => {
-    const { selected } = this.state;
-
     return (
       <div className="relative w-80">
         <img
           className="absolute bottom-0 rounded object-contain"
-          src={selected.asset}
+          src={this.v1.publicURL}
           alt="About - Launch"
           style={{ animation: 'v1 2s linear 1s infinite alternate both' }}
         />
@@ -82,7 +90,7 @@ class Timeline extends Component {
     <div className="relative w-80">
       <img
         className="absolute bottom-0 rounded"
-        src="/images/about/v2.png"
+        src={this.v2.publicURL}
         alt="About - Moving to Github Pages"
         style={{ animation: 'v1 2s linear 1s infinite alternate both' }}
       />
@@ -94,7 +102,7 @@ class Timeline extends Component {
       <Fireworks />
       <img
         className="absolute bottom-0 rounded"
-        src="/images/about/v3-typography.png"
+        src={this.typography.publicURL}
         alt="About v3 Typography"
         style={{
           animation: 'typography 2s linear 0s infinite alternate both',
@@ -102,7 +110,7 @@ class Timeline extends Component {
       />
       <img
         className="absolute right-0 bottom-0 rounded"
-        src="/images/about/v3-figma.png"
+        src={this.figma.publicURL}
         alt="About v3 Figma"
         style={{ animation: 'figma 2s linear 0s infinite alternate both' }}
       />
@@ -191,4 +199,49 @@ class Timeline extends Component {
   }
 }
 
-export default Timeline;
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query EventsQuery {
+        allEventsJson {
+          edges {
+            node {
+              content
+              date
+              selected
+              image {
+                path {
+                  publicURL
+                }
+              }
+            }
+          }
+        }
+        v1: file(relativePath: { eq: "about/v1.png" }) {
+          publicURL
+        }
+        v2: file(relativePath: { eq: "about/v2.png" }) {
+          publicURL
+        }
+        disqus: file(relativePath: { eq: "about/disqus.png" }) {
+          publicURL
+        }
+        bootstrap: file(relativePath: { eq: "about/bootstrap.svg" }) {
+          publicURL
+        }
+        typography: file(relativePath: { eq: "about/v3-typography.png" }) {
+          publicURL
+        }
+        figma: file(relativePath: { eq: "about/v3-figma.png" }) {
+          publicURL
+        }
+        gatsby: file(relativePath: { eq: "about/gatsby.svg" }) {
+          publicURL
+        }
+      }
+    `}
+    render={(data) => {
+      return <Timeline data={data} />;
+    }}
+  />
+);

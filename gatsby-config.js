@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -22,6 +23,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1200,
+              linkImagesToOriginal: false,
             },
           },
         ],
@@ -46,6 +48,13 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'json',
+        path: `${__dirname}/src/content`,
       },
     },
     {

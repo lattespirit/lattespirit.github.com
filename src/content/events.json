@@ -2,37 +2,49 @@
   {
     "date": "2012-07-25",
     "content": "前身域名 lattespirit.com.cn，一年之后转成 <span class='text-pink-dark font-bold underline'>lattespirit.com</span>，博客第一次由 WordPress 驱动上线",
-    "asset": "/images/about/v1.png",
+    "image": {
+      "path": "../images/about/v1.png"
+    },
     "selected": true
   },
   {
     "date": "2014-01-28",
     "content": "博客迁至 Github ，由 Jekyll 驱动，使用 Bootstrap v2 设计极简风格的界面",
-    "asset": "/images/about/Octocat.png",
+    "image": {
+      "path": "../images/about/Octocat.png"
+    },
     "selected": false
   },
   {
     "date": "2015-10-20",
     "content": "将第三方评论框由多说迁移至 Disqus",
-    "asset": "/images/about/disqus.png",
+    "image": {
+      "path": "../images/about/disqus.png"
+    },
     "selected": false
   },
   {
     "date": "2017-02-04",
     "content": "博客前端框架 Bootstrap 版本升级至 v3，优化导航栏区分移动端和 PC 端，并增加整站搜索功能，按下 <span class='px-1 bg-pink-dark text-white rounded'>s</span> 键调出搜索框",
-    "asset": "/images/about/bootstrap.svg",
+    "image": {
+      "path": "../images/about/bootstrap.svg"
+    },
     "selected": false
   },
   {
     "date": "2019-12-29",
     "content": "重构整站 UI，v3.0 上线，增加 <a class='text-pink-dark font-bold underline' href='/testimonials'>Testimonials</a>, <a class='text-pink-dark font-bold underline' href='/uses' >Uses</a> 和 <a class='text-pink-dark font-bold underline' href='/logos'>Typography</a>(可通过右键点击头部 Logo 进入) 页面",
-    "asset": "/images/about/v3-figma.png",
+    "image": {
+      "path": "../images/about/v3-figma.png"
+    },
     "selected": false
   },
   {
     "date": "2020-03-20",
     "content": "告别 <span>Jekyll</span>，拥抱 <a href='https://www.gatsbyjs.org/' target='_blank'>Gatsby</a>，整站进行重构",
-    "asset": "/images/about/gatsby.svg",
+    "image": {
+      "path": "../images/about/gatsby.svg"
+    },
     "selected": false
   }
 ]

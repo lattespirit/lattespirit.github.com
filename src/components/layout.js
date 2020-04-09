@@ -1,25 +1,35 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import Head from './Head';
 import Header from './Header';
 import Footer from './Footer';
 import Search from './Search';
 
-export default ({ children }) => (
-  <div>
-    <Head />
-    <img
-      className="fixed object-cover min-w-full min-h-full -z-1"
-      alt="background"
-      src="/images/background.jpg"
-    />
+export default ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query BackgroundImageQuery {
+      file(relativePath: { eq: "background.jpg" }) {
+        publicURL
+      }
+    }
+  `);
+  return (
+    <div>
+      <Head />
+      <img
+        className="fixed object-cover min-w-full min-h-full -z-1"
+        alt="background"
+        src={data.file.publicURL}
+      />
 
-    <Header />
+      <Header />
 
-    <div className="mb-20">{children}</div>
+      <div className="mb-20">{children}</div>
 
-    <Search />
+      <Search />
 
-    <Footer />
-  </div>
-);
+      <Footer />
+    </div>
+  );
+};

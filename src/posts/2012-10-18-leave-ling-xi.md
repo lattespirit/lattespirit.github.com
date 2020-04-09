@@ -4,7 +4,7 @@ description: 图片中的俊男靓女系灵犀话剧社成员
 featuredImage: ../images/post/leavelingxi.jpg
 ---
 
-![Leave Ling Xi](/images/post/leavelingxi.jpg)
+![Leave Ling Xi](../images/post/leavelingxi.jpg)
 
 图片中的俊男靓女系灵犀话剧社成员
 

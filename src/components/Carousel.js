@@ -36,7 +36,7 @@ function PrevArrow(props) {
 
 class Carousel extends Component {
   render() {
-    const { images } = this.props;
+    const { children } = this.props;
     const settings = {
       infinite: true,
       speed: 1000,
@@ -50,15 +50,8 @@ class Carousel extends Component {
     return (
       <div className="rounded-lg w-64 x:w-72 sm:w-120 md:w-136 mx-auto">
         <Slider {...settings}>
-          {images.map((image) => {
-            const src = image.includes('images')
-              ? image
-              : `/images/post/${image}`;
-            return (
-              <div key={image}>
-                <img className="rounded-lg" src={src} alt={image} />
-              </div>
-            );
+          {React.Children.map(children, (child) => {
+            return <div>{child}</div>;
           })}
         </Slider>
       </div>
