@@ -27,23 +27,23 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0f18a3016e8fea59170c.js"
+    "url": "webpack-runtime-5fe444c809111166166d.js"
   },
   {
-    "url": "styles.e86af18802f0b2a3d519.css"
+    "url": "styles.dab9af953692233498fb.css"
   },
   {
     "url": "styles-21983e83ba48ed508b4c.js"
   },
   {
-    "url": "commons-103df69aefec654c84ac.js"
+    "url": "commons-d28cd5522bd70929dfb3.js"
   },
   {
-    "url": "app-b97e74883d503b09bd30.js"
+    "url": "app-3230524d1dc85a4751d9.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c139204edc040cc317692e84bebe0624"
+    "revision": "11bccfe23635abd6b8a14a0f883bae78"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-64c7e44b9575562e9b76.js"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "0c0fec33fea535f134b7c1fb3808a4f3"
+    "revision": "8160e0c2aa3490b79f4de0a32b3ffb50"
   },
   {
     "url": "component---src-pages-archives-js-91c14611d82a90508c13.js"
@@ -74,18 +74,18 @@ self.__precacheManifest = [
     "revision": "23c98026f34a55cf4b10b1c4dde26225"
   },
   {
-    "url": "component---src-pages-uses-js-ea784a1b435a5b905725.js"
+    "url": "component---src-pages-uses-js-bece7cfa98c9cc86d940.js"
   },
   {
     "url": "page-data/uses/page-data.json",
-    "revision": "22b895fe5d4ad311c0abb049a157a17b"
+    "revision": "399ccb4f93a8498e413caf1840a5a94e"
   },
   {
-    "url": "component---src-pages-about-js-bb1254337e478d44db11.js"
+    "url": "component---src-pages-about-js-ef811d8828026f8b33dc.js"
   },
   {
     "url": "page-data/about/page-data.json",
-    "revision": "3ddd5d51b095997b4d473ef99898912f"
+    "revision": "2a3749b5191ff109f5612e1d4eb6ab7a"
   },
   {
     "url": "manifest.webmanifest",
@@ -182,7 +182,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-b97e74883d503b09bd30.js`))) {
+  if (!resources || !(await caches.match(`/app-3230524d1dc85a4751d9.js`))) {
     return await fetch(event.request)
   }
 
