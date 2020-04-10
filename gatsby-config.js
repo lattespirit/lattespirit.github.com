@@ -90,6 +90,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-40706666-1',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['/', '/archives', '/testimonials', '/uses', '/about'],

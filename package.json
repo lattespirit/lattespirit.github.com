@@ -14,6 +14,7 @@
         "fuse.js": "^3.4.6",
         "gatsby": "^2.19.37",
         "gatsby-image": "^2.2.43",
+        "gatsby-plugin-google-analytics": "^2.2.2",
         "gatsby-plugin-manifest": "^2.3.3",
         "gatsby-plugin-mdx": "^1.0.83",
         "gatsby-plugin-offline": "^3.1.2",
