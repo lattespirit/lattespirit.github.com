@@ -35,12 +35,14 @@ class PaginatedPosts extends Component {
               <div className="w-full p-4 py-6 md:p-6">
                 <div>
                   <div className="flex justify-between items-center">
-                    <Link
-                      className="no-underline font-semibold text-black text-xl"
-                      to={`/${node.fields.slug}`}
-                    >
-                      {node.frontmatter.title}
-                    </Link>
+                    <h5>
+                      <Link
+                        className="no-underline font-semibold text-black text-xl"
+                        to={`/${node.fields.slug}`}
+                      >
+                        {node.frontmatter.title}
+                      </Link>
+                    </h5>
                     {Date.now() - new Date(node.fields.date) <
                       24 * 3600 * 15 * 1000 && (
                       <NewTag className="px-2 py-1 text-xs" />
@@ -70,6 +72,7 @@ class PaginatedPosts extends Component {
           <Link
             className="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85"
             to={previousUri}
+            aria-label="Previous"
           >
             <svg
               width="6"
@@ -109,6 +112,7 @@ class PaginatedPosts extends Component {
           {/* Next Button */}
           <Link
             className="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
+            aria-label="Next"
             to={nextUri}
           >
             <svg

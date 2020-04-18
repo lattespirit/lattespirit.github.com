@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import Head from './Head';
 import Header from './Header';
 import Footer from './Footer';
@@ -17,6 +18,9 @@ export default ({ children }) => {
   return (
     <div>
       <Head />
+      <Helmet>
+        <html lang="zh" />
+      </Helmet>
       <img
         className="fixed object-cover min-w-full min-h-full -z-1"
         alt="background"
