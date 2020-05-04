@@ -80,19 +80,25 @@ class Search extends Component {
 
     const fusePosts = new Fuse(originPosts, options).search(this.keyword());
 
+    const { data } = this.props;
+    const { src: avatar } = data.file.childImageSharp.fluid;
+
     const bloggers = [
       {
         name: 'LanternD',
         url: 'https://dlyang.me',
         isPrioritized: true,
-        avatar: '../images/testimonials/LanternD.png',
+        avatar,
         alt: 'LanternD',
         description: 'Blog Enthusiast / DIYer / Cat Lover',
       },
     ];
 
     bloggers.forEach((blogger) => {
-      if (blogger.name.toLowerCase().includes(this.keyword().toLowerCase())) {
+      if (
+        this.keyword() !== '' &&
+        blogger.name.toLowerCase().includes(this.keyword().toLowerCase())
+      ) {
         fusePosts.unshift(blogger);
       }
     });
@@ -109,8 +115,9 @@ class Search extends Component {
   }
 
   updateKeyword(e) {
-    this.setState({ keyword: e.target.value });
-    this.refreshRenderedPosts();
+    this.setState({ keyword: e.target.value }, () => {
+      this.refreshRenderedPosts();
+    });
   }
 
   result() {
@@ -132,18 +139,21 @@ class Search extends Component {
             key={post.name}
           >
             {' '}
-            <div className="w-16 h-16">
+            <div className="w-12 h-12 x:w-16 x:h-16">
               <img
                 className="w-full h-full rounded-full"
                 src={post.avatar}
                 alt={post.alt}
               />
             </div>
-            <div className="ml-4 flex flex-col justify-between items-start">
-              <a className="text-lg font-bold no-underline" href={post.url}>
+            <div className="ml-4 w-auto flex flex-col justify-between items-start">
+              <a
+                className="text-sm x:text-lg font-bold no-underline"
+                href={post.url}
+              >
                 {post.name}
               </a>
-              <span className="text-sm text-pink-light">
+              <span className="text-xs x:text-sm text-pink-light">
                 {post.description}
               </span>
             </div>
@@ -271,6 +281,13 @@ export default () => (
         site {
           siteMetadata {
             url
+          }
+        }
+        file(relativePath: { eq: "testimonials/LanternD.png" }) {
+          childImageSharp {
+            fluid {
+              src
+            }
           }
         }
       }
