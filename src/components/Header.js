@@ -27,20 +27,14 @@ class Header extends Component {
 
   render() {
     const { open } = this.state;
-    const mdMenus = [
-      { title: 'Home', url: '/' },
-      { title: 'Archives', url: '/archives' },
-      { title: 'Testimonials', url: '/testimonials' },
-      { title: 'About', url: '/about' },
-    ];
 
-    const smMenus = [
-      { title: 'Home', url: '/' },
-      { title: 'Archives', url: '/archives' },
-      { title: 'Uses', url: '/uses' },
-      { title: 'Testimonials', url: '/testimonials' },
-      { title: 'Typography', url: '/logos' },
-      { title: 'About', url: '/about' },
+    const menus = [
+      { title: 'Home', url: '/', showInLargeScreen: true },
+      { title: 'Archives', url: '/archives', showInLargeScreen: true },
+      { title: 'Uses', url: '/uses', showInLargeScreen: true },
+      { title: 'Testimonials', url: '/testimonials', showInLargeScreen: true },
+      { title: 'Typography', url: '/logos', showInLargeScreen: false },
+      { title: 'About', url: '/about', showInLargeScreen: true },
     ];
 
     return (
@@ -77,15 +71,17 @@ class Header extends Component {
         </div>
 
         <div className="hidden md:block self-end">
-          {mdMenus.map((menu) => {
+          {menus.map((menu) => {
             return (
-              <Link
-                className="text-white inline-block pl-6 no-underline"
-                to={menu.url}
-                key={menu.title}
-              >
-                {menu.title}
-              </Link>
+              menu.showInLargeScreen && (
+                <Link
+                  className="text-white inline-block pl-6 no-underline"
+                  to={menu.url}
+                  key={menu.title}
+                >
+                  {menu.title}
+                </Link>
+              )
             );
           })}
         </div>
@@ -121,10 +117,10 @@ class Header extends Component {
               </svg>
             </div>
             <div className="w-20 mx-auto text-center">
-              {smMenus.map((menu) => {
+              {menus.map((menu) => {
                 return (
                   <Link
-                    className="block text-white py-4 no-underline"
+                    className="block font-bold text-white py-4 no-underline"
                     to={menu.url}
                     key={menu.title}
                   >
