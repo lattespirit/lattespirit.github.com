@@ -21,7 +21,7 @@ const H6 = (props) => (
 
 const P = (props) => <p className="leading-relaxed" {...props} />;
 
-const Img = (props) => <img className="mx-auto rounded-lg" {...props} />;
+const Img = (props) => <img className="mx-auto" {...props} />;
 
 const UI = {
   h1: H1,

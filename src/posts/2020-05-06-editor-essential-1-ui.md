@@ -6,7 +6,7 @@ featuredImage: ../images/post/keyboard.jpg
 
 #### 前言
 
-从这篇文章开始，准备写一个系列，总结我(假装很)多年来使用编辑器 / IDE 后，觉得在写代码的过程中能提升效率的工作流，所介绍的工作流并不局限于某个编辑器或者 IDE。顺便解释一下**基操勿 6**是“**基本操作勿扣 666**”的意思。
+从这篇文章开始，准备写一个系列，总结我(假装很)多年来使用编辑器 / IDE 后，觉得在写代码的过程中能提升效率的工作流，所介绍的工作流并不局限于某个编辑器或者 IDE，之后的文章里也统称**编辑器**。顺便解释一下**基操勿 6**是“**基本操作勿扣 666**”的意思。
 
 先从最简单的 UI 开始，令人赏心悦目的 UI 能让眼睛不至于疲惫。不管是编辑器还是 IDE，都能以插件或者扩展的形式对外观进行修改，并且能设置字体，以下是当前流行的主题外观和字体。
 
@@ -60,10 +60,12 @@ featuredImage: ../images/post/keyboard.jpg
 
 ![Dank Mono](../images/post/dank-mono.png)
 
-##### [Cascadia Code](https://github.com/microsoft/cascadia-code)
+##### [Cascadia Code](https://github.com/microsoft/cascadia-code)👇
 
 微软开源的字体，属于耐看类型。
 
 ![Cascadia Code](../images/post/cascadia-code.png)
 
 **注**：本博客的图片目前缺少 lightbox 功能(即点击图片可放大)，可能导致上面图片中字体看起来不是很明显，lightbox 功能已加入 TODO List，不久就会上线。
+
+下一篇将会聊到**光标**。
