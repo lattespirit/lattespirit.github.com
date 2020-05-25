@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/components/newtag.module.css"],"names":["module","exports"],"mappings":"0KACAA,EAAOC,QAAU,CAAC,OAAS,+BAA+B,OAAS","file":"styles-21983e83ba48ed508b4c.js","sourcesContent":["// extracted by mini-css-extract-plugin\nmodule.exports = {\"newtag\":\"newtag-module--newtag--EAWjw\",\"breath\":\"newtag-module--breath--3zuIC\"};"],"sourceRoot":""}
