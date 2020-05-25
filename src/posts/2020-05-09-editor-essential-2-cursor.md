@@ -46,4 +46,4 @@ featuredImage: ../images/post/keyboard.jpg
 
 ![Cursor Between Symbols](./images/cursor-between-symbols.gif)
 
-下一篇将会聊到**文件管理**。
+下一篇将会聊到**窗口**。
