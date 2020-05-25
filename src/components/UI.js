@@ -21,6 +21,8 @@ const H6 = (props) => (
 
 const P = (props) => <p className="leading-relaxed" {...props} />;
 
+const Strong = (props) => <strong className="text-pink-dark" {...props} />;
+
 const Img = (props) => <img className="mx-auto" {...props} />;
 
 const UI = {
@@ -31,6 +33,7 @@ const UI = {
   h5: H5,
   h6: H6,
   p: P,
+  strong: Strong,
   img: Img,
 };
 
