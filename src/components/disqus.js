@@ -12,6 +12,7 @@ class Disqus extends Component {
       config: {
         shortname: process.env.GATSBY_DISQUS_NAME,
         config: {
+          url: `${process.env.SITE_URL}/${props.disqus.slug}`,
           identifier: props.disqus.slug,
           title: props.disqus.title,
         },
