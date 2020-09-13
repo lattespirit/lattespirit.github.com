@@ -66,6 +66,4 @@ featuredImage: ../images/post/keyboard.jpg
 
 ![Cascadia Code](../images/post/cascadia-code.png)
 
-**注**：本博客的图片目前缺少 lightbox 功能(即点击图片可放大)，可能导致上面图片中字体看起来不是很明显，lightbox 功能已加入 TODO List，不久就会上线。
-
 下一篇将会聊到**光标**。

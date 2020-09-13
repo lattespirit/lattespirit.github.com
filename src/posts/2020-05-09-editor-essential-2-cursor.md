@@ -46,4 +46,12 @@ featuredImage: ../images/post/keyboard.jpg
 
 ![Cursor Between Symbols](./images/cursor-between-symbols.gif)
 
+#### 全局 symbol 搜索 👇
+
+Symbol 只的是一个文件包含的变量，方法名，类名等等的数据，IDE 或者编辑器在打开一个项目时，会对项目中所有文件的 symbol 进行索引，方便进行查找和跳转等等操作。
+
+以下演示的是，假设 **app/Models/Alert.php** 文件中有一个 **project()** 方法，当前光标在一个空文件，进行全局搜索 project 这个 symbol，然后会列出所有包含 project 这个 symbol 的文件，最后输入关键字进行过滤并跳转至 **project()** 方法所在行数。
+
+![Cursor to Global Symbol](./images/cursor-to-global-symbol.gif)
+
 下一篇将会聊到**窗口**。
