@@ -22,10 +22,7 @@ class PaginatedPosts extends Component {
         {/* Paginated Posts */}
         {posts.map(({ node }) => {
           return (
-            <div
-              className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden"
-              key={node.fields.slug}
-            >
+            <div className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden">
               {node.frontmatter.featuredImage && (
                 <Img
                   className="flex-none min-w-1/4 h-40 md:h-auto"
@@ -70,7 +67,7 @@ class PaginatedPosts extends Component {
         <div className="flex justify-center w-72 x:w-84 sm:w-100 h-8 mt-12 mx-auto">
           {/* Previous Button */}
           <Link
-            className="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85"
+            className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85"
             to={previousUri}
             aria-label="Previous"
           >
@@ -90,19 +87,14 @@ class PaginatedPosts extends Component {
           </Link>
           <div className="flex justify-center items-center mx-4 px-4 rounded-full bg-gray-lighter opacity-85">
             {Array.from({ length: pageCount }).map((_, i) => {
-              return currentPage === i + 1 ? (
+              return (
                 <Link
-                  key={i}
                   to={i === 0 ? '/' : `/page/${i + 1}`}
-                  className="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center bg-purple-light text-white rounded-full no-underline"
-                >
-                  {i + 1}
-                </Link>
-              ) : (
-                <Link
-                  key={i}
-                  to={i === 0 ? '/' : `/page/${i + 1}`}
-                  className="flex inline-block w-6 h-6 mr-2 text-sm x:text-base justify-center items-center text-black no-underline"
+                  className={`inline-flex w-6 h-6 mr-2 text-sm x:text-base justify-center items-center no-underline rounded-full ${
+                    currentPage === i + 1
+                      ? 'bg-purple-light text-white'
+                      : 'text-black'
+                  }`}
                 >
                   {i + 1}
                 </Link>
@@ -111,7 +103,7 @@ class PaginatedPosts extends Component {
           </div>
           {/* Next Button */}
           <Link
-            className="inline-block flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
+            className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
             aria-label="Next"
             to={nextUri}
           >
