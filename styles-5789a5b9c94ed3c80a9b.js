@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{K7k0:function(n,t,e){},kKhA:function(n,t,e){},tyWD:function(n,t,e){},vGDF:function(n,t,e){},wGSY:function(n,t,e){n.exports={newtag:"newtag-module--newtag--3mdUE",breath:"newtag-module--breath--2BeEn"}}}]);
+//# sourceMappingURL=styles-5789a5b9c94ed3c80a9b.js.map
