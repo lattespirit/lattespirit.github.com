@@ -36,14 +36,14 @@ self.__precacheManifest = [
     "url": "styles-5789a5b9c94ed3c80a9b.js"
   },
   {
-    "url": "commons-1854e079c93752a4e4e3.js"
+    "url": "commons-97539af337785bbb19ee.js"
   },
   {
     "url": "app-dab649a3d0a58d2d7aa2.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "be920cadf50503da07b6ad449f51094e"
+    "revision": "20c34c032dac7f9bdb7c478c1f0c7fa5"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-64c7e44b9575562e9b76.js"
@@ -54,7 +54,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "8b95e386352282d77344f07d242ce61a"
+    "revision": "5f51b17ceb59139ba3acaf4536566e83"
   },
   {
     "url": "component---src-templates-paginated-posts-js-c21500faa7dc1d51de66.js"
@@ -68,7 +68,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/archives/page-data.json",
-    "revision": "f354e5d8e0c42921c34849970f33f415"
+    "revision": "6f1cffb7faaff61d923e77e0d9d1d6e4"
   },
   {
     "url": "component---src-pages-testimonials-js-6585f639f3320479eb11.js"
