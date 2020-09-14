@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
     title: 'Lattespirit',
-    description: "Lattespirit's Blog",
+    description: 'Lattespirit Blog',
   },
   plugins: [
     'gatsby-transformer-remark',
@@ -25,58 +25,6 @@ module.exports = {
               maxWidth: 1200,
               linkImagesToOriginal: false,
             },
-          },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-feed',
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                url
-                title
-                description
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map((edge) => {
-                return {
-                  ...edge.node.frontmatter,
-                  date: edge.node.fields.date,
-                  url: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
-                  guid: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
-                };
-              });
-            },
-            query: `
-              {
-                allMdx(sort: { fields: fields___date, order: DESC}) {
-                  edges {
-                    node {
-                      id
-                      frontmatter {
-                        title
-                        description
-                      }
-                      fields {
-                        slug
-                        date
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: 'Lattespirit',
-            link: process.env.SITE_URL,
           },
         ],
       },
