@@ -2,6 +2,7 @@
     "scripts": {
         "lint": "eslint ./src",
         "lint:fix": "eslint ./src --fix",
+        "build": "gatsby build",
         "develop": "GATSBY_ENV=development gatsby develop",
         "deploy": "gatsby build && gh-pages -d public -b master"
     },
