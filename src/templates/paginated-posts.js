@@ -146,7 +146,7 @@ export const PaginatedPostsQuery = graphql`
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 2000) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
