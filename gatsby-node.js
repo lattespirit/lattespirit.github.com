@@ -4,7 +4,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'Mdx') {
+  if (node.internal.type === 'Mdx' || node.internal.type === 'MarkdownRemark') {
     const filename = createFilePath({ node, getNode, basePath: 'posts' });
 
     const [, date, title] = filename.match(

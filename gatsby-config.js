@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
     title: 'Lattespirit',
-    description: 'Lattespirit Blog',
+    description: "Lattespirit's Blog",
   },
   plugins: [
     'gatsby-transformer-remark',
@@ -99,6 +99,70 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['/', '/archives', '/testimonials', '/uses', '/about'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                url
+                title
+                description
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map((edge) => {
+                return {
+                  ...edge.node.frontmatter,
+                  description: edge.node.excerpt,
+                  date: edge.node.fields.date,
+                  url: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
+                };
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(sort: {
+                    fields: fields___date,
+                    order: DESC
+                  }, filter: {
+                    rawMarkdownBody: {
+                      regex: "/^((?!Carousel).)*$/s"
+                    }
+                  }) {
+                  edges {
+                    node {
+                      frontmatter {
+                        description
+                        title
+                      }
+                      fields {
+                        date
+                        slug
+                      }
+                      excerpt(format: HTML, pruneLength: 1000000)
+                    }
+                  }
+                }
+              }
+            `,
+            setup: (options) => ({
+              ...options,
+              site_url: process.env.SITE_URL,
+              feed_url: `${process.env.SITE_URL}/rss.xml`,
+            }),
+            output: '/rss.xml',
+            title: "Lattespirit's Blog",
+          },
+        ],
       },
     },
   ],
