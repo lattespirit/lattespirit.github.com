@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { graphql, Link } from 'gatsby';
 import React, { Component } from 'react';
-import Img from 'gatsby-image';
 import NewTag from '../components/NewTag';
 import Layout from '../components/Layout';
 
@@ -22,11 +21,17 @@ class PaginatedPosts extends Component {
         {/* Paginated Posts */}
         {posts.map(({ node }) => {
           return (
-            <div className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden">
+            <div
+              className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden"
+              key={node.fields.slug}
+            >
               {node.frontmatter.featuredImage && (
-                <Img
-                  className="flex-none min-w-1/4 h-40 md:h-auto"
-                  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+                <img
+                  className="w-full h-40 md:w-1/4 md:h-auto object-cover object-center"
+                  src={node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                  srcSet={
+                    node.frontmatter.featuredImage.childImageSharp.fluid.srcSet
+                  }
                 />
               )}
               <div className="w-full p-4 py-6 md:p-6">
@@ -95,6 +100,7 @@ class PaginatedPosts extends Component {
                       ? 'bg-purple-light text-white'
                       : 'text-black'
                   }`}
+                  key={i}
                 >
                   {i + 1}
                 </Link>
@@ -146,7 +152,7 @@ export const PaginatedPostsQuery = graphql`
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 2000) {
-                  ...GatsbyImageSharpFluid_noBase64
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
               }
             }
