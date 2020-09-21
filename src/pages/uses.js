@@ -90,7 +90,7 @@ export const UsesQuery = graphql`
               path {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                    ...GatsbyImageSharpFluid_noBase64
                   }
                 }
                 extension
