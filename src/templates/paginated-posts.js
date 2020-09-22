@@ -26,13 +26,18 @@ class PaginatedPosts extends Component {
               key={node.fields.slug}
             >
               {node.frontmatter.featuredImage && (
-                <img
-                  className="w-full h-40 md:w-1/4 md:h-auto object-cover object-center"
-                  src={node.frontmatter.featuredImage.childImageSharp.fluid.src}
-                  srcSet={
-                    node.frontmatter.featuredImage.childImageSharp.fluid.srcSet
-                  }
-                />
+                <div className="md:flex-shrink-0 md:w-30">
+                  <img
+                    className="w-full h-40 md:h-full object-cover object-center"
+                    src={
+                      node.frontmatter.featuredImage.childImageSharp.fluid.src
+                    }
+                    srcSet={
+                      node.frontmatter.featuredImage.childImageSharp.fluid
+                        .srcSet
+                    }
+                  />
+                </div>
               )}
               <div className="w-full p-4 py-6 md:p-6">
                 <div>
