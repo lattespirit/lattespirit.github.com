@@ -1,7 +1,7 @@
 ---
 title: Under The Sea
 description: 经历过多次浮潜和深潜之后，对水下世界的美丽与神秘多了些切身的体会
-featuredImage: ../images/post/under-the-sea-2.jpg
+featuredImage: ../../static/images/post/under-the-sea-2.jpg
 ---
 
 <Carousel>

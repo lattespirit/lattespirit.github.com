@@ -47,7 +47,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
@@ -86,7 +86,7 @@ module.exports = {
         background_color: '#F14B90',
         theme_color: '#21067A',
         display: 'standalone',
-        icon: 'src/images/lattespirit-rounded.png',
+        icon: 'static/images/lattespirit-rounded.png',
       },
     },
     {

@@ -1,7 +1,7 @@
 ---
 title: 编辑器基操勿6 (3) - 窗口
 description: 一个编辑器经常会打开多个文件，同时查看多个文件也是家常便饭，多窗口也是编辑器的标配，这种情况下，窗口的有效管理也成为了一门功课。
-featuredImage: ../images/post/keyboard.jpg
+featuredImage: ../../static/images/post/keyboard.jpg
 ---
 
 一个编辑器经常会打开多个文件，同时查看多个文件也是家常便饭，多窗口也是编辑器的标配，这种情况下，窗口的有效管理也成为了一门功课。

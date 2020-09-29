@@ -1,7 +1,7 @@
 ---
 title: 编辑器基操勿6 (4) - 文件管理
 description: 不管是用 Markdown 写文章还是编辑各种语言的代码，都离不开文件，既然使用频率极高，那么就有必要对它下手，想办法在这方面提高效率，在此聊一聊编辑器中文件的管理。
-featuredImage: ../images/post/keyboard.jpg
+featuredImage: ../../static/images/post/keyboard.jpg
 ---
 
 不管是用 Markdown 写文章还是编辑各种语言的代码，都离不开文件，既然使用频率极高，那么就有必要对它下手，想办法在这方面提高效率，在此聊一聊编辑器中文件的管理。

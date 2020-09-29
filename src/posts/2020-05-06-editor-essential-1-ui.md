@@ -1,7 +1,7 @@
 ---
 title: 编辑器基操勿6 (1) - UI
 description: 从这篇开始，准备写一个系列的文章，介绍我(假装很)多年来使用编辑器 / IDE 后，觉得在写代码的过程中能提升效率的工作流,先从能令人赏心悦目的 UI 开始
-featuredImage: ../images/post/keyboard.jpg
+featuredImage: ../../static/images/post/keyboard.jpg
 ---
 
 #### 前言

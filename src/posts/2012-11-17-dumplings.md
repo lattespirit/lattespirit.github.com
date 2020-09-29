@@ -1,7 +1,7 @@
 ---
 title: 饺子
 description: 记录一下。
-featuredImage: ../images/post/together.jpg
+featuredImage: ../../static/images/post/together.jpg
 ---
 
 ![together](../images/post/together.jpg)

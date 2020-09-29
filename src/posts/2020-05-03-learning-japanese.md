@@ -1,7 +1,7 @@
 ---
 title: 学习日语
 description: 要是谈起开始学习日语的时间，恐怕要追溯到 2015 年了
-featuredImage: ../images/post/learning-japanese.jpg
+featuredImage: ../../static/images/post/learning-japanese.jpg
 ---
 
 要是谈起开始学习日语的时间，恐怕要追溯到 2015 年了，但并不代表已经学了很多年，那时学过五十音图后就没有继续下去了，本文也仅记录个人学习日语的过程，成效有待检验。

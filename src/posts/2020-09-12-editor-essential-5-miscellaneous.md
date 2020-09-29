@@ -1,7 +1,7 @@
 ---
 title: 编辑器基操勿6 (5) - 其他
 description: 这篇文章介绍的是编辑器中一些有胜于无的功能，至此，也是编辑器基操勿6系列的最后一篇。
-featuredImage: ../images/post/keyboard.jpg
+featuredImage: ../../static/images/post/keyboard.jpg
 ---
 
 这篇文章介绍的是编辑器中一些有胜于无的功能，至此，也是**编辑器基操勿 6**系列的最后一篇。

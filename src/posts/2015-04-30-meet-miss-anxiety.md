@@ -1,7 +1,7 @@
 ---
 title: 我的早更女友
 description: 观看如题的电影后，可以说是把郭在容的女友三部曲看完了。
-featuredImage: ../images/post/meet-miss-anxiety.jpg
+featuredImage: ../../static/images/post/meet-miss-anxiety.jpg
 ---
 
 ![我的早更女友](../images/post/meet-miss-anxiety.jpg)
