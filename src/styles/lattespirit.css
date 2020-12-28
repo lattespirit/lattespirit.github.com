@@ -22,6 +22,10 @@ a {
   @apply w-72 mx-auto;
 }
 
+.model {
+  @apply w-60 mx-auto;
+}
+
 .flickity-prev-next-button {
   @apply w-4 h-4 !important;
 }
@@ -29,6 +33,10 @@ a {
 @screen x {
   .box {
     @apply w-84;
+  }
+
+  .model {
+    @apply w-64 h-64;
   }
 }
 
@@ -46,11 +54,19 @@ a {
   .flickity-prev-next-button {
     @apply w-8 h-8 !important;
   }
+
+  .model {
+    @apply w-72 h-72;
+  }
 }
 
 @screen lg {
   .box {
     @apply w-180;
+  }
+
+  .model {
+    @apply w-96 h-80;
   }
 }
 

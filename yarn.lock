@@ -1622,6 +1622,13 @@
     "utility-types" "^3.10.0"
     "zustand" "^3.0.3"
 
+"@react-three/flex@^0.5.2":
+  "integrity" "sha512-xuqPGzZop7YSNRunPrNweVr/pwjjn2X2/7XJJj5ceIvyEqxhnNVw+R6zCNQNjskO4SYkix9JrvSNIncWsz57/Q=="
+  "resolved" "https://registry.npmjs.org/@react-three/flex/-/flex-0.5.2.tgz"
+  "version" "0.5.2"
+  dependencies:
+    "yoga-layout-prebuilt" "^1.9.6"
+
 "@sideway/address@^4.1.0":
   "integrity" "sha512-wAH/JYRXeIFQRsxerIuLjgUu2Xszam+O5xKeatJ4oudShOOirfmsQ1D6LL54XOU2tizpCYku+s1wmU0SYdpoSA=="
   "resolved" "https://registry.npmjs.org/@sideway/address/-/address-4.1.0.tgz"
@@ -14935,7 +14942,7 @@
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
 
-"three@^0.124.0", "three@>=0.115":
+"three@^0.120.1", "three@^0.124.0", "three@>=0.115":
   "integrity" "sha512-ROXp1Ly7YyF+jC910DQyAWj++Qlw2lQv0qwYLNQwdDbjk4bsOXAfGO92wYTMPNei1GMJUmCxSxc3MjGBTS09Rg=="
   "resolved" "https://registry.npmjs.org/three/-/three-0.124.0.tgz"
   "version" "0.124.0"

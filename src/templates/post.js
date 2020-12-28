@@ -8,6 +8,7 @@ import Layout from '../components/Layout';
 import Disqus from '../components/Disqus';
 import UI from '../components/UI';
 import Carousel from '../components/Carousel';
+import Car from '../components/Car';
 
 export default ({ data, pageContext }) => {
   const post = data.mdx;
@@ -26,7 +27,7 @@ export default ({ data, pageContext }) => {
     <Layout>
       <Head title={post.frontmatter.title} />
       <div
-        className="flex flex-col items-center box mt-4 p-2 md:p-4 rounded-lg"
+        className="flex flex-col items-center box mt-4 px-4 md:px-8 py-2 md:py-4 rounded-lg"
         style={{ backgroundColor: 'rgba(237, 242, 247, 0.85)' }}
       >
         <p className="text-lg x:text-xl md:text-2xl font-bold mt-4">
@@ -35,8 +36,8 @@ export default ({ data, pageContext }) => {
         <p className="text-sm x:text-base text-gray-darkest my-2">
           {post.fields.date}
         </p>
-        <div className="text-sm md:text-base mx-4 md:mx-8 paragraph">
-          <MDXProvider components={{ ...UI, Carousel }}>
+        <div className="text-sm md:text-base paragraph">
+          <MDXProvider components={{ ...UI, Carousel, Car }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
         </div>
