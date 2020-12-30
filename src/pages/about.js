@@ -31,7 +31,7 @@ export default () => {
           <h1 className="text-center text-white lg:text-left lg:text-3xl font-bold">
             Jeffrey Yeung
           </h1>
-          <p className="text-center text-gray text-xs lg:text-left lg:text-sm mt-2">
+          <p className="text-center text-gray-default text-xs lg:text-left lg:text-sm mt-2">
             Developer, Fake Designer
           </p>
           <p className="text-white text-sm mt-4">

@@ -4,6 +4,8 @@
         "lint:fix": "eslint ./src --fix",
         "build": "gatsby build",
         "develop": "GATSBY_ENV=development gatsby develop",
+        "clean": "gatsby clean",
+        "serve": "gatsby serve",
         "deploy": "gatsby build && gh-pages -d public -b master"
     },
     "dependencies": {
@@ -32,12 +34,13 @@
         "gatsby-transformer-remark": "^2.13.1",
         "gatsby-transformer-sharp": "^2.9.0",
         "gsap": "file:gsap-bonus.tgz",
-        "postcss": "^8.2.1",
+        "postcss": "^8.2.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-slick": "^0.27.13",
         "react-three-fiber": "^5.0.6",
         "slick-carousel": "^1.8.1",
+        "tailwindcss": "^2.0.2",
         "three": "^0.124.0"
     },
     "devDependencies": {
@@ -53,7 +56,7 @@
         "gh-pages": "^2.2.0",
         "postcss-loader": "^3.0.0",
         "prettier": "^2.0.2",
-        "tailwindcss": "^1.2.0",
+        "tailwindcss-cli": "^0.1.2",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.10"
     }

@@ -57,18 +57,11 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-postcss',
-      options: {
-        postCssPlugins: [
-          require('tailwindcss')('./tailwind.config.js'),
-          require('autoprefixer'),
-        ],
-      },
-    },
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
+        printRejected: true,
         develop: false,
         tailwind: true,
         ignore: [

@@ -27,7 +27,7 @@ export default ({ data, pageContext }) => {
     <Layout>
       <Head title={post.frontmatter.title} />
       <div
-        className="flex flex-col items-center box mt-4 px-4 md:px-8 py-2 md:py-4 rounded-lg"
+        className="flex flex-col items-center box mt-4 px-4 md:px-8 lg:px-12 py-2 md:py-4 rounded-lg"
         style={{ backgroundColor: 'rgba(237, 242, 247, 0.85)' }}
       >
         <p className="text-lg x:text-xl md:text-2xl font-bold mt-4">
