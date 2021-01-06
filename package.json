@@ -14,7 +14,7 @@
         "@react-three/drei": "^2.2.12",
         "@react-three/flex": "^0.5.2",
         "autoprefixer": "^10.1.0",
-        "axios": "^0.20.0",
+        "axios": "^0.21.1",
         "disqus-react": "^1.0.10",
         "fuse.js": "^6.4.3",
         "gatsby": "^2.26.1",
