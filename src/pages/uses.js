@@ -72,7 +72,7 @@ export default ({ data }) => {
             最后更新于:{' '}
           </span>
           <span className="w-48 px-2 py-1 rounded-full bg-purple-light font-bold text-gray-lightest text-xs lg:text-sm">
-            2020-04-09
+            2020-12-30
           </span>
         </div>
       </div>

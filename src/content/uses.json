@@ -104,6 +104,12 @@
         "image": { "path": "../images/uses/altair.png" }
       },
       {
+        "title": "Paw",
+        "description": "黑五送的 API 工具，也支持 GraphQL，体验中",
+        "link": "https://paw.cloud/",
+        "image": { "path": "../images/uses/paw.jpg" }
+      },
+      {
         "title": "Oh My Zsh",
         "description": "用过的都说好",
         "link": "https://ohmyz.sh/",
@@ -265,6 +271,18 @@
         "title": "SVGOMG",
         "description": "压缩 SVG 常用的在线服务",
         "link": "https://jakearchibald.github.io/svgomg/",
+        "image": { "path": "" }
+      },
+      {
+        "title": "SVGR",
+        "description": "将 SVG 生成 React Component 的网站",
+        "link": "https://react-svgr.com",
+        "image": { "path": "" }
+      },
+      {
+        "title": "glTF Viewer",
+        "description": "在线浏览 gltf 的网站",
+        "link": "https://gltf-viewer.donmccurdy.com/",
         "image": { "path": "" }
       }
     ]
