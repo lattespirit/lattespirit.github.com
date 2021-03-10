@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Dec 2020 04:05:59 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[3D 之旅]]></title><description><![CDATA[<p>3D 这个概念可以说已经普及大众了，像 3D 电影，VR 游戏，甚至全息 3D 的广告或者公共提示，都能看到它的踪迹。记得最初接触 3D 是在高中，看到同学拿出一本印刷有各种隐藏着 3D 效果图片的书，需要调节眼睛才能看到效果，如下图所示，我的方法是，眼睛先对焦绿色的图片，然后调节眼睛的对焦，使图片外的区域变得略模糊，顺利的话，能在绿色的背景下看到<strong>蝴蝶</strong>的 3D 图像。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Mar 2021 14:47:27 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2020年度总结]]></title><description><![CDATA[<p>这篇年度总结确实是有点晚了，草稿是 <strong>2021-01-17</strong> 的，现在才补充完，与所谓的“手感”相关吧，不是为了完成任务而记录。不过想到自己那么久没发文，不自觉地想到下图。</p>
+<p><img src="../images/post/domain-never-use.jpg" alt="Domain Never Use"></p>
+<h4>探索</h4>
+<p>这年可以称为<strong>探索</strong>的一年，年初的时候看了很多后端技术外的入门资料，像重构博客时尝试的 React，以及 <a href="https://www.raywenderlich.com/">Raywenderlich</a> 家 Swift 与 Kotlin 相关的书，可以说只是浅尝辄止。</p>
+<p>关于 React Native 和 Flutter，也看了一些对两者比较的文章，几乎都说 Flutter 性能好，未来发展好，全平台支持只是时间问题，如今 Flutter 2 发布了，也确实如此。对于 Web 端开发者来说，React Native 则非常容易上手，各有各的优势。为了都体验一下两者的开发流程，我还特意在 <a href="https://ui8.net/">UI8</a> 选了一套 APP 原型，打算用两者都实现一下，先从 React Native 开始，大概完成一半 UI 后，因动力不足就停止了，下图是开发部分 UI 的过程。对于 Flutter，则是浏览过几遍官网的 Cookbook 部分，也发现 <a href="https://fluttercompletereference.com/">Flutter Complete Reference</a> 这本书挺好，知识点覆盖广，也很详细，值得一看。</p>
+<p><img src="../images/post/react-native.jpeg" alt="React Native Development"></p>
+<h4>小程序与产品</h4>
+<p>这年计划开始学习日语，在这过程中发现使用日语输入法打字是不可或缺的环节，由此萌生了开发一个<strong>练习日语打字</strong>微信小程序的想法，满足以下功能:</p>
+<ul>
+<li>屏幕显示一个日语单词，用键盘输入正确的罗马音或者平/片假名就能跳转至下一个单词</li>
+<li>提供按钮来显示和隐藏答案</li>
+<li>提供按钮跳过当前单词</li>
+</ul>
+<p>原型很快就用 Figma 画完了，附上<a href="https://www.figma.com/file/k7KJ2sxnx9JBm4gAkBxlQx/Japanese-Typewriting">地址</a>，调研一下现在开发小程序流行的框架后，用一个礼拜的业余时间完成了功能，提交后过一天就上线了，二维码就不贴了，在微信中搜索【<strong>日语打字机</strong>】能找到。接下来发现加载背景图较慢，而且还不允许使用包内的图片，最后暂定用渐变颜色代替。</p>
+<p>这个小程序算是一个很小的产品，由于日语知识有限，甚至里面的单词都是在网上找的，没有一一确认过是否正确，很多功能都没有实现，比如播放日语歌曲，同时练习输入歌词中的句子，甚至还可以显示歌词中的文法。这些专业知识的局限性让我也开始思考在选择独立开发一个产品前，idea 足够适合大众的同时，也需要拥有该领域丰富的知识储备，或者学习曲线够平滑，这样才能保证项目的进行，否则得需要专业人士的介入。</p>
+<p>对比这个小程序与上述 React Native 未完成的练手项目，还有一个<strong>重要的体会</strong>是，开发过程一定要快，不然激情会慢慢消磨掉，结果就变成下图。</p>
+<p><img src="../images/post/unfinished-project.jpg" alt="Unfinished Project"></p>
+<h4>日语</h4>
+<p>这一年也计划重新开始学习日语，过了五十音这关后，开始学一些简单的文法时感觉还不错，后来看到动词的 N 种变化类型时，感到记不下来，心态没调整好，就停滞了很长一段时间。成就感在我学习的过程中扮演着一个重要的角色，不足时会调整方向。</p>
+<h4>离职</h4>
+<p>这年离职了，认识了一些有趣的小伙伴，和香港同事一起工作过，部分同事打字喜欢用英文，讲话则用粤语，有时开会则普通话与粤语混用，也是不错的体验呢。</p>
+<p>由于团队开始前期的工作环境是联合办公的，我也有机会体验了<a href="https://www.beeplus.com/">BEEPLUS</a>这种新办公生态环境，布局清新优雅，提供饮料咖啡，办公桌上班的心情好了不少。</p>
+<p>2018 年圣诞节，团队还有幸被邀请至香港参加 Party，香港同事和老大们都非常热情，老大们毫无架子，非常接地气，这都是难忘的回忆。</p>
+<h4>健身</h4>
+<p>早在 19 年底就有办健身卡，开始去的次数并不多，也没有任何饮食计划，而且 2020 年新冠肆虐期间，有大半年的时间健身馆都处于闭馆状态，直到 20 年 9 月份才开馆。</p>
+<p>这年胖了很多，曾有两个月的上班时间里，中午烧腊饭过后不是一杯喜茶就是奈雪，偶尔还跟着小伙伴点下午茶，体重一度直逼 70 kg。有一次称重，上面显示 <strong>69.5</strong> kg 时，望着肚腩，突然很嫌弃自己，觉得不能这样下去。以前也有经常锻炼，那也是大学之前的事情了，工作后大家普遍“发福”，能保持身材的屈指可数，自己也踏入中年队列，为了在以后的同学聚会上不至于显得老态，显老三大件“<strong>秃头</strong>，<strong>肥胖</strong>，<strong>肤色差</strong>”要控制住。</p>
+<p><strong>锻炼+控制饮食</strong>一开始很难适应，不仅是食物种类和味道上的变化，前期锻炼时也比较盲目，每天盯着体重，有时候没降低反而上升就容易感到气馁。</p>
+<p>锻炼上选择了自己来，在网上看看别人的教程，然后实践。一开始做大量的有氧，跑步，动感单车，掉的都是水分，但也唤醒了身体。一个月的有氧后，开始进行力量训练。自以为按照器械上面的图示就能锻炼到相应的部位，实践后才发现姿势和动作是相当重要，稍有偏差就不能刺激到目标部位，效果会大打折扣。最近在尝试来自 <a href="https://www.instagram.com/pete619muscle/">Pete</a> 的“<strong>普罗米修斯</strong>”法则来增肌，期待未来一段日子里身体的变化。</p>
+<p>饮食上减少脂肪和碳水的摄入，有一段时间中午吃的是自己做的三明治，晚饭吃代餐粉。健身路上总会有些拦路虎，有时候也去聚个餐之类的。离职后时间更多了，中午经常吃玉米和番薯，锻炼回来后喝牛奶和鸡蛋补充蛋白。坚持四个月后的体重，虽然有起有落，但也降到了 <strong>60kg</strong>。</p>
+<p>健身是漫长的过程，包括会长期出现在以后的生活中。这次健身的体验不仅让我完成了“<strong>和妹子一起变胖也一起变瘦</strong>”这个基本计划，还有唤醒了控制饮食和保持运动意识，在和健身房教练的交流中，发现了自己有富贵包，脊柱侧弯，大小胸，长短腿等问题，改善这些问题是一个长期的过程，也警示着自己注意生活中的一些小习惯。</p>
+<h4>3D</h4>
+<p>阅读过上一篇文章的朋友们可以知道，3D 也是这年一个重要的主题。选择了 <strong>Blender</strong> 之后，在网上搜集了大量的视频资料，准备深度学习一番。但发现要学的东西太多了，Blender 是一个神奇的软件，能胜任的工作很多很多，3D 建模(Modeling)，绑定(Rigging)，视频编辑(Video Editing)，雕刻(Sculpting)等等，学完是不现实的，也完全没必要。自己的目标是做一些特效视频，所以选择了几个主题，<strong>Modeling</strong> 是基础，必须的，还有 <strong>Video Editing</strong> 以及 <strong>Motion Tracking</strong>，这几样够学一段时间了。</p>
+<p>关于视频编辑和特效制作使用的软件，开始选择的是 Adobe 家的 PR 和 AE，甚至还找到别人如何下载官网正版安装包的<a href="https://gist.github.com/ayyybe/a5f01c6f40020f9a7bc4939beeb2df1d">脚本</a>，还有使用 <a href="https://www.adobezii.com/">Adobe Zii</a>进行破解的流程。安装完之后不是很想用盗版，Adobe 年计划订阅又偏贵，以后有能力了再购买一次性付款的同类软件，如<a href="https://www.blackmagicdesign.com/products/davinciresolve/">达芬奇</a>，似乎免费版的功能也很香了，目前处于入门阶段就不作太多评价了。</p>
+<p>二一年，祝大家<strong>身体健康</strong>。</p>]]></description><link>https://www.lattespirit.com/2020-ndzj</link><guid isPermaLink="false">https://www.lattespirit.com/2020-ndzj</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate></item><item><title><![CDATA[3D 之旅]]></title><description><![CDATA[<p>3D 这个概念可以说已经普及大众了，像 3D 电影，VR 游戏，甚至全息 3D 的广告或者公共提示，都能看到它的踪迹。记得最初接触 3D 是在高中，看到同学拿出一本印刷有各种隐藏着 3D 效果图片的书，需要调节眼睛才能看到效果，如下图所示，我的方法是，眼睛先对焦绿色的图片，然后调节眼睛的对焦，使图片外的区域变得略模糊，顺利的话，能在绿色的背景下看到<strong>蝴蝶</strong>的 3D 图像。</p>
 <p><img src="../images/post/3d-journey-picture.jpg" alt="3D picture"></p>
 <h4>入坑开始</h4>
 <p>以前对 3D 的理解仅限于“<strong>这个效果给人感觉很立体</strong>”，去年看过<a href="https://www.youtube.com/watch?v=hDMMw06ES-A">Maxon Cinema 4D Demo Reel 2019</a>这个视频后，仿佛进入了一个新的世界，原来 3D 软件能创造出这么酷炫的视觉效果，视频由很多个作品组成，每个作品也就几秒钟，但都足以细细品味，其背景音乐也功不可没。于是决定尝试入一下坑，对 3D 软件的认知还停留在 3ds Max，还是家里书架存放已久的未知来源书籍《3ds Max 效果图设计自学经典》 😅，搜寻了一下 3D 软件界的资料，发现 Cinema 4D 和 Blender 比较适合。</p>
@@ -497,16 +530,16 @@
 <p>自己也常常想着创建或者加入一个团队，一直以来都只是一个人，没体验过团队工作带来的喜悦。常常在电影或者视频里看到屏幕里一个团队完成一个艰巨的任务后所有队员兴奋的样子，就深深感受到团队的魅力。知道在一个氛围融洽的团队不容易建立，在团队里与其他队员友好相处也容易，以后工作选择公司，一个拥有良好工作氛围应该会成为我主要考虑的因素。</p>]]></description><link>https://www.lattespirit.com/microblog19</link><guid isPermaLink="false">https://www.lattespirit.com/microblog19</guid><pubDate>Sun, 14 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog18.0]]></title><description><![CDATA[<p>早上在上实验课的时候，无意中看到电脑屏幕中老师操作的界面里的一条登陆语，是这样写的：“The quieter you become, the more you can hear.”</p>
 <p>看着这条登陆语思考了很久，想着自己不知道什么时候就已经开始注意到，要让自己的心态保持平静，不焦躁。生活中一直在这方面锻炼着自己，到现在可以说有所收获，每每遇到挫折或者闹心的事都会告诉自己要平静对待。</p>
 <p>这方面的锻炼不会停止，要走的路还很长。</p>]]></description><link>https://www.lattespirit.com/microblog18</link><guid isPermaLink="false">https://www.lattespirit.com/microblog18</guid><pubDate>Wed, 03 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog17.0]]></title><description><![CDATA[<p>最近上网都只是查查邮件，收收信息，信息很重要。</p>
-<p>这样的生活也不错，不需要太多繁琐的东西，简洁最好。或许我还可以把完成上面的事情的周期延长，越接近考研的后期，周期会更长。</p>]]></description><link>https://www.lattespirit.com/microblog17</link><guid isPermaLink="false">https://www.lattespirit.com/microblog17</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog16.0]]></title><description><![CDATA[<p>连续上了三周的职业生涯规划课，课上总体会分为规划大学生活和职业生活两部分，到现在才规划大学的生活已没太多的意义，和很多人交流中了解到，不管有无理想，有无方向，大多数人的生活方式已经固定。过去这两年，有些人已经提前自己给自己上了职业生涯规划的课，确定了自己的方向；有些人在莫名其妙中花掉了两年时间，其实也无所谓荒废，不管做什么事都有其收获。</p>
-<p>在上这些课的时候，对规划大学如何生活部分仅仅是将讲师所举例子来验证自己的理论，这部分的例子大多和自己的想法一样，听起来蛮兴奋的，内心的想法得到某种意义上的认同。职业规划部分会用心听，毕竟是以后都会面对的事情，有个认识总是件好事，很多职业技能是我们现在这个阶段未具有的，也是必须的。</p>
-<p>没几年的时间就会接触社会，到那个时候我不想空手踏出第一步。</p>]]></description><link>https://www.lattespirit.com/microblog16</link><guid isPermaLink="false">https://www.lattespirit.com/microblog16</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Just Give me A Reason]]></title><description><![CDATA[<p>歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。初听这首歌，欣赏起伏变化得合适的节奏，高潮部分的旋律也容易让人记住。</p>
+<p>这样的生活也不错，不需要太多繁琐的东西，简洁最好。或许我还可以把完成上面的事情的周期延长，越接近考研的后期，周期会更长。</p>]]></description><link>https://www.lattespirit.com/microblog17</link><guid isPermaLink="false">https://www.lattespirit.com/microblog17</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Just Give me A Reason]]></title><description><![CDATA[<p>歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。初听这首歌，欣赏起伏变化得合适的节奏，高潮部分的旋律也容易让人记住。</p>
 <p>歌曲是男女合唱，听了十多遍后看了歌词，才理解其中的意思。歌曲中男女的歌唱更像是在对话，也难怪当时 P!nk 坚持邀请好友共同完成合唱的版本，这样才会让歌曲更加动听。</p>
 <p>想聊一下的是里面的歌词，讲述的是一对情侣之间发生些小摩擦，彼此还爱着对方，不想因这些小摩擦而决裂，试着重新和好。</p>
 <p>"I thought that we were fine./Oh, we had everything"。——给我印象较深的是前面男唱 Nate Ruess 的那句，女方听了男方前面那句话后，静心细想，生活中的一些摩擦都是小事，需要的只是双方都开心见诚去对待，才有了后面那句"We had everything"的吧。</p>
 <p>"Just give me a reason. Just a little bit's enough"——情绪发泄后，还需理性看待</p>
 <p>"You’ve been havin’ real bad dreams oh oh."——安慰</p>
 <p>"We're collecting dust. But our love's enough."——这里的 "dust" 应该理解为双方一起生活的过程中遇到并跨越了的挫折，幸福不是生活没有 "dust"，而是能一起以积极的心态面对"dust"。</p>
-<p>这仅是我单曲循环这首歌曲两天后对生活的一些理解，由于本人水平有限，对生活的理解难免有错误和不当之处，欢迎提出批评指正。</p>]]></description><link>https://www.lattespirit.com/just-give-me-a-reason</link><guid isPermaLink="false">https://www.lattespirit.com/just-give-me-a-reason</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[搬家]]></title><description><![CDATA[<p><img src="../images/post/home.jpg" alt="Moving Home"></p>
+<p>这仅是我单曲循环这首歌曲两天后对生活的一些理解，由于本人水平有限，对生活的理解难免有错误和不当之处，欢迎提出批评指正。</p>]]></description><link>https://www.lattespirit.com/just-give-me-a-reason</link><guid isPermaLink="false">https://www.lattespirit.com/just-give-me-a-reason</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog16.0]]></title><description><![CDATA[<p>连续上了三周的职业生涯规划课，课上总体会分为规划大学生活和职业生活两部分，到现在才规划大学的生活已没太多的意义，和很多人交流中了解到，不管有无理想，有无方向，大多数人的生活方式已经固定。过去这两年，有些人已经提前自己给自己上了职业生涯规划的课，确定了自己的方向；有些人在莫名其妙中花掉了两年时间，其实也无所谓荒废，不管做什么事都有其收获。</p>
+<p>在上这些课的时候，对规划大学如何生活部分仅仅是将讲师所举例子来验证自己的理论，这部分的例子大多和自己的想法一样，听起来蛮兴奋的，内心的想法得到某种意义上的认同。职业规划部分会用心听，毕竟是以后都会面对的事情，有个认识总是件好事，很多职业技能是我们现在这个阶段未具有的，也是必须的。</p>
+<p>没几年的时间就会接触社会，到那个时候我不想空手踏出第一步。</p>]]></description><link>https://www.lattespirit.com/microblog16</link><guid isPermaLink="false">https://www.lattespirit.com/microblog16</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[搬家]]></title><description><![CDATA[<p><img src="../images/post/home.jpg" alt="Moving Home"></p>
 <p>和之前的习惯一样，每篇文章前面会放一张图片。
 小博关闭一个多月，最后还是决定重新够买主机将其上线，这样的话，自己便不会偷懒很多，更新频率会比在本地记录有所上升。</p>
 <p>这次将博客搬家，做了很大的变动，主机由之前的达拉斯机房换到了韩国的，载入速度上升不少，域名也由 <strong>lattespirit.com.cn</strong> 换成了 <strong>lattespirit.com</strong>,还一次性购买了三年的期限。域名的变换是必然的，使用<strong>.com</strong>的域名会显得更正式，之前也有在推特上表明自己要更换域名的心意，现在已经实现。</p>

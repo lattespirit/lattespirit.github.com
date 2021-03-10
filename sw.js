@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-86f602e244251881b185.js"
+    "url": "webpack-runtime-8a8af563039ce608dbdd.js"
   },
   {
     "url": "styles.94d2b4b1b291928930d5.css"
@@ -43,7 +43,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "1b35df2e0e67d14e4e736c33f55bdf81"
+    "revision": "265ef8fbc3295224f56200b176cbf82b"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-fd4fb51a6fac1c18bdde.js"
@@ -58,11 +58,11 @@ self.__precacheManifest = [
     "url": "c95c644e68d489c17fc52f7015e6a80467fec12f-41368c2167f968bf0536.js"
   },
   {
-    "url": "component---src-templates-paginated-posts-js-456a7dae8f233a4f37cf.js"
+    "url": "component---src-templates-paginated-posts-js-d7d873da950f00c5775a.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "ecbb1ba678d2702f9a732aa9f9893451"
+    "revision": "dd5de826fdd5cfb77397a751de6b8a65"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -74,18 +74,18 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/929091981.json",
-    "revision": "1113b58190f0129e4576f2992618a8e4"
+    "revision": "90f4a4cbdaa3071741032a977c97fcfc"
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "44945c9a5d2ead43b1f8c3fb6a75d7e0"
+    "revision": "594b9383a2ed036dd0caaca1e9769128"
   },
   {
     "url": "component---src-pages-archives-js-6fff2107cdc313d0fe7c.js"
   },
   {
     "url": "page-data/archives/page-data.json",
-    "revision": "d37c2cbea6ef0012ad2fab14c42e2c71"
+    "revision": "1cf696d3e05a3e0808e05c5974aeef0a"
   },
   {
     "url": "31590f23a14307ce625c9098e1695ed312c55a1f-3049c2d319875b7c114d.js"
@@ -102,11 +102,11 @@ self.__precacheManifest = [
     "revision": "a1d3ba847055e8f6f6e083e36cf9f4de"
   },
   {
-    "url": "component---src-pages-uses-js-ac03ba92fd06fc5f0f0d.js"
+    "url": "component---src-pages-uses-js-7fb9a630bc8de12f654e.js"
   },
   {
     "url": "page-data/uses/page-data.json",
-    "revision": "b845a48d888a5d11694bc9b66ab4fff6"
+    "revision": "1a6d608373693688d2b77d086caac158"
   },
   {
     "url": "22cb1846e3999e987bb520b28b168c77b899e222-56dbef4135baec5a036f.js"
