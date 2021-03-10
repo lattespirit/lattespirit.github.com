@@ -21,8 +21,7 @@ class Disqus extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get('https://disqus.com/next/config.json')
+    fetch('https://disqus.com/next/config.json')
       .then((response) => this.setState({ loaded: response.status === 200 }))
       .catch(() =>
         this.setState({ message: '朋友，加载 Disqus 评论框就差那一步了 :)' })
