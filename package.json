@@ -40,7 +40,7 @@
     "react-three-fiber": "^5.0.6",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^2.0.2",
-    "three": "^0.124.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "cross-env": "^6.0.3",
