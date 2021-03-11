@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Mar 2021 15:16:36 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2020年度总结]]></title><description><![CDATA[<p>这篇年度总结确实是有点晚了，草稿是 <strong>2021-01-17</strong> 的，现在才补充完，与所谓的“手感”相关吧，不是为了完成任务而记录。不过想到自己那么久没发文，不自觉地想到下图。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 11 Mar 2021 02:49:50 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2020年度总结]]></title><description><![CDATA[<p>这篇年度总结确实是有点晚了，草稿是 <strong>2021-01-17</strong> 的，现在才补充完，与所谓的“手感”相关吧，不是为了完成任务而记录。不过想到自己那么久没发文，不自觉地想到下图。</p>
 <p><img src="../images/post/domain-never-use.jpg" alt="Domain Never Use"></p>
 <h4>探索</h4>
 <p>这年可以称为<strong>探索</strong>的一年，年初的时候看了很多后端技术外的入门资料，像重构博客时尝试的 React，以及 <a href="https://www.raywenderlich.com/">Raywenderlich</a> 家 Swift 与 Kotlin 相关的书，可以说只是浅尝辄止。</p>
@@ -19,17 +19,17 @@
 <p>这一年也计划重新开始学习日语，过了五十音这关后，开始学一些简单的文法时感觉还不错，后来看到动词的 N 种变化类型时，感到记不下来，心态没调整好，就停滞了很长一段时间。成就感在我学习的过程中扮演着一个重要的角色，不足时会调整方向。</p>
 <h4>离职</h4>
 <p>这年离职了，认识了一些有趣的小伙伴，和香港同事一起工作过，部分同事打字喜欢用英文，讲话则用粤语，有时开会则普通话与粤语混用，也是不错的体验呢。</p>
-<p>由于团队开始前期的工作环境是联合办公的，我也有机会体验了<a href="https://www.beeplus.com/">BEEPLUS</a>这种新办公生态环境，布局清新优雅，提供饮料咖啡，办公桌上班的心情好了不少。</p>
+<p>由于团队开始前期的工作环境是联合办公的，我也有机会体验了<a href="https://www.beeplus.com/">BEEPLUS</a>这种新办公生态环境，布局清新优雅，提供饮料咖啡和升降式办公桌，上班的心情好了不少。</p>
 <p>2018 年圣诞节，团队还有幸被邀请至香港参加 Party，香港同事和老大们都非常热情，老大们毫无架子，非常接地气，这都是难忘的回忆。</p>
 <h4>健身</h4>
 <p>早在 19 年底就有办健身卡，开始去的次数并不多，也没有任何饮食计划，而且 2020 年新冠肆虐期间，有大半年的时间健身馆都处于闭馆状态，直到 20 年 9 月份才开馆。</p>
-<p>这年胖了很多，曾有两个月的上班时间里，中午烧腊饭过后不是一杯喜茶就是奈雪，偶尔还跟着小伙伴点下午茶，体重一度直逼 70 kg。有一次称重，上面显示 <strong>69.5</strong> kg 时，望着肚腩，突然很嫌弃自己，觉得不能这样下去。以前也有经常锻炼，那也是大学之前的事情了，工作后大家普遍“发福”，能保持身材的屈指可数，自己也踏入中年队列，为了在以后的同学聚会上不至于显得老态，显老三大件“<strong>秃头</strong>，<strong>肥胖</strong>，<strong>肤色差</strong>”要控制住。</p>
+<p>这年胖了很多，曾有两个月的上班时间里，中午烧腊饭过后不是一杯喜茶就是奈雪，偶尔还跟着小伙伴点下午茶，体重一度直逼 70 kg。有一次称重，上面显示 <strong>69.5kg</strong> 时，望着肚腩，突然很嫌弃自己，觉得不能这样下去。以前也有经常锻炼，那也是大学之前的事情了，工作后大家普遍“发福”，能保持身材的屈指可数，自己也踏入中年队列，为了在以后的同学聚会上不至于显得老态，显老三大件“<strong>秃头</strong>，<strong>肥胖</strong>，<strong>肤色差</strong>”要控制住。</p>
 <p><strong>锻炼+控制饮食</strong>一开始很难适应，不仅是食物种类和味道上的变化，前期锻炼时也比较盲目，每天盯着体重，有时候没降低反而上升就容易感到气馁。</p>
 <p>锻炼上选择了自己来，在网上看看别人的教程，然后实践。一开始做大量的有氧，跑步，动感单车，掉的都是水分，但也唤醒了身体。一个月的有氧后，开始进行力量训练。自以为按照器械上面的图示就能锻炼到相应的部位，实践后才发现姿势和动作是相当重要，稍有偏差就不能刺激到目标部位，效果会大打折扣。最近在尝试来自 <a href="https://www.instagram.com/pete619muscle/">Pete</a> 的“<strong>普罗米修斯</strong>”法则来增肌，期待未来一段日子里身体的变化。</p>
 <p>饮食上减少脂肪和碳水的摄入，有一段时间中午吃的是自己做的三明治，晚饭吃代餐粉。健身路上总会有些拦路虎，有时候也去聚个餐之类的。离职后时间更多了，中午经常吃玉米和番薯，锻炼回来后喝牛奶和鸡蛋补充蛋白。坚持四个月后的体重，虽然有起有落，但也降到了 <strong>60kg</strong>。</p>
 <p>健身是漫长的过程，包括会长期出现在以后的生活中。这次健身的体验不仅让我完成了“<strong>和妹子一起变胖也一起变瘦</strong>”这个基本计划，还有唤醒了控制饮食和保持运动意识，在和健身房教练的交流中，发现了自己有富贵包，脊柱侧弯，大小胸，长短腿等问题，改善这些问题是一个长期的过程，也警示着自己注意生活中的一些小习惯。</p>
 <h4>3D</h4>
-<p>阅读过上一篇文章的朋友们可以知道，3D 也是这年一个重要的主题。选择了 <strong>Blender</strong> 之后，在网上搜集了大量的视频资料，准备深度学习一番。但发现要学的东西太多了，Blender 是一个神奇的软件，能胜任的工作很多很多，3D 建模(Modeling)，绑定(Rigging)，视频编辑(Video Editing)，雕刻(Sculpting)等等，学完是不现实的，也完全没必要。自己的目标是做一些特效视频，所以选择了几个主题，<strong>Modeling</strong> 是基础，必须的，还有 <strong>Video Editing</strong> 以及 <strong>Motion Tracking</strong>，这几样够学一段时间了。</p>
+<p>阅读过上一篇文章的朋友们可以知道，3D 也是这年一个重要的主题。选择了 <strong>Blender</strong> 之后，在网上搜集了大量的视频资料，准备深度学习一番。但发现要学的东西太多了，Blender 是一个神奇的软件，能胜任的工作很多很多，3D 建模(Modeling)，绑定(Rigging)，粒子(Particle)，视频编辑(Video Editing)，雕刻(Sculpting)等等，学完是不现实的，也完全没必要。自己的目标是做一些特效视频，所以选择了几个主题，<strong>Modeling</strong> 是基础，必须的，还有 <strong>Video Editing</strong>，<strong>Motion Tracking</strong> 以及 <strong>VFX</strong>，这几样够学一段时间了。</p>
 <p>关于视频编辑和特效制作使用的软件，开始选择的是 Adobe 家的 PR 和 AE，甚至还找到别人如何下载官网正版安装包的<a href="https://gist.github.com/ayyybe/a5f01c6f40020f9a7bc4939beeb2df1d">脚本</a>，还有使用 <a href="https://www.adobezii.com/">Adobe Zii</a>进行破解的流程。安装完之后不是很想用盗版，Adobe 年计划订阅又偏贵，以后有能力了再购买一次性付款的同类软件，如<a href="https://www.blackmagicdesign.com/products/davinciresolve/">达芬奇</a>，似乎免费版的功能也很香了，目前处于入门阶段就不作太多评价了。</p>
 <p>二一年，祝大家<strong>身体健康</strong>。</p>]]></description><link>https://www.lattespirit.com/2020ndzj</link><guid isPermaLink="false">https://www.lattespirit.com/2020ndzj</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate></item><item><title><![CDATA[3D 之旅]]></title><description><![CDATA[<p>3D 这个概念可以说已经普及大众了，像 3D 电影，VR 游戏，甚至全息 3D 的广告或者公共提示，都能看到它的踪迹。记得最初接触 3D 是在高中，看到同学拿出一本印刷有各种隐藏着 3D 效果图片的书，需要调节眼睛才能看到效果，如下图所示，我的方法是，眼睛先对焦绿色的图片，然后调节眼睛的对焦，使图片外的区域变得略模糊，顺利的话，能在绿色的背景下看到<strong>蝴蝶</strong>的 3D 图像。</p>
 <p><img src="../images/post/3d-journey-picture.jpg" alt="3D picture"></p>
