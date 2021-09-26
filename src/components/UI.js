@@ -21,6 +21,12 @@ const H6 = (props) => (
 
 const P = (props) => <p className="leading-relaxed" {...props} />;
 
+const UL = (props) => <ul className="my-2 md:my-3" {...props} />;
+
+const LI = (props) => (
+  <li className="list-disc list-inside mb-1 md:mb-2" {...props} />
+);
+
 const Strong = (props) => <strong className="text-pink-dark" {...props} />;
 
 const Img = (props) => <img className="mx-auto" {...props} />;
@@ -33,6 +39,8 @@ const UI = {
   h5: H5,
   h6: H6,
   p: P,
+  ul: UL,
+  li: LI,
   strong: Strong,
   img: Img,
 };
