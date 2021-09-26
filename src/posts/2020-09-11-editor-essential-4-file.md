@@ -33,7 +33,6 @@ featuredImage: ../images/post/keyboard.jpg
 在一个有着成千上万文件的项目里，快速查找到目标文件，是最最基本的需求了。这个基本需求有两个加分项：
 
 - **支持模糊搜索**(Fussy Search)，例如对于这样目录结构的一个文件 **Il**l**u**minate/**Fou**ndation/**App**lication.php，在搜索时输入 llufouapp.php (即 Illuminate, Foundation, Application 各选取一部分字符进行输入) 也能最佳匹配到该文件
-
 - **支持目录分割搜索**，例如有下面个文件，在搜索时输入 i/f/application.php 能定位到 **I**lluminate/**F**oundation/**A**pplication.php
 
 ![Fussy Search File](./images/fussy-search-file.gif)
