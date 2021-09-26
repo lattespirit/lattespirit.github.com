@@ -25,20 +25,6 @@ class PaginatedPosts extends Component {
               className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden"
               key={node.fields.slug}
             >
-              {node.frontmatter.featuredImage !== null && (
-                <div className="md:flex-shrink-0 md:w-30">
-                  <img
-                    className="w-full h-40 md:h-full object-cover object-center"
-                    src={
-                      node.frontmatter.featuredImage.childImageSharp.fluid.src
-                    }
-                    srcSet={
-                      node.frontmatter.featuredImage.childImageSharp.fluid
-                        .srcSet
-                    }
-                  />
-                </div>
-              )}
               <div className="w-full p-4 py-6 md:p-6">
                 <div>
                   <div className="flex justify-between items-center">
