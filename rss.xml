@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Sep 2021 09:25:36 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[书籍还是视频]]></title><description><![CDATA[<p>平时生活中总会有这样或那样的问题需要解决，有时也会拓展自己的兴趣去学绘画，修车，财务管理等，自身技能树因此要不断扩展。当学习一项新技能时，什么样的学习途径才是适合自己？</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Sep 2021 12:48:16 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[书籍还是视频]]></title><description><![CDATA[<p>平时生活中总会有这样或那样的问题需要解决，有时也会拓展自己的兴趣去学绘画，修车，财务管理等，自身技能树因此要不断扩展。当学习一项新技能时，什么样的学习途径才是适合自己？</p>
 <p>早在去年年初在网上就看见过这样的<a href="https://twitter.com/themsaid/status/1229748343464759296">讨论</a>：</p>
 <p><img src="../images/post/book-or-video-tweet.png" alt="Tweet"></p>
 <p>最近看到阮一峰的一篇文章<a href="https://www.ruanyifeng.com/blog/2021/07/weekly-issue-166.html">视频学习胜过读书吗?</a>也有提及。</p>
-<p>意思是学习时，什么时候选择视频，什么时候选择书籍？看到这个讨论时，我仔细回顾了一下，在、过去新知识的获取途径中，书籍和视频占据了极大部分比重，剩下的包括“和别人沟通”，“主动查阅感兴趣的百科条目”，“偶然被动的宣传”等。</p>
-<p>既然视频和书籍的占比这么大，那么怎样选择才能更大地提升学习的效率呢？根据实际的经验，总结出个人的选择，对于<strong>理论类</strong>，如编程技能，选择视频对整体内容有个大概的了解，然后阅读相关书本深入理解；对于<strong>视觉类</strong>，如烹饪，绘画，建模等技能，选择视频。</p>
+<p>意思是学习时，什么时候选择视频，什么时候选择书籍？看到这个讨论时，我仔细回顾了一下，在过去新知识的获取途径中，书籍和视频占据了极大部分比重，剩下的包括“和别人沟通”，“主动查阅感兴趣的百科条目”，“偶然被动的宣传”等。</p>
+<p>既然视频和书籍的占比这么大，那么怎样选择才能更大地提升学习的效率呢？根据实际经验，总结出个人的选择，对于<strong>理论类</strong>，如编程技能，选择视频对整体内容有个大概的了解，然后阅读相关书本深入理解；对于<strong>视觉类</strong>，如烹饪，绘画，建模等技能，选择视频。</p>
 <p>不管是书籍还是视频，都在考验作者的表达能力，每看一本新书或者视频课程，都要接受新的教学方式。书籍还好，内容结构大部分都一样，一般先是前言，然后是一些注意事项，接着是正式内容，最后是附录，打开一本新书基本都能看得下去。视频就不太一样了，教学形式多种多样，有以下情形的我基本很少看：</p>
 <ul>
 <li><strong>网课</strong>，这样的形式动不动就一两个小时，中间很多垃圾时间，提取知识点耗时太长。最近看到非常感兴趣的话题<a href="https://www.buildingasecondbrain.com">Building A Second Brain</a>，由于也是网课，结果看不下去</li>
@@ -80,7 +80,7 @@
 <h5>高级代码片段 👇</h5>
 <p>代码片段比较基础的用法是输入指定的字符，然后直接会输出对应的代码片段，比如输入 <strong>met</strong> 指定输出一个公共方法的代码片段</p>
 <p><img src="./images/basic-snippet.gif" alt="Basic Snippet"></p>
-<p>更深入的用法是，对用户输入的内容进行大小写化，正则替换文本内容的操作，例如在使用 Test Driven Development 方式进行开发时需要写大量的测试方法，该方法名字一般是 <strong>it<em>must</em>login<em>before</em>paying</strong> 这种带有下划线的，在输入方法名时要键入大量的下划线就显得特别麻烦，这时就可以对代码片段进行正则化处理，期望的用法是，输入 <strong>it must login before paying</strong> 后，代码自动变成 <strong>it<em>must</em>login<em>before</em>paying</strong></p>
+<p>更深入的用法是，对用户输入的内容进行大小写化，正则替换文本内容的操作，例如在使用 Test Driven Development 方式进行开发时需要写大量的测试方法，该方法名字一般是 <strong>it_must_login_before_paying</strong> 这种带有下划线的，在输入方法名时要键入大量的下划线就显得特别麻烦，这时就可以对代码片段进行正则化处理，期望的用法是，输入 <strong>it must login before paying</strong> 后，代码自动变成 <strong>it_must_login_before_paying</strong></p>
 <p><img src="./images/advanced-snippet.gif" alt="Advanced Snippet"></p>
 <p>编辑器的日常操作已介绍完毕，如有更加有效率的操作，欢迎留言。</p>]]></description><link>https://www.lattespirit.com/editor-essential-5-miscellaneous</link><guid isPermaLink="false">https://www.lattespirit.com/editor-essential-5-miscellaneous</guid><pubDate>Sat, 12 Sep 2020 00:00:00 GMT</pubDate></item><item><title><![CDATA[编辑器基操勿6 (4) - 文件管理]]></title><description><![CDATA[<p>不管是用 Markdown 写文章还是编辑各种语言的代码，都离不开文件，既然使用频率极高，那么就有必要对它下手，想办法在这方面提高效率，在此聊一聊编辑器中文件的管理。</p>
 <h5>快速创建</h5>
@@ -261,7 +261,7 @@
 <p>经过一个多月每天晚上无论多晚都做完一套健身运动后，渐渐喜欢上了运动的感觉，而且有渐渐觉得不满足当前的运动量，每天100个俯卧撑加到了150，后面会陆续增加，腹肌锻炼在尝试着几种方法中找到合适自己的。在这个过程中，从身体方面体会到坚持的不容易，从精神层面来讲，“每个在一直坚持的人都值得尊敬”，停下来想了想，自己能坚持的有些什么，结果是原地踏步还是甩当初几条街。注意运动往往会伴随着饮食，周末里做一样以前没尝试过的菜肴，虽然做可乐鸡翅有过失误，但也是一次不错的体验。</p>
 <p>之前在晓松奇谈的节目开头都能听到“诗和远方”的歌词，大约一个礼拜前正式发布了歌曲《生活不止眼前的苟且》，每每听着文艺情绪都如黄河水泛滥滔滔不绝。见到有网友的评论“父母尚在苟且，你却想着诗和远方”，生活是不止眼前的苟且，诗和远方的田野也存在，那片海要追求，理性一点的做法是在两者之前平衡着生活。</p>
 <p>最近还遇到了让自己情绪波动的事情，这是极其少见的，曾经以为自己的心态稳定到即使情绪有波动也保持起伏不大，甚至能快速恢复平静。这件事情花了较大的精力去让自己平静，甚至还采用了与人交流探讨的手段，事后当然恢复平静了，不过后来想想“有那么一件事能让自己的心境有这么大的改变”这件事情也挺新鲜的，这让我觉得还是有很大的空间进行修行。</p>
-<p>要改变点什么。</p>]]></description><link>https://www.lattespirit.com/jm</link><guid isPermaLink="false">https://www.lattespirit.com/jm</guid><pubDate>Thu, 31 Mar 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[2015年度总结]]></title><description><![CDATA[<p>又到了作年度总结的时候，浏览了一下今年写下的博文标题，首先是感觉数量不多，基本上是一个月一篇的节奏，再者是博文内容总体的方向是抓住身边接触到的一样事物就开始聊，但聊的更多是事物本身以外的。简单感慨一下博客从12年留存至今，“生活博客”的定位也一直没变，有人惦记也是一种幸福。在之前博文中没少提到<strong>人文</strong>与<strong>科技</strong>，有提到今年会是人文大进的一年，无奈还是偏向了科技，可以总结为<strong>“怀着一颗人文的心，走在科技的道路上”</strong>的一年。</p>
+<p>要改变点什么。</p>]]></description><link>https://www.lattespirit.com/jm</link><guid isPermaLink="false">https://www.lattespirit.com/jm</guid><pubDate>Thu, 31 Mar 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[2015年度总结]]></title><description><![CDATA[<p>又到了作年度总结的时候，浏览了一下今年写下的博文标题，首先是感觉数量不多，基本上是一个月一篇的节奏，再者是博文内容总体的方向是抓住身边接触到的一样事物就开始聊，但聊的更多是事物本身以外的。简单感慨一下博客从12年留存至今，“生活博客”的定位也一直没变，有人惦记也是一种幸福。在之前博文中没少提到<strong>人文</strong>与<strong>科技</strong>，有提到今年会是人文大进的一年，无奈还是偏向了科技，可以总结为**“怀着一颗人文的心，走在科技的道路上”**的一年。</p>
 <p>停下来想了想自己在过去的一年里做了些什么，到了哪些地方，遇到了哪些人。这是比较费神的事情，细想的话就如同回忆以前每天吃了什么样的饭菜一般，能一下浮现出脑海的定是自己记忆深刻或影响深远的。看到这里，你能稍微思考一下的话，也会有自己的答案了。在思考自己经历过的事情的同时，也可以想想没有经历过的，记得很清楚的是，在过去的一年里，自己并没有过一次笑到肚子痛的经历，可以的话，在下面分享一下你最近一次的经历。</p>
 <p>世界观在不断变化，但幅度并不大；今年倒是出现了影响价值观的事物，这是令人兴奋的；至于人生观在模糊认识之中。希望接下来的日子里出现更多影响三观的事物。</p>
 <p>以前追求简洁，现在在简洁的基础上追求优雅。</p>
@@ -285,7 +285,7 @@
 <p>我所了解的二战除了初中时候通过教科书上的文字和图片了解，剩下的基本是通过影视资料，旁白加上视觉效果，得到的感触不会少。在画面中看着不断召开的会议，疯狂的大炮、飞机和军舰，屠城，集中营，活埋战俘，哀嚎的平民，战时战后的废墟，心情自然是沉重的，当然也会想到自己能生活在和平年代是幸福的。</p>
 <p>二战的流水过程是不必描述的，想谈谈那两个世纪大审判，纽伦堡审判和东京审判。这两场审判分别在德国和日本举行，花了大量的时间搜集证据给一些犯下滔天罪行的甲级战犯判刑，给世界人民一个交代。但我们知道，这两场审判是有很大区别的，纽伦堡审判中的战犯大多是处以绞刑或者无期徒刑，也有自杀的，但由于东京审判是由美国操纵的，在一定程度上袒护了一些战犯，天皇免除审判，居然有战犯判二十年和九年的，这可把我吓坏了。这无疑伤害了被日本法西斯侵略过的国家人民的心，直到今天，我们仍能看到这样的区别带来的影响，表面一点的事实是两国面对历史的不同态度，还有就是日本军国主义还留存到今天。</p>
 <p>二战结束七十年，距离现在并不算遥远，留给我们思考的有很多。能感受到法西斯主义轴心国是利用民族情感，煽动民族主义叫嚣和膨胀，召集人们进行侵略，在这里可不谈我们应该要成为一个怎样的民族，但至少要知道自己要拥有怎样的民族情感。据说九月份为纪念反法西斯战争胜利七十周年，会有假期，且不管真伪，有当然是开心，在享受假期的同时我们也应该牢记那段历史，缅怀那些为世界和平奋斗的战士。</p>]]></description><link>https://www.lattespirit.com/wwii99</link><guid isPermaLink="false">https://www.lattespirit.com/wwii99</guid><pubDate>Sat, 25 Jul 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[那时那你]]></title><description><![CDATA[<p>其实应该给题目加一个书名号的。</p>
-<p>《那时那你》是某酷<a href="https://i.youku.com/zhnliang" target="_blank"> 野孩子 Studio </a>频道下的一个专辑，打着“<strong>那时那你，全民回忆</strong>”的口号讲述着人们在过去银幕和收音机里的回忆。已经记不起是如何了解到这个专辑的了，在过去的一小段时间里看过里面很多期节目，一直想写点内容，但都没下笔，直到看了第十二期节目<strong>【那时那你 12】95 年杰克逊第 1“歌神”第 2</strong>。</p>
+<p>《那时那你》是某酷<a href="https://i.youku.com/zhnliang" target="_blank"> 野孩子 Studio </a>频道下的一个专辑，打着“<strong>那时那你，全民回忆</strong>”的口号讲述着人们在过去银幕和收音机里的回忆。已经记不起是如何了解到这个专辑的了，在过去的一小段时间里看过里面很多期节目，一直想写点内容，但都没下笔，直到看了第十二期节目**【那时那你 12】95 年杰克逊第 1“歌神”第 2**。</p>
 <p>该期节目叙述的人物是学友系列的下期，上期讲述的是学友的电影，这期则是音乐。节目中主播以高度精炼的内容叙述了学友的从出道到成为天王的音乐之路，不乏描述学友超强唱功和迷人声线以及在歌坛创造出一个个傲人成绩振奋华语乐坛的内容，还有学友创造的音乐剧《<a href="/xlh">雪狼湖</a>》丰富了演唱会的元素等等，学友成为歌神的过程中，也给我们带来了一个又一个值得无限品味的经典。记得有一次在家里，电脑音响随机播放着歌曲，偶然播出了学友的歌曲《<strong>我真的受伤了</strong>》之后，在一旁的老爸说道“终于有一首好听的歌了”，是的，这无疑是老爸那一代人的记忆。有关学友的电影个人能谈的不多，还是因为看得太少，无非也只是看过《<strong>东成西就</strong>》，《<strong>倩女幽魂 II</strong>》，《<strong>月满轩尼诗</strong>》等少部分电影，主要还是在八十年代拍的电影，值得一提的是，从网络资讯了解到，现在爆漫流行的一个表情原型就是来自学友在那个年代拍的一部电影，相信大家都有看过该表情，在这里就不方便贴出来了，心疼天王。在音乐方面足够辉煌的成就面前，我们有时候常常会忘记学友作为一个演员的身份，在我所看过的学友演的电影中可以明显感受到学友是真正用心在表演，我们知道学友至今无缘香港金像奖影帝，在《艺术人生》的访谈中学友有被问道“拍了那么多电影，有什么遗憾的”，他回答“觉得自己演得好，只是没有被肯定，但是有没有这个称号又怎样”。</p>
 <p>我也有看过《那时那你》专辑里有关星爷，神雕，beyond，李连杰等系列的内容，在这里多说一句，记得看完李连杰那两期节目没多久，就有机会去了趟佛山祖庙，在里面能看到拍摄《黄飞鸿》系列电影的一些资料，这体验是很棒的。回过头来，《那时那你》里面讲述的内容大多来自八十<a href="/sdynd">年代</a>，之前有提到过八十年代是个美好的年代，在流行音乐方面，整个世界里的 MTV 等媒体在那个年代兴起，极大的推动了各地音乐文化在世界上的传播和发展，一个个经典也在那个年代诞生，二十年甚至更久之后的我们才能好好品味经典。</p>
 <p>相信在该专辑里能找你喜欢的节目内容，去看看。</p>]]></description><link>https://www.lattespirit.com/nsnn</link><guid isPermaLink="false">https://www.lattespirit.com/nsnn</guid><pubDate>Sat, 18 Jul 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[一个人住]]></title><description><![CDATA[<p>一个人住久了，会有一些特别的感觉，算是一种体验，但是停下来想想，我这还不算久。</p>
@@ -532,10 +532,18 @@
 <p>考场考试做题的时候，在实验题部分遇到了点麻烦，实在想不起要敲入的命令是什么，着实确实紧张了不少，而且还有个摄像头在监控。最后还是静下心做出那道题目。考试时间是两个小时，我基本上都是在慢慢做题，考试开始一个小时过后，听到监考老师接了个电话，听出来似乎有个约会，之后又几次出来看我做题的进度。想着平时做实验和老师接触的时候发现他人蛮好的，就加快了做题的速度，提前半个多小时提交答案。考完之后马上可以知道结果，结果很顺利地通过了考试。考完试之后，老师给我办一些手续后便匆匆离开了。至此，我成为去年思科网络学院秋季班上第一个通过考试顺利成为思科网络工程师的学生。</p>
 <h6>总结</h6>
 <ol>
-<li>半年多的付出现在换来现在的收获，也没必要刻意给自己贴上工程师的标签，因为自己深刻认识到自己的实力还远远不足，还不能独当一面，要学习的还有很多很多，很多很多。</li>
-<li>仔细想了想，或许这半年学习的路上，自己学到的更多的是默默地奋斗。知道我准备网络工程师认证的人不多，知道我准备的是思科网络工程师的人更少，仅是宿舍边上的一些朋友。或许是个人性格的原因，少说多做，不喜欢太张扬。</li>
-<li>不能轻易小看身边任何一个人，或许人家专业课学得很差，考试只得四分，还有几门课要重修，但仔细想想，总会在人家身上学到东西。</li>
-<li>理论得到了验证。</li>
+<li>
+<p>半年多的付出现在换来现在的收获，也没必要刻意给自己贴上工程师的标签，因为自己深刻认识到自己的实力还远远不足，还不能独当一面，要学习的还有很多很多，很多很多。</p>
+</li>
+<li>
+<p>仔细想了想，或许这半年学习的路上，自己学到的更多的是默默地奋斗。知道我准备网络工程师认证的人不多，知道我准备的是思科网络工程师的人更少，仅是宿舍边上的一些朋友。或许是个人性格的原因，少说多做，不喜欢太张扬。</p>
+</li>
+<li>
+<p>不能轻易小看身边任何一个人，或许人家专业课学得很差，考试只得四分，还有几门课要重修，但仔细想想，总会在人家身上学到东西。</p>
+</li>
+<li>
+<p>理论得到了验证。</p>
+</li>
 </ol>
 <h6>未来</h6>
 <p>过去已过去，未来还未来。一个段落的结束，会开始另一个段落的书写。现在的计划总是满满的，等着自己一个个来完成，也希望自己能实现这一个个小想法。</p>
@@ -546,19 +554,19 @@
 <p>自己也常常想着创建或者加入一个团队，一直以来都只是一个人，没体验过团队工作带来的喜悦。常常在电影或者视频里看到屏幕里一个团队完成一个艰巨的任务后所有队员兴奋的样子，就深深感受到团队的魅力。知道在一个氛围融洽的团队不容易建立，在团队里与其他队员友好相处也容易，以后工作选择公司，一个拥有良好工作氛围应该会成为我主要考虑的因素。</p>]]></description><link>https://www.lattespirit.com/microblog19</link><guid isPermaLink="false">https://www.lattespirit.com/microblog19</guid><pubDate>Sun, 14 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog18.0]]></title><description><![CDATA[<p>早上在上实验课的时候，无意中看到电脑屏幕中老师操作的界面里的一条登陆语，是这样写的：“The quieter you become, the more you can hear.”</p>
 <p>看着这条登陆语思考了很久，想着自己不知道什么时候就已经开始注意到，要让自己的心态保持平静，不焦躁。生活中一直在这方面锻炼着自己，到现在可以说有所收获，每每遇到挫折或者闹心的事都会告诉自己要平静对待。</p>
 <p>这方面的锻炼不会停止，要走的路还很长。</p>]]></description><link>https://www.lattespirit.com/microblog18</link><guid isPermaLink="false">https://www.lattespirit.com/microblog18</guid><pubDate>Wed, 03 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog17.0]]></title><description><![CDATA[<p>最近上网都只是查查邮件，收收信息，信息很重要。</p>
-<p>这样的生活也不错，不需要太多繁琐的东西，简洁最好。或许我还可以把完成上面的事情的周期延长，越接近考研的后期，周期会更长。</p>]]></description><link>https://www.lattespirit.com/microblog17</link><guid isPermaLink="false">https://www.lattespirit.com/microblog17</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog16.0]]></title><description><![CDATA[<p>连续上了三周的职业生涯规划课，课上总体会分为规划大学生活和职业生活两部分，到现在才规划大学的生活已没太多的意义，和很多人交流中了解到，不管有无理想，有无方向，大多数人的生活方式已经固定。过去这两年，有些人已经提前自己给自己上了职业生涯规划的课，确定了自己的方向；有些人在莫名其妙中花掉了两年时间，其实也无所谓荒废，不管做什么事都有其收获。</p>
-<p>在上这些课的时候，对规划大学如何生活部分仅仅是将讲师所举例子来验证自己的理论，这部分的例子大多和自己的想法一样，听起来蛮兴奋的，内心的想法得到某种意义上的认同。职业规划部分会用心听，毕竟是以后都会面对的事情，有个认识总是件好事，很多职业技能是我们现在这个阶段未具有的，也是必须的。</p>
-<p>没几年的时间就会接触社会，到那个时候我不想空手踏出第一步。</p>]]></description><link>https://www.lattespirit.com/microblog16</link><guid isPermaLink="false">https://www.lattespirit.com/microblog16</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Just Give me A Reason]]></title><description><![CDATA[<p>歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。初听这首歌，欣赏起伏变化得合适的节奏，高潮部分的旋律也容易让人记住。</p>
+<p>这样的生活也不错，不需要太多繁琐的东西，简洁最好。或许我还可以把完成上面的事情的周期延长，越接近考研的后期，周期会更长。</p>]]></description><link>https://www.lattespirit.com/microblog17</link><guid isPermaLink="false">https://www.lattespirit.com/microblog17</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Just Give me A Reason]]></title><description><![CDATA[<p>歌曲名字为《Just give me a reason》原唱为 P!nk.感觉这个 MV 比原版多了份清新。初听这首歌，欣赏起伏变化得合适的节奏，高潮部分的旋律也容易让人记住。</p>
 <p>歌曲是男女合唱，听了十多遍后看了歌词，才理解其中的意思。歌曲中男女的歌唱更像是在对话，也难怪当时 P!nk 坚持邀请好友共同完成合唱的版本，这样才会让歌曲更加动听。</p>
 <p>想聊一下的是里面的歌词，讲述的是一对情侣之间发生些小摩擦，彼此还爱着对方，不想因这些小摩擦而决裂，试着重新和好。</p>
 <p>"I thought that we were fine./Oh, we had everything"。——给我印象较深的是前面男唱 Nate Ruess 的那句，女方听了男方前面那句话后，静心细想，生活中的一些摩擦都是小事，需要的只是双方都开心见诚去对待，才有了后面那句"We had everything"的吧。</p>
 <p>"Just give me a reason. Just a little bit's enough"——情绪发泄后，还需理性看待</p>
 <p>"You’ve been havin’ real bad dreams oh oh."——安慰</p>
 <p>"We're collecting dust. But our love's enough."——这里的 "dust" 应该理解为双方一起生活的过程中遇到并跨越了的挫折，幸福不是生活没有 "dust"，而是能一起以积极的心态面对"dust"。</p>
-<p>这仅是我单曲循环这首歌曲两天后对生活的一些理解，由于本人水平有限，对生活的理解难免有错误和不当之处，欢迎提出批评指正。</p>]]></description><link>https://www.lattespirit.com/just-give-me-a-reason</link><guid isPermaLink="false">https://www.lattespirit.com/just-give-me-a-reason</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[搬家]]></title><description><![CDATA[<p><img src="../images/post/home.jpg" alt="Moving Home"></p>
+<p>这仅是我单曲循环这首歌曲两天后对生活的一些理解，由于本人水平有限，对生活的理解难免有错误和不当之处，欢迎提出批评指正。</p>]]></description><link>https://www.lattespirit.com/just-give-me-a-reason</link><guid isPermaLink="false">https://www.lattespirit.com/just-give-me-a-reason</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog16.0]]></title><description><![CDATA[<p>连续上了三周的职业生涯规划课，课上总体会分为规划大学生活和职业生活两部分，到现在才规划大学的生活已没太多的意义，和很多人交流中了解到，不管有无理想，有无方向，大多数人的生活方式已经固定。过去这两年，有些人已经提前自己给自己上了职业生涯规划的课，确定了自己的方向；有些人在莫名其妙中花掉了两年时间，其实也无所谓荒废，不管做什么事都有其收获。</p>
+<p>在上这些课的时候，对规划大学如何生活部分仅仅是将讲师所举例子来验证自己的理论，这部分的例子大多和自己的想法一样，听起来蛮兴奋的，内心的想法得到某种意义上的认同。职业规划部分会用心听，毕竟是以后都会面对的事情，有个认识总是件好事，很多职业技能是我们现在这个阶段未具有的，也是必须的。</p>
+<p>没几年的时间就会接触社会，到那个时候我不想空手踏出第一步。</p>]]></description><link>https://www.lattespirit.com/microblog16</link><guid isPermaLink="false">https://www.lattespirit.com/microblog16</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[搬家]]></title><description><![CDATA[<p><img src="../images/post/home.jpg" alt="Moving Home"></p>
 <p>和之前的习惯一样，每篇文章前面会放一张图片。
 小博关闭一个多月，最后还是决定重新够买主机将其上线，这样的话，自己便不会偷懒很多，更新频率会比在本地记录有所上升。</p>
-<p>这次将博客搬家，做了很大的变动，主机由之前的达拉斯机房换到了韩国的，载入速度上升不少，域名也由 <strong>lattespirit.com.cn</strong> 换成了 <strong>lattespirit.com</strong>,还一次性购买了三年的期限。域名的变换是必然的，使用<strong>.com</strong>的域名会显得更正式，之前也有在推特上表明自己要更换域名的心意，现在已经实现。</p>
+<p>这次将博客搬家，做了很大的变动，主机由之前的达拉斯机房换到了韩国的，载入速度上升不少，域名也由 <strong>lattespirit.com.cn</strong> 换成了 <strong>lattespirit.com</strong>,还一次性购买了三年的期限。域名的变换是必然的，使用**.com**的域名会显得更正式，之前也有在推特上表明自己要更换域名的心意，现在已经实现。</p>
 <p>关于博客的名称 <strong>Lattespirit</strong> 在这里不多做介绍，可以在博客的<a href="/about" target="_blank">关于</a>页面里相关的解释。记得一次给人提起域名 <strong>Lattespirit</strong> 时，人家回了句“这么长的域名”，在给网站选取域名的原则上，这个域名确实有些长，还被 longurl 收录过，但这是不介意的，没什么说，爱的就是它。</p>
 <p>博客的风格沿用之前的主题，没变。之前有过很长一段时间选择博客的风格，之前的博文中也有记述。博客不关心 SEO 优化和搜索引擎的收录，折腾之后发现，简单和稳定最幸福。</p>
 <p>在这次搬家的过程中，虽只是在电脑面前敲敲键盘，点点鼠标，但确实有如同在现实中搬家的味道。到现在建立博客的初衷还没变，只想单纯地记录自己生活中值得记录的事情或分享自己的心得，希望以后能在博客之路一直走下去。</p>]]></description><link>https://www.lattespirit.com/banjia</link><guid isPermaLink="false">https://www.lattespirit.com/banjia</guid><pubDate>Wed, 13 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog15.0]]></title><description><![CDATA[<p>随着最近报道出推特和印象笔记相继被黑，部分账户被盗的消息，在思考着现在的网络比之前想象的更加脆弱。一直知道网络并不是绝对的安全，像一架天平上的两样事物，不能将开放和安全保持平衡，只是没想到现在安全带来的影响离自己生活那么近而已。</p>]]></description><link>https://www.lattespirit.com/microblog15</link><guid isPermaLink="false">https://www.lattespirit.com/microblog15</guid><pubDate>Tue, 05 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[说说寒假]]></title><description><![CDATA[<p><img src="../images/post/harvesttime.jpg" alt="Harvest Time"></p>
