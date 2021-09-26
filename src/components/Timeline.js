@@ -70,21 +70,19 @@ class Timeline extends Component {
     );
   };
 
-  imageOfFirstLaunch = () => {
-    return (
-      <div className="relative w-80">
-        <img
-          className="absolute bottom-0 rounded object-contain"
-          src={this.v1.publicURL}
-          alt="About - Launch"
-          style={{ animation: 'v1 2s linear 1s infinite alternate both' }}
-        />
-        <div>
-          <Fireworks />
-        </div>
+  imageOfFirstLaunch = () => (
+    <div className="relative w-80">
+      <img
+        className="absolute bottom-0 rounded object-contain"
+        src={this.v1.publicURL}
+        alt="About - Launch"
+        style={{ animation: 'v1 2s linear 1s infinite alternate both' }}
+      />
+      <div>
+        <Fireworks />
       </div>
-    );
-  };
+    </div>
+  );
 
   imageOfMovingToGithub = () => (
     <div className="relative w-80">
@@ -188,7 +186,9 @@ class Timeline extends Component {
                       : 'block text-white text-lg'
                   }
                 >
-                  {event.year}-{event.month}
+                  {event.year}
+                  -
+                  {event.month}
                 </span>
               </div>
             </div>
@@ -240,8 +240,6 @@ export default () => (
         }
       }
     `}
-    render={(data) => {
-      return <Timeline data={data} />;
-    }}
+    render={(data) => <Timeline data={data} />}
   />
 );

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from '../components/Head';
 import Typography from '../components/Typography';
 
-export default () => {
+const Hierarchy = () => {
   const headings = [
     { name: 'Heading 1 (5xl)', class: 'text-5xl' },
     { name: 'Heading 2 (4xl)', class: 'text-4xl' },
@@ -14,16 +14,16 @@ export default () => {
 
   return (
     <Typography>
-      <Head title="Hierachy" />
+      <Head title="Hierarchy" />
       <div className="my-4 md:my-8">
-        {headings.map((heading) => {
-          return (
-            <p className={heading.class} key={heading.name}>
-              {heading.name}
-            </p>
-          );
-        })}
+        {headings.map((heading) => (
+          <p className={heading.class} key={heading.name}>
+            {heading.name}
+          </p>
+        ))}
       </div>
     </Typography>
   );
 };
+
+export default Hierarchy;

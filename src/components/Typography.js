@@ -19,8 +19,8 @@ export default ({ children }) => {
       path: '/typeface',
     },
     {
-      name: 'Hierachy',
-      path: '/hierachy',
+      name: 'Hierarchy',
+      path: '/hierarchy',
     },
   ];
   return (
@@ -36,10 +36,9 @@ export default ({ children }) => {
       <div className="md:flex px-4 md:px-0">
         <div className="flex justify-between md:block md:w-20 my-4">
           {menus.map((menu) => {
-            const classes =
-              globalHistory.location.pathname === menu.path
-                ? 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg typography-nav'
-                : 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg';
+            const classes = globalHistory.location.pathname === menu.path
+              ? 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg typography-nav'
+              : 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg';
             return (
               <div className={classes} key={menu.path}>
                 <Link

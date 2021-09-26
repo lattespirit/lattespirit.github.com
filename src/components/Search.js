@@ -20,14 +20,12 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      originPosts: props.data.allMdx.posts.map((post) => {
-        return {
-          title: post.frontmatter.title,
-          url: `${props.data.site.siteMetadata.url}/${post.fields.slug}`,
-          content: post.excerpt,
-          date: post.fields.date,
-        };
-      }),
+      originPosts: props.data.allMdx.posts.map((post) => ({
+        title: post.frontmatter.title,
+        url: `${props.data.site.siteMetadata.url}/${post.fields.slug}`,
+        content: post.excerpt,
+        date: post.fields.date,
+      })),
       renderedPosts: [],
       opened: false,
       keyword: '',
@@ -117,27 +115,25 @@ class Search extends Component {
   searchResult() {
     const { renderedPosts } = this.state;
 
-    return renderedPosts.map((post) => {
-      return (
-        <div
-          className="flex justify-between items-center mx-2 sm:mx-4 my-2 py-2 border-b last:border-b-0 border-gray-light"
-          key={post.title}
-        >
-          <div className="w-40 sm:w-auto">
-            <a
-              className="block text-sm sm:text-base text-left font-bold no-underline"
-              href={post.url}
-            >
-              {post.title}
-            </a>
-          </div>
-
-          <div>
-            <p className="text-xs">{post.date}</p>
-          </div>
+    return renderedPosts.map((post) => (
+      <div
+        className="flex justify-between items-center mx-2 sm:mx-4 my-2 py-2 border-b last:border-b-0 border-gray-light"
+        key={post.title}
+      >
+        <div className="w-40 sm:w-auto">
+          <a
+            className="block text-sm sm:text-base text-left font-bold no-underline"
+            href={post.url}
+          >
+            {post.title}
+          </a>
         </div>
-      );
-    });
+
+        <div>
+          <p className="text-xs">{post.date}</p>
+        </div>
+      </div>
+    ));
   }
 
   renderResultPanel() {
@@ -153,7 +149,8 @@ class Search extends Component {
 
           <hr className="mt-8 text-purple-dark" />
           <p className="my-4 text-sm text-center">
-            Search by{' '}
+            Search by
+            {' '}
             <a
               className="text-purple-dark font-bold"
               href="https://fusejs.io"
@@ -242,8 +239,6 @@ export default () => (
         }
       }
     `}
-    render={(data) => {
-      return <Search data={data} />;
-    }}
+    render={(data) => <Search data={data} />}
   />
 );

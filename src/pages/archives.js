@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 
-export default ({ data }) => {
+const Archives = ({ data }) => {
   let titleYear = '';
   return (
     <Layout>
@@ -63,3 +63,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Archives;

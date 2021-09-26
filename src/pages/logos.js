@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Head from '../components/Head';
 import Typography from '../components/Typography';
 
-export default () => {
+const Logos = () => {
   const data = useStaticQuery(graphql`
     query TypographyQuery {
       black: file(relativePath: { eq: "typography/logo-black.svg" }) {
@@ -46,3 +46,5 @@ export default () => {
     </Typography>
   );
 };
+
+export default Logos;

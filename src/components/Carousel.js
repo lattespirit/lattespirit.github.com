@@ -5,7 +5,9 @@ import React, { Component } from 'react';
 import 'slick-carousel/slick/slick-theme.css';
 
 function NextArrow(props) {
-  const { className, style, onClick, onKeyDown } = props;
+  const {
+    className, style, onClick, onKeyDown,
+  } = props;
   return (
     <div
       className={`${className} mr-8 md:mr-12`}
@@ -20,7 +22,9 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-  const { className, style, onClick, onKeyDown } = props;
+  const {
+    className, style, onClick, onKeyDown,
+  } = props;
   return (
     <div
       className={`${className} ml-8 md:ml-12 z-10`}
@@ -50,9 +54,7 @@ class Carousel extends Component {
     return (
       <div className="rounded-lg w-64 x:w-72 sm:w-120 md:w-136 mx-auto">
         <Slider {...settings}>
-          {React.Children.map(children, (child) => {
-            return <div>{child}</div>;
-          })}
+          {React.Children.map(children, (child) => <div>{child}</div>)}
         </Slider>
       </div>
     );

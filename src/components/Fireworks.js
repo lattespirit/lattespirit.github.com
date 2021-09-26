@@ -86,7 +86,7 @@ class Fireworks extends Component {
             this.colors[Math.floor(Math.random() * this.colors.length)]
           }`,
           key: i,
-        })
+        }),
       );
     }
     return (

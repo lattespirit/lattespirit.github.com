@@ -10,7 +10,7 @@ import UI from '../components/UI';
 import Carousel from '../components/Carousel';
 import Car from '../components/Car';
 
-export default ({ data, pageContext }) => {
+const Post = ({ data, pageContext }) => {
   const post = data.mdx;
   const { prev, next } = pageContext;
   const prevText = prev ? '上篇' : '未始';
@@ -98,3 +98,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Post;

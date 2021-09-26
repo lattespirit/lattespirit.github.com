@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 
-export default () => {
+const Testimonials = () => {
   const data = useStaticQuery(graphql`
     query TestimonialQuery {
       file(relativePath: { eq: "testimonials/LanternD.png" }) {
@@ -20,7 +20,7 @@ export default () => {
   return (
     <Layout>
       <Head title="Testimonials" />
-      <p className="text-xl text-white text-center text-2xl md:text-3xl font-bold mt-4 md:mt-8">
+      <p className="text-white text-center text-2xl md:text-3xl font-bold mt-4 md:mt-8">
         What People Said...
       </p>
       <div className="bg-gray w-52 h-4 md:w-80 mx-auto mt-8 md:mt-12 rounded-t-lg" />
@@ -85,3 +85,5 @@ export default () => {
     </Layout>
   );
 };
+
+export default Testimonials;

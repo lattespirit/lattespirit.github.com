@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { DiscussionEmbed } from 'disqus-react';
-import axios from 'axios';
 
 class Disqus extends Component {
   constructor(props) {
@@ -23,9 +22,7 @@ class Disqus extends Component {
   componentDidMount() {
     fetch('https://disqus.com/next/config.json')
       .then((response) => this.setState({ loaded: response.status === 200 }))
-      .catch(() =>
-        this.setState({ message: '朋友，加载 Disqus 评论框就差那一步了 :)' })
-      );
+      .catch(() => this.setState({ message: '朋友，加载 Disqus 评论框就差那一步了 :)' }));
   }
 
   renderDisqus = () => {

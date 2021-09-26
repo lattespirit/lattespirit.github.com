@@ -2,7 +2,7 @@ import React from 'react';
 import Head from '../components/Head';
 import Typography from '../components/Typography';
 
-export default () => {
+const Colors = () => {
   const blackAndWhite = [
     { name: 'White', code: 'FFFFFF', class: 'bg-white' },
     { name: 'Black', code: '000000', class: 'bg-black' },
@@ -43,45 +43,43 @@ export default () => {
     <Typography>
       <Head title="Colors" />
       <div className="flex justify-between flex-wrap w-64 mx-auto md:mx-0 mt-6">
-        {blackAndWhite.map((color) => {
-          return (
-            <div className="flex flex-col items-center mt-4" key={color.name}>
+        {blackAndWhite.map((color) => (
+          <div className="flex flex-col items-center mt-4" key={color.name}>
+            <div
+              className={`w-24 h-24 rounded-full shadow-lg ${color.class}`}
+            />
+            <span className="text-black mt-3 mb-1 font-bold">
+              #
+              {color.code}
+            </span>
+            <span className="text-black">{color.name}</span>
+          </div>
+        ))}
+      </div>
+      {colorfuls.map((colorful, index) => (
+        <div
+          className="flex justify-between flex-wrap w-64 md:w-144 mx-auto md:mx-0 mt-6 last:mb-8"
+          key={index}
+        >
+          {colorful.colors.map((color) => (
+            <div
+              className="flex flex-col items-center mt-4"
+              key={color.name}
+            >
               <div
                 className={`w-24 h-24 rounded-full shadow-lg ${color.class}`}
               />
-              <span className="text-black mt-3 mb-1 font-bold">
-                #{color.code}
+              <span className="mt-3 mb-1 text-black font-bold">
+                #
+                {color.code}
               </span>
               <span className="text-black">{color.name}</span>
             </div>
-          );
-        })}
-      </div>
-      {colorfuls.map((colorful, index) => {
-        return (
-          <div
-            className="flex justify-between flex-wrap w-64 md:w-144 mx-auto md:mx-0 mt-6 last:mb-8"
-            key={index}
-          >
-            {colorful.colors.map((color) => {
-              return (
-                <div
-                  className="flex flex-col items-center mt-4"
-                  key={color.name}
-                >
-                  <div
-                    className={`w-24 h-24 rounded-full shadow-lg ${color.class}`}
-                  />
-                  <span className="mt-3 mb-1 text-black font-bold">
-                    #{color.code}
-                  </span>
-                  <span className="text-black">{color.name}</span>
-                </div>
-              );
-            })}
-          </div>
-        );
-      })}
+          ))}
+        </div>
+      ))}
     </Typography>
   );
 };
+
+export default Colors;

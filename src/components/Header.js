@@ -71,19 +71,17 @@ class Header extends Component {
         </div>
 
         <div className="hidden md:block self-end">
-          {menus.map((menu) => {
-            return (
-              menu.showInLargeScreen && (
-                <Link
-                  className="text-white inline-block pl-6 no-underline"
-                  to={menu.url}
-                  key={menu.title}
-                >
-                  {menu.title}
-                </Link>
-              )
-            );
-          })}
+          {menus.map((menu) => (
+            menu.showInLargeScreen && (
+            <Link
+              className="text-white inline-block pl-6 no-underline"
+              to={menu.url}
+              key={menu.title}
+            >
+              {menu.title}
+            </Link>
+            )
+          ))}
         </div>
         {open && (
           <div
@@ -117,17 +115,15 @@ class Header extends Component {
               </svg>
             </div>
             <div className="w-20 mx-auto text-center">
-              {menus.map((menu) => {
-                return (
-                  <Link
-                    className="block font-bold text-white py-4 no-underline"
-                    to={menu.url}
-                    key={menu.title}
-                  >
-                    {menu.title}
-                  </Link>
-                );
-              })}
+              {menus.map((menu) => (
+                <Link
+                  className="block font-bold text-white py-4 no-underline"
+                  to={menu.url}
+                  key={menu.title}
+                >
+                  {menu.title}
+                </Link>
+              ))}
             </div>
           </div>
         )}

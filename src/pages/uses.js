@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 
-export default ({ data }) => {
+const Uses = ({ data }) => {
   const { edges } = data.allUsesJson;
   return (
     <Layout>
@@ -17,59 +17,57 @@ export default ({ data }) => {
             欢迎来到我的使用装备页面，这里记录了我日常中用到的硬件与软件。
           </p>
 
-          {edges.map((area) => {
-            return (
-              <div className="my-4" key={area.node.name}>
-                <p className="text-lg font-bold py-2 border-b-2 border-purple-light">
-                  {area.node.name}
-                </p>
-                {area.node.items.map((item) => {
-                  const itemClass =
-                    item.description && item.link
-                      ? 'text-purple-light text-sm md:text-lg font-bold'
-                      : 'text-purple-light text-sm md:text-lg';
-                  const itemTitle = item.link ? (
-                    <a className="text-purple-light" href={item.link}>
-                      {item.title}
-                    </a>
-                  ) : (
-                    item.title
-                  );
-                  return (
-                    <div
-                      className="flex justify-between items-center py-2 md:py-3"
-                      key={item.title}
-                    >
-                      <div className="flex-1">
-                        <p className={itemClass}>{itemTitle}</p>
-                        {item.description && (
-                          <p className="text-xs md:text-base text-gray-darkest">
-                            {item.description}
-                          </p>
-                        )}
-                      </div>
-                      {item.image.path &&
-                        item.image.path.extension !== 'svg' && (
+          {edges.map((area) => (
+            <div className="my-4" key={area.node.name}>
+              <p className="text-lg font-bold py-2 border-b-2 border-purple-light">
+                {area.node.name}
+              </p>
+              {area.node.items.map((item) => {
+                const itemClass = item.description && item.link
+                  ? 'text-purple-light text-sm md:text-lg font-bold'
+                  : 'text-purple-light text-sm md:text-lg';
+                const itemTitle = item.link ? (
+                  <a className="text-purple-light" href={item.link}>
+                    {item.title}
+                  </a>
+                ) : (
+                  item.title
+                );
+                return (
+                  <div
+                    className="flex justify-between items-center py-2 md:py-3"
+                    key={item.title}
+                  >
+                    <div className="flex-1">
+                      <p className={itemClass}>{itemTitle}</p>
+                      {item.description && (
+                      <p className="text-xs md:text-base text-gray-darkest">
+                        {item.description}
+                      </p>
+                      )}
+                    </div>
+                    {item.image.path
+                        && item.image.path.extension !== 'svg' && (
                           <Img
                             className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center bg-cover ml-2 lg:ml-auto"
                             fluid={item.image.path.childImageSharp.fluid}
                           />
-                        )}
-                      {item.image.path &&
-                        item.image.path.extension === 'svg' && (
+                    )}
+                    {item.image.path
+                        && item.image.path.extension === 'svg' && (
                           <img
                             className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center object-cover ml-2 lg:ml-auto"
                             src={item.image.path.publicURL}
                           />
-                        )}
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ))}
           <span className="text-sm lg:text-base text-purple-dark">
-            最后更新于:{' '}
+            最后更新于:
+            {' '}
           </span>
           <span className="w-48 px-2 py-1 rounded-full bg-purple-light font-bold text-gray-lightest text-xs lg:text-sm">
             2020-12-30
@@ -107,3 +105,5 @@ export const UsesQuery = graphql`
     }
   }
 `;
+
+export default Uses;
