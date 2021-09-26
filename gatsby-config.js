@@ -110,17 +110,15 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
-                return {
-                  ...edge.node.frontmatter,
-                  description: edge.node.excerpt,
-                  date: edge.node.fields.date,
-                  url: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
-                  guid: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
-                };
-              });
-            },
+            serialize: ({ query: { site, allMarkdownRemark } }) => allMarkdownRemark.edges.map(
+              (edge) => ({
+                ...edge.node.frontmatter,
+                description: edge.node.excerpt,
+                date: edge.node.fields.date,
+                url: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
+                guid: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
+              }),
+            ),
             query: `
               {
                 allMarkdownRemark(sort: {

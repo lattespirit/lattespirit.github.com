@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const filename = createFilePath({ node, getNode, basePath: 'posts' });
 
     const [, date, title] = filename.match(
-      /^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/
+      /^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/,
     );
 
     createNodeField({

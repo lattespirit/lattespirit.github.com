@@ -71,8 +71,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mx-4 mt-8 md:w-100 md:mx-auto mt-20 lg:mt-40 lg:flex lg:w-200 lg:mx-auto lg:flex lg:justify-between">
-        <div className="flex justify-center items-center lg:w-100 lg:h-60 lg:self-start block">
+      <div className="mx-4 md:w-100 md:mx-auto mt-20 lg:mt-40 lg:w-200 lg:mx-auto lg:flex lg:justify-between">
+        <div className="flex justify-center items-center lg:w-100 lg:h-60 lg:self-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
