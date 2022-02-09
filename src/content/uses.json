@@ -238,6 +238,12 @@
         "description": "2020 年开始 3D 之旅",
         "link": "https://www.blender.org/",
         "image": { "path": "../images/uses/blender.png" }
+      },
+      {
+        "title": "Obsidian",
+        "description": "作笔记，写 TODO，GTD 等等",
+        "link": "https://obsidian.md/",
+        "image": { "path": "../images/uses/obsidian.png" }
       }
     ]
   },
