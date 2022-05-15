@@ -46,7 +46,7 @@ export default () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Github
+            GitHub
           </a>
           <span className="invisible md:visible text-white">&nbsp;|&nbsp;</span>
         </p>

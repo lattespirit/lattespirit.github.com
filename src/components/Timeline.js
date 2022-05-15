@@ -89,7 +89,7 @@ class Timeline extends Component {
       <img
         className="absolute bottom-0 rounded"
         src={this.v2.publicURL}
-        alt="About - Moving to Github Pages"
+        alt="About - Moving to GitHub Pages"
         style={{ animation: 'v1 2s linear 1s infinite alternate both' }}
       />
     </div>
