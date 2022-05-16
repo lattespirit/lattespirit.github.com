@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-94d6c68612a02637eb32.js"
+    "url": "webpack-runtime-90d620757bf6945875c4.js"
   },
   {
     "url": "styles.4a4c1428ade87836d24d.css"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "91468f0719aa55bb5eb00a3046617141"
+    "revision": "1ba0fa9b2212a578a0b161a524ffc54a"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-d43486f4682974eb15fc.js"
@@ -52,18 +52,18 @@ self.__precacheManifest = [
     "url": "30d759858598de216411963693bede4f6c1ce5cb-a8f78a0d19b027e23192.js"
   },
   {
-    "url": "c95c644e68d489c17fc52f7015e6a80467fec12f-ace3a03b8fd5165e27db.js"
+    "url": "c95c644e68d489c17fc52f7015e6a80467fec12f-ef3e8637ad630b74c70b.js"
   },
   {
     "url": "component---src-templates-paginated-posts-js-3bb79c1a6b195f72866a.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "5bd44f0c8d06a6ad59e00ea3dc4c79f6"
+    "revision": "cb25b69898003b00031ce36847c48c43"
   },
   {
     "url": "page-data/sq/d/2523741585.json",
-    "revision": "e4771cfddb02493b75d76864cdf435d2"
+    "revision": "ec713cf05b68ed8eefb865a0a7e4df23"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -75,14 +75,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "7935472f31cc901cf3044b78df81ad71"
+    "revision": "395b2af29ae302c68fe59491761b1fff"
   },
   {
     "url": "component---src-pages-archives-js-2b990b553197e40dc2a5.js"
   },
   {
     "url": "page-data/archives/page-data.json",
-    "revision": "cb67cf2b04c37f997cca6510b721ad5e"
+    "revision": "43d71da848f37433ef475fc566f0e189"
   },
   {
     "url": "31590f23a14307ce625c9098e1695ed312c55a1f-813bc1cb771a7d8715dd.js"
@@ -99,7 +99,7 @@ self.__precacheManifest = [
     "revision": "a1d3ba847055e8f6f6e083e36cf9f4de"
   },
   {
-    "url": "component---src-pages-uses-js-bd00c5c2bfecd59d1a89.js"
+    "url": "component---src-pages-uses-js-733e179d4cbb8ec36473.js"
   },
   {
     "url": "page-data/uses/page-data.json",
@@ -109,7 +109,7 @@ self.__precacheManifest = [
     "url": "22cb1846e3999e987bb520b28b168c77b899e222-0b7a6ed86c591abfa0ff.js"
   },
   {
-    "url": "component---src-pages-about-js-d1f0e5d864878a38a927.js"
+    "url": "component---src-pages-about-js-4145dd96d5919bb5741c.js"
   },
   {
     "url": "page-data/about/page-data.json",

@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 09 Feb 2022 16:32:19 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2021年度总结]]></title><description><![CDATA[<h4>笔记</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 16 May 2022 13:39:45 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Stand Out as a Web Designer]]></title><description><![CDATA[<p>最近看了 <a href="https://designfulltime.com">Stand Out as a Web Designer</a> 这个课程，讲述的是设计网页的一些建议，课程由八节课组成，每个节课讲述一个建议，在这里做一些总结。</p>
+<h4>Power of the Main Lockup</h4>
+<p><strong>Main Lockup</strong> 指的是网页中的一个板块，能让访客迅速了解品牌网站的基本信息、方向或者主题，还能做相应的引导，因此这个板块应该摆放在首页最显眼的位置。一般由以下三部分组成：</p>
+<ul>
+<li>Main Headline 主标题</li>
+<li>Sub Headline 子标题</li>
+<li>CTA(Call To Action) 召唤行动</li>
+</ul>
+<p>很多大型网站的首页都体现了这样的设计，如 <a href="https://webflow.com/">Webflow</a>，<a href="https://stripe.com/">Stripe</a>，<a href="https://github.com/">GitHub</a>，<a href="https://www.sketch.com/">Sketch</a> 等等这些耳熟能详的网站。</p>
+<p>再举一个小众的网站，在看课程前我也没听过的，<a href="https://www.hellocasahome.com/">Casa Home</a>，如下图红框所示，一浏览首页就能快速了解网站是卖蜡烛香薰的，Main Headline 最显眼和简短，Sub Headline 作了详细的补充，而且 <strong>Shop Now</strong> 这个 Call To Action 按钮包含了设计者引导并期望用户跳转至商品页面进行浏览的意图。</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-hellocasahome.png" alt="Hello Casa Home"></p>
+<h4>Importance of One Main CTA</h4>
+<p>每个网站都有自己 CTA 的展现方式，数量也不尽相同，建议是 CTA 数量尽可能少，展示核心的即可。</p>
+<p>CTA 展示问题常见的有：</p>
+<ul>
+<li>文案、引导功能相同的 CTA 出现在多处，使得冗余元素太多</li>
+<li>文案不同，引导功能相同的 CTA 出现在多处，让人不知道选哪个</li>
+<li>CTA 太多</li>
+</ul>
+<p>下面三个例子能很好地说明问题</p>
+<p>Sketch 将两个注册功能相同的按钮放在了不同的地方，而且都很突出</p>
+<p>Webflow 的两个按钮也都是注册功能，文案和背景稍有不同</p>
+<p>Slack 的包含太多 CTA，页面显得复杂和臃肿</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-sketch.png" alt="Sketch">
+<img src="../images/post/stand-out-as-a-web-designer-webflow.png" alt="Webflow">
+<img src="../images/post/stand-out-as-a-web-designer-slack.png" alt="Slack"></p>
+<p>Stripe 就很好地突出了一个他们认为最重要的注册 CTA，其他 CTA 如 "Sign In" 和 "Contact sales" 相较于注册的则没有“抢占风头”</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-stripe.png" alt="Stripe"></p>
+<p>总的来说，CTA 要尽可能地少，多个 CTA 存在时，需要保证它们不会互相竞争来吸人眼球，而且要将最希望访客进行下一步操作的 CTA 凸显出来</p>
+<h4>How to Tease Continuation</h4>
+<p><strong>Tease Continuation</strong> 的翻译让人有点犯难，直译也不会达到让人马上明白的效果，就先举个例子。</p>
+<p>一般来说，网页的所有内容不能一次性在屏幕中全部展示出来，需要上下或者左右滚动进行浏览，巧妙地通过网页元素的摆放，隐式地，而不是通过跳动的箭头或者文字显式告诉访客进行滚动，则称为 Tease Continuation，达到了 <strong>Say it without saying it</strong> 的效果。</p>
+<p>通过下面 <a href="https://vimeo.com/">Vimeo</a> 和 <a href="https://www.around.co/">Around</a> 官网首页的底部就能很好地说明</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-vimeo.png" alt="Vimeo">
+<img src="../images/post/stand-out-as-a-web-designer-around.png" alt="Around"></p>
+<p>此外还提到了好的网站设计三大要素</p>
+<ul>
+<li>Good Typography</li>
+<li>Good CTA</li>
+<li>Tease Continuation</li>
+</ul>
+<h4>Clean Simple Lines</h4>
+<p>网页的元素，如 Logo，标题，图片，文字段落等尽量保持在一条直线上，看起来就很干净整洁。</p>
+<p>正常在做设计稿的时候，一般都先根据目标屏幕的尺寸设置好栅栏 Grid，稍微有点强迫症都会给元素对齐。</p>
+<p>关于这节课的内容，展示了 Webflow，Sketch，Apple 官网的网页元素，画上一条线并且分析它们有没有上下对齐，如下图所示，就不多作介绍了，感兴趣的话也可以自己画上一条线研究研究。</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-airbnb-clean-lines.png" alt="Airbnb Clean Simple Lines"></p>
+<h4>How To Pack A 1-2-Maybe 3</h4>
+<p>又是一节看标题不知其意的课，简单来说，访客打开网站首页时，屏幕展现的板块数量一般在 1~3，目的是保持简洁，下面直接截几张图片感受一下</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-how-to-pack-1.png" alt="How to Pack 1">
+<img src="../images/post/stand-out-as-a-web-designer-how-to-pack-2.png" alt="How to Pack 2">
+<img src="../images/post/stand-out-as-a-web-designer-how-to-pack-3.png" alt="How to Pack 3"></p>
+<h4>End with An Action</h4>
+<p>在结尾处加上一个 CTA，用处仿佛是一个销售给你展示完整个页面，故事也讲完了，接下来干点什么事情一样，结尾处的 CTA 也可以看作是一个总结引导。</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-nike.png" alt="Nike">
+<img src="../images/post/stand-out-as-a-web-designer-discord.png" alt="Discord"></p>
+<h4>Consistent in Every View</h4>
+<p>网页元素的风格保持一致，通过例子可以解释</p>
+<p>简单的一个例子就是按钮不应该一个地方用圆角，一个地方用直角 👇</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-consistent-1.png" alt="Consistent Uber"></p>
+<p>相同 CTA 的文案应保持一致 👇</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-consistent-2.png" alt="Consistent Sketch"></p>
+<p>功能相同或者类似的 CTA 配色应保持一致 👇</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-consistent-3.png" alt="Consistent Discord"></p>
+<p>小组件在各个功能相同的页面中应该同时存在 👇</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-consistent-4.png" alt="Consistent Model Y"></p>
+<p><img src="../images/post/stand-out-as-a-web-designer-consistent-5.png" alt="Consistent Model 3"></p>
+<h4>Typography Musts</h4>
+<p>最后一个建议是文字的排版要避免一个单词占据一整行，这节有 20 多分钟，核心内容都是前面那一句</p>
+<p><img src="../images/post/stand-out-as-a-web-designer-typography-musts.png" alt="Typography Musts"></p>
+<h4>总结</h4>
+<p>有了上面八个小建议，在浏览和设计品牌网站首页的时候，脑海里多了一些评判的标准，当然，这不是教科书式的，设计本来就可以天马行空没有约束地进行创造。</p>]]></description><link>https://www.lattespirit.com/stand-out-as-a-web-designer</link><guid isPermaLink="false">https://www.lattespirit.com/stand-out-as-a-web-designer</guid><pubDate>Tue, 01 Feb 2022 00:00:00 GMT</pubDate></item><item><title><![CDATA[2021年度总结]]></title><description><![CDATA[<h4>笔记</h4>
 <p>2021 年里，各平台资讯的主题比较多是 <strong>Web3.0</strong>，<strong>DAO</strong> 等，2020 年的时候也已经听说 NFT，发现“区块链”、“以太坊”的方向值得关注一下，于是我在网上找了构建 Dapp 的课程。看之前我在想，会不会又陷入看完课程还是不能掌握相关内容的困境。这些年手上已经搜集了互联网行业相关很多很多的课程，包括主流编程语言，框架，UI 设计，摄影，剪辑，3D，VFX 等等等等，每次看到一个课程的介绍，都觉得自己看完后会获得课程描述中的能力，但事实上没有。</p>
 <p>在看课程的时候，大多数情况下都能听懂，以为这样就掌握了，但过段时间就记不起细节，大脑只留存“看过”的记忆，结果就是看过没掌握，得反复找到该内容来看。为了解决这样的问题，我现在的做法是<strong>提炼知识点并作笔记，自己进行反复解释或者阐述直到能表达清楚</strong>。这不是什么新鲜的方法，或者在很多人看来“本该就这样”，只是我一直忽略了笔记的重要性。</p>
 <p>关于笔记工具的选择，目前锁定 <strong>Obsidian</strong> 和 <strong>Logseq</strong>。一开始我是用 Logseq 的，在仅知道双向链接概念的前提下，进入主界面后，除了看到一个当天日期的标题、测试双链功能和尝试一些 Markdown 语法，我并不知道还能干什么，因此被劝退不少，后来使用了 Obsidian，才知道那是 Daily Note 的功能，只不过 Logseq 以默认的方式展现了。</p>
@@ -222,7 +292,7 @@
 <p>博客上线时用的是别人的 Wordpress 模板，那时 WordPress 非常流行，各种好坏善恶的模板到处都是，我也选了个人气还不错的。开始想在 WebArchive 上找一下 2012-2013 年有没有截取到博客首页的画面，结果发现只有<a href="https://web.archive.org/web/20130410015648/http://www.lattespirit.com/">这个页面</a>，可惜样式还乱了。最后还是在移动硬盘的备份里找到了一份网站源码，还有数据库，花了点时间搭建好旧版本的 WordPress 后就还原成了下面的模样，且记录为 <strong>1.0</strong></p>
 <p><img src="../images/about/v1.png" alt="V1.0"></p>
 <h6>v2.0</h6>
-<p>接下来就是转入 Github Pages，尝试过在官方推荐的主题中找简约风格的，发现修改起来还略麻烦，就决定自己设计简简单单的页面。Bootstrap 是当时比较热门的，自带响应式天赋属性还有基本的幻灯片，Modal 等组件，很快就把页面设计出来了，因为真的很简洁。</p>
+<p>接下来就是转入 GitHub Pages，尝试过在官方推荐的主题中找简约风格的，发现修改起来还略麻烦，就决定自己设计简简单单的页面。Bootstrap 是当时比较热门的，自带响应式天赋属性还有基本的幻灯片，Modal 等组件，很快就把页面设计出来了，因为真的很简洁。</p>
 <p><img src="../images/about/v2.png" alt="V2.0"></p>
 <h6>v3.0</h6>
 <p>从 2014 年开始 v2 的 UI 就用到 2019 年底，现在想想，原来已经 5 年了，也该换身新衣裳，加上本身今年个人的方向就是设计，11 月初就开工了。一个多月里业余的时间都用在 Figma 上画设计稿，接下来选择用 <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a> 和 <a href="https://vuejs.org" target="_blank">Vue.js</a> 来实现就比较快了，在开发的过程中，还使用了黑五刚买的 <a href="https://solisapp.com" target="_blank">Solis</a> 进行模拟多设备调试，省下了大量的时间。值得一提的是，这次更新增加了 Typography 页面，展示博客所用到的字体，配色和物料等，入口比较隐蔽，像 <a href="https://laracasts.com" target="_blank">Laracasts</a> 的一样，右键点击 Logo 进入，似乎是不成文的规定，具体还没考究。</p>
