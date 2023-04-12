@@ -25,6 +25,20 @@ class PaginatedPosts extends Component {
             className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden"
             key={node.fields.slug}
           >
+            {node.frontmatter.featuredImage !== null && (
+            <div className="md:flex-shrink-0 md:w-30">
+              <img
+                className="w-full h-40 md:h-full object-cover object-center"
+                src={
+                      node.frontmatter.featuredImage.childImageSharp.fluid.src
+                    }
+                srcSet={
+                      node.frontmatter.featuredImage.childImageSharp.fluid
+                        .srcSet
+                    }
+              />
+            </div>
+            )}
             <div className="w-full p-4 py-6 md:p-6">
               <div>
                 <div className="flex justify-between items-center">
@@ -36,10 +50,9 @@ class PaginatedPosts extends Component {
                       {node.frontmatter.title}
                     </Link>
                   </h5>
-                  {Date.now() - new Date(node.fields.date)
-                      < 24 * 3600 * 15 * 1000 && (
-                      <NewTag className="px-2 py-1 text-xs" />
-                  )}
+                  {/* NewTag should show up when post is created in 15 days. */}
+                  {Date.now() - new Date(node.fields.date) < 1296000000
+                    && (<NewTag className="px-2 py-1 text-xs" />)}
                 </div>
                 <p className="mt-2 text-gray-darkest text-sm x:text-base md:text-sm">
                   {node.frontmatter.description}
