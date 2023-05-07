@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 12 Apr 2023 06:40:43 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022年度总结]]></title><description><![CDATA[<p>总结开头也不用写啥了，直奔下面几个标题的内容。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 May 2023 15:20:16 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[影视 TV app]]></title><description><![CDATA[<h4>背景介绍</h4>
+<p>仔细想了一下，自己已经有接近十年没有好好在电视机前看过电视节目了，例如某某频道和卫视这样的节目，取而代之的是在 iPad 上看综艺，或者在电脑显示器以及到电影院的方式看电影。</p>
+<p>最近在家里接触电视机比较多，想着毕竟电视尺寸比电脑显示器的大不少，也就折腾看看现在流行的看电视的最佳实践是什么。在折腾之前，也对现在电视盒子的一些乱象有所了解，比如引起民愤的 VIP 还得看广告问题，以及因牌照问题导致手机端和电视端会员不能同步问题，当然还有删减问题。</p>
+<h4>需求</h4>
+<p>基于以上背景，折腾有了一些方向，希望使用电视机的过程中：</p>
+<ul>
+<li>无广告</li>
+<li>能搜索电影、影视剧、综艺、动漫资源</li>
+<li>影视资源无删减</li>
+<li>能在线搜索字幕</li>
+<li>部署简单，无需本地存储，因为暂时没有 NAS</li>
+</ul>
+<p>经过一番搜索，得到了如下两个选择：</p>
+<ul>
+<li><a href="https://github.com/liu673cn/box">TVBox</a></li>
+<li>阿里云盘官方 TV app</li>
+</ul>
+<h4>TVBox</h4>
+<p>根据个人的理解，这个应用提供了搜索和整合影视资源的功能，当然还有视频的播放，但自身不提供资源，需要自行寻找资源的提供者。</p>
+<p>该项目比较人性化的是，已经列出了一些常用的源地址，甚至提供了已经内置好源地址的 apk 安装包，目前使用比较稳定的是<strong>小苹果</strong>。</p>
+<p>使用了一个月后，有以下优缺点的总结：</p>
+<h5>优点</h5>
+<ul>
+<li>安装简单</li>
+<li>拥有海量及热门资源</li>
+<li>播放器能进行音轨切换，能够搜索字幕</li>
+</ul>
+<h5>缺点</h5>
+<ul>
+<li>虽然有主备源，有些资源访问慢</li>
+<li>有些影视资源自带广告</li>
+<li>源需要维护，封装的<strong>影视仓</strong>出现过一次源链接失效，首页加载出现 404 的现象</li>
+<li>播放高清的视频，出现跳帧现象，直接跳到一两分钟后的画面，属于致命缺点</li>
+</ul>
+<h4>阿里云盘 TV app</h4>
+<p>官方提供的应用，播放视频可以说是非常稳定，当然需要个人账号。容量方面之前有过很多活动进行免费扩容，我没怎么热心关注完成，也有 1T 多的大小，没有收藏癖好的话完全够用。</p>
+<p>同样总结一下使用感受：</p>
+<h5>优点</h5>
+<ul>
+<li>安装简单</li>
+<li>稳定</li>
+</ul>
+<h5>缺点</h5>
+<ul>
+<li>需要自己转存资源，热门资源不用担心</li>
+<li>云盘上的资源容易被和谐</li>
+</ul>
+<h4>结论</h4>
+<p>目前用阿里云盘 TV app 比较多，因为想看的资源也比较容易找，冷门且找不到的话则用小苹果。</p>]]></description><link>https://www.lattespirit.com/choose-a-media-tv-app</link><guid isPermaLink="false">https://www.lattespirit.com/choose-a-media-tv-app</guid><pubDate>Sat, 06 May 2023 00:00:00 GMT</pubDate></item><item><title><![CDATA[2022年度总结]]></title><description><![CDATA[<p>总结开头也不用写啥了，直奔下面几个标题的内容。</p>
 <h4>电影</h4>
 <p>这两年养成了记录看电影的习惯，每看一部电影，把电影的中英名、上映年份、观看日期记录下来，2021 年观看了 61 部电影和影视剧，2022 年则只有 30 部，距离完成每周一部的计划还差不少。这些影视作品包括首次观看和重温的，前者占据大多数，重温电影也有常看常新的味道。</p>
 <p>看完一些感触较深的电影还会去找相关的解说，相当于查漏补缺，常常有很多在观看时没注意到的小细节，以前有一档节目《龙斌大话电影》，个人认为是影评节目中最好的，可惜现在不再更新了，节目里主持人言辞犀利，没有一味地描述剧情，借用电影里的台词充当解说，该赞美的时候毫不吝啬，吐槽也会来得措不及防。</p>
