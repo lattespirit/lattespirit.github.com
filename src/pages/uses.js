@@ -70,7 +70,7 @@ const Uses = ({ data }) => {
             {' '}
           </span>
           <span className="w-48 px-2 py-1 rounded-full bg-purple-light font-bold text-gray-lightest text-xs lg:text-sm">
-            2022-02-10
+            2023-05-09
           </span>
         </div>
       </div>
