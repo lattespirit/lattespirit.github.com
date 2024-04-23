@@ -55,7 +55,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^5.0.0",
     "postcss-loader": "^6.1.1",
     "tailwindcss-cli": "^0.1.2",
     "webpack": "^5.54.0",
