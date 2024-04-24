@@ -59,11 +59,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "3bec1e9cf78e9a113551bc9b14205319"
+    "revision": "3fe49ae7b7ee0169eae09f67014fa415"
   },
   {
     "url": "page-data/sq/d/2523741585.json",
-    "revision": "f1bb687c97d144ef67e2ad9b0ed63d14"
+    "revision": "a191f5416614dfd28942aaeafeb8c7cb"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -82,7 +82,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/archives/page-data.json",
-    "revision": "0ae5038cbd08545ba8fca6668c8e4551"
+    "revision": "eb5fd3c1167a859c07ad8d8259720021"
   },
   {
     "url": "31590f23a14307ce625c9098e1695ed312c55a1f-813bc1cb771a7d8715dd.js"
@@ -121,7 +121,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/958598658.json",
-    "revision": "8a4c963165eaa2d8baefb1db5108e7d7"
+    "revision": "ef1ac35700f0a41d830b04f1d35325cc"
   },
   {
     "url": "manifest.webmanifest",
