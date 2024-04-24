@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Apr 2024 15:43:19 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[影视 TV app]]></title><description><![CDATA[<h4>背景介绍</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://www.lattespirit.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Apr 2024 16:22:50 GMT</lastBuildDate><atom:link href="https://www.lattespirit.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[影视 TV app]]></title><description><![CDATA[<h4>背景介绍</h4>
 <p>仔细想了一下，自己已经有接近十年没有好好在电视机前看过电视节目了，例如某某频道和卫视这样的节目，取而代之的是在 iPad 上看综艺，或者在电脑显示器以及到电影院的方式看电影。</p>
 <p>最近在家里接触电视机比较多，想着毕竟电视尺寸比电脑显示器的大不少，也就折腾看看现在流行的看电视的最佳实践是什么。在折腾之前，也对现在电视盒子的一些乱象有所了解，比如引起民愤的 VIP 还得看广告问题，以及因牌照问题导致手机端和电视端会员不能同步问题，当然还有删减问题。</p>
 <h4>需求</h4>
@@ -46,51 +46,7 @@
 <li>云盘上的资源容易被和谐</li>
 </ul>
 <h4>结论</h4>
-<p>目前用阿里云盘 TV app 比较多，因为想看的资源也比较容易找，冷门且找不到的话则用小苹果。</p>]]></description><link>https://www.lattespirit.com/choose-a-media-tv-app</link><guid isPermaLink="false">https://www.lattespirit.com/choose-a-media-tv-app</guid><pubDate>Sat, 06 May 2023 00:00:00 GMT</pubDate></item><item><title><![CDATA[刷墙记录]]></title><description><![CDATA[<p>家里有个小房间闲置，准备打算重新装扮一下用作小办工间来使用，由于墙上之前留下一些小污渍，包括胶带留痕、铅笔轨迹等，方案没那么复杂，直接用乳胶漆刷两遍就好。</p>
-<h4>刷前准备</h4>
-<p>刷墙前的预备工作挺多的，得先把房间能搬运的东西都移出去，窗帘也要移走，墙壁和顶部的灰尘用鸡毛掸子清理一遍。为避免乳胶漆低落到地面，以及接触到空调、灯具、插座等，需要在其边缘贴上保护膜 ，免得刷完墙后有更多的收尾工作要做。</p>
-<p>关于保护膜，我用的是下图这种胶布与膜结合的套装，对着踢脚线贴上一圈胶布，自然就给地面穿上了一件衣服。其他电器的话，则用<strong>美纹纸</strong>给周围围上，没有的话透明胶也可以，只要及时移除不留下胶痕就行。</p>
-<p>// TODO 保护膜图片</p>
-<h5>准备工具</h5>
-<p><strong>羊毛刷</strong>，刷漆的主要工具，要分别配上一根长柄和短柄
-<strong>手刷</strong>，用来补刷一些边角
-<strong>乳胶漆托盘</strong>，漆桶入口没刷头那么大，乳胶漆倒在托盘上，方便涂抹刷头
-<strong>防护塑料膜</strong>，起保护地面作用
-<strong>美纹纸</strong>，保护插座、窗户、灯具等家居用品
-<strong>砂纸</strong>（可选），原墙面有凸起瑕疵或深色污渍，可预先磨平</p>
-<p>// TODO 加上工具集合图片</p>
-<h5>选择乳胶漆</h5>
-<p>看了一通攻略，也不晓得是不是推广内容抄来抄去，其中共同提到的有注意执行标准，国标// TODO 找到具体国标</p>
-<p>剩下的要求就比较按照个人主观来判断了</p>
-<ul>
-<li>异味较少，不刺激</li>
-<li>防霉，这个要求是看到家里其他墙面确实起霉了才着重考虑的</li>
-</ul>
-<p><strong>用量</strong>方面，卖乳胶漆的详情页面里会有提示，</p>
-<ul>
-<li>
-<p>刷墙步骤</p>
-<ul>
-<li>保护措施
-<ul>
-<li>插座</li>
-<li>踢脚线</li>
-</ul>
-</li>
-<li>先刷四角，再刷中间</li>
-</ul>
-</li>
-<li>
-<p>注意事项</p>
-<ul>
-<li>刷完及时清洗工具</li>
-<li>羊毛刷与刷柄边缘留距离</li>
-</ul>
-</li>
-<li>
-<p>如何清洗乳胶漆污渍</p>
-</li>
-</ul>]]></description><link>https://www.lattespirit.com/wall-painting</link><guid isPermaLink="false">https://www.lattespirit.com/wall-painting</guid><pubDate>Mon, 24 Apr 2023 00:00:00 GMT</pubDate></item><item><title><![CDATA[2022年度总结]]></title><description><![CDATA[<p>总结开头也不用写啥了，直奔下面几个标题的内容。</p>
+<p>目前用阿里云盘 TV app 比较多，因为想看的资源也比较容易找，冷门且找不到的话则用小苹果。</p>]]></description><link>https://www.lattespirit.com/choose-a-media-tv-app</link><guid isPermaLink="false">https://www.lattespirit.com/choose-a-media-tv-app</guid><pubDate>Sat, 06 May 2023 00:00:00 GMT</pubDate></item><item><title><![CDATA[2022年度总结]]></title><description><![CDATA[<p>总结开头也不用写啥了，直奔下面几个标题的内容。</p>
 <h4>电影</h4>
 <p>这两年养成了记录看电影的习惯，每看一部电影，把电影的中英名、上映年份、观看日期记录下来，2021 年观看了 61 部电影和影视剧，2022 年则只有 30 部，距离完成每周一部的计划还差不少。这些影视作品包括首次观看和重温的，前者占据大多数，重温电影也有常看常新的味道。</p>
 <p>看完一些感触较深的电影还会去找相关的解说，相当于查漏补缺，常常有很多在观看时没注意到的小细节，以前有一档节目《龙斌大话电影》，个人认为是影评节目中最好的，可惜现在不再更新了，节目里主持人言辞犀利，没有一味地描述剧情，借用电影里的台词充当解说，该赞美的时候毫不吝啬，吐槽也会来得措不及防。</p>
