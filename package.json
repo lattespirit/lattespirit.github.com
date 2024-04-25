@@ -42,7 +42,7 @@
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^2.2.15",
-    "three": "^0.132.2"
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
