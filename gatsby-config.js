@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
     title: 'Lattespirit',
-    description: "Lattespirit's Blog",
+    description: "Jeffrey Yeung's Blog",
   },
   plugins: [
     'gatsby-transformer-remark',
