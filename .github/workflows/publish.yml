@@ -28,7 +28,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run buld
+          npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
