@@ -137,7 +137,7 @@ class PaginatedPosts extends Component {
 export const PaginatedPostsQuery = graphql`
   query paginatedPostsQuery($skip: Int!, $limit: Int!) {
     allMdx(
-      sort: { fields: fields___date, order: DESC }
+      sort: { fields: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {

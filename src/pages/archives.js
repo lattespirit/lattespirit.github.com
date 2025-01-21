@@ -46,7 +46,7 @@ const Archives = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: fields___date, order: DESC }) {
+    allMdx(sort: { fields: { date: DESC } }) {
       totalCount
       edges {
         node {

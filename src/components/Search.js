@@ -220,7 +220,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query sitePosts {
-        allMdx(sort: { fields: fields___date, order: DESC }) {
+        allMdx(sort: { fields: { date: DESC } }) {
           posts: nodes {
             excerpt(pruneLength: 10000)
             frontmatter {

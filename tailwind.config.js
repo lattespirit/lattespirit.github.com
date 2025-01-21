@@ -231,6 +231,6 @@ module.exports = {
     margin: ['responsive', 'first', 'last'],
     borderWidth: ['responsive', 'first', 'last'],
   },
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   plugins: [],
 };

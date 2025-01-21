@@ -83,12 +83,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-40706666-1',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['/', '/archives', '/testimonials', '/uses', '/about'],
@@ -122,8 +116,7 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(sort: {
-                    fields: fields___date,
-                    order: DESC
+                    fields: { date: DESC },
                   }, filter: {
                     rawMarkdownBody: {
                       regex: "/^((?!Carousel).)*$/s"

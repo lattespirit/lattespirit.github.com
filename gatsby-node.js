@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allMdx(sort: { fields: fields___date, order: DESC }) {
+      allMdx(sort: { fields: { date: DESC } }) {
         edges {
           node {
             fields {
@@ -38,6 +38,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               title
+            }
+            internal {
+              contentFilePath
             }
           }
         }
@@ -55,9 +58,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const numPages = Math.ceil(posts.length / postsPerPage);
 
   posts.forEach(({ node }, index) => {
+    const postTemplate = path.resolve('./src/templates/post.js');
     createPage({
       path: node.fields.slug,
-      component: path.resolve('./src/templates/post.js'),
+      component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         slug: node.fields.slug,
         title: node.frontmatter.title,

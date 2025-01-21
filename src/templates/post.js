@@ -10,7 +10,7 @@ import UI from '../components/UI';
 import Carousel from '../components/Carousel';
 import Car from '../components/Car';
 
-const Post = ({ data, pageContext }) => {
+const Post = ({ data, pageContext, children }) => {
   const post = data.mdx;
   const { prev, next } = pageContext;
   const prevText = prev ? '上篇' : '未始';
@@ -38,7 +38,7 @@ const Post = ({ data, pageContext }) => {
         </p>
         <div className="text-sm md:text-base paragraph">
           <MDXProvider components={{ ...UI, Carousel, Car }}>
-            <MDXRenderer>{post.body}</MDXRenderer>
+            {children}
           </MDXProvider>
         </div>
       </div>
@@ -84,8 +84,8 @@ const Post = ({ data, pageContext }) => {
   );
 };
 
-export const query = graphql`
-  query($slug: String!) {
+export const PostQuery = graphql`
+  query PostQuery($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
       frontmatter {
