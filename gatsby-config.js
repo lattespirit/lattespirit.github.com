@@ -10,8 +10,9 @@ module.exports = {
   },
   plugins: [
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-json',
     {

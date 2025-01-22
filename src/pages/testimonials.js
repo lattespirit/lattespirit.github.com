@@ -1,17 +1,15 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 
 const Testimonials = () => {
   const data = useStaticQuery(graphql`
     query TestimonialQuery {
-      file(relativePath: { eq: "testimonials/LanternD.png" }) {
+      file(relativePath: {eq: "testimonials/LanternD.png"}) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
+          gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
         }
       }
     }
@@ -74,10 +72,9 @@ const Testimonials = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Img
-                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover bg-purple-dark"
-                fluid={data.file.childImageSharp.fluid}
-              />
+              <GatsbyImage
+                image={data.file.childImageSharp.gatsbyImageData}
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-center bg-cover bg-purple-dark" />
             </a>
           </div>
         </div>

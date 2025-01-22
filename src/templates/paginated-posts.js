@@ -30,12 +30,11 @@ class PaginatedPosts extends Component {
               <img
                 className="w-full h-40 md:h-full object-cover object-center"
                 src={
-                      node.frontmatter.featuredImage.childImageSharp.fluid.src
-                    }
+                  node.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.fallback.src
+                }
                 srcSet={
-                      node.frontmatter.featuredImage.childImageSharp.fluid
-                        .srcSet
-                    }
+                  node.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.sources.srcSet
+                }
               />
             </div>
             )}
@@ -136,11 +135,7 @@ class PaginatedPosts extends Component {
 
 export const PaginatedPostsQuery = graphql`
   query paginatedPostsQuery($skip: Int!, $limit: Int!) {
-    allMdx(
-      sort: { fields: { date: DESC } }
-      limit: $limit
-      skip: $skip
-    ) {
+    allMdx(sort: {fields: {date: DESC}}, limit: $limit, skip: $skip) {
       edges {
         node {
           fields {
@@ -152,9 +147,7 @@ export const PaginatedPostsQuery = graphql`
             description
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 2000) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
-                }
+                gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
               }
             }
           }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 import Timeline from '../components/Timeline';
@@ -9,11 +9,9 @@ import Disqus from '../components/Disqus';
 const About = () => {
   const data = useStaticQuery(graphql`
     query AboutQuery {
-      me: file(relativePath: { eq: "lattespirit.jpg" }) {
+      me: file(relativePath: {eq: "lattespirit.jpg"}) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_noBase64
-          }
+          gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
         }
       }
     }
@@ -22,10 +20,9 @@ const About = () => {
     <Layout>
       <Head title="About" />
       <div className="w-64 mx-auto x:w-auto x:mx-10 mt-10 lg:flex lg:flex-row-reverse lg:w-180 lg:mx-auto">
-        <Img
-          className="w-20 h-20 lg:w-40 lg:h-40 mx-auto rounded-full object-cover object-center shadow-2xl lg:mr-0"
-          fluid={data.me.childImageSharp.fluid}
-        />
+        <GatsbyImage
+          image={data.me.childImageSharp.gatsbyImageData}
+          className="w-20 h-20 lg:w-40 lg:h-40 mx-auto rounded-full object-cover object-center shadow-2xl lg:mr-0" />
 
         <div className="mt-4 md:w-80 mx-auto lg:w-100">
           <h1 className="text-center text-white lg:text-left lg:text-3xl font-bold">

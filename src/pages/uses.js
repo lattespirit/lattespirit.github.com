@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 
@@ -48,10 +48,9 @@ const Uses = ({ data }) => {
                     </div>
                     {item.image.path
                         && item.image.path.extension !== 'svg' && (
-                          <Img
-                            className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center bg-cover ml-2 lg:ml-auto"
-                            fluid={item.image.path.childImageSharp.fluid}
-                          />
+                          <GatsbyImage
+                            image={item.image.path.childImageSharp.gatsbyImageData}
+                            className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center bg-cover ml-2 lg:ml-auto" />
                     )}
                     {item.image.path
                         && item.image.path.extension === 'svg' && (
@@ -78,32 +77,28 @@ const Uses = ({ data }) => {
   );
 };
 
-export const UsesQuery = graphql`
-  query UsesQuery {
-    allUsesJson {
-      edges {
-        node {
-          items {
-            image {
-              path {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid_noBase64
-                  }
-                }
-                extension
-                publicURL
+export const UsesQuery = graphql`query UsesQuery {
+  allUsesJson {
+    edges {
+      node {
+        items {
+          image {
+            path {
+              childImageSharp {
+                gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
               }
+              extension
+              publicURL
             }
-            description
-            link
-            title
           }
-          name
+          description
+          link
+          title
         }
+        name
       }
     }
   }
-`;
+}`;
 
 export default Uses;
