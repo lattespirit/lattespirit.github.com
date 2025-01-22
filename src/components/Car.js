@@ -208,9 +208,9 @@ function Car() {
   return (
     <div className="model">
       <Canvas camera={{ position: [4, 1.6, 1] }}>
-        <ambientLight intensity={0.1} />
-        <pointLight intensity="1" position={[10, 10, 10]} />
-        <pointLight intensity="1" position={[-10, 10, 10]} />
+        <ambientLight intensity={Math.PI / 2} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
+        <spotLight position={[-10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
         <Suspense fallback={null}>
           <Flex justifyContent="center" alignContent="center">
             <Box centerAnchor>
