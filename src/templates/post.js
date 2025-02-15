@@ -2,7 +2,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 import Disqus from '../components/Disqus';

@@ -19,7 +19,7 @@ a {
 }
 
 .box {
-  @apply w-72 mx-auto;
+  @apply mx-4;
 }
 
 .model {
@@ -31,10 +31,6 @@ a {
 }
 
 @screen x {
-  .box {
-    @apply w-84;
-  }
-
   .model {
     @apply w-64 h-64;
   }
@@ -42,13 +38,13 @@ a {
 
 @screen sm {
   .box {
-    @apply w-100;
+    @apply mx-8;
   }
 }
 
 @screen md {
   .box {
-    @apply w-140;
+    @apply mx-12;
   }
 
   .flickity-prev-next-button {
@@ -58,11 +54,14 @@ a {
   .model {
     @apply w-72 h-72;
   }
+  .typography-nav {
+    @apply border-l-2;
+  }
 }
 
 @screen lg {
   .box {
-    @apply w-180;
+    @apply w-180 mx-auto;
   }
 
   .model {
@@ -76,12 +75,6 @@ a {
 
 .typography-nav {
   @apply font-bold border-b-2 border-purple-light;
-}
-
-@screen md {
-  .typography-nav {
-    @apply border-l-2;
-  }
 }
 
 @tailwind utilities;

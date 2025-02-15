@@ -20,8 +20,8 @@ const Archives = ({ data }) => {
                   {postYear}
                 </p>
               )}
-              <div className="flex py-2" key={node.id}>
-                <p className="mr-4">{node.fields.date}</p>
+              <div className="flex items-center py-2 gap-4" key={node.id}>
+                <p className='text-sm text-gray-darkest'>{node.fields.date}</p>
                 <p>
                   <Link
                     className="text-purple-dark no-underline font-semibold"

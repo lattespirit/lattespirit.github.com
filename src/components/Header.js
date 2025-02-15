@@ -70,11 +70,11 @@ class Header extends Component {
           </svg>
         </div>
 
-        <div className="hidden md:block self-end">
+        <div className="hidden md:flex gap-6">
           {menus.map((menu) => (
             menu.showInLargeScreen && (
             <Link
-              className="text-white inline-block pl-6 no-underline"
+              className="text-white inline-block no-underline"
               to={menu.url}
               key={menu.title}
             >
