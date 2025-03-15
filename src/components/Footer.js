@@ -63,7 +63,7 @@ export default () => {
           {' '}
           by
           {' '}
-          <a className="no-underline" href="https://lattespirit.com">
+          <a className="no-underline" href="https://lattespirit.github.io">
             {data.site.siteMetadata.title}
           </a>
         </p>
