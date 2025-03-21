@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://lattespirit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 Mar 2025 15:16:04 GMT</lastBuildDate><atom:link href="https://lattespirit.github.io/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2024年度总结]]></title><description><![CDATA[<p>看着几个只写了梗概的草稿文件许久，我选择先写 2024 的年度总结，也包含一些 2023 年的。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lattespirit's Blog]]></title><description><![CDATA[Lattespirit's Blog]]></description><link>https://lattespirit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 21 Mar 2025 01:35:32 GMT</lastBuildDate><atom:link href="https://lattespirit.github.io/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2024年度总结]]></title><description><![CDATA[<p>看着几个只写了梗概的草稿文件许久，我选择先写 2024 的年度总结，也包含一些 2023 年的。</p>
 <h4>车</h4>
 <p>一年前拥有了自己的第一部车，国产燃油 SUV，不讨论油电之争，根据自己的用车需求，参考了一下销量榜，做点功课，跟销售 Battle Battle，就入手了。估计我是同龄人中开车比较晚的了，前些年基本在外漂泊，用车场景不多。市内打的基本都能解决，跨省市出行就比较痛苦点得搭动车，节假日时候还得抢票，前几年春节期间给黄牛增加过创收。</p>
 <p>有了代步车自然方便很多，但是刚开始上手开车的心里总会有些许恐惧，毕竟从拿证到上手也隔了两年多，买车前也只选择了试乘没有试驾。开车从手生到熟悉的过程是比较值得记录的，特别是这一年开的 6000 km 中犯过的一些新手错误，以下简单记录一下。</p>
@@ -17,7 +17,31 @@
 <p>说回域名，最后在过期的前几天续上了，后面没有折腾过。以前想着给博客换个主题样式或者用 Next.js 重构还有点动力，现在以浏览为主，没有任何输出，跟只在朋友圈点点赞的行为类似。</p>
 <p><strong>这不是我想要的</strong></p>
 <h4>TAC-慈</h4>
-<p><img src="../images/post/ci.jpg" alt="慈"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.44171779141104%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwACBf/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgT/2gAMAwEAAhADEAAAARZtaFwZaT//xAAcEAACAQUBAAAAAAAAAAAAAAABAwACBBIhIjH/2gAIAQEAAQUCSrIVoMPJVLg7Pv8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAABL/2gAIAQIBAT8BS//EABkQAAEFAAAAAAAAAAAAAAAAAAACESAhMv/aAAgBAQAGPwLRahof/8QAHBAAAgEFAQAAAAAAAAAAAAAAAREAECExUZFx/9oACAEBAAE/IUCu1FiUewScSCtQ1hchOKH/2gAMAwEAAgADAAAAEJDP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QRn//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EI7EPR//xAAbEAEAAwADAQAAAAAAAAAAAAABABEhYXGBkf/aAAgBAQABPxAqX1OM3DJqqs9h3Bpeh9lgoKpKEOi84R2sPk//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="慈"
+        title=""
+        src="/static/01751bdfb39bfa0d06a79e405e77731b/6aca1/ci.jpg"
+        srcset="/static/01751bdfb39bfa0d06a79e405e77731b/d2f63/ci.jpg 163w,
+/static/01751bdfb39bfa0d06a79e405e77731b/c989d/ci.jpg 325w,
+/static/01751bdfb39bfa0d06a79e405e77731b/6aca1/ci.jpg 650w,
+/static/01751bdfb39bfa0d06a79e405e77731b/7c09c/ci.jpg 975w,
+/static/01751bdfb39bfa0d06a79e405e77731b/01ab0/ci.jpg 1300w,
+/static/01751bdfb39bfa0d06a79e405e77731b/279bb/ci.jpg 1606w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>这是一把 CF 手游里的狙击枪道具，游戏里获得途径是游戏币兑换，游戏币获得的途径是</p>
 <ul>
 <li>做每日任务，免费</li>
@@ -109,7 +133,31 @@
 </ul>
 <p>很多大型网站的首页都体现了这样的设计，如 <a href="https://webflow.com/">Webflow</a>，<a href="https://stripe.com/">Stripe</a>，<a href="https://github.com/">GitHub</a>，<a href="https://www.sketch.com/">Sketch</a> 等等这些耳熟能详的网站。</p>
 <p>再举一个小众的网站，在看课程前我也没听过的，<a href="https://www.hellocasahome.com/">Casa Home</a>，如下图红框所示，一浏览首页就能快速了解网站是卖蜡烛香薰的，Main Headline 最显眼和简短，Sub Headline 作了详细的补充，而且 <strong>Shop Now</strong> 这个 Call To Action 按钮包含了设计者引导并期望用户跳转至商品页面进行浏览的意图。</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-hellocasahome.png" alt="Hello Casa Home"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACRUlEQVR42k2O20/TYBjGe+1/4aXeeGWMf4HGxAsSE6NecWGySAhXRmOEKDHi6UJkIMJk6+zYOKTilI7T5rauazs2oOvG2KFFGaPdoV3ZoP3aGeM3rkx+efK8b54n74uAiA9E5s7UZ4R9ZnTeIhcsqIzfwt9ZP+wm7YejCZfkAkzCDIjOGyEMBFHE6gAdnAALGKZugFMAvXmmfyxwmANV0fzbsSzdPAOA027G0g39uGPqSEtkq6xPSQdUfqO5F2sWWRVSYNR8XBGSmphslVhlL66VWK3AaEUGmmMhoRVooyZ2y1J4uhZz1yi0zngaicUGR6h5Ui1t6mWuLm7L4k5hdzPDbuhStnWQPvnNtQ+41n4KqGWklY/xS+95YpInPgqhaTnuqkYdcsxZ3/Tm1jEhE/+J2flhW/Bx39rIw8puoCVx2v52t6zA8l5UCE5lA5P88jhkP+KsUKhMOqW4axX7pMpC6Ls3eO1i6tI5/PL5FDFL4GizmIDHDbWCtPPRVcczFh+tJzxVFpNZTIo5a5SrTDrkXFRr/Aqv4+63g/aeqysDPfTSzJfR4Srj0dJ+XcohbZGm0GHe/0FNeuU4Wo05ITKDHcH/U4v5rdCsY3R8ZLDP1jt2/+bWWP+LB7e9bx4l5l6XuRByLNINeqbBuqXIlEQ6JMop0a4u0FAzB5Rn/Lnt5cC9of67+JNb34buXL9y4WnvDe8rGxf5ipweZeqcX8muKtkVJRP4j+6oZohmZllK4sUwWiTd6bXpHWJCiHwuBSfqeeofX83QVbGWAv0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Hello Casa Home"
+        title=""
+        src="/static/73ee394535428caae66057bd7b8cff7e/a6d36/stand-out-as-a-web-designer-hellocasahome.png"
+        srcset="/static/73ee394535428caae66057bd7b8cff7e/222b7/stand-out-as-a-web-designer-hellocasahome.png 163w,
+/static/73ee394535428caae66057bd7b8cff7e/ff46a/stand-out-as-a-web-designer-hellocasahome.png 325w,
+/static/73ee394535428caae66057bd7b8cff7e/a6d36/stand-out-as-a-web-designer-hellocasahome.png 650w,
+/static/73ee394535428caae66057bd7b8cff7e/e548f/stand-out-as-a-web-designer-hellocasahome.png 975w,
+/static/73ee394535428caae66057bd7b8cff7e/3c492/stand-out-as-a-web-designer-hellocasahome.png 1300w,
+/static/73ee394535428caae66057bd7b8cff7e/7e508/stand-out-as-a-web-designer-hellocasahome.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>Importance of One Main CTA</h4>
 <p>每个网站都有自己 CTA 的展现方式，数量也不尽相同，建议是 CTA 数量尽可能少，展示核心的即可。</p>
 <p>CTA 展示问题常见的有：</p>
@@ -122,18 +170,162 @@
 <p>Sketch 将两个注册功能相同的按钮放在了不同的地方，而且都很突出</p>
 <p>Webflow 的两个按钮也都是注册功能，文案和背景稍有不同</p>
 <p>Slack 的包含太多 CTA，页面显得复杂和臃肿</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-sketch.png" alt="Sketch">
-<img src="../images/post/stand-out-as-a-web-designer-webflow.png" alt="Webflow">
-<img src="../images/post/stand-out-as-a-web-designer-slack.png" alt="Slack"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKUlEQVR42j1Q/WtSYRS+f1NREQRBjP1WP8RaLBZFBUFrYJKrzZw459XrRx9zFG4mTmmrHH7eO7cfAmG0yESsjZwf887Ubc6pd3qdet/73rfrcMLDgcN5nvM852AooO2A1Lbc6rYP5/w4IHV8QAv8OCR1gh8Xp8IpJ/VuxCkb3ndNoaCSt4/ANw+xnhj4NHn7ePWzctf2suCYKC0qGJcKreq7BL8GfZtB4Y+CXw5t96FxAMoHsO5iUsd5ppfGhuZGbzqkgwvPbpkf33BKB5OW52diXFh7DYMawflIeHtdUF6D0v4z59MVRadcNE9bX6StY+l52e9ZScws4X14j4O8KjQ/hIirSH4BSS5jvZPAsirw6p53fLi+qKi7VOzyVMOtPnGroRi4K8YRSQhLEkRcQcpzSHYe650EXZNh0+h3w1PeiwuUAVJ6niQgKVY9CBAiOBFiCvGFtgdIfRFNXsI6n/BNt1bNpQ3PYTxapePlwm65QJeyKeYgWzv4d0gnmL0ss58t5TLFzHblJwVJA5q7i4g+DAVNIGTLxLdSO3QqmSzkCzyACKFjttnkBAHCKlMT+zYHRJxwfL1c5ClTx9L+BENcE3DtDJ3ZSWzHN//s5XKR9N+VcCyxsVaOvk86iHwkxLJV9qjYOK42G7UWU4KUsRPeo8JEEwAATdM/1tdjvyJH5cqnLx8UxpmQ01Kx9H2907+1MBGfvR21GkG7xTYadHyTpwyisxBb+Q+RKr13h6OHLAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Sketch"
+        title=""
+        src="/static/932a46930576831f8afa69467f39c13b/a6d36/stand-out-as-a-web-designer-sketch.png"
+        srcset="/static/932a46930576831f8afa69467f39c13b/222b7/stand-out-as-a-web-designer-sketch.png 163w,
+/static/932a46930576831f8afa69467f39c13b/ff46a/stand-out-as-a-web-designer-sketch.png 325w,
+/static/932a46930576831f8afa69467f39c13b/a6d36/stand-out-as-a-web-designer-sketch.png 650w,
+/static/932a46930576831f8afa69467f39c13b/e548f/stand-out-as-a-web-designer-sketch.png 975w,
+/static/932a46930576831f8afa69467f39c13b/3c492/stand-out-as-a-web-designer-sketch.png 1300w,
+/static/932a46930576831f8afa69467f39c13b/7e508/stand-out-as-a-web-designer-sketch.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCUlEQVR42mOQl5dXUFAAkpqamsrKylJSUpJgIAUGcIaMjExkgP+M/r7clCQpcTFpGRlpaWkGWVlZOTk5IKmmpgbki4qKiomJAUlhYWEgKQ0GEP0aqiqmhvq6mhpAPkScAYiBOiUkJOzs7GJiYlxcXOLj452dnQMCAoCkgIAA0AiwE6RExcSBBktISkrDAIMkmCMuLm5hYREVFRUREWFgYODg4JCRkQHkenh4AA0FapCXl1RXk1ZWUZZGAgxAO4EGAx0ZFhaWlJQE1AC03N3dHciOjo4GmmJoZCQtIWJi4OvkWKKnoSMjLQXxMNRmoGYRERE9PT0zMzMTExMnJyeg5WZmpuaWlkKCgrx8/OJCvBrKnvq6ebKi0mIiQkAdCM1AN6uoqJiZmRsaGRsZGQF1GhubGBoamRro2drbW1lbW9nZWVgYWFtoW9lY2TrYq6qoQDzLAIwDHh6euLi4v3//fgOD79+///r+9eyJYw97sz5smvH9x8/Pd59/ef/p+49fnz9//v//f0x0DB8fHzCCoZpjY2N///795euX79++/vnx7cLbn88ePXo/t/75otZ3T9887dry+caTr79+fP70CagZGBYcHBzAwALFMz8/f2ho6OPHj+/evXvn7t2yww/YZ17s2Hfl2eOH927dvHz58qXjZ+7fu3/v3r3bt2+/fPkSGIuamjre3j4AxNm9xh4TsXUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Webflow"
+        title=""
+        src="/static/08d230489185f3b06b6b061d67c25dc6/a6d36/stand-out-as-a-web-designer-webflow.png"
+        srcset="/static/08d230489185f3b06b6b061d67c25dc6/222b7/stand-out-as-a-web-designer-webflow.png 163w,
+/static/08d230489185f3b06b6b061d67c25dc6/ff46a/stand-out-as-a-web-designer-webflow.png 325w,
+/static/08d230489185f3b06b6b061d67c25dc6/a6d36/stand-out-as-a-web-designer-webflow.png 650w,
+/static/08d230489185f3b06b6b061d67c25dc6/e548f/stand-out-as-a-web-designer-webflow.png 975w,
+/static/08d230489185f3b06b6b061d67c25dc6/3c492/stand-out-as-a-web-designer-webflow.png 1300w,
+/static/08d230489185f3b06b6b061d67c25dc6/7e508/stand-out-as-a-web-designer-webflow.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMUlEQVR42mMIEQ0BIZHgMMmwSNnIELGQUPGQMPGwULHQEBGQVLBwcKhYcISwV7Swd3dIdYZmnBenN1ABUIoBojlIODhOKS7TKDNdPyPDMAdIZptkA1GgSFCQTEiAeGCuY0FHTkdLamttQlWycUoAfwDQdJBmIBUoGJhhmNEc0tLindTuF9ngEVtgkZSqk+7C4jqlZuKty7dOb7nw5uOHr9++/f//vyO9y43FLVwiHGyzWEiQUFCSRmK2dWmaRWGafnKWVkyiUlS4eJg1g92clolfP3+6tOfakRNn7z98AtTcltaO0Ay02Z/Pv8ShOC9zbUT0+hSLyky16GTFqGipcBsG2xVTVwI17F2y/+Kx81dOX3l491F5aIUHu0eYRBjUzyAjREPCxYLDRYPCxEPDJcPDJcKANgP9lm2V2xLTGiYX5s7t6cnn5cHr6S3gDdHCcGrrPgg6uQWETm/ef2bzvmOb9uxfvXXvmk0H123bv2Dt/sUbj27Yc3zzvtNb9oPQ1v0QLQx/vr+GoL/fX///+frju5vfX93+/u7hhyc37n68++bjo4+3rvx6//jDm/vvX9//8+PN7++vf8O0MHx+/fjT68dfXj9++erxzRdPTj+7de7h3auPHzx5fO/Fs8dvXoDQt48vvz2//+3Fg89vngDVwxHDl7dPPr558v/d49XPXjvuv+3iXjhz/aHr//5f+/zj++e3X98+vnL26Kkje69eOHHrypmv754C1UPQ5zePAQjIUXzwFpz+AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Slack"
+        title=""
+        src="/static/2607087f48def6440b298b2327ad0b3d/a6d36/stand-out-as-a-web-designer-slack.png"
+        srcset="/static/2607087f48def6440b298b2327ad0b3d/222b7/stand-out-as-a-web-designer-slack.png 163w,
+/static/2607087f48def6440b298b2327ad0b3d/ff46a/stand-out-as-a-web-designer-slack.png 325w,
+/static/2607087f48def6440b298b2327ad0b3d/a6d36/stand-out-as-a-web-designer-slack.png 650w,
+/static/2607087f48def6440b298b2327ad0b3d/e548f/stand-out-as-a-web-designer-slack.png 975w,
+/static/2607087f48def6440b298b2327ad0b3d/3c492/stand-out-as-a-web-designer-slack.png 1300w,
+/static/2607087f48def6440b298b2327ad0b3d/7e508/stand-out-as-a-web-designer-slack.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>Stripe 就很好地突出了一个他们认为最重要的注册 CTA，其他 CTA 如 "Sign In" 和 "Contact sales" 相较于注册的则没有“抢占风头”</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-stripe.png" alt="Stripe"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACGUlEQVR42lWQ208TQRSH90/zwUTFJ2OjiEIVijEhShRNCCbeJalUCGq0mGokpBQRDEajsYqkeGuL0BqwBNpSeqG0O53d7XZvMzs747aI0fNwTmbO+X7nwlmDLZq7k7/el7oxHB+Y+NHrzzgvq85jpNfBvEfYRDOdPGpNNiuj7ZvDd+cvzE0d3gw0VQIHYKAJcua7turY2eKdq8megeRFL3/7qdjvgY/v58Y8iRlPYvZeNjRUXpoCsSAfni2G17KhYjIoxANSzC9zymC7fP4UbOsAzu5IR4/vXN+Dh76b0y+HPn8Mpr4vRvprxbl0QYKAN2p5HZuGqVuUMMZMYnG864zkahUvnRQeda14Xa/dh4K+lvfPWqP+06W33TRxrZwOfZhf+hqNVWUVY4owwSaljGk65pT9B9G+PahzL3lxXAg4ck/aIiNd38bdn8ZHXz1/k9rY0hCpCBIUZSjWJFlBGNuYqhvIJBxznGBXbtGZaZb/JcNyoQDWs2A9V1lJFjK5EoSSrhuE2N2IJGuyiuzOmk4UHRnYhi3LXoDWB2EVAPO5vKYqqqbphm41UsUSWPiZWF5Nb23zUJAAEAEUQUUqA4FjOyghTK1urK7FFuIEobrSriKoiF/CsejiMrBZsSqK1b++Adsmiwxs27V4h2BMQn9GwhjZEVtUJ5T9b7swqV8fU6toaIjWqUwNk/q3yQPefqom5fWG2j/wb8Ux95UhQm1aAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Stripe"
+        title=""
+        src="/static/a78d799b983aac261a78a2a83995782f/a6d36/stand-out-as-a-web-designer-stripe.png"
+        srcset="/static/a78d799b983aac261a78a2a83995782f/222b7/stand-out-as-a-web-designer-stripe.png 163w,
+/static/a78d799b983aac261a78a2a83995782f/ff46a/stand-out-as-a-web-designer-stripe.png 325w,
+/static/a78d799b983aac261a78a2a83995782f/a6d36/stand-out-as-a-web-designer-stripe.png 650w,
+/static/a78d799b983aac261a78a2a83995782f/e548f/stand-out-as-a-web-designer-stripe.png 975w,
+/static/a78d799b983aac261a78a2a83995782f/3c492/stand-out-as-a-web-designer-stripe.png 1300w,
+/static/a78d799b983aac261a78a2a83995782f/7e508/stand-out-as-a-web-designer-stripe.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>总的来说，CTA 要尽可能地少，多个 CTA 存在时，需要保证它们不会互相竞争来吸人眼球，而且要将最希望访客进行下一步操作的 CTA 凸显出来</p>
 <h4>How to Tease Continuation</h4>
 <p><strong>Tease Continuation</strong> 的翻译让人有点犯难，直译也不会达到让人马上明白的效果，就先举个例子。</p>
 <p>一般来说，网页的所有内容不能一次性在屏幕中全部展示出来，需要上下或者左右滚动进行浏览，巧妙地通过网页元素的摆放，隐式地，而不是通过跳动的箭头或者文字显式告诉访客进行滚动，则称为 Tease Continuation，达到了 <strong>Say it without saying it</strong> 的效果。</p>
 <p>通过下面 <a href="https://vimeo.com/">Vimeo</a> 和 <a href="https://www.around.co/">Around</a> 官网首页的底部就能很好地说明</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-vimeo.png" alt="Vimeo">
-<img src="../images/post/stand-out-as-a-web-designer-around.png" alt="Around"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhklEQVR42mN4+frNp89ffv/+/QuIgOA3FABZf//+/Y8KgCI/fv4CMi5fv7nvyHGG/9jAz58/v3z5AjTqx48fX79+xTQFAhj+gQGcD2GfOXNm8eLFW7Zs2bVr14YNG06cOAGXgisDmsiA6bCjR49u2rRpx7atx48eOX78+MaNG4EGXb9+HU0/yGYMzf9+fP/+7v2H+89fPX797u27969ev/nw4SPQC1icjcaHGP3u579Jt7/Pu//96/cfv3/8AApj9zNc1/8/v39/+/bz67df3759//rt4+dvn758+/7l6/cvX358/QZBQNl/v3/BzWIA6/v/79uX/3/+1Dc0W5mZebk4Brg5RXm7JPq7JgW6pgd7xPk4hXo4+jnbB3h73b11+//fX3/BLoRp/vMbyIgLDxNlYNAWZDMRYvGQ40nVEq01lEzRE4rSFnaV5bQUYTKSErx08TIkXGGaQQDESYiPl+FkMJIRspTlizJX7Ur0m18Q3RJmVxDuGW2u7KHAY6Ume/n6bbhmAFAz8JdA9CgsAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Vimeo"
+        title=""
+        src="/static/09828884fb709b109b077f8e1f147a28/a6d36/stand-out-as-a-web-designer-vimeo.png"
+        srcset="/static/09828884fb709b109b077f8e1f147a28/222b7/stand-out-as-a-web-designer-vimeo.png 163w,
+/static/09828884fb709b109b077f8e1f147a28/ff46a/stand-out-as-a-web-designer-vimeo.png 325w,
+/static/09828884fb709b109b077f8e1f147a28/a6d36/stand-out-as-a-web-designer-vimeo.png 650w,
+/static/09828884fb709b109b077f8e1f147a28/e548f/stand-out-as-a-web-designer-vimeo.png 975w,
+/static/09828884fb709b109b077f8e1f147a28/3c492/stand-out-as-a-web-designer-vimeo.png 1300w,
+/static/09828884fb709b109b077f8e1f147a28/7e508/stand-out-as-a-web-designer-vimeo.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVR42m2RS0/CQBDHe+IgMTGxj93tY9tuSwuJqFTKoyAhDbWGaBNIhMSQcFNvHojx6Mn4GTgZEznIl3RaBVH8ZzLdduY3M53laKFyqLkYI5wJIcTzvCAIkiSBFzdECDFNk1KqaZqlM1vXOSTxAhLXJATK5XKxWIQk8LZtA8AYAw8wVESZ0l4IcRgTgglOHwTKAzCZTMbjcRRFo9EoDMNupna7bVkWwHhD3PoEMMxZrVbjOA6CoJmp0WjAF9/3Pc+D/n9hRVHSMVaCMEw+HA6hbZIkruvCXziOA6Xxln7BaXNRLDjO+2LxsVzO5/NSqVSr14EnsvwP/L2qH0NUVXSqQS4YMwxVJhYzDUqzRWG0DSsYU8AI1gk2ZAJew5KevaqSqENoZXBW1jBUgjxbllvBeef0oub3aq2+f9TrKFHMBn0ruQ9niRPauR1vlw/y+8284CBJI+kU3Nf1UkUdXE6vhjemVmHspG50H44fbw/uns+e3q5fpzTs5PKDHWG2J70YxJWxiNIFfQKPO1o8ZXRDugAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Around"
+        title=""
+        src="/static/22d482eb2f1852920ef43e88b68123a1/a6d36/stand-out-as-a-web-designer-around.png"
+        srcset="/static/22d482eb2f1852920ef43e88b68123a1/222b7/stand-out-as-a-web-designer-around.png 163w,
+/static/22d482eb2f1852920ef43e88b68123a1/ff46a/stand-out-as-a-web-designer-around.png 325w,
+/static/22d482eb2f1852920ef43e88b68123a1/a6d36/stand-out-as-a-web-designer-around.png 650w,
+/static/22d482eb2f1852920ef43e88b68123a1/e548f/stand-out-as-a-web-designer-around.png 975w,
+/static/22d482eb2f1852920ef43e88b68123a1/3c492/stand-out-as-a-web-designer-around.png 1300w,
+/static/22d482eb2f1852920ef43e88b68123a1/7e508/stand-out-as-a-web-designer-around.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>此外还提到了好的网站设计三大要素</p>
 <ul>
 <li>Good Typography</li>
@@ -144,30 +336,318 @@
 <p>网页的元素，如 Logo，标题，图片，文字段落等尽量保持在一条直线上，看起来就很干净整洁。</p>
 <p>正常在做设计稿的时候，一般都先根据目标屏幕的尺寸设置好栅栏 Grid，稍微有点强迫症都会给元素对齐。</p>
 <p>关于这节课的内容，展示了 Webflow，Sketch，Apple 官网的网页元素，画上一条线并且分析它们有没有上下对齐，如下图所示，就不多作介绍了，感兴趣的话也可以自己画上一条线研究研究。</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-airbnb-clean-lines.png" alt="Airbnb Clean Simple Lines"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqklEQVR42gGfAmD9AIGDpoCFqX+GqX1/ooOCoYyIpZOMpoaBlH15hIeBin54fmlhY4d8haydsLinu8Kxw8m3yMm1x8mwws6svwD8/vvs5un27/L2+Pv2+Pzy9Pfx8vPs7u/m6Ojo6enr5efs7/Pr7vDv8fLx8/Xv8fPt7O3q5+nl6ezjztIA////4s7KnnxyppSDpJGB0MfA6enp4uDf4eHh5+jj5d/g4NDA9PLq4tzT08rE0Me8zMfC9fPy////7dfWAP///8azq0MmFCcmJ1VGMaqijJiUi3hwX7Cwp8LAqoyDcJt+ZKubcc+/o66ZiWBXRsq5pff08P///8y4twD////Kt7JcOCBhTDJsUzd9hW4/bU8uWjRNgF9neF1MQihTSzEsMg+xpoiXhm2Ifmvdx6vy7OT///+wnZsA////5dfVs5+Yz8S3zsC0w8rCvdfGxNzNxN3Ru8e7rbKjtL2tsbqo1NLG7OTZ/ffv9O/o+ff1////xaipAP///9rKy4RwcHl8fX18fX16en53eH97e5qTkfHs6M7Fv6qcna+jn8PGvNHP0Z6dnKqjovr19P///8GlpQD///+poaQjCAYbGBcdGBcPCwoODAgNDQc8NzDd08aShnh3TDxPNCaztLmYlpRQTkdQSkXb19j///+1nJ0AjJKUXVlbRjU3RD89PTg3Ix8dHxwZISAbTUhC4tnNrpiSkHNsfHd6YWx/WVpiS0dLU0Q8z8zM////ppKTAGZcXTIlKHRlZ358ezQwLjcyMSMhHRsaFkxHP8K1tblunbehrevt6ElfeSM0QDQbE0gsIsfFxv///5SFhwAfIi0bHSclJjEnKjUlJjEkJTEXGSQTFR4WGB4mIysmIy0lJCkwMTUhIikfICgsISQwIiY9MzhJPUBDMTV0jX5m/Qt/iwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Airbnb Clean Simple Lines"
+        title=""
+        src="/static/279d02eab803489c9e2b02ac25937146/a6d36/stand-out-as-a-web-designer-airbnb-clean-lines.png"
+        srcset="/static/279d02eab803489c9e2b02ac25937146/222b7/stand-out-as-a-web-designer-airbnb-clean-lines.png 163w,
+/static/279d02eab803489c9e2b02ac25937146/ff46a/stand-out-as-a-web-designer-airbnb-clean-lines.png 325w,
+/static/279d02eab803489c9e2b02ac25937146/a6d36/stand-out-as-a-web-designer-airbnb-clean-lines.png 650w,
+/static/279d02eab803489c9e2b02ac25937146/e548f/stand-out-as-a-web-designer-airbnb-clean-lines.png 975w,
+/static/279d02eab803489c9e2b02ac25937146/3c492/stand-out-as-a-web-designer-airbnb-clean-lines.png 1300w,
+/static/279d02eab803489c9e2b02ac25937146/a878e/stand-out-as-a-web-designer-airbnb-clean-lines.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>How To Pack A 1-2-Maybe 3</h4>
 <p>又是一节看标题不知其意的课，简单来说，访客打开网站首页时，屏幕展现的板块数量一般在 1~3，目的是保持简洁，下面直接截几张图片感受一下</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-how-to-pack-1.png" alt="How to Pack 1">
-<img src="../images/post/stand-out-as-a-web-designer-how-to-pack-2.png" alt="How to Pack 2">
-<img src="../images/post/stand-out-as-a-web-designer-how-to-pack-3.png" alt="How to Pack 3"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACWElEQVR42n2RSW8SYRjH+QbGaw9eevETtCfRYBovJamYpi6NxmopxMYejBciiVRDkyZUvdSGSmJJbJhhq50yRYayDMO+xQAnQqCFDksCHUa2gRnGF+TsP0/ePMv7e97lEfA832w22+02/18NhzzH8Z0u32rz/f4kKYhEIl6v1+/3R6NR4IfDYRzHEQQJBAIhoGAQRW24xx0h8DCBE76Axxv0evyxWNRoNApAg2w2m8lk0ul0IpEoFou1Ws3hcPSYnu6bdm19Qyiae6HYfAdhG18huUKtVCpJ8hJQer1+BKdSKYIg4vE4YEAL8ASfzwfycvm6SCSSy1/JliWSx8szMvWs+PmD+5J6owGqk5MLhXOtdn9xcQnHfSRJdjqdf7Dj1+Fr6ZO3spfKlUczN6fvzC89fCaVSZ/WqgVQhSBoBPe6dCTs2tF8PC/kKYqi6SZBBDm2yV/tv1mbvze3cFd4e+r6takb07O3RAtiIWI5AJTBYBjB8d9txNEOxFiK6nIcS9O03x9i+/Rl6rMV0mh2dg+0e7pP22rV5pZ6a2V19fgYmcAM0zl1Vr5oy3vfyWKp3mrRFxdFFEUb9Ua1QlLUVZOiKpVKsVRqtf6AoVZr1XKZHAwGOp1uNCrC54xF3aEgdnaG2e3207EcGGYym0HocrnA6nQ6wXdiGObxeECYTCZVKtXo2v3+gGW5wVh9hun1eiCZz+fFYnEulwM+wzDcWCzLDodDZrwBhmGB2+0+sZgRGDoxwSMzwzaLEbUYrYYf2x/eH0GHqNWIHplsVhjYxPlpBuNQKBR/ATzm85kDBJqpAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="How to Pack 1"
+        title=""
+        src="/static/ea5d200a4d4fbc87c0303351b99a0761/a6d36/stand-out-as-a-web-designer-how-to-pack-1.png"
+        srcset="/static/ea5d200a4d4fbc87c0303351b99a0761/222b7/stand-out-as-a-web-designer-how-to-pack-1.png 163w,
+/static/ea5d200a4d4fbc87c0303351b99a0761/ff46a/stand-out-as-a-web-designer-how-to-pack-1.png 325w,
+/static/ea5d200a4d4fbc87c0303351b99a0761/a6d36/stand-out-as-a-web-designer-how-to-pack-1.png 650w,
+/static/ea5d200a4d4fbc87c0303351b99a0761/e548f/stand-out-as-a-web-designer-how-to-pack-1.png 975w,
+/static/ea5d200a4d4fbc87c0303351b99a0761/3c492/stand-out-as-a-web-designer-how-to-pack-1.png 1300w,
+/static/ea5d200a4d4fbc87c0303351b99a0761/a878e/stand-out-as-a-web-designer-how-to-pack-1.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+UlEQVR42l1R7VLaUBDl3ewM79LxCeoDSDsd20617T+myg/EUSwxpCIRMAlSFIXwqYCEQILUUOsgEnNzkx6ItjPNnNnsnj2be/fEp3Y77dZl4fSkq1wBSqcNRuurSFDWa5XmZaPVvGjUaxf1GnIkXgvRh7pUPCvLRUAundeq5awk7jEx8BzHVisyykM+CR5dT1Y8L2Dy/bsVn+u6lFJ3/njJWaGwtrra73XjLNtTuwf737l4HLzjPMkIIYiRSGQ2bJNHhxKA2hbKga5trH8VRcHv91+1mzvbW6ranX3atjyZ9ThFubkZ9nms69h4E8vMpFOSKGDF3ejOi4WFjdB6/vSETx7kjqX5DMUwZLOTn4afr+24zsNk/Pt2NDJuANOcGrqmlAq6rt2P7xzH+f/av4yfsBcbehjo/euBhkRROr1+T2nUWvns8GYI/q8GVo/vbr98/uSrVsr5H7mslPEgSWlRTCeT+0cpXFUQjvhUhpfENHgJXTENTe44i70CgeW5YbZNyZRaE2LdwzxvJZy6uPhS68+swrbEmtrEpLZJyQOW/uc2pXALnlmObY+uh7quTyYTwzACgQAiBLIsx2KxQ54f6CrklvU8DHu5OMsw0T1ml+O4rUgkGo1CmkgkBEFADIfDb9+8DgaDoVDo44cVlv3Gsgz+yNLSqz9ZbC+9ROKrWgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="How to Pack 2"
+        title=""
+        src="/static/63c289bda8f00872e6d97878b33c239c/a6d36/stand-out-as-a-web-designer-how-to-pack-2.png"
+        srcset="/static/63c289bda8f00872e6d97878b33c239c/222b7/stand-out-as-a-web-designer-how-to-pack-2.png 163w,
+/static/63c289bda8f00872e6d97878b33c239c/ff46a/stand-out-as-a-web-designer-how-to-pack-2.png 325w,
+/static/63c289bda8f00872e6d97878b33c239c/a6d36/stand-out-as-a-web-designer-how-to-pack-2.png 650w,
+/static/63c289bda8f00872e6d97878b33c239c/e548f/stand-out-as-a-web-designer-how-to-pack-2.png 975w,
+/static/63c289bda8f00872e6d97878b33c239c/3c492/stand-out-as-a-web-designer-how-to-pack-2.png 1300w,
+/static/63c289bda8f00872e6d97878b33c239c/a878e/stand-out-as-a-web-designer-how-to-pack-2.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACiElEQVR42mOwcttl47HL2n2Xe/BuJ79dQK6Z8y4zl51WHjst3HZaue8ydd5p6rzLyGFnXMae+Mw9hvY7gbJmLkDxbQwRCZeDI094BJ7yDT7tGXgmMOJ0cMwZn4gz7qGn3UPPugaf9gg97RRwysb3lKXHSQv3k5ZeQO4Jp8Dr6obtDNlFnytrX/hEvYhNfZ5XcC866XVD+9uatrclja+zyh/mVL4ub36XWvzaLeK5U9Ar97A3ialPotNfhqb90rGYxZCZ+yYs9opdwOOC1DM7uxfEJ98NjHkYmvzSLfiImIS+a/Ah39hnvjH3HQKe+2WcD86/3Jl+NCbyvFPEF12LaQxhCe8qFx7MrrgXlXx+8vKnGVVvKhverNr4dtr81zYudXZurY5evTbeexOzHvQtW71w9anUwK2ePgc9Y37qWc5kcIu8FrO4LaL8Qsq0exMXHChPWu8RcSM47opbyFVjl4smLsfsfY65BF6JzNxf3DkzJu1CSPQOVdOtbmFPNY17GJatOrZk89oNuw/tPnB0w5JlW1ZvXLL86JJlhxcvO7xwyZGFS48sXXF0+cpjS1bsmLdq+9oNB7ftOjp/yd5V685m5zUw/P///+/fv/+xgd+/v////w/M/AtjQMR/A8lVq1aBNH//8f3fv38vX75ub5vs7hbm7BgcGpxqZeFlZGx89+69t2/f7dm779ix40DGnz9/fv369e0b0ND/y5evAGkGCgHJd+8+ZGdWqalaGWvb21sHKMhbxETlAMVfv35z9eq1u/fuvXjx6vPnLyg2Hzx4cPv27Tt37ty1a1dXZ5+amoGqvL6OpoW0lGFEVMOhgwdWr1kzafIUoNJtYABUCSSPHj1aXV0NAJc1jhx+VE/KAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="How to Pack 3"
+        title=""
+        src="/static/da33ccb9a26d182b1f7e658e16a405d5/a6d36/stand-out-as-a-web-designer-how-to-pack-3.png"
+        srcset="/static/da33ccb9a26d182b1f7e658e16a405d5/222b7/stand-out-as-a-web-designer-how-to-pack-3.png 163w,
+/static/da33ccb9a26d182b1f7e658e16a405d5/ff46a/stand-out-as-a-web-designer-how-to-pack-3.png 325w,
+/static/da33ccb9a26d182b1f7e658e16a405d5/a6d36/stand-out-as-a-web-designer-how-to-pack-3.png 650w,
+/static/da33ccb9a26d182b1f7e658e16a405d5/e548f/stand-out-as-a-web-designer-how-to-pack-3.png 975w,
+/static/da33ccb9a26d182b1f7e658e16a405d5/3c492/stand-out-as-a-web-designer-how-to-pack-3.png 1300w,
+/static/da33ccb9a26d182b1f7e658e16a405d5/a878e/stand-out-as-a-web-designer-how-to-pack-3.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>End with An Action</h4>
 <p>在结尾处加上一个 CTA，用处仿佛是一个销售给你展示完整个页面，故事也讲完了，接下来干点什么事情一样，结尾处的 CTA 也可以看作是一个总结引导。</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-nike.png" alt="Nike">
-<img src="../images/post/stand-out-as-a-web-designer-discord.png" alt="Discord"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoUlEQVR42nWOT0sCYRDG36/RoXPUuY/RoYKCDh2kgk5Fn6FDB0vokAq7UZ1i1fU/bpJFZGqta7vtVrjruqsroigitmmpqQ1KYWU/XoaZd+Z5ZlC5XNZ1vdvtfgzRbrcbjUar1XrvM9xqNpv1el3vgzqdDih7XwxyEEiSlJJlOZ3OZDLg1fsDTKJvwbAYlCRJnlFUJBym4/FSqdQbBRr52+lb0NdXD3exX+4/xG99Rvbe9Jf3V733P6harRaLxXw+r2laLpfLZrNws6qqoihCrahqOq3IcgqA7mBmMFar1VClUlEURRAEjuMg0jRtsVj8fr/ZbPb5fC6Xy+PxEgRxdHwsihI8mOF5nmVZWInADARQg5jnBYa5JwhbOHzjdJJ2m91o3IMkQJ253G6Hw4FjeCR2y3JcIpEoFAoomUx6vd5oNCbwz89P0qOQhBgMnm9sbhkMa3Pziyur6yeHmGFpYXpqYnJ8bHl2Bscwk8kEWxHDMHBVKHRxeXkVicTicTBlKYrCMBxOCAQCJOn02E5x47bdajrd3/EfHWBWq3F3V9O0T3Ur/YxIezAfAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Nike"
+        title=""
+        src="/static/a21d4134bbbd0dc3e68d3c255c6ff10f/a6d36/stand-out-as-a-web-designer-nike.png"
+        srcset="/static/a21d4134bbbd0dc3e68d3c255c6ff10f/222b7/stand-out-as-a-web-designer-nike.png 163w,
+/static/a21d4134bbbd0dc3e68d3c255c6ff10f/ff46a/stand-out-as-a-web-designer-nike.png 325w,
+/static/a21d4134bbbd0dc3e68d3c255c6ff10f/a6d36/stand-out-as-a-web-designer-nike.png 650w,
+/static/a21d4134bbbd0dc3e68d3c255c6ff10f/e548f/stand-out-as-a-web-designer-nike.png 975w,
+/static/a21d4134bbbd0dc3e68d3c255c6ff10f/3c492/stand-out-as-a-web-designer-nike.png 1300w,
+/static/a21d4134bbbd0dc3e68d3c255c6ff10f/7e508/stand-out-as-a-web-designer-nike.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABc0lEQVR42mWO2U7CQBSG50FEpMu0w3QsUBSI25XX3vsEviMobUkQKlSiQGLiJUSjmBC6USitwyIp8ufLZM4538kMcGPp9d7q9VajYbbbL89m12y/tozOk9FpNs3h8GM8Hk8mVtwH8SII5mG0iKJw5vuuawczK5g5rufMg7nv+57nubsBTiyWZU2siW3bo8Gg3+kbj++UrtkdfX06ruvsBUR7CRf0+enoJyxXo0o1HH0vonAahvtiBDRd/0NT1YqqPtC7quq1asWolZu1ck29VzVtKWh6TF4CDhl+BZfkJIHc8Pg6ySLaSXLpAwYmWJRg4BG36rBiYiNvAAxElBQviFgpnd/izFWKF3kkYTnHiVjKKKyQJtk8deTcKUwTOl2vUACdreERlmSCZXnbocuiJHMIZ08KtFQKJUQIA8WtAOIqxDIDMStIW9YlIrnVqWD5khOPWQHtLNM/IJLJF894RFgB/4OBS4FH2cLFnSAVGSis+ulfZ2c90KsUcAEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Discord"
+        title=""
+        src="/static/70c5d8ba97bb4e4dcf38bac94585e83a/a6d36/stand-out-as-a-web-designer-discord.png"
+        srcset="/static/70c5d8ba97bb4e4dcf38bac94585e83a/222b7/stand-out-as-a-web-designer-discord.png 163w,
+/static/70c5d8ba97bb4e4dcf38bac94585e83a/ff46a/stand-out-as-a-web-designer-discord.png 325w,
+/static/70c5d8ba97bb4e4dcf38bac94585e83a/a6d36/stand-out-as-a-web-designer-discord.png 650w,
+/static/70c5d8ba97bb4e4dcf38bac94585e83a/e548f/stand-out-as-a-web-designer-discord.png 975w,
+/static/70c5d8ba97bb4e4dcf38bac94585e83a/3c492/stand-out-as-a-web-designer-discord.png 1300w,
+/static/70c5d8ba97bb4e4dcf38bac94585e83a/7e508/stand-out-as-a-web-designer-discord.png 3836w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>Consistent in Every View</h4>
 <p>网页元素的风格保持一致，通过例子可以解释</p>
 <p>简单的一个例子就是按钮不应该一个地方用圆角，一个地方用直角 👇</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-consistent-1.png" alt="Consistent Uber"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACkUlEQVR42mNgZGZhYmHj4eFVkJNTU5TRVZWyNtG1MDFSVNHUVJLWkBfTV5YzVVPSVJA2UJTOCAo30rPgl1MXU9AQEJNiYGXjEhKVkJOWriktOnvy6KXTh66eP3n35rUrV29M7mrID3WbX1NUHxcSb2fkaWNo4eRn6hnlmlBi5BigZePJwMXJLSMtJyos3NPa+Ofvv5+/gOA3EP3//3/mnAVpgV6zqgvy/FwzvB39zLRNHbyMHAOjo+ND/QN0zBwZuLh5pKSk2Ll4a2tqHz98cPnixYuXLp0/fx6oedaMWZVJkRv6m+McLEoD3UPMdXQMzFxiCwMjEgJCIozsPBnYOTj4BARZ2NirioruHT168fDh+7du3b5z5///f4sWLvGxtc4K8jbX1LTT1rTUVJVTUHGOzDV38dQ31dMztWLg5RcSlpTlExKtLyzasW7dplWr/n/58uc/CKzasE1RWcPBxMjV1FRRRs7FWEdTRV3LyEbfyNzKyUPT3J4BCJiZWYBkRFjY4e3bd65evXvH9kMHDly5fLmxqU1VRVNMWISLg1taUNBORYaTlYONmU1IUERaVlFLU5uhsqq6qqqmtq6+pr6hqr6+sbmls6tz8pRpM2bPnzR1xsQpM2ZMnzlp4qTpEydOnTCxprG1sbWztau3saW1q7OT4T8M/Pj06d3T589fvXnz/uOvv/+AACIOof6CEZDz7ecvuDjD9+/fv/369e/37xPr129cvuL/9+9AiW/fv3359u3bjx9fv//4AkTfvgMRkP3u48eTZy++/fjp09dvQMQANODbu1f///69eebM1IbqlbOnz5k5/e7dByC3gKL8NxD9/PX7x6/fP3///vD5y627D959+vLp+/evP34CAKhmX1hO6pf2AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Consistent Uber"
+        title=""
+        src="/static/dcef8439d161ba459ff37910f1ed923c/a6d36/stand-out-as-a-web-designer-consistent-1.png"
+        srcset="/static/dcef8439d161ba459ff37910f1ed923c/222b7/stand-out-as-a-web-designer-consistent-1.png 163w,
+/static/dcef8439d161ba459ff37910f1ed923c/ff46a/stand-out-as-a-web-designer-consistent-1.png 325w,
+/static/dcef8439d161ba459ff37910f1ed923c/a6d36/stand-out-as-a-web-designer-consistent-1.png 650w,
+/static/dcef8439d161ba459ff37910f1ed923c/e548f/stand-out-as-a-web-designer-consistent-1.png 975w,
+/static/dcef8439d161ba459ff37910f1ed923c/3c492/stand-out-as-a-web-designer-consistent-1.png 1300w,
+/static/dcef8439d161ba459ff37910f1ed923c/a878e/stand-out-as-a-web-designer-consistent-1.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>相同 CTA 的文案应保持一致 👇</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-consistent-2.png" alt="Consistent Sketch"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgklEQVR42kWQ60uTcRTH94dEEFQvTKJMiVlGk2lmWWiRRbbLM7eGYmvZnLrn2URbMhWVvNWWTjN30y7iJbRcpma3OR12EX2jWOZlatgzH+ee3/n1mFjw4cvhwOecw+GtTo3+mhpbnRyb/+xZ/Dqy8GWEy23837x/GfXPTCxM+nzdHROvXyyP9y95exc9XXPvnvLASSEnhVsNgRbdhp3asJGbdjJoI0N2rqnHDhL3VuDhWsaR3UmcfC/m4yIhyotEufsQuYuHXfpt0NYUPbj0rJNiXVTQpkP2fPT8DvSVIUcWqrmCiy+AKgEpYlF6FFLuZ1W7t2ROwG0Gf4PmTSHxwZg+oL/mMRJvDaJlqxa7K5FLBVUXkT4hlCEMSeKQWIgkxxARjpR7/ssrVu3wXbnHpPCaFL5S5XqTNuAsCD6jwHwVjEJQ80EaDSIBIuKAECBZBFLs3Tm71UA358+ab3/nsGhmzRqumLNo5i1qVJUCBXxQHQTZIRDxORNkApAeheth27IBO0m23fR7sJXpqFyrVzOPcrA9bwsniS0yTB2G7DCccQBLI0EcAxIByI+DOmpns5MKtpfSPWa6szrQWc2+MkPfg82euo3u6hCXTTdDusiQKozNjIDMGLghhJx4KIr7J5OLXXXTbttQu7Wk6mF9bbnrHmkwlRH5FY7ufpZlV8eHlr3utSflWHsCCpPBdAlqRDzuVbitALt0/sG2Se9g8S2pXCTRytJ0SdGJCYnxqfIKqwtjzDDMyiZmfG5ckozvK3GDGjsoXqA5N9Cct96YPf3S8Wl44PK5M+I04nSs8PyR8JSzSaeSU+sa7YhllxbmZ378XPrYS9dk0I0k3WKkHxv+AID+s27IH0GOAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Consistent Sketch"
+        title=""
+        src="/static/540da4035e0e33cdde83ebce69a78775/a6d36/stand-out-as-a-web-designer-consistent-2.png"
+        srcset="/static/540da4035e0e33cdde83ebce69a78775/222b7/stand-out-as-a-web-designer-consistent-2.png 163w,
+/static/540da4035e0e33cdde83ebce69a78775/ff46a/stand-out-as-a-web-designer-consistent-2.png 325w,
+/static/540da4035e0e33cdde83ebce69a78775/a6d36/stand-out-as-a-web-designer-consistent-2.png 650w,
+/static/540da4035e0e33cdde83ebce69a78775/e548f/stand-out-as-a-web-designer-consistent-2.png 975w,
+/static/540da4035e0e33cdde83ebce69a78775/3c492/stand-out-as-a-web-designer-consistent-2.png 1300w,
+/static/540da4035e0e33cdde83ebce69a78775/a878e/stand-out-as-a-web-designer-consistent-2.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>功能相同或者类似的 CTA 配色应保持一致 👇</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-consistent-3.png" alt="Consistent Discord"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACkklEQVR42k2N/08ScRjH7+/oyy+1tVptpaLTg/wCCogIpnwzmSCCBDgNzS+/ZFpbW65av/RDzfVla2v2Za0fbG2ZiGBa6ljIdYICNu+4+9wdpEw4QcGOtVrPnr33PO/n9d4DeRYY7yJd6AXS7QUuD5ibB7MewM0zc2DGwyk57aZcs8SKN+Jzr7tcxLQbTLuIqY9RqNVAKlSExU719FFtRqDWU7p2UC0DwkZSICWrZES5hOGLyVbB8k2zr9cQFIhisISCxdwJQL1Xgc0OBgbJLitQ6eIdJmB3AL0RKLVAoqbrVHSLMmyoW5KJ0LJKrLiGLJXGRU0MXwK4hvQmmi8mLN1keyfec2XJaCT6hhnnMG12Mg4HNmLyXbOt6y2gvJ66KGZq6hmHLtKoSVQrGLiOgJQqUtEcaNLGjIrlT6MTRtNPoyZsblszaNDO2s9K+ZJAHqyUhWEhLeyeVfX7xrQzzdJVXi33MgbVyAn10/cDY6FO58b1N0lrL3bbjrx9Hn1yf7NZ+KJIcK9UcKeoct5qRUafPbp1d+VSxUse/IUvZWAxAUnUVPnkuOFh6MYUO/H4wwP7pFS7o9JRDUoCro1VNVD1moTiMqvr/9Yx/s7WR9qH1ngyVNLyS9xCQf7Anp/CiL1EcjsZRSI7DBndOoxs5aPYYTCcQ0PZUORgfSMXxDN+LL2J79HbueBmZhXJ+pEUdPhf7R8cBEMbSOB7cA0NrPoxbKtg7mdZNpnNsH+Y/F/JZDKFcD5fWChAmzqcZ89UnDsNCyrkx48VO2yDnI/jsTnPvNe7wMQTuVzuH18Ip1Kp3d1dlk3H43GHbejkiZLzp8p4F0RHj5R0WUY4CEF+TL56vbj4FUVRHMdZluX4dLrA/waTCLHrrSs3qgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Consistent Discord"
+        title=""
+        src="/static/3c94be8303a8130fc6f20ba35fc2e458/a6d36/stand-out-as-a-web-designer-consistent-3.png"
+        srcset="/static/3c94be8303a8130fc6f20ba35fc2e458/222b7/stand-out-as-a-web-designer-consistent-3.png 163w,
+/static/3c94be8303a8130fc6f20ba35fc2e458/ff46a/stand-out-as-a-web-designer-consistent-3.png 325w,
+/static/3c94be8303a8130fc6f20ba35fc2e458/a6d36/stand-out-as-a-web-designer-consistent-3.png 650w,
+/static/3c94be8303a8130fc6f20ba35fc2e458/e548f/stand-out-as-a-web-designer-consistent-3.png 975w,
+/static/3c94be8303a8130fc6f20ba35fc2e458/3c492/stand-out-as-a-web-designer-consistent-3.png 1300w,
+/static/3c94be8303a8130fc6f20ba35fc2e458/a878e/stand-out-as-a-web-designer-consistent-3.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>小组件在各个功能相同的页面中应该同时存在 👇</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-consistent-4.png" alt="Consistent Model Y"></p>
-<p><img src="../images/post/stand-out-as-a-web-designer-consistent-5.png" alt="Consistent Model 3"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACnklEQVR42iVSWWsTYRSdP6Dog0sRFESQilWkKkrffRGRoqDSF6uCYkGsvila7ZJJmmVmkjR5KG1tkzSZZDpZZiZpbRrokm2aaTLZE0EFa5c0S7M0Tdpq/dTD4cA9nAsH7oVC4TDP84uBJbeXBVzwsj6WC3BBrz8AxsASv8iFgOlnOR9wPH4fG/Avcn42MD+/ACkUCgRBUAwT9othkbgX7u8RimUoJkFQoQSRK1RSVN7VJ8TkfyGWSIGCFaACAQxZKIpiGCA0TdlsNtJsNU5Y8AkzaaEmp6Zp2m4gSJ2RYBi7w+Gw2+0Mw4CYiSAMBhzi3d4lL8vx0VA4Go7FIrF4LJGM/2cynUylE8kUMFPpdCKVSiST8XgiyPPRaDQcDkPl8lZ5da2QyWaL5bVsYS2bzxSKG8Xycjb/Yz2XyW+CwK+9vWq1mtssrWQLmVyh+A/5fB7ysizPR74EQ9+WV1Y3ctu13f1SfStbIinXo4437Q+fd77oxBnnzu/9an23sl2vVLfrO/VarVapVCAnTUybxp3aEdpimv5s18CwuvXBcGub6F773TNNzxpOdZw83XOxhcVt33P5n9nC19UMqLOeK5TAMud2xpyOiH8hwvniQbaz7X4DBN08dPjGgYNNl648bTgBHzv++sjR9y9fzXo9Jqt1gmJcbt8MOGogCM2ZxmZpYs7lmJ1xeOZduEH75HH7ndu3LjSea77ecv5sY3PTxctXr4lRLOD3gGqTDsrOWG1WUq/XQZ/UstFBxdiQSjs6qB0bMuG6KQdttZIWC2kwjJMWkjATpJkw4noTgRuNelyv0WpGNGPDOs0IhIoFSlSiUqJqJaZWyVUDcqlEiCBShRwZUILXQAAxDJHJxBKJSCSChXCvoK/7Q9fb7o/v/gCFLcKWJkH9vwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Consistent Model Y"
+        title=""
+        src="/static/1205f6a3d041ebece3bcd8743f5b2fdb/a6d36/stand-out-as-a-web-designer-consistent-4.png"
+        srcset="/static/1205f6a3d041ebece3bcd8743f5b2fdb/222b7/stand-out-as-a-web-designer-consistent-4.png 163w,
+/static/1205f6a3d041ebece3bcd8743f5b2fdb/ff46a/stand-out-as-a-web-designer-consistent-4.png 325w,
+/static/1205f6a3d041ebece3bcd8743f5b2fdb/a6d36/stand-out-as-a-web-designer-consistent-4.png 650w,
+/static/1205f6a3d041ebece3bcd8743f5b2fdb/e548f/stand-out-as-a-web-designer-consistent-4.png 975w,
+/static/1205f6a3d041ebece3bcd8743f5b2fdb/3c492/stand-out-as-a-web-designer-consistent-4.png 1300w,
+/static/1205f6a3d041ebece3bcd8743f5b2fdb/a878e/stand-out-as-a-web-designer-consistent-4.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACdklEQVR42h2MyU8TYQDF5+QBw8FEJFgEQZBCKdgWOlNmOtN29uX7ZutsnRZoS0tLkMUQVE4m6tWD3jx4Ey8ejIks4pQCFZe/yonJy8vvveQ95EfQDToXnfPeWXB5cfnrovc76PSC//H0rHsWXF39/NO7/tu9vD753j0+Pf92HBydBMennS9fjxCol6BedvymU25qdlXRK5LqC9BnJJcHJavU8Fc3wl6AJR54jGSTtEoyGsVoKMEjql0zvDXTXTPceuiaXVetuqSvaE7DLrfDI4qzSNbkgQ+LVVbxcpyJkXKaEBIojdSKyzW/UfSb5dVNzW1AK7xo6nZNMauq2yiv7TSbW/Xmhlfflo0VVvZIxsxQSirDJdI0IislgzFERqclR9HKHCyJmp/C+YlZDKchieXXa9VPe+3PrRateECv8IrLSnaOM/AcQGIoN5/ME4/I6TSbJKEi+jVldWRwciAyqS9S2+nMhyx5OBVtoRjLGxJwReBK0Av3FKsj92bwqRieii0Nx8nZefIgBV7PSO8I9+OCdDgZfTs4tNXXnx+9L+qWLFmK6nGSVWB1Wiwu5WRkLIaj0+jENDYUxR6Ozz+7eef9jcE3o/F2PKlGIvzIGI5TnKBqqidDTwQOJxWJAsxQMqe4SCqajs1kxuey4zH87oNEZGC4cOs20ddPEIQoa6rmmoZv6D7UfAk4gmwzYpEWLb+6vfv0FTKXJOILVJrgMIJHlzgsK2I0xBmoGWXDqMiyHQoAT1IcVjBpThOBt/74YHf/5ZP9F8hsAp9LZUMlFqkFNI+TAs2qVEEhC6DA6zka5Aog5BBoTlfN5Xp7z6m0NGtlc+f5PyaW2l9Cj+UtAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Consistent Model 3"
+        title=""
+        src="/static/a8572e312c52a519f55f74615ce5dc07/a6d36/stand-out-as-a-web-designer-consistent-5.png"
+        srcset="/static/a8572e312c52a519f55f74615ce5dc07/222b7/stand-out-as-a-web-designer-consistent-5.png 163w,
+/static/a8572e312c52a519f55f74615ce5dc07/ff46a/stand-out-as-a-web-designer-consistent-5.png 325w,
+/static/a8572e312c52a519f55f74615ce5dc07/a6d36/stand-out-as-a-web-designer-consistent-5.png 650w,
+/static/a8572e312c52a519f55f74615ce5dc07/e548f/stand-out-as-a-web-designer-consistent-5.png 975w,
+/static/a8572e312c52a519f55f74615ce5dc07/3c492/stand-out-as-a-web-designer-consistent-5.png 1300w,
+/static/a8572e312c52a519f55f74615ce5dc07/a878e/stand-out-as-a-web-designer-consistent-5.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>Typography Musts</h4>
 <p>最后一个建议是文字的排版要避免一个单词占据一整行，这节有 20 多分钟，核心内容都是前面那一句</p>
-<p><img src="../images/post/stand-out-as-a-web-designer-typography-musts.png" alt="Typography Musts"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABXElEQVR42m2RTU+DQBCGZ2eXpVKEdvkotHwUhEZjQ9oK2pu9mJ6M8aQXTx5N/A0a/7gLNFraPtlshs2+WeYZgD8IkQsB6oVYfwJw3XSz+Si7svNiEM0QKRzDAS6FuEmSue8v4/h6PPY4l+k4vfj++Xp/ed6+faxfPwllh0lGiAngCpHnuR+Gk+k0CoLQsnyAiWk8bh+eNvfr6nZZ3VF69LJ84RxgQIhAtOROiIVoIxoAmqaNPG+WZXEYuLalqryTpA1IqYrICfYo9hBlLfsmdIdUgM2dA6SXHbKiiiK7ooy1p02kTspaFowx0mXvHxCjoSg9J7LsVrXv+2VZFkVRVZXUkaapqqpwEqrw0B1v8iQQAuqRgeM4q9VKhheLRZIkuq7XIzxJT9MnUXam6Uzh7Tw55zLQ72uIbddHqvcF1L0hMvbvaddYY4R0L3eEnUTGh+f6SJjuwDD62oGwX5ecG23yz+u+AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Typography Musts"
+        title=""
+        src="/static/380ab7f3f471ebf0289e1cdea6a67966/a6d36/stand-out-as-a-web-designer-typography-musts.png"
+        srcset="/static/380ab7f3f471ebf0289e1cdea6a67966/222b7/stand-out-as-a-web-designer-typography-musts.png 163w,
+/static/380ab7f3f471ebf0289e1cdea6a67966/ff46a/stand-out-as-a-web-designer-typography-musts.png 325w,
+/static/380ab7f3f471ebf0289e1cdea6a67966/a6d36/stand-out-as-a-web-designer-typography-musts.png 650w,
+/static/380ab7f3f471ebf0289e1cdea6a67966/e548f/stand-out-as-a-web-designer-typography-musts.png 975w,
+/static/380ab7f3f471ebf0289e1cdea6a67966/3c492/stand-out-as-a-web-designer-typography-musts.png 1300w,
+/static/380ab7f3f471ebf0289e1cdea6a67966/a878e/stand-out-as-a-web-designer-typography-musts.png 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>总结</h4>
 <p>有了上面八个小建议，在浏览和设计品牌网站首页的时候，脑海里多了一些评判的标准，当然，这不是教科书式的，设计本来就可以天马行空没有约束地进行创造。</p>]]></description><link>https://lattespirit.github.io/stand-out-as-a-web-designer</link><guid isPermaLink="false">https://lattespirit.github.io/stand-out-as-a-web-designer</guid><pubDate>Tue, 01 Feb 2022 00:00:00 GMT</pubDate></item><item><title><![CDATA[2021年度总结]]></title><description><![CDATA[<h4>笔记</h4>
 <p>2021 年里，各平台资讯的主题比较多是 <strong>Web3.0</strong>，<strong>DAO</strong> 等，2020 年的时候也已经听说 NFT，发现“区块链”、“以太坊”的方向值得关注一下，于是我在网上找了构建 Dapp 的课程。看之前我在想，会不会又陷入看完课程还是不能掌握相关内容的困境。这些年手上已经搜集了互联网行业相关很多很多的课程，包括主流编程语言，框架，UI 设计，摄影，剪辑，3D，VFX 等等等等，每次看到一个课程的介绍，都觉得自己看完后会获得课程描述中的能力，但事实上没有。</p>
@@ -182,7 +662,30 @@
 <p>回顾这一两年在博客上的动静，实在是太安静了，更新主题成了折腾博客最大的动力，不过起码还存活着。有了上面“作笔记”的感悟，觉得应该把博客重新利用起来，是锻炼理解和表达能力的一种方式，内容丰富多彩多样的话，更可以作为自己的一张名片。</p>
 <p>二二年，祝大家<strong>身体健康</strong>。</p>]]></description><link>https://lattespirit.github.io/2021-recap</link><guid isPermaLink="false">https://lattespirit.github.io/2021-recap</guid><pubDate>Sun, 16 Jan 2022 00:00:00 GMT</pubDate></item><item><title><![CDATA[书籍还是视频]]></title><description><![CDATA[<p>平时生活中总会有这样或那样的问题需要解决，有时也会拓展自己的兴趣去学绘画，修车，财务管理等，自身技能树因此要不断扩展。当学习一项新技能时，什么样的学习途径才是适合自己？</p>
 <p>早在去年年初在网上就看见过这样的<a href="https://twitter.com/themsaid/status/1229748343464759296">讨论</a>：</p>
-<p><img src="../images/post/book-or-video-tweet.png" alt="Tweet"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 27.607361963190186%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABPklEQVR42pVR2U7CUBTsHwi4xFBKrUp3a/cKlC6UQBFQymYkRp99M/6BiX/gB4+3F0h89eFkpvfOPadzhvn8+kE3XyHJC/RGc8QEBc3HCa/iTND/URrOrwww3x/vcNMZZCeC6iUQ9IA2q7ASjpsKqg0ZVU5GjVP2uOMlVhsSva/84YwZxLjUfYhWF4rTw7XRhurGMDsZ5XqQQPdiiGaHDIwh2yEkK4TmRkQzgHHXh9nOcEvKCYdgZps3ZJM1suka42KL6eoF6f0SD5tXRGQFw8cnJOMFxost8uIZ/cmS8s5gBt1PaPMSNS+mAxg3ymGQ7jdBSg/KSaXI6Y2IMCV/QL7t3aPSgeyEMIiWbZk4qrd21rm9dWKb4bUArGiDU1xaTdVDXbQo8qoPngRUb1lUXNvvsNzXIbTTC40GcgjmFw99u+Yrmj7AAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Tweet"
+        title=""
+        src="/static/270e79e5d786395720e3330e43f2e095/a6d36/book-or-video-tweet.png"
+        srcset="/static/270e79e5d786395720e3330e43f2e095/222b7/book-or-video-tweet.png 163w,
+/static/270e79e5d786395720e3330e43f2e095/ff46a/book-or-video-tweet.png 325w,
+/static/270e79e5d786395720e3330e43f2e095/a6d36/book-or-video-tweet.png 650w,
+/static/270e79e5d786395720e3330e43f2e095/e548f/book-or-video-tweet.png 975w,
+/static/270e79e5d786395720e3330e43f2e095/7161f/book-or-video-tweet.png 1182w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>最近看到阮一峰的一篇文章<a href="https://www.ruanyifeng.com/blog/2021/07/weekly-issue-166.html">视频学习胜过读书吗?</a>也有提及。</p>
 <p>意思是学习时，什么时候选择视频，什么时候选择书籍？看到这个讨论时，我仔细回顾了一下，在过去新知识的获取途径中，书籍和视频占据了极大部分比重，剩下的包括“和别人沟通”，“主动查阅感兴趣的百科条目”，“偶然被动的宣传”等。</p>
 <p>既然视频和书籍的占比这么大，那么怎样选择才能更大地提升学习的效率呢？根据实际经验，总结出个人的选择，对于<strong>理论类</strong>，如编程技能，选择视频对整体内容有个大概的了解，然后阅读相关书本深入理解；对于<strong>视觉类</strong>，如烹饪，绘画，建模等技能，选择视频。</p>
@@ -199,11 +702,56 @@
 <li><strong>将知识点用在项目或者例子上</strong>，可以理解为 <strong>Learn By Doing/Example</strong>，一个章节或者整个课程都可以作为一个项目，章节也可以作为整个项目的铺垫，比如 Blender Launch Pad，课程从零开始，结束后能渲染出一个视频</li>
 </ul>
 <p>以上是个人关于选择书籍还是视频的想法，<strong>不是建议</strong>，找到自己的学习新技能的方式最佳。 接下来的一篇文章，我会尝试使用上述教学方式介绍一种电影中常用的人像照明方式 <a href="https://en.wikipedia.org/wiki/Rembrandt_lighting">Rembrandt lighting</a></p>]]></description><link>https://lattespirit.github.io/book-or-video</link><guid isPermaLink="false">https://lattespirit.github.io/book-or-video</guid><pubDate>Sat, 25 Sep 2021 00:00:00 GMT</pubDate></item><item><title><![CDATA[2020年度总结]]></title><description><![CDATA[<p>这篇年度总结确实是有点晚了，草稿是 <strong>2021-01-17</strong> 的，现在才补充完，与所谓的“手感”相关吧，不是为了完成任务而记录。不过想到自己那么久没发文，不自觉地想到下图。</p>
-<p><img src="../images/post/domain-never-use.jpg" alt="Domain Never Use"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUEBv/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/9oADAMBAAIQAxAAAAHPblVTX1hMOatB06wg3//EABsQAQADAAMBAAAAAAAAAAAAAAECAxEABBIh/9oACAEBAAEFAveTrntQ6WkBpSNI6b86wNGHP//EABcRAAMBAAAAAAAAAAAAAAAAAAMQMTL/2gAIAQMBAT8BJlGi/8QAGBEAAwEBAAAAAAAAAAAAAAAAAQMQETH/2gAIAQIBAT8BVhOxfZ//xAAbEAABBAMAAAAAAAAAAAAAAAAAAhAhMQEREv/aAAgBAQAGPwKxPLVInTZEw3//xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhMUGx8P/aAAgBAQABPyFTZUOMxEDd8lQzovVQ9DTohXEVb9uKCHfsA0E//9oADAMBAAIAAwAAABDQCPz/xAAZEQADAAMAAAAAAAAAAAAAAAABEBExcbH/2gAIAQMBAT8QiIFk2OL/xAAaEQEAAQUAAAAAAAAAAAAAAAABECFBUdHw/9oACAECAQE/EGAFtQa+xH//xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhQTFRYYH/2gAIAQEAAT8Q3amlrN38jlWicms8RlBHYlZhTFc2cHsywE7Mr3BF1PcvttS29w0I2S9oLQjwn//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Domain Never Use"
+        title=""
+        src="/static/f9e938f468f419121e5aade739ceced9/41099/domain-never-use.jpg"
+        srcset="/static/f9e938f468f419121e5aade739ceced9/d2f63/domain-never-use.jpg 163w,
+/static/f9e938f468f419121e5aade739ceced9/c989d/domain-never-use.jpg 325w,
+/static/f9e938f468f419121e5aade739ceced9/41099/domain-never-use.jpg 500w"
+        sizes="(max-width: 500px) 100vw, 500px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>探索</h4>
 <p>这年可以称为<strong>探索</strong>的一年，年初的时候看了很多后端技术外的入门资料，像重构博客时尝试的 React，以及 <a href="https://www.raywenderlich.com/">Raywenderlich</a> 家 Swift 与 Kotlin 相关的书，可以说只是浅尝辄止。</p>
 <p>关于 React Native 和 Flutter，也看了一些对两者比较的文章，几乎都说 Flutter 性能好，未来发展好，全平台支持只是时间问题，如今 Flutter 2 发布了，也确实如此。对于 Web 端开发者来说，React Native 则非常容易上手，各有各的优势。为了都体验一下两者的开发流程，我还特意在 <a href="https://ui8.net/">UI8</a> 选了一套 APP 原型，打算用两者都实现一下，先从 React Native 开始，大概完成一半 UI 后，因动力不足就停止了，下图是开发部分 UI 的过程。对于 Flutter，则是浏览过几遍官网的 Cookbook 部分，也发现 <a href="https://fluttercompletereference.com/">Flutter Complete Reference</a> 这本书挺好，知识点覆盖广，也很详细，值得一看。</p>
-<p><img src="../images/post/react-native.jpeg" alt="React Native Development"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.987730061349694%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAcpqdkvKA//EABoQAAIDAQEAAAAAAAAAAAAAAAECAwQRMSL/2gAIAQEAAQUCHdbK6g1x2KNNHlf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAEBAQEBAQAAAAAAAAAAAAABAAIRITH/2gAIAQEABj8CLXWx0PkW/IC//8QAGhABAQADAQEAAAAAAAAAAAAAAQAhMaFBcf/aAAgBAQABPyHqJUEwm5pUuyXdO+D1iYCBf//aAAwDAQACAAMAAAAQU8//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxAn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHhABAAICAQUAAAAAAAAAAAAAAQARITFBYXGhsfD/2gAIAQEAAT8QQh8XDMrRpW4eRqhVnhfcvJ4scWe/VgrUgG5//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="React Native Development"
+        title=""
+        src="/static/803377896fef77d31d3b7218a32b5104/6aca1/react-native.jpg"
+        srcset="/static/803377896fef77d31d3b7218a32b5104/d2f63/react-native.jpg 163w,
+/static/803377896fef77d31d3b7218a32b5104/c989d/react-native.jpg 325w,
+/static/803377896fef77d31d3b7218a32b5104/6aca1/react-native.jpg 650w,
+/static/803377896fef77d31d3b7218a32b5104/7c09c/react-native.jpg 975w,
+/static/803377896fef77d31d3b7218a32b5104/01ab0/react-native.jpg 1300w,
+/static/803377896fef77d31d3b7218a32b5104/e1596/react-native.jpg 2048w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>小程序与产品</h4>
 <p>这年计划开始学习日语，在这过程中发现使用日语输入法打字是不可或缺的环节，由此萌生了开发一个<strong>练习日语打字</strong>微信小程序的想法，满足以下功能:</p>
 <ul>
@@ -214,7 +762,28 @@
 <p>原型很快就用 Figma 画完了，附上<a href="https://www.figma.com/file/k7KJ2sxnx9JBm4gAkBxlQx/Japanese-Typewriting">地址</a>，调研一下现在开发小程序流行的框架后，用一个礼拜的业余时间完成了功能，提交后过一天就上线了，二维码就不贴了，在微信中搜索【<strong>日语打字机</strong>】能找到。接下来发现加载背景图较慢，而且还不允许使用包内的图片，最后暂定用渐变颜色代替。</p>
 <p>这个小程序算是一个很小的产品，由于日语知识有限，甚至里面的单词都是在网上找的，没有一一确认过是否正确，很多功能都没有实现，比如播放日语歌曲，同时练习输入歌词中的句子，甚至还可以显示歌词中的文法。这些专业知识的局限性让我也开始思考在选择独立开发一个产品前，idea 足够适合大众的同时，也需要拥有该领域丰富的知识储备，或者学习曲线够平滑，这样才能保证项目的进行，否则得需要专业人士的介入。</p>
 <p>对比这个小程序与上述 React Native 未完成的练手项目，还有一个<strong>重要的体会</strong>是，开发过程一定要快，不然激情会慢慢消磨掉，结果就变成下图。</p>
-<p><img src="../images/post/unfinished-project.jpg" alt="Unfinished Project"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 631px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 80.98159509202453%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAAW83U5Kkf//EABgQAQEBAQEAAAAAAAAAAAAAAAEAESIy/9oACAEBAAEFAkVyS6jxmX//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFH/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BV//EABgQAAIDAAAAAAAAAAAAAAAAAAIQESEx/9oACAEBAAY/ArZTj//EABoQAQACAwEAAAAAAAAAAAAAAAEAESFRcYH/2gAIAQEAAT8hyo91CyLEWyVbxEGG50n/2gAMAwEAAgADAAAAEIwf/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERQf/aAAgBAwEBPxCYxrT/xAAXEQEBAQEAAAAAAAAAAAAAAAABABEx/9oACAECAQE/ENekPL//xAAbEAEAAwEBAQEAAAAAAAAAAAABABEhMVFB8P/aAAgBAQABPxBw6McdeDGHO0N8KyV0sdmsRbbdP2RRvpuWoW73yp//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Unfinished Project"
+        title=""
+        src="/static/2ff491d9e3660cd47e8fe40256a003f4/9dbcf/unfinished-project.jpg"
+        srcset="/static/2ff491d9e3660cd47e8fe40256a003f4/d2f63/unfinished-project.jpg 163w,
+/static/2ff491d9e3660cd47e8fe40256a003f4/c989d/unfinished-project.jpg 325w,
+/static/2ff491d9e3660cd47e8fe40256a003f4/9dbcf/unfinished-project.jpg 631w"
+        sizes="(max-width: 631px) 100vw, 631px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>日语</h4>
 <p>这一年也计划重新开始学习日语，过了五十音这关后，开始学一些简单的文法时感觉还不错，后来看到动词的 N 种变化类型时，感到记不下来，心态没调整好，就停滞了很长一段时间。成就感在我学习的过程中扮演着一个重要的角色，不足时会调整方向。</p>
 <h4>离职</h4>
@@ -232,15 +801,82 @@
 <p>阅读过上一篇文章的朋友们可以知道，3D 也是这年一个重要的主题。选择了 <strong>Blender</strong> 之后，在网上搜集了大量的视频资料，准备深度学习一番。但发现要学的东西太多了，Blender 是一个神奇的软件，能胜任的工作很多很多，3D 建模(Modeling)，绑定(Rigging)，粒子(Particle)，视频编辑(Video Editing)，雕刻(Sculpting)等等，学完是不现实的，也完全没必要。自己的目标是做一些特效视频，所以选择了几个主题，<strong>Modeling</strong> 是基础，必须的，还有 <strong>Video Editing</strong>，<strong>Motion Tracking</strong> 以及 <strong>VFX</strong>，这几样够学一段时间了。</p>
 <p>关于视频编辑和特效制作使用的软件，开始选择的是 Adobe 家的 PR 和 AE，甚至还找到别人如何下载官网正版安装包的<a href="https://gist.github.com/ayyybe/a5f01c6f40020f9a7bc4939beeb2df1d">脚本</a>，还有使用 <a href="https://www.adobezii.com/">Adobe Zii</a>进行破解的流程。安装完之后不是很想用盗版，Adobe 年计划订阅又偏贵，以后有能力了再购买一次性付款的同类软件，如<a href="https://www.blackmagicdesign.com/products/davinciresolve/">达芬奇</a>，似乎免费版的功能也很香了，目前处于入门阶段就不作太多评价了。</p>
 <p>二一年，祝大家<strong>身体健康</strong>。</p>]]></description><link>https://lattespirit.github.io/2020-recap</link><guid isPermaLink="false">https://lattespirit.github.io/2020-recap</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate></item><item><title><![CDATA[3D 之旅]]></title><description><![CDATA[<p>3D 这个概念可以说已经普及大众了，像 3D 电影，VR 游戏，甚至全息 3D 的广告或者公共提示，都能看到它的踪迹。记得最初接触 3D 是在高中，看到同学拿出一本印刷有各种隐藏着 3D 效果图片的书，需要调节眼睛才能看到效果，如下图所示，我的方法是，眼睛先对焦绿色的图片，然后调节眼睛的对焦，使图片外的区域变得略模糊，顺利的话，能在绿色的背景下看到<strong>蝴蝶</strong>的 3D 图像。</p>
-<p><img src="../images/post/3d-journey-picture.jpg" alt="3D picture"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 74.84662576687117%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAwT/2gAMAwEAAhADEAAAAZ4jnA//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAEFAl//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/IV//2gAMAwEAAgADAAAAEAz/AP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABsQAAIBBQAAAAAAAAAAAAAAAAABERAhQYGR/9oACAEBAAE/ENkidOl8Sf/Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3D picture"
+        title=""
+        src="/static/c4f3a1da40cad8b00eadb02d7fbf978d/36dd4/3d-journey-picture.jpg"
+        srcset="/static/c4f3a1da40cad8b00eadb02d7fbf978d/d2f63/3d-journey-picture.jpg 163w,
+/static/c4f3a1da40cad8b00eadb02d7fbf978d/c989d/3d-journey-picture.jpg 325w,
+/static/c4f3a1da40cad8b00eadb02d7fbf978d/36dd4/3d-journey-picture.jpg 512w"
+        sizes="(max-width: 512px) 100vw, 512px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>入坑开始</h4>
 <p>以前对 3D 的理解仅限于“<strong>这个效果给人感觉很立体</strong>”，去年看过<a href="https://www.youtube.com/watch?v=hDMMw06ES-A">Maxon Cinema 4D Demo Reel 2019</a>这个视频后，仿佛进入了一个新的世界，原来 3D 软件能创造出这么酷炫的视觉效果，视频由很多个作品组成，每个作品也就几秒钟，但都足以细细品味，其背景音乐也功不可没。于是决定尝试入一下坑，对 3D 软件的认知还停留在 3ds Max，还是家里书架存放已久的未知来源书籍《3ds Max 效果图设计自学经典》 😅，搜寻了一下 3D 软件界的资料，发现 Cinema 4D 和 Blender 比较适合。</p>
 <p><a href="https://www.maxon.net/en/cinema-4d">Cinema 4D</a> 是闭源收费软件，价格不菲，看到的大部分作品都非常精美，据说界面设计比较容易上手；<a href="https://www.blender.org">Blender</a> 是开源免费软件，GPL 协议让用户有足够的自由来使用，社区也很强大。起初对于 Cinema 4D 之于 Blender 的看法，相当于 P 图界中 <strong>Photoshop</strong> 之于 <strong>GIMP</strong>，由于感觉 GIMP 比较冷门，使用人群不多，一开始还担心 Blender 的也是这样，接触了一段时间后发现社区，资源，插件等还是很不错的。</p>
 <p>总的来说，两者都适合入门和进阶，但考虑到价格与版权（看过群友讨论 Cinema 4D 东家告了一些使用盗版的公司），最终屈服在真香定律选择了 Blender。当然了，还有其他优秀的软件，像 <a href="https://www.sidefx.com">SideFx</a>公司 的 <a href="https://www.sidefx.com/products/houdini/">Houdini</a>，用它制作出来的<a href="https://vimeo.com/441339532">电影特效</a>和<a href="https://vimeo.com/397201248">游戏效果</a>非常震撼，就不一一列举了。网上还有一些关于这些软件的评价表情包，如下图，仅供娱乐的同时也道出了一些事实。</p>
-<p><img src="../images/post/3d-journey-meme.jpg" alt="3D Softwares Meme"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 81.59509202453987%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABhirJoAuP/8QAGRAAAgMBAAAAAAAAAAAAAAAAAQIAAxES/9oACAEBAAEFAnvCt3zEJKkMHs1Yu5//xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQMBAT8BCTb/xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQIBAT8BVhy//8QAHBAAAgICAwAAAAAAAAAAAAAAAAERIRIxAiJx/9oACAEBAAY/Aosjs34WVxbvZjm0zbP/xAAbEAEAAwADAQAAAAAAAAAAAAABABFRITFBof/aAAgBAQABPyFrtjxElT4Hoy+VuJwZ9IrhuF1Nr8n/2gAMAwEAAgADAAAAEGPP/8QAFREBAQAAAAAAAAAAAAAAAAAAAQD/2gAIAQMBAT8QFiFf/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAIAQIBAT8QK1P/xAAeEAEBAAICAgMAAAAAAAAAAAABEQAhMVFBYYGRof/aAAgBAQABPxBGbCFofDzhFfsU+Tc+pko0bDUOsWKajTbz6mJgEBBdpxHDOH7Z+M//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3D Softwares Meme"
+        title=""
+        src="/static/6d08d651b9432f407bad78cee0b147b4/6aca1/3d-journey-meme.jpg"
+        srcset="/static/6d08d651b9432f407bad78cee0b147b4/d2f63/3d-journey-meme.jpg 163w,
+/static/6d08d651b9432f407bad78cee0b147b4/c989d/3d-journey-meme.jpg 325w,
+/static/6d08d651b9432f407bad78cee0b147b4/6aca1/3d-journey-meme.jpg 650w,
+/static/6d08d651b9432f407bad78cee0b147b4/82d6d/3d-journey-meme.jpg 962w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h4>Blender 实战路线</h4>
 <p>一开始看的是 Blender 官方的<a href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6">基础教程</a>，了解基本的界面和操作，接下来看<a href="https://www.youtube.com/channel/UCOKHwx1VCdgnxwbjyb9Iu1g">Blender Guru</a>一步步实现<a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgH1JI7FtPX_Q9OGFhP-HCUV">甜甜圈</a>的制作，最近则是跟着<a href="https://cgboost.com/">CGBoost</a>的<a href="https://cgboost.com/blender-launchpad/">课程</a>实战汽车模型的制作以及动画的基本实现。</p>
-<p><img src="../images/post/3d-journey-blender-car.png" alt="Blender Car Model"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADSUlEQVR42i2S608TVhiH+5/sg0sYDE3k0i0YyVpbblKKDKbABpUxqkBKh3GGGCYbFkSkQCuO1kJLS+kN5DLQwHQh88NYlo17KdiWMmQjDZvOy+dnJ7APT/Kek/d98uacnyRbcY6cj9TkyEoEn/Cp+ioXzl6hWFFHqeoKpflfHqHSU1bQyPn8WnKySygqqKBAVc6pDBnp6WkkJLxHRkYGkquVc9g/X+W+LsZ3ujgD+jfcq36J+eMI97UHWOteYat/jV3/lsGGt9j0r7A0xnE07+NqOaBYXsuxhHd4PymZ1NRUJNpcG/byPWxVe/RpXtBdFqereJfOs6t0qTcPz+bP4pgqDg4xi54+zUvuXnxBf/UbVKdreFcIExOTjoSXCq2Yzv1Bb2GYOxf+oqNolxbFJrfzVjEWBukuec4t1R5tql16zu/TXR4Xsjh9Nf9gqfuXfHkVCYnHSE4+TlpaGpLLRf105sXozN2gtz5Krz7Kdfk6TdIlTOo1Bhp2MOp2MF2KYG3axXpjj4Gbf2K/s4e75zWa0utIPzyJVPoBMpkMyV3NPP0XQ5irQ5jqg5h1a3RoVjGoVnBWrPNDd5TRjl/p+mYBpz2GezCGyxLDYY7gG/ibak0z2XlK5Geyyc3NQzLasMX47Q2mTCGm+zaZsT/joSfKrDtCwBqkx7VCc8sCtYbf+XYixrAjjHcoLMRizhOnuvIa6dIUTqakIpefQfIoEGFuLMqcP8xj7xbzQ0F+sq+xMB7iqWMZY+2PfGEL0foghsW1hd+9xcjQJm7HBt+P76OpaOTEiSQRHakQypHMeEJM9iwx1rzAWNNTvLonIkaPGG6eZ3RwCZ9jBatxkQlfiHGB3xtixBFk8N4ykw+eo6n6iuNCmCI2zMzMRDLlXiHQ9Qv2mjls2ln6L8/iMv6Mx7HI8MAiPu8qvpElvJ4VvKL2e9cI+NexW37D43yGVnuNLKUcpVIp3jAXyZPpHR7PxJid2ubhZJRpweR4hMmJMKMOsZV/C6d1mcBI6JDp6W2mJsRHidpj2aayTI8yS0ZWVvaRsLN9mA6Di442QbsLg2GIr29YabvppK3NSfvhnaj/55bob21xYGgdEjN+1OpyTmeeEpGRo1Ao+A8+oXqdkxeckAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Blender Car Model"
+        title=""
+        src="/static/1a504892e86ed0416764b3886079c51c/a6d36/3d-journey-blender-car.png"
+        srcset="/static/1a504892e86ed0416764b3886079c51c/222b7/3d-journey-blender-car.png 163w,
+/static/1a504892e86ed0416764b3886079c51c/ff46a/3d-journey-blender-car.png 325w,
+/static/1a504892e86ed0416764b3886079c51c/a6d36/3d-journey-blender-car.png 650w,
+/static/1a504892e86ed0416764b3886079c51c/e548f/3d-journey-blender-car.png 975w,
+/static/1a504892e86ed0416764b3886079c51c/3c492/3d-journey-blender-car.png 1300w,
+/static/1a504892e86ed0416764b3886079c51c/2c960/3d-journey-blender-car.png 2870w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>这些流程走下来，可以说是成功入坑了。</p>
 <h4>Web 端</h4>
 <p>Web 端上让人引起舒适的 3D 效果除了<a href="https://threejs.org">Three.js 官网</a>的例子外，还有模型的导入，让我心心念念的例子有<a href="https://play.date">playdate 官网</a>首页的游戏机模型，以及<a href="https://sketchfab.com">Sketchfab 官网</a>首页 Sci-fi 风格的昆虫(目前变成了一只鞋子)。既然现在已经有建好的汽车模型，折腾一下展示在这里也是十分必要的，最终效果<strong>如下所示</strong></p>
@@ -338,10 +974,58 @@
 <br />
 <h5><a href="https://www.material-theme.com/">Material Theme</a>👇</h5>
 <p>群众基础很大的一款主题，提供了 Oceanic, Palenight, Darker, Lighter 的配色，还包含了文件的 icon。</p>
-<p><img src="../images/post/materialtheme.png" alt="Material Theme"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.73619631901841%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2ElEQVR42m1Sy3KcMBDkVxwn2QWWxwohISSEHkgIFvBiu3zJ//9HhhxcG5er+sKgnpnu6UhtrzJMjZuv/Vj3HumAlccqQKX1C3Mr9QsyofJb7aZSuqIbCulyMRRiiPD4UkoPpYypjEssB+ls1ogTbmPCT1V7xvyMWUxEQnjayISKpOngb2HGiI4vTdiRmQEnppjbzP7WmEBtQNrVw1gZj81U2znn9ky6mMoDWCTjEkGzuBY/suq5JAnXlZ7UvKswUztWypW9LfuBuBssX/b+0qpLqwEpoLNRwd2lNb8RO2GeCHvlRviV+63zq1nvfL63/lZKG8PCTZ8y9Ymc6+gKglt9aKtFKkwhbD/dqZ7N/UNvrzCQ+AnpAVY4Bj6QMyDnTAB+lvRXxS6dhfZmf5frHj7+dAs47DJucmHgacr+I0OvqJKG9jom3anmKTdQbfxM3cyGlY0rUh6pcO39I+2BLHo4xmFYjsEG1Nk2vFG/A+FMD52HWiq/J2PepYQ/XRDwDyWtkcs79RtSMzG32q6493n3dXLySS4If86qp6yCbyC348LCvbbTVR6HyOE2/+R8wWEYgSTo410F8TShGVdiZ6RGbAIIhjwCwDO4Qg6p7IbyyKYlZiLD7S/lxqWtlWLv8gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Material Theme"
+        title=""
+        src="/static/519fd2b0084baa499d4e478311a4c9c3/a6d36/materialtheme.png"
+        srcset="/static/519fd2b0084baa499d4e478311a4c9c3/222b7/materialtheme.png 163w,
+/static/519fd2b0084baa499d4e478311a4c9c3/ff46a/materialtheme.png 325w,
+/static/519fd2b0084baa499d4e478311a4c9c3/a6d36/materialtheme.png 650w,
+/static/519fd2b0084baa499d4e478311a4c9c3/e548f/materialtheme.png 975w,
+/static/519fd2b0084baa499d4e478311a4c9c3/3c492/materialtheme.png 1300w,
+/static/519fd2b0084baa499d4e478311a4c9c3/d9ed5/materialtheme.png 2880w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h5><a href="https://draculatheme.com/">Dracula Theme</a>👇</h5>
 <p>吸血鬼的主题，支持的 app 很广泛。</p>
-<p><img src="../images/post/draculatheme.png" alt="Dracula Theme"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.987730061349694%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgUlEQVR42nWR23LbIBCG9RRJ6riyJMRJICQQIEDYsh1N0t5kOn3/hyk+qTfJzDc7XOwH/y4ZoRIhATGHmN1BrIbN5IIyse28MnsXzmY8mnG27iSH2MlwxWeokTXvipJsc/gAbfOacteHU68OpBkRMYjoR9WYXg689RmlanQHY+Ogw88dulNAxsxy/lyWz4/ff7U9pW7S2Csm1eS33ZRh1FOmIBGIiLzADx82zCh5YJ1nwlM2PkxL6CqHDMAWYVEilpxVzgvExKjMLOTUcJf4RiZpWwIADiAvQZPMNHNREdEHxrzoohBTJ+PXcgXaErAat3lx2dlN3pVYqX3wH8YfuZwwMV/Lg44+dfQyvXbLfJO1nZflj7EpeYr9zcwpcw15BUhVrzJMF7Wdw/TSnbZFmf0vX7nLL6/l06Z4eQXPm+p5UyaefhTbHSSNruEA0VCjAWJ9++EViAfWumyMs42zcUdjD4OeEkpPo5/351/u9B72i5/eR//Wq9j100orvPVv/wD7G3Pkr55kKgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Dracula Theme"
+        title=""
+        src="/static/3e170bd882539cd3b81e6ca7323a50f6/a6d36/draculatheme.png"
+        srcset="/static/3e170bd882539cd3b81e6ca7323a50f6/222b7/draculatheme.png 163w,
+/static/3e170bd882539cd3b81e6ca7323a50f6/ff46a/draculatheme.png 325w,
+/static/3e170bd882539cd3b81e6ca7323a50f6/a6d36/draculatheme.png 650w,
+/static/3e170bd882539cd3b81e6ca7323a50f6/e548f/draculatheme.png 975w,
+/static/3e170bd882539cd3b81e6ca7323a50f6/3c492/draculatheme.png 1300w,
+/static/3e170bd882539cd3b81e6ca7323a50f6/b4472/draculatheme.png 2468w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h5><a href="https://rainglow.io/">Rainglow</a>👇</h5>
 <p>提供了丰富的 Color Scheme。</p>
 <h5><a href="https://monokai.pro/">Monokai Pro</a>👇</h5>
@@ -352,19 +1036,137 @@
 <br />
 <h5><a href="https://github.com/tonsky/FiraCode">Fira Code</a>👇</h5>
 <p>一款开源的等宽字体，支持 ligature.</p>
-<p><img src="../images/post/fira-code.png" alt="Fira Code"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjUlEQVR42oWS6W6kMBCEeZRMwsRgfJ8wDIdtQEOOff/H2faQSJn82JU+IWRR3VVlippdX17NqVSnUlMx227HMtZsqshQNUNNR4CI2F0/uVlqPh8nBwUiF4Tb04sEcUPH1t9UuzGThIvCpWMK5XPrN6oiCBAMJSOQxRXx59o/HWI2WZUEYBM3gduIGawaajY6E7tLUt0iTGRyZjrA3OKVtIjAZvVUKsYno9eKjhhgmW+HU99vY9qHeOvDrrsVpufNJfZVjm2fz4bwwNXK5AKDhc1gnm03fNJ6oQrOF6YSVYnJcGTuEOlL5ADCo798NiJUP4IBEMeZlYoAKTAP0F8jIjyLClmEu1MJmSVmk/Q7fqwUgCDW3ax/0/7d+l3aG8D1ViBkzlV7XBVsaBgsHH6JIbMxi7Qr4TM+bvFOcZd9wUTkEpoYclUM3ObmwDx0ofRCZISXJvNl7VEso+s/TL/7bnMucjETKAwy84ncm/vl6EEMH9nrh+velE7iLqv/yYOYiOCGP0Kn/Bv9T1nT8S8tjY3XADnd3gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Fira Code"
+        title=""
+        src="/static/1167d3aa5ebfd9934a4c1af673e74e31/a6d36/fira-code.png"
+        srcset="/static/1167d3aa5ebfd9934a4c1af673e74e31/222b7/fira-code.png 163w,
+/static/1167d3aa5ebfd9934a4c1af673e74e31/ff46a/fira-code.png 325w,
+/static/1167d3aa5ebfd9934a4c1af673e74e31/a6d36/fira-code.png 650w,
+/static/1167d3aa5ebfd9934a4c1af673e74e31/e548f/fira-code.png 975w,
+/static/1167d3aa5ebfd9934a4c1af673e74e31/3c492/fira-code.png 1300w,
+/static/1167d3aa5ebfd9934a4c1af673e74e31/0b569/fira-code.png 2878w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h5><a href="https://www.typography.com/fonts/operator/overview">Operator Mono</a>👇</h5>
 <p>很有特色的一款字体，看起来很舒服，价格不菲。</p>
-<p><img src="../images/post/operator-mono.png" alt="Operator Mono"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfklEQVR42n1SjW6bMBjMoyQNjWOMbfzvdAlgCIRN7bT3f5qeIa0arZt0srClu++7OzZUnPcHuyv0rjCV7FycmeqpaI/VBaC8AZjs449XYa9UduvLig2pXkgZd3sFMuNNDLMOozBD7ZJ0dxUuUwwT1z3luDYrVnJ4pmGbyZqJ1upBql5aIOEsBUZdStFYncKpV2GQphOqFSZBd3NgkVR58rbQlWyVHlbVR7QhXk/NLTaTP48QrVTKkwsajtm2e3q2XHbK3Li6co2dM5jMezLZeT8pP+kwqTAqP9Z2KPPa7ETYS0E8wGSy4Rer02dUwBGBLXbYh2EsApRY+0gcKU+7Ap4V7sr/LB8jXfgXZa7azcrN6wlIO20IsQcal6o01uN1+stwHmX9zYa5NiPixAw85skrbQU8c9ERdr738UGGqDYIYsAH8l8qWKp6INe98jfUkHvCWbfIHxL4eaBLvgTxDRnZhsvv0Lz5ODmTUG/5jYV/kKs6xfaPcSP9L+eT/A4YMY1RqExNPgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Operator Mono"
+        title=""
+        src="/static/a696f8f67c809141d04410850a4576fa/a6d36/operator-mono.png"
+        srcset="/static/a696f8f67c809141d04410850a4576fa/222b7/operator-mono.png 163w,
+/static/a696f8f67c809141d04410850a4576fa/ff46a/operator-mono.png 325w,
+/static/a696f8f67c809141d04410850a4576fa/a6d36/operator-mono.png 650w,
+/static/a696f8f67c809141d04410850a4576fa/e548f/operator-mono.png 975w,
+/static/a696f8f67c809141d04410850a4576fa/3c492/operator-mono.png 1300w,
+/static/a696f8f67c809141d04410850a4576fa/0b569/operator-mono.png 2878w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h5><a href="https://dank.sh/">Dank Mono</a>👇</h5>
 <p>同样适合码字，字母 <strong>f</strong> 的设计让人印象深刻，价值 40.00£.</p>
-<p><img src="../images/post/dank-mono.png" alt="Dank Mono"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABf0lEQVR42n2S23KbMBCGeZRSE4POZ4TTgBBYNhdN3v9xspJSJ81MO/OPLqT99vCvGsRfTmfbdrrtDBWrmw6iNsTDQGcQYguIyG369ZvbKxKh3lQ1PX0+46k9KYAJm8fxrn3iZhMugnIWNkPScUxMR8Qg6QJC9AP2T8hXGPPFqF2ojduNm8htxBxKzZjBfXQ+Kr9zvTIVmMl5mzOdenppT/pHpykPSu8DWyAaEiH+6DD46XoJ92m5+Zck3Fa6WJoO+yGP7X4+WSZWqROTO7zltm0kIvdJeLDuKt1VuQSnAOkN57bJpSfPXe9BREQzHkSsqEw10I/KAOsSXVz8bKcZetfjS9vBzAqe1XhggL9YCoJBlEna3aW7q6xDukOYW4bPaCqr0mAPk/EbWeXczfpD6MRldTHA2VSsiooAnvVkrvsY/pAke7HTgmG+Fris6i9YRulusCRRJUM2rMCUr48/8/lJvsIQ6ue3aX4dfbIG6uSdoX/rOzzOb9ol9F/mAb8DaxWM1oem3ioAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Dank Mono"
+        title=""
+        src="/static/e55e0076d9b25ca2e18abdd72063152f/a6d36/dank-mono.png"
+        srcset="/static/e55e0076d9b25ca2e18abdd72063152f/222b7/dank-mono.png 163w,
+/static/e55e0076d9b25ca2e18abdd72063152f/ff46a/dank-mono.png 325w,
+/static/e55e0076d9b25ca2e18abdd72063152f/a6d36/dank-mono.png 650w,
+/static/e55e0076d9b25ca2e18abdd72063152f/e548f/dank-mono.png 975w,
+/static/e55e0076d9b25ca2e18abdd72063152f/3c492/dank-mono.png 1300w,
+/static/e55e0076d9b25ca2e18abdd72063152f/0b569/dank-mono.png 2878w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h5><a href="https://github.com/microsoft/cascadia-code">Cascadia Code</a>👇</h5>
 <p>微软开源的字体，属于耐看类型。</p>
-<p><img src="../images/post/cascadia-code.png" alt="Cascadia Code"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABk0lEQVR42n2S626jMBCFeZSmpTHG9ytgBQw4JCLZbN//bTomTZv+2JU+WWLk4zlnhgLzw9ve7koNMDn6biVqxjxWpAcwGwAq5+5wE/aIRbxX7hSIBlS3uze1Kw1lQ+gupjsLm5SfpU/5FdpzOYX2zM0MAvisKJxf4uYdNy9ZrAkfnElSJ+mACcQ1HzHL/Rs7h0My4Qh1oUdus7tiT1pEc+eXUgs5OrtUbKgBnsn2cpM4HM7j6RKXtU+rCUs2BZ1L3FQ5tnt9t4xPUp+4OnIDbSflJiLA9kDEaC0Uj8IscDKTuJrrbJt0iIQSeYCKuQk3IsfnYADh0duFCogQMR+JmGoB705FhRyqu10JmRUk1O2lzpeGZ+At71ff/XHdrWmv2q+AtOcCIbvH7bYqAybZNt4vzY8+OrcYf6LQk8fHzPvivuE7kEToVLE+j0pkt/V2j8nJgG01080teVj7Ldap7f+6/tqGU9PMUo30MTAI/O3o5yd5FoNt39+acNWwbRm/B/YvfompmvzwIW1C27T/r8Rs+AT1B45dfy0XmQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Cascadia Code"
+        title=""
+        src="/static/5a206fc71d0e0c94ff0c59c63e201591/a6d36/cascadia-code.png"
+        srcset="/static/5a206fc71d0e0c94ff0c59c63e201591/222b7/cascadia-code.png 163w,
+/static/5a206fc71d0e0c94ff0c59c63e201591/ff46a/cascadia-code.png 325w,
+/static/5a206fc71d0e0c94ff0c59c63e201591/a6d36/cascadia-code.png 650w,
+/static/5a206fc71d0e0c94ff0c59c63e201591/e548f/cascadia-code.png 975w,
+/static/5a206fc71d0e0c94ff0c59c63e201591/3c492/cascadia-code.png 1300w,
+/static/5a206fc71d0e0c94ff0c59c63e201591/0b569/cascadia-code.png 2878w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>下一篇将会聊到<strong>光标</strong>。</p>]]></description><link>https://lattespirit.github.io/editor-essential-1-ui</link><guid isPermaLink="false">https://lattespirit.github.io/editor-essential-1-ui</guid><pubDate>Wed, 06 May 2020 00:00:00 GMT</pubDate></item><item><title><![CDATA[学习日语]]></title><description><![CDATA[<p>要是谈起开始学习日语的时间，恐怕要追溯到 2015 年了，但并不代表已经学了很多年，那时学过五十音图后就没有继续下去了，本文也仅记录个人学习日语的过程，成效有待检验。</p>
 <p>现在还能找到那时练习书写时手机拍的照片。</p>
-<p><img src="../images/post/learning-japanese.jpg" alt="Leaening Japnaese"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.44171779141104%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB5phfDzCv/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECEBEi/9oACAEBAAEFAlWqwyH0f//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAQADAAAAAAAAAAAAAAAAAAEQIEH/2gAIAQEABj8ComR//8QAGxAAAgIDAQAAAAAAAAAAAAAAAREAIRAxQYH/2gAIAQEAAT8hdDhMdMWI5v64c8gax//aAAwDAQACAAMAAAAQzy//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxAn/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFB0f/aAAgBAQABPxB0LuZ8hexZ6RTG35gDXsSbgSnNis//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Leaening Japnaese"
+        title=""
+        src="/static/da99e2bc08b48ee54b2e6db0a8ed06f6/6aca1/learning-japanese.jpg"
+        srcset="/static/da99e2bc08b48ee54b2e6db0a8ed06f6/d2f63/learning-japanese.jpg 163w,
+/static/da99e2bc08b48ee54b2e6db0a8ed06f6/c989d/learning-japanese.jpg 325w,
+/static/da99e2bc08b48ee54b2e6db0a8ed06f6/6aca1/learning-japanese.jpg 650w,
+/static/da99e2bc08b48ee54b2e6db0a8ed06f6/6a068/learning-japanese.jpg 960w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h5>缘由</h5>
 <p>这也是我看过很多与本文标题类似的文章中都会提到的一个话题。日本文化在世界上有着一定的影响，<strong>拓展视野</strong>和<strong>学习新语言感到有趣</strong>成为我学习日语的主要原因，有了日语基础后，我可以哼唱许多以前中文翻唱的流行歌曲，与推上的一些大佬互动，以后去日本玩耍也会便利很多。</p>
 <h5>学习计划</h5>
@@ -391,10 +1193,58 @@
 <p>说是版本升级，也只是改变 UI 以及添加了一些页面而已，内容相关的功能几乎没变，在这里简单回顾一下博客 UI 的历程。</p>
 <h6>v1.0</h6>
 <p>博客上线时用的是别人的 Wordpress 模板，那时 WordPress 非常流行，各种好坏善恶的模板到处都是，我也选了个人气还不错的。开始想在 WebArchive 上找一下 2012-2013 年有没有截取到博客首页的画面，结果发现只有<a href="https://web.archive.org/web/20130410015648/http://www.lattespirit.com/">这个页面</a>，可惜样式还乱了。最后还是在移动硬盘的备份里找到了一份网站源码，还有数据库，花了点时间搭建好旧版本的 WordPress 后就还原成了下面的模样，且记录为 <strong>1.0</strong></p>
-<p><img src="../images/about/v1.png" alt="V1.0"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.73619631901841%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR42m1R227TQBD1hyAgUW8JlVARQuIB8YtA60tFC5+E8Et8iR3b613Hl/V1NwmIJpzaDW1Vjsazs7Nzzs6OlSBYEErDiMQxDUIyX0ReQP5rOPID4od97IdhSJTR8fTl4cnz8eGLyenBm3fD9pEd3frx8WT6+uzV2dvxyXR0NHk2Onj/4aNyoRswTb/8oumfNV01LlV9MONfcKEZn85V4+u1rmrnqo4k/NW378puj/VaCtlut9vdEyBZiV/r3zfbmu/+3AzJzWajtD2EEJSy+Xy+7MEYTdP0NkgSGC/yPM94wcuqHuq7rquqSpFSggkZTMA0Tdd1HcexLGs2mxFCGGQorSsOLTBWq5XoIXsow4IslKDPOc+yDKUI7kql7JoKQk3bysdQHm460cGji1UPaN4dCMFL3jTNGoN5SkY2yzNv4cYs7qCBrwcW2TRtXadplhcFXtuLPiCjCGTGEkZZtkdRFGgeQcmLiKU/Zj5ez9gSw9p3I+7JeJVp/hxGZdu21cO2HdexfUKtgC2ThJC4rut78tAemsElvu97nhdFEa7Ff0qSBB73l2UJP5QNtIH8F2nkWN877EL4AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="V1.0"
+        title=""
+        src="/static/ad7075b88a03b5a6b165bc8594714f4b/a6d36/v1.png"
+        srcset="/static/ad7075b88a03b5a6b165bc8594714f4b/222b7/v1.png 163w,
+/static/ad7075b88a03b5a6b165bc8594714f4b/ff46a/v1.png 325w,
+/static/ad7075b88a03b5a6b165bc8594714f4b/a6d36/v1.png 650w,
+/static/ad7075b88a03b5a6b165bc8594714f4b/e548f/v1.png 975w,
+/static/ad7075b88a03b5a6b165bc8594714f4b/3c492/v1.png 1300w,
+/static/ad7075b88a03b5a6b165bc8594714f4b/d9ed5/v1.png 2880w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h6>v2.0</h6>
 <p>接下来就是转入 GitHub Pages，尝试过在官方推荐的主题中找简约风格的，发现修改起来还略麻烦，就决定自己设计简简单单的页面。Bootstrap 是当时比较热门的，自带响应式天赋属性还有基本的幻灯片，Modal 等组件，很快就把页面设计出来了，因为真的很简洁。</p>
-<p><img src="../images/about/v2.png" alt="V2.0"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.05521472392638%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkUlEQVR42p2RSw7DIAxEc/9zdsOvLY4AG2xTpCwT2oZZWJalN2Nptn6Squaca61jbyxIbcx+pe18EpEIkHAwengN/Qszs3MuQKHG/auuk30IHkptch9m9j5AIha9DetI9uG9o+gCrGqMta+0lDxga0PMa7BY6x4OZvX+SCZEyGRi6fOSr+HDIBd87oWICtXZ+x/5GYz+aLgUdwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="V2.0"
+        title=""
+        src="/static/594afbfbf37737cea78d947459639c60/a6d36/v2.png"
+        srcset="/static/594afbfbf37737cea78d947459639c60/222b7/v2.png 163w,
+/static/594afbfbf37737cea78d947459639c60/ff46a/v2.png 325w,
+/static/594afbfbf37737cea78d947459639c60/a6d36/v2.png 650w,
+/static/594afbfbf37737cea78d947459639c60/e548f/v2.png 975w,
+/static/594afbfbf37737cea78d947459639c60/3c492/v2.png 1300w,
+/static/594afbfbf37737cea78d947459639c60/05883/v2.png 2808w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h6>v3.0</h6>
 <p>从 2014 年开始 v2 的 UI 就用到 2019 年底，现在想想，原来已经 5 年了，也该换身新衣裳，加上本身今年个人的方向就是设计，11 月初就开工了。一个多月里业余的时间都用在 Figma 上画设计稿，接下来选择用 <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a> 和 <a href="https://vuejs.org" target="_blank">Vue.js</a> 来实现就比较快了，在开发的过程中，还使用了黑五刚买的 <a href="https://solisapp.com" target="_blank">Solis</a> 进行模拟多设备调试，省下了大量的时间。值得一提的是，这次更新增加了 Typography 页面，展示博客所用到的字体，配色和物料等，入口比较隐蔽，像 <a href="https://laracasts.com" target="_blank">Laracasts</a> 的一样，右键点击 Logo 进入，似乎是不成文的规定，具体还没考究。</p>
 <h6>需要增加的特性</h6>
@@ -451,7 +1301,27 @@
 <p>一六年，祝大家顺顺利利。</p>]]></description><link>https://lattespirit.github.io/2015-recap</link><guid isPermaLink="false">https://lattespirit.github.io/2015-recap</guid><pubDate>Thu, 31 Dec 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[Scabs]]></title><description><![CDATA[<p><del>不好意思，歌曲设置成了自动播放。</del></p>
 <p><strong>就不挂歌曲外链了</strong>。</p>
 <p>曲名在播放器上有显示，旋律也不作介绍了，自己对歌曲不熟悉，也不知道其背后的故事，在这里放置该歌曲只是起到背景音乐的作用，一直是相信 BGM 的力量的，接近两个月没有写博文，偶然的机会听到这旋律后来了点电，便决定把一些积压的想法写写，也顺便把曲名当作博文名了。既然是积压，当然也就预示着这篇博文各部分内容不会有太大的联系。博客中两篇相邻的博文间隔时间这么长是比较少见的，与其说宁缺毋滥思想作祟，不如说自己懒更合理。</p>
-<p><img src="../images/post/para-para-sakura.jpg" alt="Para Para Sakura"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 306px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 130.67484662576686%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAFi1ksbaNyFlOjRtCAf/8QAHRAAAgMAAgMAAAAAAAAAAAAAAQIAAxEEIRATI//aAAgBAQABBQIVlJgz1AS7ulXDHqWL81TOThh8Cf/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/ASP/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAeEAACAgEFAQAAAAAAAAAAAAAAAQIhMRAgImJxof/aAAgBAQAGPwLlgsqTRKxLt80lYvMmVs//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAxIUFREJH/2gAIAQEAAT8h5AfrGqjXuVIZ5jNUTlvWOprEPcM9ZNqWWOIU2lY4185t3i5pn//aAAwDAQACAAMAAAAQD/ww/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEREP/aAAgBAwEBPxBLjVIf/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/EFZuT//EAB4QAQACAgIDAQAAAAAAAAAAAAEAESExQWFRseGh/9oACAEBAAE/EAiodravncwwWHGQLh/YtGVchLd7IMIrczIvUCBSlsD0UNxNQHvcI450rtNcSibgbZXrvEor1fJaFq8XEoy88zKznM//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Para Para Sakura"
+        title=""
+        src="/static/d04738e61f7dc755991b589e3dbb715a/01fdd/para-para-sakura.jpg"
+        srcset="/static/d04738e61f7dc755991b589e3dbb715a/d2f63/para-para-sakura.jpg 163w,
+/static/d04738e61f7dc755991b589e3dbb715a/01fdd/para-para-sakura.jpg 306w"
+        sizes="(max-width: 306px) 100vw, 306px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>大多时候喜欢看没看过的老电影，前段时间看了《<strong>星语心愿</strong>》，已经记不起怎么想起看这部电影的了，可能是为了和别人谈天时有更多的谈资以及更能聊到一块。不管有没有看过，大家或多或少都会知道有这样一部电影的存在，也大多是因为张柏芝的歌曲《星愿》，电影中的情节虚幻的部分不少，也有很多规则的设定，比如洋葱头回人间的时限以及不能说出自己身份等等，故事的情节也基本是按照这些设定发展的，在今天看来或许有些老套，相信在当时会是不错的新颖看点，加上任贤齐与张柏芝的精彩演出，使之成为一部到今天还能让大家记起的电影。说到流星雨，截止到现在已经听到过身边的几个人提到 2001 年那场极盛的狮子座流星雨，那时后年纪小，没意识去关注，而且年份也是我上网查阅资料得到的，并没有太大遗憾。还得提一下《<strong>浪漫樱花</strong>》，倒也奇怪，连续看的这两部在头脑里留下记忆的电影是出自同一位导演马楚成，这也难怪在《<strong>浪漫樱花</strong>》的台词中有提到《<strong>星语星愿</strong>》的男主角的名字洋葱头。这部电影不仅男女主角颜值高，里面的舞蹈也让当时的青年男女争相学习，可谓风靡一时，这可是记得很清楚的，我的哥哥姐姐们就是这样子。男主角的表演是精彩的，能感受得到里面真切情感，对电影本身想评论的并不多，想提一点电影之外的，情节与日本和樱花相关，有注意到电影里的一个场景是在<strong>上野公园</strong>，看到画面中的樱花那么美，还谷歌地球了一下，街景里的画面自然和自己想象的不太一样，这也让上野公园成为了<strong>TODOLIST</strong>里的一个行，值得一提的是，最初学到的第一个日语词汇便是<strong>Sakura</strong>。</p>
 <p>最近悄无声息地入手了一台相机，想给自己的生活增加点色彩，也算是培养一个兴趣。从入手到拍摄这一过程看来，增加色彩的效果是很不错的，起码生活有所追求。作为一名刚入坑的新手，拍摄的照片并没有很多，就像打怪升级一样，积累到一定的经验或许会有更多的感悟，可以是生活的，人文的，理念的等等。个人增加感悟的方法还可以是学一门另外的语言，已经有三个月的时间没有继续学习日语了，负罪感不会很多，和摄影一样，都是一项长期积累的运动，自己知道不会放弃就是了。选择上面这两项技能作为自己生活的一部分不会没有原因，身边有两位朋友分别在这两方面的领域都比较擅长，自己感兴趣，又有大腿抱，简直美呆。话说回来，世界上的每个事物的本质是独立存在着，随着外界的运动彼此影响，总存在着这样或那样的联系，一起事件能发展到某一状态的都是关系影响的结果，所以个人会选择接触这两个领域是不奇怪的，有时发生了这样或那样的事情，用“<strong>刚好</strong>”或者“<strong>缘分</strong>”来解释也未尝不可。</p>
 <p>总能听到“适合自己的才是最好的”，这个话题能讨论的可是有很多，在适合自己这个状态下，却是被公认为是一个愚蠢的，或者是没有效率的，或者是损人利己的话，那么自我感觉极度满足的同时，却往往忽视了自我以外需要考虑的东西。</p>
@@ -461,7 +1331,29 @@
 <p>“师父领进门，修行在个人”，学习能力的重要性不用强调太多，每一位教过我的老师我都记得，尽管大多都不记得名字了，感谢各位引领我进入各个领域的师父。</p>
 <p>写得越来越少了。</p>]]></description><link>https://lattespirit.github.io/teacher</link><guid isPermaLink="false">https://lattespirit.github.io/teacher</guid><pubDate>Fri, 18 Sep 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[Depapepe]]></title><description><![CDATA[<p>先来首曲子吧。</p>
 <p><strong>Depapepe</strong> 是日本的一个吉他组合，初识这个组合的吉他曲是在 Ins 中 Flipagram 的账号里一则动态中，Flipagram 是一款视频制作软件，把照片层叠在一起，然后加上背景音乐从而得到视频，那则动态里的背景音乐《START》来自Depapepe的专辑《Let's Go》。选择开头播放的曲子的原因是节奏舒缓点咯，在这里多说一句，将 Flipagram 的视频分享到 Ins 的时候保持15秒里播放30-35张照片的效果比较好，尽管偏题。</p>
-<p>也记得从哪里见过这样的想法，人至少会一门乐器。说出来也不怕被笑话，我曾经也有过想法背一把吉他出去走走，最后留一头长发回来，老妈也认不出来。当然，只是玩笑。其实很多北漂的人也靠过一把吉他记录生活，抒发情感，消除寂寞。随着日子一天天过去，渐渐有感觉学好一门乐器已经变得不容易，远一点来说，世界这么大，文化这么精彩丰富，把握住自己挚爱的，同时做好一名合格的观众也很不错。</p>]]></description><link>https://lattespirit.github.io/depapepe</link><guid isPermaLink="false">https://lattespirit.github.io/depapepe</guid><pubDate>Tue, 25 Aug 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[二战留下的世界]]></title><description><![CDATA[<p><img src="../images/post/anti-fascist.jpg" alt="Anti Fascist"></p>
+<p>也记得从哪里见过这样的想法，人至少会一门乐器。说出来也不怕被笑话，我曾经也有过想法背一把吉他出去走走，最后留一头长发回来，老妈也认不出来。当然，只是玩笑。其实很多北漂的人也靠过一把吉他记录生活，抒发情感，消除寂寞。随着日子一天天过去，渐渐有感觉学好一门乐器已经变得不容易，远一点来说，世界这么大，文化这么精彩丰富，把握住自己挚爱的，同时做好一名合格的观众也很不错。</p>]]></description><link>https://lattespirit.github.io/depapepe</link><guid isPermaLink="false">https://lattespirit.github.io/depapepe</guid><pubDate>Tue, 25 Aug 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[二战留下的世界]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.05521472392638%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHOeqDkYf/EABkQAAMAAwAAAAAAAAAAAAAAAAEQEQISIf/aAAgBAQABBQLDpN1qq//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAARAiCR/9oACAEBAAY/AhuO1//EABsQAAMAAgMAAAAAAAAAAAAAAAABERBRIUFh/9oACAEBAAE/IWcVL64JsHS541lbKf/aAAwDAQACAAMAAAAQQ8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAEAAgIDAAAAAAAAAAAAAAABABEhMRBxof/aAAgBAQABPxAO9xgyGUgSilhHUtKtPnCU7bn/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Anti Fascist"
+        title=""
+        src="/static/1b9f96a442f9e0ad0d3faadfcfffbeb0/6aca1/anti-fascist.jpg"
+        srcset="/static/1b9f96a442f9e0ad0d3faadfcfffbeb0/d2f63/anti-fascist.jpg 163w,
+/static/1b9f96a442f9e0ad0d3faadfcfffbeb0/c989d/anti-fascist.jpg 325w,
+/static/1b9f96a442f9e0ad0d3faadfcfffbeb0/6aca1/anti-fascist.jpg 650w,
+/static/1b9f96a442f9e0ad0d3faadfcfffbeb0/0f840/anti-fascist.jpg 789w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>上图是网易新闻中心出品的纪念二战的策划活动<a href="https://news.163.com/special/wwii99/" target="_blank"><strong>The Old World's Last 99 Days</strong></a>的一个截图，该活动的主要内容是以日历的方式记录反法西斯战争胜利那天，也就是 1945 年 8 月 15 日前 99 天每天发生的事件。日历从 2015 年 5 月 8 日开始展示，今天是 7 月 25 日，上图来源于此。看文本内容的时候并没有太大的感触，就像平时看一些史料一样平和看待，但听着播放的背景音乐就感觉挺伤感的，BGM 的作用不可估量，以致于我着手动笔写下一点点东西。</p>
 <p>是从百度百科那里了解到这个策划活动的，搜索一些与反法西斯战争相关的词条后，其主页会显示该日历内容，试了一下，像搜索“<strong>密苏里号</strong>”、“<strong>纽伦堡</strong>”和“<strong>诺曼底登陆</strong>”等词条，日历会出现，但是像“<strong>麦克阿瑟</strong>”、“<strong>自由法国</strong>”、“<strong>卡廷森林</strong>”和“<strong>敦刻尔克</strong>”等词条并没有出现，暂时无法判断词条首页是根据什么条件来展示日历，多测一测或许可以估摸出答案，考验历史知识的时候到了。</p>
 <p>我所了解的二战除了初中时候通过教科书上的文字和图片了解，剩下的基本是通过影视资料，旁白加上视觉效果，得到的感触不会少。在画面中看着不断召开的会议，疯狂的大炮、飞机和军舰，屠城，集中营，活埋战俘，哀嚎的平民，战时战后的废墟，心情自然是沉重的，当然也会想到自己能生活在和平年代是幸福的。</p>
@@ -478,7 +1370,29 @@
 <p>一直想谈谈有关“脑海中的音乐”这样一个话题，有这样一个场景，当我们听到一段熟悉的旋律时，偶尔会想起自己之前在该旋律中做的一些事情或者当时的一些感觉，我相信这是有关“音乐记忆”的东西，也没去查相关的知识，在这里列出一些理论知识当然是不合适的，比较关心的是应该还是听到旋律后带来的新感觉，这样的感觉可以让我们停下手中的事情，重新细细品味那时的味道。</p>
 <p>或许有人也喜欢用音乐把回忆装起来，我并没有这样做，但不经意间也会把一些回忆融入旋律存入脑海中，这样的旋律回忆常常是在旅途中产生的。在旅行的过程中喜欢听歌，不同的旅途中自然会产生不同的感受，如果和一个人一起的话，相信会有更深刻更难忘的感受。为什么会用“如果”，听起来很悲伤的样子。</p>
 <p>回到开头的歌曲，这是我在听电台的时候随机听到的，之前虽没完整听过，但是也是可以确认自己以前是听过的。听了一遍之后，被里面的调调吸引，自己在这首歌曲里是没存有多少记忆的，展示在这里的原因还是里面的歌词，大意是分手后的一方恋人假想没有分手会产生的结果，并不断的问着没有回答的问题，不清楚真实生活中分手后的恋人听着这首歌是《怎样》的心情。</p>
-<p>每个人的际遇都不一样，如果可以，可以谈谈你听着这首歌时的感想。</p>]]></description><link>https://lattespirit.github.io/how</link><guid isPermaLink="false">https://lattespirit.github.io/how</guid><pubDate>Thu, 28 May 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[我的早更女友]]></title><description><![CDATA[<p><img src="../images/post/meet-miss-anxiety.jpg" alt="我的早更女友"></p>
+<p>每个人的际遇都不一样，如果可以，可以谈谈你听着这首歌时的感想。</p>]]></description><link>https://lattespirit.github.io/how</link><guid isPermaLink="false">https://lattespirit.github.io/how</guid><pubDate>Thu, 28 May 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[我的早更女友]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.71165644171779%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAGM0YNIzSVP/8QAGRAAAgMBAAAAAAAAAAAAAAAAAQMAAhES/9oACAEBAAEFAgytAtuBR7Xmy1exhXP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPwFK/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEDEf/aAAgBAgEBPwHEOZ//xAAcEAACAgIDAAAAAAAAAAAAAAAAAREhAjEDECL/2gAIAQEABj8Cs5Mrl6E8t9eaghNn/8QAGRABAQEBAQEAAAAAAAAAAAAAEQEAMSFR/9oACAEBAAE/IfFKiYR+PeOuOXTOW1k83VCUuNOU0p7v/9oADAMBAAIAAwAAABD7L//EABcRAQEBAQAAAAAAAAAAAAAAAAEAITH/2gAIAQMBAT8QV7Y3/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAgEBPxALmSKo3//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQaFRYbH/2gAIAQEAAT8QAW8SnEVqxsKi2jjBBHr3tN/YgnKsSlOeoi2KhLD1MgRFqLeOp//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="我的早更女友"
+        title=""
+        src="/static/0419bca2000f13a28eac2eb78a25fd5a/6aca1/meet-miss-anxiety.jpg"
+        srcset="/static/0419bca2000f13a28eac2eb78a25fd5a/d2f63/meet-miss-anxiety.jpg 163w,
+/static/0419bca2000f13a28eac2eb78a25fd5a/c989d/meet-miss-anxiety.jpg 325w,
+/static/0419bca2000f13a28eac2eb78a25fd5a/6aca1/meet-miss-anxiety.jpg 650w,
+/static/0419bca2000f13a28eac2eb78a25fd5a/232db/meet-miss-anxiety.jpg 819w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>观看如题的电影后，可以说是把郭在容的女友三部曲看完了。</p>
 <p>这是去年的电影，那时刚上映时只是轻轻地扫了一眼海报，没有很惊艳的感觉，没很冲动地马上去看，也会和自己不刻意追求观看新上映的电影有关。像电影《Taken3》，今年二月份的时候就在网上下载看过，还是阿拉伯文的字幕，懒得再找资源便坚持看完，在今年三月底左右的时候在街上看到该电影的宣传海报时，还会产生“这不是上映过了吗”的想法。《我的早更女友》也是用手机里的某视频应用下载来看的，不想打广告就没写出来是什么手机应用，只是想表达看该电影的背景是一个较为随便的环境而已。</p>
 <p>提到郭在容的女友三部曲，想必大家印象最深的还是野蛮女友篇，当然，我也是。可以说那是我看的第一部韩国电影，现在回想起来，对这部电影最早的印象是小学时候，还能想得到当时风靡亚洲的景象，也不愧为经典。在这部看了不下十遍的电影里，认识了卡农，认识了彩蛋，也是其中的彩蛋让我看了这部电影那么多遍，每次看的感觉也都不一样。我想很多人还都会对那经典的开场白记忆犹新：“很多年前，父母把我当作女孩来养，我也一直以为我是个女孩，甚至会认为，随着年龄的增长，我的小弟弟会越来越小，直到消失。后来才发现，哈哈，可情况恰恰相反”，现在看到还是偶尔会笑。给个人印象比较深的还是牵牛这个角色以及演员车太贤，戏里戏外给人的感觉都是很有亲和力，也是从这部电影开始，看了车太贤的其他电影，开始接触韩国悲情式电影，感觉和其他地区电影很大不同的是韩国电影表达的情感方式较为细腻。</p>
@@ -507,7 +1421,30 @@
 <p>遇到铮铮姐。</p>
 <p>明天就是新一年的开始，口号是从来不在公众的地方喊的，可以稍微展望一下。和身边的小伙伴们一样，接下来是出来工作的一年，有想要实现的想法大可在这一年里完成，大家都那么优秀，期待看到大家各显神通的时候。个人方面觉得自己是准备好了的，看着。</p>
 <p>在最后谈谈感情吧，这似乎成了写年度总结的一个不成文的规定，执笔到这里的时候特地翻了一下去年的总结，真想复制粘贴一部分内容了哈哈，为了保持一定的创新性，不能这么做，写下包括这句的内容时已经完成创新的任务了，但我还是想引用那句“人不恋，不恋人”，这句话极其简洁地表达了想表达的内容，可是第四次在博客里说这句话了啊，有时间我们坐下来点杯咖啡可以聊得更多。</p>
-<p>一五年，祝所有人顺顺利利。</p>]]></description><link>https://lattespirit.github.io/2014-recap</link><guid isPermaLink="false">https://lattespirit.github.io/2014-recap</guid><pubDate>Wed, 31 Dec 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[原型链]]></title><description><![CDATA[<p><img src="../images/post/prototype.png" alt="Prototype"></p>
+<p>一五年，祝所有人顺顺利利。</p>]]></description><link>https://lattespirit.github.io/2014-recap</link><guid isPermaLink="false">https://lattespirit.github.io/2014-recap</guid><pubDate>Wed, 31 Dec 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[原型链]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 63.80368098159509%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgUlEQVR42pVSa2+CUAyFqBBdTNSoc5r4DI+LCigCF3Q4gQBmHxyb+/9/ZQdcjC6Lc+dD03J72tMWhvkNLMs+5XjMwdwJ0GBrtdpwOOx2u/P5HA7C89PfQPZ4PF6tVqZp9vv9er3+DzLyms0mBPd6vUajcRfhVLtUKlWrVdjBYCBJUqFQQFgsFs85VxLO8cmORiPDMFRVJYQohMBB2Ol0binneb5SqaDhZDKxLAsE191sNh4mp5Rico7jH3KcdGUczLZcLlE+8P0wDNM0DYIgiqIwDD6On46zxsGSJPF9P/8YohYW4XledgLo0XWdOq67foZOJMmyZFo2ddeaquJaULRY6IZhJvtXx6FoA4Gw6MqUy2VFUSh1t9vdbDZrt9s4EgQHYSQIAnzbtpGAAdL3o7/bHQ5vcRxji5lslEFnIhNFIZAEkaIoTqcKCmmaBnL2SmTvxYcuWZZxeZT7nvk2OI7DRlAoiveWbcNvtVpXa2cv8OOYGBia0VAUBdwcf+sl+QvIt0MgeBzelgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Prototype"
+        title=""
+        src="/static/cf96ebdd090e2afdc57e41183c3b40c3/a6d36/prototype.png"
+        srcset="/static/cf96ebdd090e2afdc57e41183c3b40c3/222b7/prototype.png 163w,
+/static/cf96ebdd090e2afdc57e41183c3b40c3/ff46a/prototype.png 325w,
+/static/cf96ebdd090e2afdc57e41183c3b40c3/a6d36/prototype.png 650w,
+/static/cf96ebdd090e2afdc57e41183c3b40c3/e548f/prototype.png 975w,
+/static/cf96ebdd090e2afdc57e41183c3b40c3/ad997/prototype.png 1012w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>看到题目以及上面的图片会有感觉这篇博文会是有关技术的，不是的啊，建立本博时就将其定位为生活博客，始终不会改变，这一点想法会和以下将要谈的内容也有些联系。</p>
 <p>本应先谈谈上面这张图片的，但具体表达的内容不好谈，只提及它是一条链，表示了一个原型就已足够，其实它也起到了装饰本页面的作用，有张图片撑场会稍微显得多姿多彩一些。仔细看看这张图片，一个框框下面连接了很多的小框框，下面的小框框都是起源于上面的大框框，各个小框框刚建立起来时都具有相同的功能，但又有各自独特的性质，就像老师在班上安排了五位学生都可以负责收作业，同时他们也可以成为不同职位的班干，各自负责管理，体育活动，唱歌或者倒垃圾等事务。</p>
 <p>这是个简单的例子，我更想表达的是我们可以把这条链放在思想的层面上，大框框里是思想的原型，下面的小框框则是各种各样的想法，再者，我们可以取其中一个小框框，把它当作“大框框”，再往下建立小框框，这样会变得更加有趣。</p>
@@ -575,7 +1512,28 @@
 <p>到纺织厂也就是快到目的地的时候，已经可以发现很多同路去一起去看油菜花的人儿了，有情侣，有一堆小伙伴等等，相信他们看到那片油菜花后的感觉和我们的一样，略为失望。只因来的时间不对，那片油菜花地很多地方已经被改种其它的庄稼，虽说还有很多的油菜花可以看，但已没有全盛的美感。斯情斯景或许在我们问路时就已经知晓，最后只能是以来过这个理由来安慰自己。其实中间过程还是有很多令人感动的地方，比如问路时那位因担心我们走错路而给我们反复讲了很多遍路程该怎么走的阿姨。</p>
 <p>之后回校不提。</p>
 <p>来个总结，这是一篇纯粹记录生活的博文，行文自然有些平淡。骑行最自由了，在路途中看到自己喜欢的东西可以停下来玩玩或者拍个照片，这次骑行拍的照片不少，本想在这篇博文里设置一个小型相册来展示骑行中的图片的，但想到最近博客最近加载有些慢（这是全国性的问题，与个人技术无关），也就打消了这个念头。总之途中收获的东西还很多的。</p>
-<p>就这样。</p>]]></description><link>https://lattespirit.github.io/cycling-guilin</link><guid isPermaLink="false">https://lattespirit.github.io/cycling-guilin</guid><pubDate>Thu, 27 Mar 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[雪狼湖]]></title><description><![CDATA[<p><img src="../images/post/xlh.jpg" alt="雪狼湖"></p>
+<p>就这样。</p>]]></description><link>https://lattespirit.github.io/cycling-guilin</link><guid isPermaLink="false">https://lattespirit.github.io/cycling-guilin</guid><pubDate>Thu, 27 Mar 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[雪狼湖]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75.4601226993865%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABUBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAFWnsaSHE//xAAcEAACAgIDAAAAAAAAAAAAAAABAgARAxIEFCH/2gAIAQEAAQUCXNuvlniwqKU6TsBZ/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BiP/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPwGtr//EAB0QAAIBBAMAAAAAAAAAAAAAAAABEQMSIVExcaH/2gAIAQEABj8C57GoWngxUSRCfhsi0//EABwQAQADAAIDAAAAAAAAAAAAAAEAESExgWFxsf/aAAgBAQABPyEmMBlkhcJHteJvkOCoZdzEK1NeFfs2AdLP/9oADAMBAAIAAwAAABC8z//EABYRAQEBAAAAAAAAAAAAAAAAAAEQMf/aAAgBAwEBPxABkf/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxCtQf/EABwQAQACAgMBAAAAAAAAAAAAAAERIQBBMVGBsf/aAAgBAQABPxBnNgFwWKIsxS0MAhWw+PuMxohGpe3bkN0YtIE1xM4AaHZqOkc35k9FCqgF7z//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="雪狼湖"
+        title=""
+        src="/static/79d755b94b3268a0d176e67b466ada4d/36dd4/xlh.jpg"
+        srcset="/static/79d755b94b3268a0d176e67b466ada4d/d2f63/xlh.jpg 163w,
+/static/79d755b94b3268a0d176e67b466ada4d/c989d/xlh.jpg 325w,
+/static/79d755b94b3268a0d176e67b466ada4d/36dd4/xlh.jpg 512w"
+        sizes="(max-width: 512px) 100vw, 512px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>相信《雪狼湖》（以下简称《雪》）大家并不陌生，学友创造的音乐剧，自己之前也只是在一些娱乐新闻上见过这部音乐剧的报道，并没仔细了解过其内容，如今发现有很多东西可以写。</p>
 <p>在这里谈起这部剧相关的事情，主要还是自己今天偶然听到学友的歌曲《情人佳节》，感觉挺有意思，搜索搜索着相关内容便搜到了《雪》，之后便在网络上各种途径阅读其情节、评价及其背后的故事。97 年粤语版首映，05 年国语版上映，在社会上引起巨大反响，被称为华人音乐剧经典巨作。</p>
 <p>《雪》讲述的是一个凄美的爱情故事，内容不必详述，相信感兴趣的你会自己去品味。我是边听着剧中的音乐边阅读其故事内容的，学友的歌声自然棒到没得说，虽远不及亲临现场视觉加听觉的盛宴般品味，但也体会得到《雪》给观众带来的极大震撼。在阅读《雪》的唯美故事之前，听着剧里的哥看着歌中的歌词并没有太多的感触，阅读故事之后再听起那些歌曲，画面感增强了不少。里面的音乐让我感受比较深的是《情人佳节》里胡狼唱的那段“我用我所有感情去灌溉/愿我花儿在人间世外中盛开/雪儿到来/就看到这娇媚的花海/我的心意/她一定明白”以及宁静雪的“他一定会教我难忘/朵朵花儿开的香/就像亲吻般美满/两个人一种理想/我的爱狼”，这是两位主角对双方的期盼。对了，这是国语版里的歌词，其实个人觉得粤语版的效果更好，原汁原味。</p>
@@ -745,13 +1703,55 @@
 <p>"We're collecting dust. But our love's enough."——这里的 "dust" 应该理解为双方一起生活的过程中遇到并跨越了的挫折，幸福不是生活没有 "dust"，而是能一起以积极的心态面对"dust"。</p>
 <p>这仅是我单曲循环这首歌曲两天后对生活的一些理解，由于本人水平有限，对生活的理解难免有错误和不当之处，欢迎提出批评指正。</p>]]></description><link>https://lattespirit.github.io/just-give-me-a-reason</link><guid isPermaLink="false">https://lattespirit.github.io/just-give-me-a-reason</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog16.0]]></title><description><![CDATA[<p>连续上了三周的职业生涯规划课，课上总体会分为规划大学生活和职业生活两部分，到现在才规划大学的生活已没太多的意义，和很多人交流中了解到，不管有无理想，有无方向，大多数人的生活方式已经固定。过去这两年，有些人已经提前自己给自己上了职业生涯规划的课，确定了自己的方向；有些人在莫名其妙中花掉了两年时间，其实也无所谓荒废，不管做什么事都有其收获。</p>
 <p>在上这些课的时候，对规划大学如何生活部分仅仅是将讲师所举例子来验证自己的理论，这部分的例子大多和自己的想法一样，听起来蛮兴奋的，内心的想法得到某种意义上的认同。职业规划部分会用心听，毕竟是以后都会面对的事情，有个认识总是件好事，很多职业技能是我们现在这个阶段未具有的，也是必须的。</p>
-<p>没几年的时间就会接触社会，到那个时候我不想空手踏出第一步。</p>]]></description><link>https://lattespirit.github.io/microblog16</link><guid isPermaLink="false">https://lattespirit.github.io/microblog16</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[搬家]]></title><description><![CDATA[<p><img src="../images/post/home.jpg" alt="Moving Home"></p>
+<p>没几年的时间就会接触社会，到那个时候我不想空手踏出第一步。</p>]]></description><link>https://lattespirit.github.io/microblog16</link><guid isPermaLink="false">https://lattespirit.github.io/microblog16</guid><pubDate>Fri, 22 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[搬家]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.25766871165644%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAAW4NBVIFZ//EABkQAAIDAQAAAAAAAAAAAAAAAAABAhESA//aAAgBAQABBQJdVFbTNo5ypadWf//EABcRAQADAAAAAAAAAAAAAAAAAAABERL/2gAIAQMBAT8BzCn/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEgL/2gAIAQIBAT8BrSn/xAAcEAAABgMAAAAAAAAAAAAAAAAAAQIQETEhImH/2gAIAQEABj8C2ScgrTwU2G//xAAaEAEBAQADAQAAAAAAAAAAAAABEQAhMXFB/9oACAEBAAE/IfiQvDc84oFYtzbrnHp9MFCm8b//2gAMAwEAAgADAAAAEDvf/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAERQf/aAAgBAwEBPxAzXX//xAAWEQEBAQAAAAAAAAAAAAAAAAABAEH/2gAIAQIBAT8QyhOX/8QAHhABAAIBBAMAAAAAAAAAAAAAAQARITFBYYFRcbH/2gAIAQEAAT8Q4aAQqvvEeV6tRc0s09RCpe4HVixkqNUZ3hXfwy9AhTfuf//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Moving Home"
+        title=""
+        src="/static/e5ba68ceec428232c3b296a1c91a85d6/b4294/home.jpg"
+        srcset="/static/e5ba68ceec428232c3b296a1c91a85d6/d2f63/home.jpg 163w,
+/static/e5ba68ceec428232c3b296a1c91a85d6/c989d/home.jpg 325w,
+/static/e5ba68ceec428232c3b296a1c91a85d6/b4294/home.jpg 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>和之前的习惯一样，每篇文章前面会放一张图片。
 小博关闭一个多月，最后还是决定重新够买主机将其上线，这样的话，自己便不会偷懒很多，更新频率会比在本地记录有所上升。</p>
 <p>这次将博客搬家，做了很大的变动，主机由之前的达拉斯机房换到了韩国的，载入速度上升不少，域名也由 <strong>lattespirit.com.cn</strong> 换成了 <strong>lattespirit.com</strong>,还一次性购买了三年的期限。域名的变换是必然的，使用**.com**的域名会显得更正式，之前也有在推特上表明自己要更换域名的心意，现在已经实现。</p>
 <p>关于博客的名称 <strong>Lattespirit</strong> 在这里不多做介绍，可以在博客的<a href="/about" target="_blank">关于</a>页面里相关的解释。记得一次给人提起域名 <strong>Lattespirit</strong> 时，人家回了句“这么长的域名”，在给网站选取域名的原则上，这个域名确实有些长，还被 longurl 收录过，但这是不介意的，没什么说，爱的就是它。</p>
 <p>博客的风格沿用之前的主题，没变。之前有过很长一段时间选择博客的风格，之前的博文中也有记述。博客不关心 SEO 优化和搜索引擎的收录，折腾之后发现，简单和稳定最幸福。</p>
-<p>在这次搬家的过程中，虽只是在电脑面前敲敲键盘，点点鼠标，但确实有如同在现实中搬家的味道。到现在建立博客的初衷还没变，只想单纯地记录自己生活中值得记录的事情或分享自己的心得，希望以后能在博客之路一直走下去。</p>]]></description><link>https://lattespirit.github.io/move-place</link><guid isPermaLink="false">https://lattespirit.github.io/move-place</guid><pubDate>Wed, 13 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog15.0]]></title><description><![CDATA[<p>随着最近报道出推特和印象笔记相继被黑，部分账户被盗的消息，在思考着现在的网络比之前想象的更加脆弱。一直知道网络并不是绝对的安全，像一架天平上的两样事物，不能将开放和安全保持平衡，只是没想到现在安全带来的影响离自己生活那么近而已。</p>]]></description><link>https://lattespirit.github.io/microblog15</link><guid isPermaLink="false">https://lattespirit.github.io/microblog15</guid><pubDate>Tue, 05 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[说说寒假]]></title><description><![CDATA[<p><img src="../images/post/harvesttime.jpg" alt="Harvest Time"></p>
+<p>在这次搬家的过程中，虽只是在电脑面前敲敲键盘，点点鼠标，但确实有如同在现实中搬家的味道。到现在建立博客的初衷还没变，只想单纯地记录自己生活中值得记录的事情或分享自己的心得，希望以后能在博客之路一直走下去。</p>]]></description><link>https://lattespirit.github.io/move-place</link><guid isPermaLink="false">https://lattespirit.github.io/move-place</guid><pubDate>Wed, 13 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog15.0]]></title><description><![CDATA[<p>随着最近报道出推特和印象笔记相继被黑，部分账户被盗的消息，在思考着现在的网络比之前想象的更加脆弱。一直知道网络并不是绝对的安全，像一架天平上的两样事物，不能将开放和安全保持平衡，只是没想到现在安全带来的影响离自己生活那么近而已。</p>]]></description><link>https://lattespirit.github.io/microblog15</link><guid isPermaLink="false">https://lattespirit.github.io/microblog15</guid><pubDate>Tue, 05 Mar 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[说说寒假]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAC/9oADAMBAAIQAxAAAAE250GqLKs//8QAGBABAQEBAQAAAAAAAAAAAAAAAQIAECH/2gAIAQEAAQUCIMSYjyXHP//EABYRAQEBAAAAAAAAAAAAAAAAAAATAf/aAAgBAwEBPwGeIv/EABgRAAIDAAAAAAAAAAAAAAAAAAABAgMT/9oACAECAQE/AXbI3Z//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAaEAACAwEBAAAAAAAAAAAAAAAAAUFRcRHh/9oACAEBAAE/IfQLSIoOaWkMOuz/2gAMAwEAAgADAAAAEDMf/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAwEBPxAUkb2//8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAgEBPxAzGXS//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFBYf/aAAgBAQABPxDJdo8HIvo87GhvX2Kiu0zIbRb67EKpA+T/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Harvest Time"
+        title=""
+        src="/static/cb2953b41d526e2d1161b47608dfa5f3/b4294/harvesttime.jpg"
+        srcset="/static/cb2953b41d526e2d1161b47608dfa5f3/d2f63/harvesttime.jpg 163w,
+/static/cb2953b41d526e2d1161b47608dfa5f3/c989d/harvesttime.jpg 325w,
+/static/cb2953b41d526e2d1161b47608dfa5f3/b4294/harvesttime.jpg 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>这张图片名为 <strong>Harvest Time</strong>。</p>
 <p>明天的火车，这个寒假该收尾。</p>
 <p>不想说有很多事没做，有很多想法没有实现，没有遗憾，还是生活么？只不想过于强调而已。</p>
@@ -762,7 +1762,28 @@
 <p>现在已是大年初三，日子一天天的过，离出去闯荡的日子越来越近，不知道明天会是什么样，只想把握好现在，一天一天地积蓄着力量，为以后打着坚实的基础，这个可是我理论的一部分。按照理论淋雨一直走，能有多大的成效到时候便知晓。</p>
 <p>2013年注定是不一样的一年，在此祝大家新年快乐，万事如意，也祝自己梦想成真。</p>]]></description><link>https://lattespirit.github.io/microblog14</link><guid isPermaLink="false">https://lattespirit.github.io/microblog14</guid><pubDate>Wed, 13 Feb 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog11.0]]></title><description><![CDATA[<p>学期结束，可以说这个学期是我大学到现在过得最自由的一段时间，选的课最少，自由的时间最多，都用来学习自己想学的东西。</p>
 <p>专业课学得一团糟，但是真的一点都不后悔。只能说自己还不够强大，不能兼顾两者，不过也认识到自己缺少这样一种能力。</p>
-<p>晚上的车，不说太多，准备收拾东西赶火车。</p>]]></description><link>https://lattespirit.github.io/microblog11</link><guid isPermaLink="false">https://lattespirit.github.io/microblog11</guid><pubDate>Wed, 09 Jan 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[2012年度总结]]></title><description><![CDATA[<p><img src="../images/post/2013.jpg" alt="2013 Recap"></p>
+<p>晚上的车，不说太多，准备收拾东西赶火车。</p>]]></description><link>https://lattespirit.github.io/microblog11</link><guid isPermaLink="false">https://lattespirit.github.io/microblog11</guid><pubDate>Wed, 09 Jan 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[2012年度总结]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABrqvFDXMij//EABkQAAMBAQEAAAAAAAAAAAAAAAECAwASE//aAAgBAQABBQJRpVDgMDpktlmfWY4T/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhAAAQUBAAAAAAAAAAAAAAAAAAECEiFREf/aAAgBAQAGPwIwoWyE64I3D//EABoQAQEBAAMBAAAAAAAAAAAAAAERACExQVH/2gAIAQEAAT8hhnViHq+YlqgzBtjwh1q9HiibnS/W/9oADAMBAAIAAwAAABBMH//EABcRAQEBAQAAAAAAAAAAAAAAAAEAEUH/2gAIAQMBAT8Qw7Jf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EBTMhv/EABwQAAICAwEBAAAAAAAAAAAAAAERACExUWGhcf/aAAgBAQABPxAaBKEtkgFkyBhEugQKfNwVsNA2/fIzDJ3OR9XcRPUCKJ3mf//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="2013 Recap"
+        title=""
+        src="/static/053dcf9b6d378f48fbc72800181e1ff5/b4294/2013.jpg"
+        srcset="/static/053dcf9b6d378f48fbc72800181e1ff5/d2f63/2013.jpg 163w,
+/static/053dcf9b6d378f48fbc72800181e1ff5/c989d/2013.jpg 325w,
+/static/053dcf9b6d378f48fbc72800181e1ff5/b4294/2013.jpg 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>初看文章题目，给人感觉很严肃或者正式，其实是些简单的小结。</p>
 <p>一年将至结尾，是要作一个小小的总结的，记录这一年里自己生活中的事件。说是总结，也想不出要以怎样的方式进行记录，按照时间轴来叙述的话像是在清理流水账，未免显得单调与乏味。为找些灵感，特地翻了翻自己空间里的说说以及新浪微博，发现说说的内容很少，微博亦尽是些枯燥而没有实质的东西。生活中的琐事一件件搬上来的话并非必要，现遍历了脑袋里有关 2012 年里的资料，选择出一些大事记。</p>
 <p>一二年让自己从大二升到了大三，很感谢这一过程，让自己知道自己想要的是什么并且到现在一直在努力奋斗着，收获当然会有很多。仍记得上半年还是大二的时候，那时自己的生活是多么的无趣，有过一段时间课不上，在宿舍里也不学习其他的知识，什么事情也不想干，什么事情也干不好。大二上学期时候有过迷茫，那时经过一些思考，认为自己已经度过了迷茫期，但事实证明还是没有。现在回过头来看，觉得自己虽然没在那两段迷茫的日子里没有干出什么值得骄傲的事情，但也是一个必经的过程，没有那段经历也不会有现在有梦想有激情的自己。所以我一直认为我们不管做什么事情，仔细思考其过程，总会得到收获，有时候只不过是收获的大小而已。</p>
@@ -781,31 +1802,137 @@
 <p>好有激情的两名青年，心生敬佩之意。个人也是这么认为的，在自己还年轻的时候干一些疯狂的事情，让自己在七八十岁年纪的时候和别人谈及这些事情时还能笑一笑。</p>
 <p>海南三亚，从文章上了解到那里有非常美丽的景色，想去。或许自己暂时没有那么多的精力，或许自己没有硬件条件上的支持，又或许自己喜欢在阳光的日子里骑行，也不能做些什么，有那么一天有机会的话，自己也要去体验一下这样的生活，当然，要有伙伴，一个人太寂寞。</p>
 <p>若他们能按计划启程的话，祝他们一切顺利。</p>]]></description><link>https://lattespirit.github.io/microblog7</link><guid isPermaLink="false">https://lattespirit.github.io/microblog7</guid><pubDate>Wed, 28 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[OnePiece]]></title><description><![CDATA[<p>看过海贼的都懂得这段音乐。</p>
-<p><audio class="w-60 sm:w-auto mx-auto my-2" src="/mp3/op-memory.mp3" controls="controls" loop="loop" ></audio></p>]]></description><link>https://lattespirit.github.io/onepiece</link><guid isPermaLink="false">https://lattespirit.github.io/onepiece</guid><pubDate>Fri, 23 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[温馨音乐]]></title><description><![CDATA[<p><img src="../images/post/labixiaoxin.jpg" alt="蜡笔小新"></p>
+<p><audio class="w-60 sm:w-auto mx-auto my-2" src="/mp3/op-memory.mp3" controls="controls" loop="loop" ></audio></p>]]></description><link>https://lattespirit.github.io/onepiece</link><guid isPermaLink="false">https://lattespirit.github.io/onepiece</guid><pubDate>Fri, 23 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[温馨音乐]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 74.84662576687117%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgADBf/EABYBAQEBAAAAAAAAAAAAAAAAAAIDBP/aAAwDAQACEAMQAAAB6WSOWjnE/wD/xAAZEAACAwEAAAAAAAAAAAAAAAACEQABEiH/2gAIAQEAAQUCU1qheeMBoSn/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8BbH//xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAgEBPwGH/8QAGRAAAwADAAAAAAAAAAAAAAAAAAERECEx/9oACAEBAAY/Ahyiu2dZa3j/xAAbEAEAAgIDAAAAAAAAAAAAAAABABEQITFR0f/aAAgBAQABPyFsjXEoTdAAfYxdnlLhamrx/9oADAMBAAIAAwAAABBf3//EABkRAQADAQEAAAAAAAAAAAAAAAEAESFBkf/aAAgBAwEBPxDC15GzU8n/xAAWEQEBAQAAAAAAAAAAAAAAAAABERD/2gAIAQIBAT8QKg5//8QAHRABAAICAgMAAAAAAAAAAAAAAQARITFBcVGx8P/aAAgBAQABPxAm0uZXEWWTqil6+uVMw0VcRiRqwfSMenB5x4iz/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="蜡笔小新"
+        title=""
+        src="/static/a27f7708daef49bd3be04f1b93f91cc2/b4294/labixiaoxin.jpg"
+        srcset="/static/a27f7708daef49bd3be04f1b93f91cc2/d2f63/labixiaoxin.jpg 163w,
+/static/a27f7708daef49bd3be04f1b93f91cc2/c989d/labixiaoxin.jpg 325w,
+/static/a27f7708daef49bd3be04f1b93f91cc2/b4294/labixiaoxin.jpg 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>会永远记住给我们童年带来无限欢乐的一家人</p>
 <p>点击上面的播放按钮，听听这段旋律，是不是让你感到熟悉和温馨，并勾起你童年的回忆了呢？</p>
 <p>偶然翻看起收藏的《蜡笔小新》，重新被里面这段背景音乐感染，这段动人的旋律总是在温馨的场景中出现，给人的感觉是很舒服，听起来很暖。之前想着在自己写的剧本里添加上这段优美的旋律，相信会给剧目增色不少，后来还是没能实现，算是一个遗憾吧。</p>
-<p>上网找了找这段音乐，百度，谷歌，优酷，还有维基百科，维基上有《蜡笔小新》背景音乐的清单，但是语言是日文的，看不懂。再找了一段时间，最后在土豆上找到了这段旋律，可惜的是，还是没能知道其名字。没事，在以后的日子里会找到的。</p>]]></description><link>https://lattespirit.github.io/warm-music</link><guid isPermaLink="false">https://lattespirit.github.io/warm-music</guid><pubDate>Mon, 19 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog4.0]]></title><description><![CDATA[<p>把浏览器的书签删得差不多了，只剩下自己博客的链接和谷歌百度搜索引擎。目的很简单，不想让自己打开浏览器的时候去点击那些教程的链接继续研究CSS3等内容。要学习的东西确实很多，以后有机会再去重拾那份激情。</p>
-<p>或许接下来的一段很长的时间里大家会很少在QQ见到我的身影，上Q的目的也仅限于有要事或者下载群里的文件。没有想要逃避什么或者是想把自己藏起来，只是自己有其他的事情做，不会在电脑上花费太多的时间，但博客上的内容还是会继续更新。</p>
-<p>冬天慢慢来临，怕冷，但是喜欢冬天。还有，那篇文章该尽快着手下笔。</p>
-<p>愿一切顺利。</p>]]></description><link>https://lattespirit.github.io/microblog4</link><guid isPermaLink="false">https://lattespirit.github.io/microblog4</guid><pubDate>Sat, 17 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[饺子]]></title><description><![CDATA[<p><img src="../images/post/together.jpg" alt="together"></p>
+<p>上网找了找这段音乐，百度，谷歌，优酷，还有维基百科，维基上有《蜡笔小新》背景音乐的清单，但是语言是日文的，看不懂。再找了一段时间，最后在土豆上找到了这段旋律，可惜的是，还是没能知道其名字。没事，在以后的日子里会找到的。</p>]]></description><link>https://lattespirit.github.io/warm-music</link><guid isPermaLink="false">https://lattespirit.github.io/warm-music</guid><pubDate>Mon, 19 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[饺子]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 74.84662576687117%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDBf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//aAAwDAQACEAMQAAABnr5m+ZICv//EABwQAQEAAgIDAAAAAAAAAAAAAAECAwQAERITFP/aAAgBAQABBQLXz+s+rwK3cqwk8bmxh7//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAIAQIBAT8Bq4//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAQAyEigf/aAAgBAQAGPwJAD2dYw5pCkRX/xAAcEAADAQACAwAAAAAAAAAAAAAAAREhMUFRYYH/2gAIAQEAAT8hdeq76CRnYyYXrp8JDHj6MbNmOC2NR//aAAwDAQACAAMAAAAQbN//xAAXEQEAAwAAAAAAAAAAAAAAAAAAARGB/9oACAEDAQE/ENXD/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAERYXH/2gAIAQIBAT8QksLD/8QAGhABAQADAQEAAAAAAAAAAAAAAREAIaFBUf/aAAgBAQABPxCWSARX6DmV9NVIR+5pwcLjuXytF9Ob6AsNduLBngrn/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="together"
+        title=""
+        src="/static/f3653b95e624f297e03ad83975416bae/b4294/together.jpg"
+        srcset="/static/f3653b95e624f297e03ad83975416bae/d2f63/together.jpg 163w,
+/static/f3653b95e624f297e03ad83975416bae/c989d/together.jpg 325w,
+/static/f3653b95e624f297e03ad83975416bae/b4294/together.jpg 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>记录一下。</p>
 <p>和一伙计在外面开小灶吃完晚饭，手上带了两笼蒸饺回去给舍友。天色已暗，走在学校里走在回宿舍的路上，看见一对老夫妻，约七十岁的样子。路过他们的时候，老伯拍了一下我的手臂，说他们没钱吃东西，以为是骗子，随手指了一下学校饭馆位置，说食堂在那边后便和我伙计走开。走了一小段路，我回了头，看见两位老人接着问另一个路人。</p>
 <p>我俩停了下来，讨论了一下，觉得不管老人是不是骗子，都让人感觉心酸。若他们遇到什么困难真的是没钱吃饭而我们不伸出援手，那我们是怎么做人的。若他们真的是骗子，这样的年纪应该是在家享清福的时候，却还得出来做事。没多久，我俩走了回去，将两份饺子交到老人的手上，话没多说，我们也走了。约走了蛮长的一段路，我再回头，看见两位老人已经在低头吃着那袋还有些温热的饺子了。</p>
 <p>回到宿舍后，满脑子都是那两位老人的身影。意识到一个很严重的问题，当老伯问我那个问题时，到底是什么让我的第一反应是他是个骗子，先反思自己，难道是自己总是那么多疑，看多了众多社会的丑陋，已经不相信这个社会，又或者是这个社会本就如此让人不安？不想说太多。</p>
-<p>或许他们有困难，被人骗光身上的钱或者遇到什么意外，若真如此，只希望正能量能帮助这两位老人度过难关。</p>]]></description><link>https://lattespirit.github.io/dumplings</link><guid isPermaLink="false">https://lattespirit.github.io/dumplings</guid><pubDate>Sat, 17 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog3.0]]></title><description><![CDATA[<p>在糗百上看到一句话：“希望自己成功的速度比父母老去的速度快一些。”</p>
+<p>或许他们有困难，被人骗光身上的钱或者遇到什么意外，若真如此，只希望正能量能帮助这两位老人度过难关。</p>]]></description><link>https://lattespirit.github.io/dumplings</link><guid isPermaLink="false">https://lattespirit.github.io/dumplings</guid><pubDate>Sat, 17 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog4.0]]></title><description><![CDATA[<p>把浏览器的书签删得差不多了，只剩下自己博客的链接和谷歌百度搜索引擎。目的很简单，不想让自己打开浏览器的时候去点击那些教程的链接继续研究CSS3等内容。要学习的东西确实很多，以后有机会再去重拾那份激情。</p>
+<p>或许接下来的一段很长的时间里大家会很少在QQ见到我的身影，上Q的目的也仅限于有要事或者下载群里的文件。没有想要逃避什么或者是想把自己藏起来，只是自己有其他的事情做，不会在电脑上花费太多的时间，但博客上的内容还是会继续更新。</p>
+<p>冬天慢慢来临，怕冷，但是喜欢冬天。还有，那篇文章该尽快着手下笔。</p>
+<p>愿一切顺利。</p>]]></description><link>https://lattespirit.github.io/microblog4</link><guid isPermaLink="false">https://lattespirit.github.io/microblog4</guid><pubDate>Sat, 17 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog3.0]]></title><description><![CDATA[<p>在糗百上看到一句话：“希望自己成功的速度比父母老去的速度快一些。”</p>
 <p>顿时眼眶湿润了些。</p>
-<p>祝父母身体健康。</p>]]></description><link>https://lattespirit.github.io/microblog3</link><guid isPermaLink="false">https://lattespirit.github.io/microblog3</guid><pubDate>Sat, 10 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[路]]></title><description><![CDATA[<p><img src="../images/post/road.jpg" alt="road"></p>
+<p>祝父母身体健康。</p>]]></description><link>https://lattespirit.github.io/microblog3</link><guid isPermaLink="false">https://lattespirit.github.io/microblog3</guid><pubDate>Sat, 10 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[路]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABsNy3wwgH/8QAGhAAAgMBAQAAAAAAAAAAAAAAAQIAAxESIv/aAAgBAQABBQJbFaMdX1ATa2cgGf/EABcRAAMBAAAAAAAAAAAAAAAAAAABAhL/2gAIAQMBAT8BUmUf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAS/9oACAECAQE/AVtN/8QAHBAAAgICAwAAAAAAAAAAAAAAAAERIRAiMUGB/9oACAEBAAY/AuGvDVnZbpEzj//EABsQAQEAAgMBAAAAAAAAAAAAAAEAEVEhQXGx/9oACAEBAAE/ITM/MhTm8sbCcGDo3LgVv//aAAwDAQACAAMAAAAQ0M//xAAWEQEBAQAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8QF2X/xAAWEQEBAQAAAAAAAAAAAAAAAAABECH/2gAIAQIBAT8QUyH/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUFxUWHR/9oACAEBAAE/ECq4DlSAQJNYQS7R4RidO5t7+QoewFQBUFtOTWJ//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="road"
+        title=""
+        src="/static/ecdcd7c32dc38f84feeb4dcf68e26927/b4294/road.jpg"
+        srcset="/static/ecdcd7c32dc38f84feeb4dcf68e26927/d2f63/road.jpg 163w,
+/static/ecdcd7c32dc38f84feeb4dcf68e26927/c989d/road.jpg 325w,
+/static/ecdcd7c32dc38f84feeb4dcf68e26927/b4294/road.jpg 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>总觉得以后的路很长，不好走，不知道其他人有没有这样的感觉。</p>
 <p>先上个图，想好再写。</p>
 <p>过了几天，之前胡乱想了一些东西，到现在也已差不多完全忘却，不知道要写的是什么。这样也好，路这个字的含义太大，不适合现在的自己去谈，谈出的东西也会很肤浅，不如作罢且不写。</p>]]></description><link>https://lattespirit.github.io/road</link><guid isPermaLink="false">https://lattespirit.github.io/road</guid><pubDate>Mon, 05 Nov 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[MicroBlog2.0]]></title><description><![CDATA[<p>说个最近发生在自己身边的事情，班上一个女生出车祸，没有生命危险，事情经过不便详述。</p>
 <p>有时候会认为出意外这种事情总不会发生在自己身边的人的身上，那都是电视或者报纸上才有的，但随着自己的交际圈或者说周围的环境在变化，遇到更多的事情，那些事情会离自己越来越近。</p>
-<p>对于这个事件中搭载班上女生开摩托车的人一点同情心都没有，只是苦了那个女生，出于人道主义我们还是会捐款，但对他的冒失行为是非常鄙视。</p>]]></description><link>https://lattespirit.github.io/microblog2</link><guid isPermaLink="false">https://lattespirit.github.io/microblog2</guid><pubDate>Tue, 30 Oct 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[劳与逸]]></title><description><![CDATA[<p><img src="../images/post/boat.jpg" alt="boat"></p>
+<p>对于这个事件中搭载班上女生开摩托车的人一点同情心都没有，只是苦了那个女生，出于人道主义我们还是会捐款，但对他的冒失行为是非常鄙视。</p>]]></description><link>https://lattespirit.github.io/microblog2</link><guid isPermaLink="false">https://lattespirit.github.io/microblog2</guid><pubDate>Tue, 30 Oct 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[劳与逸]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBP/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAABdFIWlZf/xAAZEAACAwEAAAAAAAAAAAAAAAAAEwEDEQL/2gAIAQEAAQUCio5q0XgiBIo//8QAGBEAAgMAAAAAAAAAAAAAAAAAAAIBEkH/2gAIAQMBAT8BhG0ox//EABkRAAIDAQAAAAAAAAAAAAAAAAACAQMTQf/aAAgBAgEBPwGbF4aqf//EABcQAAMBAAAAAAAAAAAAAAAAAAABMhD/2gAIAQEABj8C2mUyj//EABwQAQACAQUAAAAAAAAAAAAAAAEAERAhMUFRgf/aAAgBAQABPyGnkneIhVZiEiVDXunyf//aAAwDAQACAAMAAAAQ/D//xAAXEQEBAQEAAAAAAAAAAAAAAAABIQAR/9oACAEDAQE/EEsTPeG//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxDNVFhWf//EABsQAQEBAAIDAAAAAAAAAAAAAAERAEGRIVHB/9oACAEBAAE/EOZ241JhzvPHiHwMiHfdSdJkAtBLG//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="boat"
+        title=""
+        src="/static/b14c6213b58a8bc7ca28fb3b83b6c82e/b4294/boat.jpg"
+        srcset="/static/b14c6213b58a8bc7ca28fb3b83b6c82e/d2f63/boat.jpg 163w,
+/static/b14c6213b58a8bc7ca28fb3b83b6c82e/c989d/boat.jpg 325w,
+/static/b14c6213b58a8bc7ca28fb3b83b6c82e/b4294/boat.jpg 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>图片给我的感觉里面充满着一种悠闲的气息，有一天会选择这样一个地方游玩。</p>
 <p>生活一直在继续，随着年岁的增长，有越来越多的事情要自己去处理，这是一个必经的过程。最近事情很多，不过都坚持了下去，顺利处理完了大小事宜。但是接下来还有更多的事情要做 ，感觉自己要一直前行，不敢懈怠。</p>
 <p>生活中忙碌一点好，有事情做，可以充实自己，当做是历练，也不至于无所事事。这一周在给别人做网站三周前就有人联系说要弄网站，到最近这一两周的时间才开工，是给一个公司的产品做宣传，网站的链接和内容不方便多作介绍。因自己有其他的事情，本不应接下这活，看到伙伴那么有激情，便决定接下这活尝试一下，也当做是我们技术的一次锻炼的机会。经过我俩几天的努力，终于把全部的代码写完，外网并能正常访问。想说一下网页的编写过程，使用的新框架是前两周才学习的，能迅速将学到的东西放到实践中并取得一定的效果，感觉很棒。选择这项工作，收获很大，报酬什么的先且不谈，最深刻的体验是我了解了工作的辛苦。钱不好挣，生活不容易过，这早便知晓，但之前也只是单纯的一种头脑中的认识，现在也切身体会到了其中的滋味，对自己来说，也是一种成长。但过于强大的工作量，会让自己身体吃不消。连续两三天早起晚睡挑灯对网页代码的编写让我感到脖子有明显的酸痛，这是我现在的年龄段不应出现的现象，元朝《丹溪心法》上说过：“与其就疗于有疾之后，不若摄养于无疾之先”，身体是革命的本钱，无论自己处于人生中的哪个阶段，是在为生活奋斗或是放肆消遣，一个健康的身体是最重要的。</p>
 <p>生活不应是一直在忙碌着，工作的时候做个工作狂，一个劲地干好工作上的事情；休息的时候做个无业人士，抛开一切闲暇地生活。桂林确实是个美丽的城市，公园很多，景色也很美，细一下心，带上一两个伙伴沿着没有界定的风景线无目的地走着，身心定会感到无比轻松，这也是从工作和学习中脱离出来，获得内心放松的一种方式。在桂林念书，拿着学生证旅游可以得到很多优惠，这确实是一个很好的制度。来桂林有三年，周边县市的景点没去过多少，仅有的也只是走走市区里的公园或者爬爬山，似乎觉得有些浪费手头的资源，但想想这也没什么浪不浪费可言，或许是每个人的游玩的想法不一样，个人的看法是，游玩不在于去的地方有多少，距离有多远，而是每一次游玩都要有意义，出行之后获得与之前不一样的思想，内心得到放松，或者对生活有新的认识。这几年的时间里，仅出去游玩过几次，但每次都玩得非常非常开心，内心也很满足。或许有点宁缺毋滥的味道吧，一直这样生活着，感觉这种生活方式也很好，可以让自己成长得很快。</p>
-<p>生活的道路很长，要做的事很多。一路上走走停停，生后像骑行一样，有一个过程，累了就停下来休息休息，养足精神再继续出发，若一下子卯足力气狂奔，最后不会到达终点，即使能到达，留下的身体的伤痛以后也要偿还。</p>]]></description><link>https://lattespirit.github.io/work-and-rest</link><guid isPermaLink="false">https://lattespirit.github.io/work-and-rest</guid><pubDate>Sun, 28 Oct 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[离开灵犀]]></title><description><![CDATA[<p><img src="../images/post/leavelingxi.jpg" alt="Leave Ling Xi"></p>
+<p>生活的道路很长，要做的事很多。一路上走走停停，生后像骑行一样，有一个过程，累了就停下来休息休息，养足精神再继续出发，若一下子卯足力气狂奔，最后不会到达终点，即使能到达，留下的身体的伤痛以后也要偿还。</p>]]></description><link>https://lattespirit.github.io/work-and-rest</link><guid isPermaLink="false">https://lattespirit.github.io/work-and-rest</guid><pubDate>Sun, 28 Oct 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[离开灵犀]]></title><description><![CDATA[<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 74.84662576687117%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABhfltTTAwD//EABsQAQACAgMAAAAAAAAAAAAAAAIAAQQSAxEi/9oACAEBAAEFApZ0pY+0417p9s5AJ//EABYRAQEBAAAAAAAAAAAAAAAAAAABEv/aAAgBAwEBPwGMv//EABYRAQEBAAAAAAAAAAAAAAAAAAABEv/aAAgBAgEBPwG1p//EABkQAAMBAQEAAAAAAAAAAAAAAAABESIhYf/aAAgBAQAGPwLyU0VCNdRD/8QAGhABAQEBAQEBAAAAAAAAAAAAAREAQSExUf/aAAgBAQABPyH9SRw+4K9/NSKJMpay+4Bey3uIDwOBv//aAAwDAQACAAMAAAAQnw//xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQMBAT8QGYSr/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERQf/aAAgBAgEBPxDOiQ//xAAbEAEAAwEBAQEAAAAAAAAAAAABESExAFFBof/aAAgBAQABPxBFDhY0ifnEECaFrPfN5256MmXlUiK0ZM9kGS2uVP51W4gonf/Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Leave Ling Xi"
+        title=""
+        src="/static/76c865b499fbd2df115926810468fb46/6aca1/leavelingxi.jpg"
+        srcset="/static/76c865b499fbd2df115926810468fb46/d2f63/leavelingxi.jpg 163w,
+/static/76c865b499fbd2df115926810468fb46/c989d/leavelingxi.jpg 325w,
+/static/76c865b499fbd2df115926810468fb46/6aca1/leavelingxi.jpg 650w,
+/static/76c865b499fbd2df115926810468fb46/8e1fc/leavelingxi.jpg 900w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>图片中的俊男靓女系灵犀话剧社成员</p>
 <p>是时候离开灵犀了。</p>
 <p>看得出大家对话剧的热爱，对话剧的工作都很积极，而且大家都演得很好很好，进步也很大很大。还有和自同一级的伙伴，两年前，我们一起进入灵犀，一起实现我们心中的话剧梦，是兴趣让我们走到了一起。在这两年里，大家一起排练过话剧，共同演出过节目，也没有年级的界限，像朋友一样相处，排练的过程真的很开心。有了新血液和新力量的注入，灵犀在不断成长，在这里，想对我们 11 级的伙伴们说，也是上一届社长对我们说过的，没有后悔让你们进入灵犀的大家庭里。</p>
