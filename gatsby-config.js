@@ -1,11 +1,11 @@
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
-    title: 'Lattespirit',
+    title: "Lattespirit",
     description: "Jeffrey Yeung's Blog",
   },
   plugins: [
@@ -22,18 +22,18 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-json',
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
+    "gatsby-transformer-json",
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: "gatsby-plugin-mdx",
       options: {
-        extensions: ['.md', '.mdx'],
+        extensions: [".md", ".mdx"],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1200,
               linkImagesToOriginal: false,
@@ -43,66 +43,66 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'pages',
+        name: "pages",
         path: `${__dirname}/src/pages`,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'posts',
+        name: "posts",
         path: `${__dirname}/src/posts`,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'json',
+        name: "json",
         path: `${__dirname}/src/content`,
       },
     },
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     {
-      resolve: 'gatsby-plugin-purgecss',
+      resolve: "gatsby-plugin-purgecss",
       options: {
         printRejected: true,
         develop: false,
         tailwind: true,
         ignore: [
-          'node_modules/slick-carousel/slick/slick-theme.css',
-          'node_modules/slick-carousel/slick/slick.css',
+          "node_modules/slick-carousel/slick/slick-theme.css",
+          "node_modules/slick-carousel/slick/slick.css",
         ],
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'Lattespirit',
-        short_name: 'Lattespirit',
-        start_url: '/',
-        background_color: '#F14B90',
-        theme_color: '#21067A',
-        display: 'standalone',
-        icon: 'src/images/lattespirit-rounded.png',
+        name: "Lattespirit",
+        short_name: "Lattespirit",
+        start_url: "/",
+        background_color: "#F14B90",
+        theme_color: "#21067A",
+        display: "standalone",
+        icon: "src/images/lattespirit-rounded.png",
       },
     },
     {
-      resolve: 'gatsby-plugin-offline',
+      resolve: "gatsby-plugin-offline",
       options: {
-        precachePages: ['/', '/archives', '/testimonials', '/uses', '/about'],
+        precachePages: ["/", "/archives", "/testimonials", "/uses", "/about"],
       },
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
@@ -117,15 +117,14 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => allMarkdownRemark.edges.map(
-              (edge) => ({
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map((edge) => ({
                 ...edge.node.frontmatter,
                 description: edge.node.excerpt,
                 date: edge.node.fields.date,
                 url: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
                 guid: `${site.siteMetadata.url}/${edge.node.fields.slug}`,
-              }),
-            ),
+              })),
             query: `
               {
                 allMarkdownRemark(sort: {
@@ -156,10 +155,25 @@ module.exports = {
               site_url: process.env.SITE_URL,
               feed_url: `${process.env.SITE_URL}/rss.xml`,
             }),
-            output: '/rss.xml',
+            output: "/rss.xml",
             title: "Lattespirit's Blog",
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-5J0G3B1Y05"],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+          exclude: [],
+          delayOnRouteUpdate: 0,
+        },
       },
     },
   ],
