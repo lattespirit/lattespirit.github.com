@@ -176,5 +176,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        clarity_project_id: "qus0x5v4f4",
+        enable_on_dev_env: false,
+      },
+    },
   ],
 };
