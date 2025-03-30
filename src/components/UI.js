@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const H1 = (props) => (
   <h1 className="font-bold text-5xl text-purple-dark" {...props} />
@@ -21,11 +21,14 @@ const H6 = (props) => (
 
 const P = (props) => <p className="leading-relaxed" {...props} />;
 
-const UL = (props) => <ul className="my-2 md:my-3" {...props} />;
-
-const LI = (props) => (
-  <li className="list-disc list-inside mb-1 md:mb-2" {...props} />
+const UL = (props) => (
+  <ul
+    className="my-2 md:my-3 pl-6 list-outside list-disc marker:text-purple-dark"
+    {...props}
+  />
 );
+
+const LI = (props) => <li className="mb-1 md:mb-2" {...props} />;
 
 const Strong = (props) => <strong className="text-pink-dark" {...props} />;
 
