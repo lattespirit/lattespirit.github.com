@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import * as newTagStyles from './newtag.module.css';
+import React from "react";
 
 const NewTag = ({ className, children }) => (
   <span
-    className={`${newTagStyles.newtag} text-white rounded-md ${
-      className || 'px-2 py-1'
+    className={`bg-pink-dark animate-breath text-white rounded-md ${
+      className || "px-2 py-1"
     }`}
   >
-    {children || 'NEW'}
+    {children || "NEW"}
   </span>
 );
 
