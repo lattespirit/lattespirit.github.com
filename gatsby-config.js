@@ -156,7 +156,7 @@ module.exports = {
               feed_url: `${process.env.SITE_URL}/rss.xml`,
             }),
             output: "/rss.xml",
-            title: "Lattespirit's Blog",
+            title: "Jeffrey Yeung's Blog",
           },
         ],
       },

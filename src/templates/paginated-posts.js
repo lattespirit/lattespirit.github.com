@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
-import { graphql, Link } from 'gatsby';
-import React, { Component } from 'react';
-import NewTag from '../components/NewTag';
-import Layout from '../components/Layout';
+import { graphql, Link } from "gatsby";
+import React, { Component } from "react";
+import NewTag from "../components/NewTag";
+import Layout from "../components/Layout";
+import { ArrowRight } from "lucide-react";
 
 class PaginatedPosts extends Component {
   render() {
     const { data } = this.props;
     const { edges: posts, pageInfo } = data.allMdx;
-    const {
-      currentPage, hasNextPage, hasPreviousPage, pageCount,
-    } = pageInfo;
+    const { currentPage, hasNextPage, hasPreviousPage, pageCount } = pageInfo;
 
-    const previousUri = hasPreviousPage && currentPage !== 2 ? `/page/${currentPage - 1}` : '/';
+    const previousUri =
+      hasPreviousPage && currentPage !== 2 ? `/page/${currentPage - 1}` : "/";
     const nextUri = hasNextPage
       ? `/page/${currentPage + 1}`
       : `/page/${currentPage}`;
@@ -26,17 +26,19 @@ class PaginatedPosts extends Component {
             key={node.fields.slug}
           >
             {node.frontmatter.featuredImage !== null && (
-            <div className="md:flex-shrink-0 md:w-30">
-              <img
-                className="w-full h-40 md:h-full object-cover object-center"
-                src={
-                  node.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.fallback.src
-                }
-                srcSet={
-                  node.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.sources.srcSet
-                }
-              />
-            </div>
+              <div className="md:flex-shrink-0 md:w-30">
+                <img
+                  className="w-full h-40 md:h-full object-cover object-center"
+                  src={
+                    node.frontmatter.featuredImage.childImageSharp
+                      .gatsbyImageData.images.fallback.src
+                  }
+                  srcSet={
+                    node.frontmatter.featuredImage.childImageSharp
+                      .gatsbyImageData.images.sources.srcSet
+                  }
+                />
+              </div>
             )}
             <div className="w-full p-4 py-6 md:p-6">
               <div>
@@ -50,8 +52,9 @@ class PaginatedPosts extends Component {
                     </Link>
                   </h5>
                   {/* NewTag should show up when post is created in 15 days. */}
-                  {Date.now() - new Date(node.fields.date) < 1296000000
-                    && (<NewTag className="px-2 py-1 text-xs" />)}
+                  {Date.now() - new Date(node.fields.date) < 1296000000 && (
+                    <NewTag className="px-2 py-1 text-xs" />
+                  )}
                 </div>
                 <p className="mt-2 text-gray-darkest text-sm x:text-base md:text-sm">
                   {node.frontmatter.description}
@@ -62,10 +65,11 @@ class PaginatedPosts extends Component {
                   {node.fields.date}
                 </span>
                 <Link
-                  className="inline-block bg-purple-light rounded text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline"
+                  className="inline-block flex items-center gap-1 bg-purple-light rounded text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline"
                   to={`/${node.fields.slug}`}
                 >
-                  Read More
+                  <span className="text-gray-lightest">Read More</span>
+                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -95,11 +99,11 @@ class PaginatedPosts extends Component {
           <div className="flex justify-center items-center mx-4 px-4 rounded-full bg-gray-lighter opacity-85">
             {Array.from({ length: pageCount }).map((_, i) => (
               <Link
-                to={i === 0 ? '/' : `/page/${i + 1}`}
+                to={i === 0 ? "/" : `/page/${i + 1}`}
                 className={`inline-flex w-6 h-6 mr-2 text-sm x:text-base justify-center items-center no-underline rounded-full ${
                   currentPage === i + 1
-                    ? 'bg-purple-light text-white'
-                    : 'text-black'
+                    ? "bg-purple-light text-white"
+                    : "text-black"
                 }`}
                 key={i}
               >
@@ -135,7 +139,7 @@ class PaginatedPosts extends Component {
 
 export const PaginatedPostsQuery = graphql`
   query paginatedPostsQuery($skip: Int!, $limit: Int!) {
-    allMdx(sort: {fields: {date: DESC}}, limit: $limit, skip: $skip) {
+    allMdx(sort: { fields: { date: DESC } }, limit: $limit, skip: $skip) {
       edges {
         node {
           fields {

@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { Helmet } from 'react-helmet';
-import Head from './Head';
-import Header from './Header';
-import Footer from './Footer';
-import Search from './Search';
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
+import Head from "./Head";
+import Header from "./Header";
+import Footer from "./Footer";
+import Search from "./Search";
+import Toast from "./Toast";
 
 export default ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -32,6 +33,8 @@ export default ({ children }) => {
       <div className="mb-20">{children}</div>
 
       <Search />
+
+      <Toast />
 
       <Footer />
     </div>
