@@ -35,7 +35,7 @@ class Disqus extends Component {
     const { message } = this.state;
     return (
       <p
-        className="flex justify-center items-center border-purple-light text-purple-light text-xs md:text-base text-center rounded"
+        className="flex justify-center items-center border-purple-light text-purple-light text-xs md:text-base text-center rounded-sm"
         v-if="! loaded"
       >
         <svg

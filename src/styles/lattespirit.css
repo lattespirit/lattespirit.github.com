@@ -1,71 +1,99 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap") layer(components);
 
-body {
-  font-family: Nunito, sans-serif;
-  @apply flex flex-col h-full;
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-lightest: #f7fafc;
+  --color-gray-lighter: #edf2f7;
+  --color-gray-light: #e2e8f0;
+  --color-gray-default: #cbd5e0;
+  --color-gray-dark: #a0aec0;
+  --color-gray-darker: #718096;
+  --color-gray-darkest: #4a5568;
+  --color-purple-light: #4f239f;
+  --color-purple-dark: #21067a;
+  --color-pink-light: #ed6b99;
+  --color-pink-dark: #f14b90;
+  --color-orange-lighter: #fbae68;
+  --color-orange-light: #e97848;
+  --color-orange-dark: #ce522a;
+
+  --breakpoint-x: 23.43rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+
+  --animate-breath: breath 2s linear infinite alternate;
+
+  @keyframes breath {
+    0% {
+      box-shadow: 0 0 5px var(--color-pink-dark);
+    }
+
+    100% {
+      box-shadow:
+        0 0 5px var(--color-pink-dark),
+        0 0 25px var(--color-pink-dark),
+        0 0 50px var(--color-pink-dark),
+        0 0 200px var(--color-pink-dark);
+    }
+  }
 }
 
-a,
-strong,
-span {
-  @apply text-pink-dark;
-}
+@layer base {
+  body {
+    font-family: Nunito, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-a {
-  @apply underline;
+  a,
+  strong,
+  span {
+    color: #f14b90;
+  }
+
+  a {
+    text-decoration-line: underline;
+  }
 }
 
 .box {
   @apply mx-4;
 }
 
-.model {
-  @apply w-60 mx-auto;
-}
-
 .flickity-prev-next-button {
-  @apply w-4 h-4 !important;
+  @apply w-4 h-4;
 }
 
-@screen x {
-  .model {
-    @apply w-64 h-64;
-  }
-}
-
-@screen sm {
+@media (width >=theme(--breakpoint-sm)) {
   .box {
     @apply mx-8;
   }
 }
 
-@screen md {
+@media (width >=theme(--breakpoint-md)) {
   .box {
     @apply mx-12;
   }
 
   .flickity-prev-next-button {
-    @apply w-8 h-8 !important;
+    @apply w-8 h-8;
   }
 
-  .model {
-    @apply w-72 h-72;
-  }
   .typography-nav {
     @apply border-l-2;
   }
 }
 
-@screen lg {
+@media (width >=theme(--breakpoint-lg)) {
   .box {
     @apply w-180 mx-auto;
-  }
-
-  .model {
-    @apply w-96 h-80;
   }
 }
 
@@ -76,5 +104,3 @@ a {
 .typography-nav {
   @apply font-bold border-b-2 border-purple-light;
 }
-
-@tailwind utilities;

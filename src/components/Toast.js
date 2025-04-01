@@ -45,7 +45,6 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
           className="fixed top-6 right-0 md:right-6 mx-4 md:mx-0 px-4 py-2 bg-white/20 backdrop-blur-md rounded-xl flex items-center space-x-3 shadow-lg border border-white/20 text-sm md:text-base"
-          onClick={() => setShow(false)}
         >
           <GatsbyImage
             image={data.me.childImageSharp.gatsbyImageData}
@@ -54,8 +53,9 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
           />
           <span className="text-pink-light">{message}</span>
           <button
-            className="text-white bg-white/20 hover:bg-white/40 rounded-full p-1 transition"
+            className="text-white bg-white/20 hover:bg-white/40 rounded-full p-1 cursor-pointer transition"
             aria-label="Close"
+            onClick={() => setShow(false)}
           >
             <X size={16} />
           </button>

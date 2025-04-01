@@ -26,7 +26,7 @@ class PaginatedPosts extends Component {
             key={node.fields.slug}
           >
             {node.frontmatter.featuredImage !== null && (
-              <div className="md:flex-shrink-0 md:w-30">
+              <div className="md:shrink-0 md:w-30">
                 <img
                   className="w-full h-40 md:h-full object-cover object-center"
                   src={
@@ -65,7 +65,7 @@ class PaginatedPosts extends Component {
                   {node.fields.date}
                 </span>
                 <Link
-                  className="inline-block flex items-center gap-1 bg-purple-light rounded text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline"
+                  className="flex items-center gap-1 bg-purple-light rounded-sm text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline"
                   to={`/${node.fields.slug}`}
                 >
                   <span className="text-gray-lightest">Read More</span>

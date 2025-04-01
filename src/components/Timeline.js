@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-danger */
-import './timeline.css';
-import React, { Component } from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import Fireworks from './Fireworks';
-import NewTag from './NewTag';
+import "./timeline.css";
+import React, { Component } from "react";
+import { graphql, StaticQuery } from "gatsby";
+import Fireworks from "./Fireworks";
+import NewTag from "./NewTag";
 
 class Timeline extends Component {
   constructor(props) {
@@ -46,15 +46,15 @@ class Timeline extends Component {
   renderCarouselImage = () => {
     const { selected } = this.state;
 
-    if (selected.date === '2012-07-25') {
+    if (selected.date === "2012-07-25") {
       return this.imageOfFirstLaunch();
     }
 
-    if (selected.date === '2014-01-28') {
+    if (selected.date === "2014-01-28") {
       return this.imageOfMovingToGithub();
     }
 
-    if (selected.date === '2019-12-29') {
+    if (selected.date === "2019-12-29") {
       return this.assetsOfRefactoringUI();
     }
 
@@ -64,7 +64,7 @@ class Timeline extends Component {
           className="w-60"
           src={selected.image.path.publicURL}
           alt="About"
-          style={{ animation: 'general 1s linear 0s infinite alternate both' }}
+          style={{ animation: "general 1s linear 0s infinite alternate both" }}
         />
       </div>
     );
@@ -73,10 +73,10 @@ class Timeline extends Component {
   imageOfFirstLaunch = () => (
     <div className="relative w-80">
       <img
-        className="absolute bottom-0 rounded object-contain"
+        className="absolute bottom-0 rounded-sm object-contain"
         src={this.v1.publicURL}
         alt="About - Launch"
-        style={{ animation: 'v1 2s linear 1s infinite alternate both' }}
+        style={{ animation: "v1 2s linear 1s infinite alternate both" }}
       />
       <div>
         <Fireworks />
@@ -87,10 +87,10 @@ class Timeline extends Component {
   imageOfMovingToGithub = () => (
     <div className="relative w-80">
       <img
-        className="absolute bottom-0 rounded"
+        className="absolute bottom-0 rounded-sm"
         src={this.v2.publicURL}
         alt="About - Moving to GitHub Pages"
-        style={{ animation: 'v1 2s linear 1s infinite alternate both' }}
+        style={{ animation: "v1 2s linear 1s infinite alternate both" }}
       />
     </div>
   );
@@ -99,20 +99,20 @@ class Timeline extends Component {
     <div className="flex flex-col relative w-50 red">
       <Fireworks />
       <img
-        className="absolute bottom-0 rounded"
+        className="absolute bottom-0 rounded-sm"
         src={this.typography.publicURL}
         alt="About v3 Typography"
         style={{
-          animation: 'typography 2s linear 0s infinite alternate both',
+          animation: "typography 2s linear 0s infinite alternate both",
         }}
       />
       <img
-        className="absolute right-0 bottom-0 rounded"
+        className="absolute right-0 bottom-0 rounded-sm"
         src={this.figma.publicURL}
         alt="About v3 Figma"
-        style={{ animation: 'figma 2s linear 0s infinite alternate both' }}
+        style={{ animation: "figma 2s linear 0s infinite alternate both" }}
       />
-      <Fireworks style={{ transform: 'translate(300px)' }} />
+      <Fireworks style={{ transform: "translate(300px)" }} />
     </div>
   );
 
@@ -129,7 +129,7 @@ class Timeline extends Component {
               <p className="text-white text-left text-3xl font-bold">
                 {selected.date}
               </p>
-              <div className="w-full flex-grow bg-gray-lighter lg:bg-transparent opacity-85 rounded-lg text-gray-darkest lg:text-white text-sm lg:text-base px-4 py-2 lg:p-0 lg:mt-4">
+              <div className="w-full grow bg-gray-lighter lg:bg-transparent opacity-85 rounded-lg text-gray-darkest lg:text-white text-sm lg:text-base px-4 py-2 lg:p-0 lg:mt-4">
                 <p
                   className="text-left font-bold"
                   dangerouslySetInnerHTML={{
@@ -156,15 +156,15 @@ class Timeline extends Component {
                   {event.date}
                 </span>
                 <div
-                  className="w-full flex-grow bg-gray-lighter opacity-85 rounded-lg text-xs text-left text-gray-darkest px-4 py-2"
+                  className="w-full grow bg-gray-lighter opacity-85 rounded-lg text-xs text-left text-gray-darkest px-4 py-2"
                   dangerouslySetInnerHTML={{ __html: event.content }}
                 />
               </div>
               <div
                 className={`hidden transition-transform duration-500 transform hover:scale-115 relative lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold ${
                   event.selected
-                    ? 'text-purple-light bg-gray-light'
-                    : 'text-white bg-purple-light'
+                    ? "text-purple-light bg-gray-light"
+                    : "text-white bg-purple-light"
                 }`}
               >
                 {event.isNew && (
@@ -173,8 +173,8 @@ class Timeline extends Component {
                 <span
                   className={
                     event.selected
-                      ? 'block text-purple-light text-5xl'
-                      : 'block text-white text-5xl'
+                      ? "block text-purple-light text-5xl"
+                      : "block text-white text-5xl"
                   }
                 >
                   {event.day}
@@ -182,13 +182,11 @@ class Timeline extends Component {
                 <span
                   className={
                     event.selected
-                      ? 'block text-purple-light text-lg'
-                      : 'block text-white text-lg'
+                      ? "block text-purple-light text-lg"
+                      : "block text-white text-lg"
                   }
                 >
-                  {event.year}
-                  -
-                  {event.month}
+                  {event.year}-{event.month}
                 </span>
               </div>
             </div>

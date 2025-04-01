@@ -180,7 +180,7 @@ class Search extends Component {
               <input
                 type="text"
                 name="keyword"
-                className="w-full px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full outline-none mr-2"
+                className="w-full px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full outline-hidden mr-2"
                 placeholder="Search..."
                 value={keyword}
                 onChange={this.updateKeyword.bind(this)}
@@ -206,7 +206,7 @@ class Search extends Component {
           </div>
         </div>
         <button
-          className="fixed inset-0 w-full h-full bg-black opacity-50 outline-none cursor-default"
+          className="fixed inset-0 w-full h-full bg-black opacity-50 outline-hidden cursor-default"
           onClick={this.close}
           type="reset"
           aria-label="Reset"
