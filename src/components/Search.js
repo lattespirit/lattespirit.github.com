@@ -1,244 +1,160 @@
-/* eslint-disable react/prop-types */
-import Fuse from 'fuse.js';
-import React, { Component } from 'react';
-import { graphql, StaticQuery } from 'gatsby';
+import React, { useState, useEffect, useRef } from "react";
+import { graphql, useStaticQuery, navigate } from "gatsby";
+import { Combobox } from "@headlessui/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, X } from "lucide-react";
+import Fuse from "fuse.js";
 
-class Search extends Component {
-  static emptyResult() {
-    return (
-      <div className="rounded-lg my-6 text-sm sm:text-base text-center">
-        <p>
-          匆匆的
-          <span className="font-bold text-purple-dark">搜索结果</span>
-          转眼已消逝
-        </p>
-        <p className="mt-4">有几多青春美丽</p>
-      </div>
-    );
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      originPosts: props.data.allMdx.posts.map((post) => ({
-        title: post.frontmatter.title,
-        url: `${props.data.site.siteMetadata.url}/${post.fields.slug}`,
-        content: post.excerpt,
-        date: post.fields.date,
-      })),
-      renderedPosts: [],
-      opened: false,
-      keyword: '',
-    };
-  }
-
-  componentDidMount() {
-    document.addEventListener('keyup', this.handleKeyboard);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keyup', this.handleKeyboard);
-  }
-
-  handleKeyboard = (e) => {
-    if (e.key === 'Esc' || e.key === 'Escape') {
-      this.close();
-    }
-
-    if (e.key === 's') {
-      this.open();
-    }
-  };
-
-  clearKeyword = () => {
-    this.setState({ keyword: '' });
-  };
-
-  open = () => {
-    this.setState({ opened: true });
-    document.querySelector('#search-input').focus();
-  };
-
-  close = () => {
-    this.setState({ opened: false });
-  };
-
-  refreshRenderedPosts() {
-    const options = {
-      shouldSort: true,
-      threshold: 0.6,
-      location: 0,
-      distance: 1000,
-      maxPatternLength: 32,
-      minMatchCharLength: 1,
-      keys: ['title', 'content', 'url'],
-    };
-
-    const { originPosts } = this.state;
-
-    const fusePosts = new Fuse(originPosts, options).search(this.keyword());
-
-    this.setState({
-      renderedPosts: fusePosts.map((post) => {
-        const { item } = post;
-        return {
-          title: item.title,
-          url: item.url,
-          content: item.content,
-          date: item.date,
-          index: post.refIndex,
-        };
-      }),
-    });
-  }
-
-  keyword() {
-    const { keyword } = this.state;
-
-    return keyword;
-  }
-
-  updateKeyword(e) {
-    this.setState({ keyword: e.target.value }, () => {
-      this.refreshRenderedPosts();
-    });
-  }
-
-  result() {
-    const { renderedPosts } = this.state;
-
-    return renderedPosts.length === 0
-      ? Search.emptyResult()
-      : this.searchResult();
-  }
-
-  searchResult() {
-    const { renderedPosts } = this.state;
-
-    return renderedPosts.map((post) => (
-      <div
-        className="flex justify-between items-center mx-2 sm:mx-4 my-2 py-2 border-b last:border-b-0 border-gray-light"
-        key={post.title}
-      >
-        <div className="w-40 sm:w-auto">
-          <a
-            className="block text-sm sm:text-base text-left font-bold no-underline"
-            href={post.url}
-          >
-            {post.title}
-          </a>
-        </div>
-
-        <div>
-          <p className="text-xs">{post.date}</p>
-        </div>
-      </div>
-    ));
-  }
-
-  renderResultPanel() {
-    const { keyword } = this.state;
-
-    if (keyword.length > 0) {
-      return (
-        <div
-          className="w-full bg-white rounded-lg mt-4 sm:mt-8 px-4 overflow-y-scroll"
-          style={{ maxHeight: '60vh' }}
-        >
-          {this.result()}
-
-          <hr className="mt-8 text-purple-dark" />
-          <p className="my-4 text-sm text-center">
-            Search by
-            {' '}
-            <a
-              className="text-purple-dark font-bold"
-              href="https://fusejs.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @fuse.js
-            </a>
-          </p>
-        </div>
-      );
-    }
-
-    return <></>;
-  }
-
-  render() {
-    const { opened, keyword } = this.state;
-    return (
-      <div
-        className={opened ? 'fixed w-full h-full' : 'hidden'}
-        style={{ top: '0vh' }}
-      >
-        <div className="relative mt-6 sm:mt-8 lg:mt-20">
-          <div className="absolute box inset-x-0 z-10">
-            <div className="flex items-center">
-              <input
-                type="text"
-                name="keyword"
-                className="w-full px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full outline-hidden mr-2"
-                placeholder="Search..."
-                value={keyword}
-                onChange={this.updateKeyword.bind(this)}
-                id="search-input"
-              />
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-6 h-6 sm:w-8 sm:h-8 stroke-current text-white feather feather-x-circle"
-                onClick={this.close}
-              >
-                <circle cx="12" cy="12" r="10" />
-                <line x1="15" y1="9" x2="9" y2="15" />
-                <line x1="9" y1="9" x2="15" y2="15" />
-              </svg>
-            </div>
-
-            {this.renderResultPanel()}
-          </div>
-        </div>
-        <button
-          className="fixed inset-0 w-full h-full bg-black opacity-50 outline-hidden cursor-default"
-          onClick={this.close}
-          type="reset"
-          aria-label="Reset"
-        />
-      </div>
-    );
-  }
-}
-
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query sitePosts {
-        allMdx(sort: { fields: { date: DESC } }) {
-          posts: nodes {
-            excerpt(pruneLength: 10000)
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-              date
-            }
+export default function SearchBox() {
+  const data = useStaticQuery(graphql`
+    query sitePosts {
+      allMdx(sort: { fields: { date: DESC } }) {
+        posts: nodes {
+          excerpt(pruneLength: 10000)
+          frontmatter {
+            title
           }
-        }
-        site {
-          siteMetadata {
-            url
+          fields {
+            slug
+            date
           }
         }
       }
-    `}
-    render={(data) => <Search data={data} />}
-  />
-);
+      site {
+        siteMetadata {
+          url
+        }
+      }
+    }
+  `);
+
+  const posts =
+    data.allMdx.posts.map((post) => ({
+      title: post.frontmatter.title,
+      url: `/${post.fields.slug}`,
+      content: post.excerpt,
+      date: post.fields.date,
+    })) || [];
+
+  const [query, setQuery] = useState("");
+  const [selectedPost, setSelectedPost] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  const inputRef = useRef(null);
+
+  const fuse = new Fuse(posts, {
+    shouldSort: true,
+    threshold: 0.6,
+    location: 0,
+    distance: 1000,
+    maxPatternLength: 32,
+    minMatchCharLength: 1,
+    keys: ["title", "content", "url"],
+  });
+
+  const safeQuery = typeof query === "string" ? query : "";
+
+  const filteredOptions =
+    safeQuery.trim() === ""
+      ? posts
+      : fuse.search(safeQuery).map((result) => result.item);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (document.activeElement.tagName === "INPUT") return;
+
+      if ((event.metaKey || event.ctrlKey) && event.key === "k") {
+        event.preventDefault();
+        setIsOpen(true);
+      } else if (event.key === "s" && !event.metaKey && !event.ctrlKey) {
+        event.preventDefault();
+        setIsOpen(true);
+      } else if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
+  const handleSelect = (post) => {
+    if (post) {
+      setSelectedPost(post);
+      setQuery(post.title);
+      navigate(post.url);
+    }
+  };
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+          className="fixed inset-0 bg-white/20 backdrop-blur-md"
+        >
+          <div className="relative w-96 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4">
+            <button
+              className="absolute -top-2 -right-2 text-gray-400 hover:text-gray-700"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close search"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <Combobox value={selectedPost} onChange={handleSelect}>
+              <div className="flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-white/80 backdrop-blur-md shadow-sm">
+                <Search className="w-5 h-5 text-gray-400" />
+                <Combobox.Input
+                  ref={inputRef}
+                  className="w-full border-none focus:ring-0 px-2 bg-transparent"
+                  placeholder="Search..."
+                  onChange={(event) => {
+                    setQuery(event.target.value || "");
+                  }}
+                />
+              </div>
+              <div className="mt-2 max-h-80 overflow-auto">
+                <Combobox.Options className="py-2 border border-gray-300 rounded-lg bg-white/80 backdrop-blur-md shadow-lg">
+                  {filteredOptions.length > 0 ? (
+                    filteredOptions.map((post) => (
+                      <Combobox.Option
+                        key={post?.title}
+                        value={post || {}}
+                        className={({ active }) =>
+                          `px-4 py-2 cursor-pointer ${active ? "bg-gray-200" : ""}`
+                        }
+                      >
+                        <div className="font-medium">
+                          {post?.title || "Untitled"}
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {(post?.content || "").slice(0, 80)}...
+                        </div>
+                      </Combobox.Option>
+                    ))
+                  ) : (
+                    <div className="px-4 py-2 text-gray-500">Nothing found</div>
+                  )}
+                </Combobox.Options>
+              </div>
+            </Combobox>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}

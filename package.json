@@ -10,6 +10,7 @@
     "upload": "gh-pages -d public -b master"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@mdx-js/react": "^2.3.0",
     "@react-three/drei": "^9.121.3",
     "@react-three/fiber": "^8.17.12",
@@ -37,6 +38,7 @@
     "gatsby-transformer-sharp": "^5.14.0",
     "gsap": "file:gsap-bonus.tgz",
     "lucide-react": "^0.486.0",
+    "motion": "^12.6.3",
     "postcss": "^8.4.49",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
