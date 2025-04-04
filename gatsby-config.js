@@ -70,19 +70,6 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
-    "gatsby-plugin-postcss",
-    {
-      resolve: "gatsby-plugin-purgecss",
-      options: {
-        printRejected: true,
-        develop: false,
-        tailwind: true,
-        ignore: [
-          "node_modules/slick-carousel/slick/slick-theme.css",
-          "node_modules/slick-carousel/slick/slick.css",
-        ],
-      },
-    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

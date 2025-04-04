@@ -174,7 +174,7 @@ export default function SearchBox() {
                     <ComboboxOption
                       key={post?.url}
                       value={post}
-                      className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-[focus]:bg-[var(--color-purple-dark)]/30"
+                      className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-[focus]:bg-purple-dark/30"
                     >
                       <div className="flex justify-between">
                         <span className="text-purple-dark/80 font-bold">
@@ -216,7 +216,7 @@ export default function SearchBox() {
                 </div>
                 <div className="ml-auto text-gray-lighter text-sm">
                   Press{" "}
-                  <span className="font-bold text-purple-dark/70">esc</span> to
+                  <span className="font-bold text-purple-dark/65">Esc</span> to
                   Clear/Close
                 </div>
               </div>
