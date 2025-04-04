@@ -1,9 +1,31 @@
 import React, { useState, useEffect, useRef } from "react";
 import { graphql, useStaticQuery, navigate } from "gatsby";
-import { Combobox } from "@headlessui/react";
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxOption,
+  ComboboxOptions,
+} from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X } from "lucide-react";
 import Fuse from "fuse.js";
+import {
+  ArrowUturnRightIcon,
+  ArrowDownCircleIcon,
+  ArrowUpCircleIcon,
+  XCircleIcon,
+} from "@heroicons/react/24/solid";
+
+const Empty = () => (
+  <div className="rounded-lg my-6 text-sm sm:text-base text-center">
+    <p>
+      匆匆的
+      <span className="font-bold text-purple-dark">搜索结果</span>
+      转眼已消逝
+    </p>
+    <p className="mt-4">有几多青春美丽</p>
+  </div>
+);
 
 export default function SearchBox() {
   const data = useStaticQuery(graphql`
@@ -60,7 +82,12 @@ export default function SearchBox() {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (document.activeElement.tagName === "INPUT") return;
+      if (document.activeElement.tagName === "INPUT") {
+        if (event.key === "Escape") {
+          setIsOpen(false);
+        }
+        return;
+      }
 
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
         event.preventDefault();
@@ -89,6 +116,7 @@ export default function SearchBox() {
   }, [isOpen]);
 
   const handleSelect = (post) => {
+    console.log("handleSelect", post);
     if (post) {
       setSelectedPost(post);
       setQuery(post.title);
@@ -104,54 +132,95 @@ export default function SearchBox() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 bg-white/20 backdrop-blur-md"
+          className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
         >
-          <div className="relative w-96 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4">
+          <div className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10">
             <button
-              className="absolute -top-2 -right-2 text-gray-400 hover:text-gray-700"
+              className="absolute -top-3 -right-3 cursor-pointer"
               onClick={() => setIsOpen(false)}
               aria-label="Close search"
             >
-              <X className="w-5 h-5" />
+              <XCircleIcon className="size-6 text-gray-lightest hover:text-gray-dark" />
             </button>
 
             <Combobox value={selectedPost} onChange={handleSelect}>
-              <div className="flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-white/80 backdrop-blur-md shadow-sm">
+              <div className="flex items-center rounded-lg px-4 py-3 bg-white/80 backdrop-blur-md shadow-sm">
                 <Search className="w-5 h-5 text-gray-400" />
-                <Combobox.Input
+                <ComboboxInput
                   ref={inputRef}
-                  className="w-full border-none focus:ring-0 px-2 bg-transparent"
+                  className="w-full border-none focus:outline-none px-2 bg-transparent"
                   placeholder="Search..."
+                  displayValue={(post) => post?.title || ""}
+                  onKeyDown={(e) => {
+                    if (e.key === "Tab") {
+                      // Default behavior:
+                      // Selects the currently focused item and closes the combobox
+                      // disable it
+                      e.preventDefault();
+                    }
+                  }}
                   onChange={(event) => {
                     setQuery(event.target.value || "");
                   }}
                 />
               </div>
-              <div className="mt-2 max-h-80 overflow-auto">
-                <Combobox.Options className="py-2 border border-gray-300 rounded-lg bg-white/80 backdrop-blur-md shadow-lg">
-                  {filteredOptions.length > 0 ? (
-                    filteredOptions.map((post) => (
-                      <Combobox.Option
-                        key={post?.title}
-                        value={post || {}}
-                        className={({ active }) =>
-                          `px-4 py-2 cursor-pointer ${active ? "bg-gray-200" : ""}`
-                        }
-                      >
-                        <div className="font-medium">
+              <div className="py-4 h-full overflow-auto">
+                <ComboboxOptions
+                  data-open
+                  transition
+                  className="overflow-auto"
+                  style={{ maxHeight: "60vh" }}
+                >
+                  {filteredOptions.map((post) => (
+                    <ComboboxOption
+                      key={post?.url}
+                      value={post}
+                      className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-[focus]:bg-purple-dark/30"
+                    >
+                      <div className="flex justify-between">
+                        <span className="text-purple-dark/80 font-bold">
                           {post?.title || "Untitled"}
-                        </div>
-                        <div className="text-sm text-gray-500">
+                        </span>
+                        <span className="text-gray-darker data-[focus]:text-gray-dark">
+                          {post?.date || ""}
+                        </span>
+                      </div>
+                      <div className="flex gap-4">
+                        <span className="text-sm text-purple-dark/70">
                           {(post?.content || "").slice(0, 80)}...
+                        </span>
+                        <div className="w-4 h-4">
+                          <ArrowUturnRightIcon className="invisible size-5 ml-auto group-data-[focus]:visible" />
                         </div>
-                      </Combobox.Option>
-                    ))
-                  ) : (
-                    <div className="px-4 py-2 text-gray-500">Nothing found</div>
-                  )}
-                </Combobox.Options>
+                      </div>
+                    </ComboboxOption>
+                  ))}
+                  {filteredOptions.length === 0 && <Empty />}
+                </ComboboxOptions>
               </div>
             </Combobox>
+
+            <div className="absolute inset-x-0 px-4">
+              <div className="h-8 flex items-center gap-6 px-4 bg-pink-dark/80 rounded-lg">
+                <div className="flex items-center gap-1">
+                  <ArrowUpCircleIcon className="size-6 text-white" />
+                  <ArrowDownCircleIcon className="size-6 text-white" />
+                  <span className="text-sm text-gray-light/90">
+                    to Navigate
+                  </span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <ArrowUturnRightIcon className="size-4 text-white" />
+                  <span className="text-sm text-gray-light/90">
+                    to Redirect
+                  </span>
+                </div>
+                <div className="ml-auto text-gray-lighter text-base">
+                  Press <span className="text-purple-dark/50">esc</span> to
+                  Clear/Close
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       )}
