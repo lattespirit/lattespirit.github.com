@@ -116,7 +116,6 @@ export default function SearchBox() {
   }, [isOpen]);
 
   const handleSelect = (post) => {
-    console.log("handleSelect", post);
     if (post) {
       setSelectedPost(post);
       setQuery(post.title);
@@ -175,13 +174,13 @@ export default function SearchBox() {
                     <ComboboxOption
                       key={post?.url}
                       value={post}
-                      className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-[focus]:bg-purple-dark/30"
+                      className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-[focus]:bg-[var(--color-purple-dark)]/30"
                     >
                       <div className="flex justify-between">
                         <span className="text-purple-dark/80 font-bold">
                           {post?.title || "Untitled"}
                         </span>
-                        <span className="text-gray-darker data-[focus]:text-gray-dark">
+                        <span className="text-gray-darkest text-sm">
                           {post?.date || ""}
                         </span>
                       </div>
@@ -189,7 +188,7 @@ export default function SearchBox() {
                         <span className="text-sm text-purple-dark/70">
                           {(post?.content || "").slice(0, 80)}...
                         </span>
-                        <div className="w-4 h-4">
+                        <div className="w-4 h-4 ml-auto">
                           <ArrowUturnRightIcon className="invisible size-5 ml-auto group-data-[focus]:visible" />
                         </div>
                       </div>
@@ -215,8 +214,9 @@ export default function SearchBox() {
                     to Redirect
                   </span>
                 </div>
-                <div className="ml-auto text-gray-lighter text-base">
-                  Press <span className="text-purple-dark/50">esc</span> to
+                <div className="ml-auto text-gray-lighter text-sm">
+                  Press{" "}
+                  <span className="font-bold text-purple-dark/70">esc</span> to
                   Clear/Close
                 </div>
               </div>
