@@ -129,8 +129,8 @@ export default function SearchBox() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.2 }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{ duration: 0.36 }}
           className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
         >
           <div className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10">
@@ -163,11 +163,11 @@ export default function SearchBox() {
                   }}
                 />
               </div>
-              <div className="py-4 h-full overflow-auto">
+              <div className="py-4 h-full overflow-auto mask-b-from-90%">
                 <ComboboxOptions
                   data-open
                   transition
-                  className="overflow-auto"
+                  className="origin-top transition duration-200 ease-out empty:invisible data-[closed]:scale-95 data-[closed]:opacity-0"
                   style={{ maxHeight: "60vh" }}
                 >
                   {filteredOptions.map((post) => (
