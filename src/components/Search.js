@@ -7,13 +7,13 @@ import {
   ComboboxOptions,
 } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X } from "lucide-react";
 import Fuse from "fuse.js";
 import {
   ArrowUturnRightIcon,
   ArrowDownCircleIcon,
   ArrowUpCircleIcon,
   XCircleIcon,
+  MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 
 const Empty = () => (
@@ -27,7 +27,7 @@ const Empty = () => (
   </div>
 );
 
-export default function SearchBox() {
+export default function Search() {
   const data = useStaticQuery(graphql`
     query sitePosts {
       allMdx(sort: { fields: { date: DESC } }) {
@@ -130,21 +130,24 @@ export default function SearchBox() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
-          transition={{ duration: 0.36 }}
+          transition={{
+            default: { duration: 0.25 },
+            scale: { type: "spring", stiffness: 150 },
+          }}
           className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
         >
           <div className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10">
             <button
-              className="absolute -top-3 -right-3 cursor-pointer"
+              className="absolute -top-4 -right-5 cursor-pointer"
               onClick={() => setIsOpen(false)}
               aria-label="Close search"
             >
-              <XCircleIcon className="size-6 text-gray-lightest hover:text-gray-dark" />
+              <XCircleIcon className="text-white size-8"/>
             </button>
 
             <Combobox value={selectedPost} onChange={handleSelect}>
               <div className="flex items-center rounded-lg px-4 py-3 bg-white/80 backdrop-blur-md shadow-sm">
-                <Search className="w-5 h-5 text-gray-400" />
+                <MagnifyingGlassIcon className="size-6 text-purple-dark" />
                 <ComboboxInput
                   ref={inputRef}
                   className="w-full border-none focus:outline-none px-2 bg-transparent"
@@ -204,9 +207,7 @@ export default function SearchBox() {
                 <div className="flex items-center gap-1">
                   <ArrowUpCircleIcon className="size-6 text-white" />
                   <ArrowDownCircleIcon className="size-6 text-white" />
-                  <span className="text-sm text-gray-light/90">
-                    to Navigate
-                  </span>
+                  <span className="text-sm text-gray-light/90">to Open</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <ArrowUturnRightIcon className="size-4 text-white" />
