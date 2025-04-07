@@ -15,6 +15,7 @@ import {
   XCircleIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
+import { useClickAway } from "@uidotdev/usehooks";
 
 const Empty = () => (
   <div className="rounded-lg my-6 text-sm sm:text-base text-center">
@@ -79,6 +80,10 @@ export default function Search() {
     safeQuery.trim() === ""
       ? posts
       : fuse.search(safeQuery).map((result) => result.item);
+
+  const ref = useClickAway(() => {
+    setIsOpen(false);
+  });
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -153,7 +158,10 @@ export default function Search() {
           exit="exit"
           className="hidden lg:block fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
         >
-          <div className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10">
+          <div
+            ref={ref}
+            className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10"
+          >
             <button
               className="absolute -top-4 -right-5 cursor-pointer"
               onClick={() => setIsOpen(false)}
