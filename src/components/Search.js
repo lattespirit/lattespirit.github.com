@@ -84,6 +84,7 @@ export default function Search() {
     const handleKeyDown = (event) => {
       if (document.activeElement.tagName === "INPUT") {
         if (event.key === "Escape") {
+          event.preventDefault();
           setIsOpen(false);
         }
         return;
@@ -127,14 +128,30 @@ export default function Search() {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.05 }}
-          transition={{
-            default: { duration: 0.25 },
-            scale: { type: "spring", stiffness: 150 },
+          variants={{
+            open: {
+              opacity: 1,
+              scale: 1,
+              transition: {
+                scale: { type: "spring", stiffness: 150 },
+              },
+            },
+            closed: {
+              opacity: 0,
+              scale: 0.95,
+            },
+            exit: {
+              opacity: 0,
+              scale: 0.95,
+              transition: {
+                duration: 0.2,
+              },
+            },
           }}
-          className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
+          initial="closed"
+          animate="open"
+          exit="exit"
+          className="hidden lg:block fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
         >
           <div className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10">
             <button
@@ -142,7 +159,7 @@ export default function Search() {
               onClick={() => setIsOpen(false)}
               aria-label="Close search"
             >
-              <XCircleIcon className="text-white size-8"/>
+              <XCircleIcon className="text-white size-8" />
             </button>
 
             <Combobox value={selectedPost} onChange={handleSelect}>
