@@ -156,11 +156,11 @@ export default function Search() {
           initial="closed"
           animate="open"
           exit="exit"
-          className="hidden lg:block fixed inset-0 bg-purple-dark/40 backdrop-blur-md will-change-transform"
+          className="hidden lg:block fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
         >
           <div
             ref={ref}
-            className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10"
+            className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10 will-change-transform"
           >
             <button
               className="absolute -top-4 -right-5 cursor-pointer"
