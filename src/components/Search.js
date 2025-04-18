@@ -138,25 +138,22 @@ export default function Search() {
               opacity: 1,
               scale: 1,
               transition: {
-                scale: { type: "spring", stiffness: 150 },
-                duration: 0.2,
+                duration: 0.24,
+                ease: "easeOut",
               },
             },
             closed: {
               opacity: 0,
               scale: 0.95,
-            },
-            exit: {
-              opacity: 0,
-              scale: 0.95,
               transition: {
-                duration: 0.2,
+                duration: 0.24,
+                ease: "easeOut",
               },
             },
           }}
           initial="closed"
           animate="open"
-          exit="exit"
+          exit="closed"
           className="hidden lg:block fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
         >
           <div
@@ -233,13 +230,13 @@ export default function Search() {
                 <div className="flex items-center gap-1">
                   <ArrowUpCircleIcon className="size-6 text-white" />
                   <ArrowDownCircleIcon className="size-6 text-white" />
-                  <span className="text-sm text-gray-light/90">to Navigate</span>
+                  <span className="text-sm text-gray-light/90">
+                    to Navigate
+                  </span>
                 </div>
                 <div className="flex items-center gap-1">
                   <ArrowUturnRightIcon className="size-4 text-white" />
-                  <span className="text-sm text-gray-light/90">
-                    to Open
-                  </span>
+                  <span className="text-sm text-gray-light/90">to Open</span>
                 </div>
                 <div className="ml-auto text-gray-lighter text-sm">
                   Press{" "}
