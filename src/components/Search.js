@@ -139,6 +139,7 @@ export default function Search() {
               scale: 1,
               transition: {
                 scale: { type: "spring", stiffness: 150 },
+                duration: 0.2,
               },
             },
             closed: {
