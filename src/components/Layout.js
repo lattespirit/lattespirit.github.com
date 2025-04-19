@@ -3,7 +3,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import Head from "./Head";
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Search from "./Search";
 import Toast from "./Toast";
@@ -28,7 +28,7 @@ export default ({ children }) => {
         src={data.file.publicURL}
       />
 
-      <Header />
+      <Navbar />
 
       <div className="mb-20">{children}</div>
 
