@@ -29,6 +29,22 @@ const Navbar = () => {
       >
         {title}
       </Link>
+      <div className="hidden md:flex gap-6">
+        {links.map(
+          (menu) =>
+            menu.showInLargeScreen && (
+              <Link
+                className="text-white inline-block no-underline hover:text-gray-dark"
+                to={menu.url}
+                key={menu.title}
+              >
+                {menu.title}
+              </Link>
+            )
+        )}
+      </div>
+
+      {/* Mobile Menu Hamburger */}
       <button
         className="flex justify-center items-center md:hidden"
         onClick={toggleMenu}
@@ -51,20 +67,6 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <div className="hidden md:flex gap-6">
-        {links.map(
-          (menu) =>
-            menu.showInLargeScreen && (
-              <Link
-                className="text-white inline-block no-underline"
-                to={menu.url}
-                key={menu.title}
-              >
-                {menu.title}
-              </Link>
-            )
-        )}
-      </div>
       <AnimatePresence>
         {open && (
           <motion.div

@@ -1,9 +1,8 @@
-/* eslint-disable react/prop-types */
-import { graphql, Link } from "gatsby";
+import { graphql, Link, navigate } from "gatsby";
 import React, { Component } from "react";
 import NewTag from "../components/NewTag";
 import Layout from "../components/Layout";
-import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
 
 class PaginatedPosts extends Component {
   render() {
@@ -45,7 +44,7 @@ class PaginatedPosts extends Component {
                 <div className="flex justify-between items-center">
                   <h5>
                     <Link
-                      className="no-underline font-semibold text-black text-xl"
+                      className="no-underline font-semibold text-purple-dark text-xl hover:text-purple-light"
                       to={`/${node.fields.slug}`}
                     >
                       {node.frontmatter.title}
@@ -64,13 +63,50 @@ class PaginatedPosts extends Component {
                 <span className="text-purple-light font-bold text-sm">
                   {node.fields.date}
                 </span>
-                <Link
-                  className="flex items-center gap-1 bg-purple-light rounded-sm text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline"
-                  to={`/${node.fields.slug}`}
+                <motion.button
+                  className="flex items-center gap-1 rounded-sm text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline bg-purple-dark cursor-pointer"
+                  whileHover="hover"
+                  whileTap={{ scale: 0.95 }}
+                  initial="rest"
+                  animate="rest"
+                  variants={{
+                    hover: { background: "var(--color-purple-light)", scale: 1.02},
+                  }}
+                  onClick={() => navigate(`/${node.fields.slug}`)}
                 >
-                  <span className="text-gray-lightest">Read More</span>
-                  <ArrowRight size={16} />
-                </Link>
+                  <motion.span
+                    className="text-gray-light"
+                    variants={{
+                      hover: { color: "var(--color-gray-lightest)" },
+                    }}
+                  >
+                    Read More
+                  </motion.span>
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-gray-lightest"
+                    variants={{
+                      rest: { x: 0 },
+                      hover: { x: 6 },
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                    }}
+                  >
+                    <path
+                      d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </motion.svg>
+                </motion.button>
               </div>
             </div>
           </div>
