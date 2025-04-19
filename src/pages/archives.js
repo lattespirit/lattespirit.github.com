@@ -1,44 +1,49 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 
+const groupPostsByYear = (posts) => {
+  return posts.reduce((acc, { node }) => {
+    const year = new Date(node.fields.date).getFullYear();
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(node);
+    return acc;
+  }, {});
+};
+
 const Archives = ({ data }) => {
-  let titleYear = '';
+  const postsByYear = groupPostsByYear(data.allMdx.edges);
+
   return (
     <Layout>
       <Head title="Archives" />
       <div className="flex flex-col box mt-4 p-6 md:p-10 bg-gray-lighter opacity-85 rounded-lg">
-        {data.allMdx.edges.map(({ node }) => {
-          const postYear = new Date(node.fields.date).getFullYear();
-
-          const Title = (
-            <React.Fragment key={node.id}>
-              {titleYear !== postYear && (
-                <p className="text-lg md:text-xl font-bold first:mt-0 my-2">
-                  {postYear}
-                </p>
-              )}
-              <div className="flex items-center py-2 gap-4" key={node.id}>
-                <p className='text-sm text-gray-darkest'>{node.fields.date}</p>
-                <p>
-                  <Link
-                    className="text-purple-dark no-underline font-semibold"
-                    to={`/${node.fields.slug}`}
+        {Object.keys(postsByYear)
+          .sort((a, b) => b - a)
+          .map((year) => (
+            <div key={year}>
+              <h2 className="text-lg md:text-xl font-bold first:mt-0 my-2">
+                {year}
+              </h2>
+              {postsByYear[year].map((post) => (
+                <div className="flex items-center gap-0.5 py-2" key={post.id}>
+                  <time
+                    className="w-24 text-sm text-gray-darkest"
+                    dateTime={post.fields.date}
                   >
-                    {node.frontmatter.title}
-                  </Link>
-                </p>
-              </div>
-            </React.Fragment>
-          );
-          if (titleYear !== postYear) {
-            titleYear = postYear;
-          }
-
-          return Title;
-        })}
+                    {post.fields.date}
+                  </time>
+                    <Link
+                      className="flex-1 text-purple-dark no-underline font-semibold"
+                      to={`/${post.fields.slug}`}
+                    >
+                      {post.frontmatter.title}
+                    </Link>
+                </div>
+              ))}
+            </div>
+          ))}
       </div>
     </Layout>
   );
@@ -56,7 +61,7 @@ export const query = graphql`
           }
           fields {
             slug
-            date
+            date(formatString: "YYYY-MM-DD") # Format the date directly
           }
         }
       }
