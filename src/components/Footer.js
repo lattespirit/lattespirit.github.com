@@ -1,16 +1,9 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import useSiteMetadata from '../hooks/useSiteMetadata';
 
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  const { title } = useSiteMetadata();
+
   return (
     <footer className="mx-auto text-white text-xs x:text-base mt-auto">
       <p className="text-center">
@@ -64,7 +57,7 @@ export default () => {
           by
           {' '}
           <a className="no-underline" href="https://lattespirit.github.io">
-            {data.site.siteMetadata.title}
+            {title}
           </a>
         </p>
       </div>
