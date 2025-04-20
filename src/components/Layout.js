@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
 
       <Navbar />
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         <motion.main
           variants={variants}
           initial="initial"

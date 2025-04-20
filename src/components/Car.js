@@ -1,11 +1,11 @@
-import React, { useRef, Suspense, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useAnimations, useGLTF } from '@react-three/drei';
-import { Flex, Box } from '@react-three/flex';
+import React, { useRef, Suspense, useEffect } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
+import { Flex, Box } from "@react-three/flex";
 
 function Model(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('/car.gltf');
+  const { nodes, materials, animations } = useGLTF("/car.gltf");
   const { actions, mixer } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -206,11 +206,23 @@ function Model(props) {
 
 function Car() {
   return (
-    <div className="model">
+    <div className="w-60 h-60 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-96 lg:h-80 p mx-auto">
       <Canvas camera={{ position: [4, 1.6, 1] }}>
         <ambientLight intensity={Math.PI / 2} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
-        <spotLight position={[-10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
+        <spotLight
+          position={[10, 10, 10]}
+          angle={0.15}
+          penumbra={1}
+          decay={0}
+          intensity={Math.PI}
+        />
+        <spotLight
+          position={[-10, 10, 10]}
+          angle={0.15}
+          penumbra={1}
+          decay={0}
+          intensity={Math.PI}
+        />
         <Suspense fallback={null}>
           <Flex justifyContent="center" alignContent="center">
             <Box centerAnchor>
