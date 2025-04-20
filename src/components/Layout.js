@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Search from "./Search";
 import Toast from "./Toast";
 import { AnimatePresence, motion } from "motion/react";
+import { useLocation } from "@reach/router";
 
 const duration = 0.3;
 const ease = [0.76, 0, 0.24, 1];
@@ -40,6 +41,8 @@ const variants = {
 };
 
 const Layout = ({ children }) => {
+  const location = useLocation();
+
   const data = useStaticQuery(graphql`
     query BackgroundImageQuery {
       file(relativePath: { eq: "background.jpg" }) {
@@ -63,7 +66,7 @@ const Layout = ({ children }) => {
 
       <AnimatePresence>
         <motion.main
-          key={window.location.pathname}
+          key={location.pathname}
           variants={variants}
           initial="initial"
           animate="animate"
