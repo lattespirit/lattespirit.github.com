@@ -61,8 +61,9 @@ const Layout = ({ children }) => {
 
       <Navbar />
 
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         <motion.main
+          key={window.location.pathname}
           variants={variants}
           initial="initial"
           animate="animate"
