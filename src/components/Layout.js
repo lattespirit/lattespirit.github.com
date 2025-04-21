@@ -14,8 +14,8 @@ const ease = [0.76, 0, 0.24, 1];
 
 const variants = {
   initial: {
-    opacity: 1,
-    scale: 0.99,
+    opacity: 0.99,
+    scale: 1,
     transition: {
       duration,
       ease,
