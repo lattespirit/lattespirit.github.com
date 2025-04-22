@@ -6,16 +6,16 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Search from "./Search";
 import Toast from "./Toast";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useLocation } from "@reach/router";
 
-const duration = 0.3;
+const duration = 0.4;
 const ease = [0.76, 0, 0.24, 1];
 
 const variants = {
   initial: {
-    opacity: 0.99,
-    scale: 0.99,
+    opacity: 0.8,
+    y: -20,
     transition: {
       duration,
       ease,
@@ -23,16 +23,7 @@ const variants = {
   },
   animate: {
     opacity: 1,
-    scale: 1,
-    transition: {
-      duration,
-      delay: 0.1,
-      when: "beforeChildren",
-    },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.99,
+    y: 0,
     transition: {
       duration,
       ease,
@@ -64,18 +55,15 @@ const Layout = ({ children }) => {
 
       <Navbar />
 
-      <AnimatePresence>
-        <motion.main
-          key={location.pathname}
-          variants={variants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          className="mb-20"
-        >
-          {children}
-        </motion.main>
-      </AnimatePresence>
+      <motion.main
+        key={location.pathname}
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        className="mb-20"
+      >
+        {children}
+      </motion.main>
 
       <Search />
 
