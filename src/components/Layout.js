@@ -9,24 +9,20 @@ import Toast from "./Toast";
 import { motion } from "motion/react";
 import { useLocation } from "@reach/router";
 
-const duration = 0.4;
-const ease = [0.76, 0, 0.24, 1];
-
 const variants = {
   initial: {
     opacity: 0.8,
     y: -20,
-    transition: {
-      duration,
-      ease,
-    },
   },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
-      duration,
-      ease,
+      duration: 0.4,
+      type: "spring",
+      bounce: 0,
+      stiffness: 100,
+      damp: 20,
     },
   },
 };
@@ -60,7 +56,7 @@ const Layout = ({ children }) => {
         variants={variants}
         initial="initial"
         animate="animate"
-        className="mb-20"
+        className="mb-20 will-change-transform"
       >
         {children}
       </motion.main>
