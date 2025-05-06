@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jeffrey Yeung's Blog]]></title><description><![CDATA[Jeffrey Yeung's Blog]]></description><link>https://lattespirit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 23 Apr 2025 15:43:32 GMT</lastBuildDate><atom:link href="https://lattespirit.github.io/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[再见 dot com]]></title><description><![CDATA[<p>2025.03.09 这天，<strong>lattespirit.com</strong> 域名到期，不再续费。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jeffrey Yeung's Blog]]></title><description><![CDATA[Jeffrey Yeung's Blog]]></description><link>https://lattespirit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 06 May 2025 15:21:04 GMT</lastBuildDate><atom:link href="https://lattespirit.github.io/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[再见 dot com]]></title><description><![CDATA[<p>2025.03.09 这天，<strong>lattespirit.com</strong> 域名到期，不再续费。</p>
 <p>最直接的原因是没有优惠券，非常直接。网络上没找到合适的，而且要在付款页进行多次试错。提前将续费订单放到购物车，GoDaddy 官方也没有通过邮件方式发优惠码促销，索性随缘。</p>
 <p>根本原因是该域名给我带来的精神价值已经越来越少，使用 GitHub 提供的二级域名也不赖。</p>
 <p>还别说，决定不续费后，在博客上的生产力提升了不少</p>
@@ -1234,7 +1234,7 @@
 <p>给新的一年定的主题是视觉，不管是视频制作还是网页设计，在“内容为王”的基础上，给人的观感还是很重要的，所以会尝试往这个方向学习。</p>
 <p>二零年，祝大家顺顺利利。</p>]]></description><link>https://lattespirit.github.io/2019-recap</link><guid isPermaLink="false">https://lattespirit.github.io/2019-recap</guid><pubDate>Fri, 10 Jan 2020 00:00:00 GMT</pubDate></item><item><title><![CDATA[博客3.0]]></title><description><![CDATA[<p>博客迎来了 3.0 版本。</p>
 <p>说是版本升级，也只是改变 UI 以及添加了一些页面而已，内容相关的功能几乎没变，在这里简单回顾一下博客 UI 的历程。</p>
-<h6>v1.0</h6>
+<h5>v1.0</h5>
 <p>博客上线时用的是别人的 Wordpress 模板，那时 WordPress 非常流行，各种好坏善恶的模板到处都是，我也选了个人气还不错的。开始想在 WebArchive 上找一下 2012-2013 年有没有截取到博客首页的画面，结果发现只有<a href="https://web.archive.org/web/20130410015648/http://www.lattespirit.com/">这个页面</a>，可惜样式还乱了。最后还是在移动硬盘的备份里找到了一份网站源码，还有数据库，花了点时间搭建好旧版本的 WordPress 后就还原成了下面的模样，且记录为 <strong>1.0</strong></p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -1261,7 +1261,7 @@
         decoding="async"
       />
     </span></p>
-<h6>v2.0</h6>
+<h5>v2.0</h5>
 <p>接下来就是转入 GitHub Pages，尝试过在官方推荐的主题中找简约风格的，发现修改起来还略麻烦，就决定自己设计简简单单的页面。Bootstrap 是当时比较热门的，自带响应式天赋属性还有基本的幻灯片，Modal 等组件，很快就把页面设计出来了，因为真的很简洁。</p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -1288,17 +1288,17 @@
         decoding="async"
       />
     </span></p>
-<h6>v3.0</h6>
+<h5>v3.0</h5>
 <p>从 2014 年开始 v2 的 UI 就用到 2019 年底，现在想想，原来已经 5 年了，也该换身新衣裳，加上本身今年个人的方向就是设计，11 月初就开工了。一个多月里业余的时间都用在 Figma 上画设计稿，接下来选择用 <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a> 和 <a href="https://vuejs.org" target="_blank">Vue.js</a> 来实现就比较快了，在开发的过程中，还使用了黑五刚买的 <a href="https://solisapp.com" target="_blank">Solis</a> 进行模拟多设备调试，省下了大量的时间。值得一提的是，这次更新增加了 Typography 页面，展示博客所用到的字体，配色和物料等，入口比较隐蔽，像 <a href="https://laracasts.com" target="_blank">Laracasts</a> 的一样，右键点击 Logo 进入，似乎是不成文的规定，具体还没考究。</p>
-<h6>需要增加的特性</h6>
+<h5>需要增加的特性</h5>
 <ul>
 <li>小功能组件化并设计 UI，如块引用，列表等</li>
 <li>主题化，根据单一位置的配置来切换主题</li>
 <li>或许会增加 Dark Mode，应该会在下次更换背景时再加，现在已经够 Dark 了 😅</li>
 </ul>
-<h6>未来计划</h6>
+<h5>未来计划</h5>
 <p>添加 <span>Gallery</span> 页面，将以前旅游的见闻以专题的形式展示，效果不会令人失望。</p>
-<h6>使用博客引擎 Jekyll 遇到的问题</h6>
+<h5>使用博客引擎 Jekyll 遇到的问题</h5>
 <ul>
 <li>为使用 posts.paginator 变量，按照官方文档在 Windows 10 下安装 jekyll-paginate 插件后，变量依然无效，导致我根据 _site/*<em>/</em>.html 文件 purge CSS 产出时丢失了一些样式类</li>
 <li>jekyll-docker 在 Windows Docker Toolbox 下启动失败，但是估计 Docker Desktop for Windows 正常，没有测试</li>
