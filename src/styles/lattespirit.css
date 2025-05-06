@@ -63,13 +63,8 @@
 }
 
 @layer components {
-  .paragraph > h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: calc(var(--spacing) * 6) 0;
+  .paragraph :is(h1, h2, h3, h4, h5, h6) {
+    margin: calc(var(--spacing) * 4) 0;
   }
 }
 
