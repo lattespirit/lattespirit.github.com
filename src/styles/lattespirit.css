@@ -1,6 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 @import "tailwindcss";
-
-@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap") layer(components);
 
 @theme {
   --color-*: initial;
@@ -60,6 +59,17 @@
 
   a {
     text-decoration-line: underline;
+  }
+}
+
+@layer components {
+  .paragraph > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: calc(var(--spacing) * 6) 0;
   }
 }
 
