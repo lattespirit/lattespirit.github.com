@@ -1,69 +1,64 @@
-/* eslint-disable react/prop-types */
-import React, { Component } from 'react';
-import { DiscussionEmbed } from 'disqus-react';
+import React, { Suspense, useState, useEffect } from 'react';
+import { InformationCircleIcon } from '@heroicons/react/24/solid';
 
-class Disqus extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loaded: false,
-      message: 'Disqus 评论框加载中。。。',
-      config: {
-        shortname: process.env.GATSBY_DISQUS_NAME,
-        config: {
-          url: `${process.env.SITE_URL}/${props.disqus.slug}`,
-          identifier: props.disqus.slug,
-          title: props.disqus.title,
-        },
-      },
-    };
-  }
+const DiscussionEmbed = React.lazy(() =>
+  import('disqus-react').then((module) => ({ default: module.DiscussionEmbed }))
+);
 
-  componentDidMount() {
-    fetch('https://disqus.com/next/config.json')
-      .then((response) => this.setState({ loaded: response.status === 200 }))
-      .catch(() => this.setState({ message: '朋友，加载 Disqus 评论框就差那一步了 :)' }));
-  }
+const Disqus = ({ disqus }) => {
+  const [loaded, setLoaded] = useState(false);
+  const [message, setMessage] = useState('Disqus 评论框加载中。。。');
+  const [shouldRender, setShouldRender] = useState(false);
 
-  renderDisqus = () => {
-    const { config } = this.state;
-
-    return <DiscussionEmbed {...config} />;
+  const config = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: {
+      url: `${process.env.SITE_URL}/${disqus.slug}`,
+      identifier: disqus.slug,
+      title: disqus.title,
+    },
   };
 
-  renderMessage = () => {
-    const { message } = this.state;
-    return (
-      <p
-        className="flex justify-center items-center border-purple-light text-purple-light text-xs md:text-base text-center rounded-sm"
-        v-if="! loaded"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="w-4 h-4 sm:w-6 sm:h-6 mx-2 sm:mx-4 feather feather-info"
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldRender(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (shouldRender) {
+      fetch('https://disqus.com/next/config.json')
+        .then((response) => setLoaded(response.status === 200))
+        .catch(() => setMessage('朋友，加载 Disqus 评论框就差那一步了 :)'));
+    }
+  }, [shouldRender]);
+
+  if (!shouldRender) {
+    return null;
+  }
+
+  return (
+    <div className="box mt-20 p-4 md:p-6 bg-gray-lighter opacity-85 rounded-lg">
+      {loaded ? (
+        <Suspense
+          fallback={
+            <div className="text-center text-purple-light font-bold">
+              {message}
+            </div>
+          }
         >
-          <circle cx="12" cy="12" r="10" />
-          <line x1="12" y1="16" x2="12" y2="12" />
-          <line x1="12" y1="8" x2="12.01" y2="8" />
-        </svg>
-        <span className="text-purple-light font-bold">{message}</span>
-      </p>
-    );
-  };
-
-  render() {
-    const { loaded } = this.state;
-    return (
-      <div className="box mt-20 p-4 md:p-6 bg-gray-lighter opacity-85 rounded-lg">
-        {loaded ? this.renderDisqus() : this.renderMessage()}
-      </div>
-    );
-  }
-}
+          <DiscussionEmbed {...config} />
+        </Suspense>
+      ) : (
+        <div className="flex justify-center items-center gap-2 border-purple-light text-purple-light text-xs md:text-base text-center rounded-sm">
+          <InformationCircleIcon className="size-6" />
+          <span className="text-purple-light font-bold">{message}</span>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default Disqus;
