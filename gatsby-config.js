@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
     title: "Lattespirit",
+    author: "Jeffrey Yeung",
     description: "Jeffrey Yeung's Blog",
   },
   plugins: [

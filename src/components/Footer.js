@@ -2,7 +2,7 @@ import React from 'react';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 
 export default () => {
-  const { title } = useSiteMetadata();
+  const { author } = useSiteMetadata();
 
   return (
     <footer className="mx-auto text-white text-xs x:text-base mt-auto">
@@ -57,7 +57,7 @@ export default () => {
           by
           {' '}
           <a className="no-underline" href="https://lattespirit.github.io">
-            {title}
+            {author}
           </a>
         </p>
       </div>
