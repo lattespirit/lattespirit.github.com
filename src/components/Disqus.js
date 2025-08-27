@@ -6,9 +6,9 @@ const DiscussionEmbed = React.lazy(() =>
 );
 
 const Disqus = ({ disqus }) => {
-  const [loaded, setLoaded] = useState(false);
-  const [message, setMessage] = useState('Disqus 评论框加载中。。。');
+  const [shouldStartToLoad, setShouldStartToLoad] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const [message, setMessage] = useState('Disqus 评论框加载中。。。');
 
   const config = {
     shortname: process.env.GATSBY_DISQUS_NAME,
@@ -21,41 +21,39 @@ const Disqus = ({ disqus }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShouldRender(true);
+      setShouldStartToLoad(true);
     }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    if (shouldRender) {
+    if (shouldStartToLoad) {
       fetch('https://disqus.com/next/config.json')
-        .then((response) => setLoaded(response.status === 200))
+        .then((response) => setShouldRender(response.status === 200))
         .catch(() => setMessage('朋友，加载 Disqus 评论框就差那一步了 :)'));
     }
-  }, [shouldRender]);
+  }, [shouldStartToLoad]);
 
-  if (!shouldRender) {
+  const LoadingComponent = (
+    <div className="flex justify-center items-center gap-2 border-purple-light text-purple-light text-xs md:text-base text-center rounded-sm">
+      <InformationCircleIcon className="size-6" />
+      <span className="text-purple-light font-bold">{message}</span>
+    </div>
+  );
+
+  if (!shouldStartToLoad) {
     return null;
   }
 
   return (
     <div className="box mt-20 p-4 md:p-6 bg-gray-lighter opacity-85 rounded-lg">
-      {loaded ? (
-        <Suspense
-          fallback={
-            <div className="text-center text-purple-light font-bold">
-              {message}
-            </div>
-          }
-        >
+      {shouldRender ? (
+        <Suspense fallback={LoadingComponent}>
           <DiscussionEmbed {...config} />
         </Suspense>
       ) : (
-        <div className="flex justify-center items-center gap-2 border-purple-light text-purple-light text-xs md:text-base text-center rounded-sm">
-          <InformationCircleIcon className="size-6" />
-          <span className="text-purple-light font-bold">{message}</span>
-        </div>
+        LoadingComponent
       )}
     </div>
   );
