@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import Head from "./Head";
 import Navbar from "./Navbar";
@@ -8,6 +7,7 @@ import Search from "./Search";
 import Toast from "./Toast";
 import { motion } from "motion/react";
 import { useLocation } from "@reach/router";
+import { StaticImage } from "gatsby-plugin-image";
 
 const variants = {
   initial: {
@@ -28,24 +28,25 @@ const variants = {
 const Layout = ({ children }) => {
   const location = useLocation();
 
-  const data = useStaticQuery(graphql`
-    query BackgroundImageQuery {
-      file(relativePath: { eq: "background.jpg" }) {
-        publicURL
-      }
-    }
-  `);
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
+      
+      <div className="fixed inset-0 -z-10">
+        <StaticImage
+          src="../images/background.jpg"
+          alt="Background"
+          placeholder="dominantColor"
+          layout="fullWidth"
+          loading="eager"
+          quality={90}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
       <Head />
       <Helmet>
         <html lang="zh" />
       </Helmet>
-      <img
-        className="fixed object-cover min-w-full min-h-full -z-1"
-        alt="background"
-        src={data.file.publicURL}
-      />
 
       <Navbar />
 
@@ -65,7 +66,6 @@ const Layout = ({ children }) => {
 
       <Footer />
     </div>
-  );
-};
-
+  )};
+  
 export default Layout;
