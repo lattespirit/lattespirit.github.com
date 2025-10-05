@@ -21,6 +21,7 @@ const variants = {
       bounce: 0,
       stiffness: 100,
       damp: 20,
+      delay: 0.16,
     },
   },
 };
@@ -31,7 +32,12 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen relative">
       
-      <div className="fixed inset-0 -z-10">
+      <motion.div 
+        className="fixed inset-0 -z-10"
+        initial={{ scale: 1.08 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
         <StaticImage
           src="../images/background.jpg"
           alt="Background"
@@ -41,7 +47,7 @@ const Layout = ({ children }) => {
           quality={90}
           className="w-full h-full object-cover"
         />
-      </div>
+      </motion.div>
       
       <Head />
       <Helmet>
