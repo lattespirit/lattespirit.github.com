@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         className="fixed inset-0 -z-10"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.56, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
         <StaticImage
           src="../images/background.jpg"
