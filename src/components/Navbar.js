@@ -76,7 +76,7 @@ const Navbar = () => {
                 x: "0",
                 transition: {
                   ease: [0.76, 0, 0.24, 1],
-                  duration: 0.5,
+                  duration: 0.38,
                   staggerChildren: 0.1,
                 },
               },

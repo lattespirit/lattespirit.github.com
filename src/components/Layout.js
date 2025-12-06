@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
     <div className="flex flex-col min-h-screen relative">
       
       <motion.div 
-        className="fixed inset-0 -z-10"
+        className="fixed top-0 left-0 w-full h-[100lvh] -z-10"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.56, ease: [0.25, 0.46, 0.45, 0.94] }}
