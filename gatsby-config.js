@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
-    title: "Lattespirit",
+    title: "Jeffrey Yeung",
     author: "Jeffrey Yeung",
     description: "Jeffrey Yeung's Blog",
   },
