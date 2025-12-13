@@ -3,6 +3,12 @@ import React, { Component } from "react";
 import NewTag from "../components/NewTag";
 import Layout from "../components/Layout";
 import { motion } from "motion/react";
+import ArrowRight from "../components/icons/ArrowRight";
+import ArrowLeft from "../components/icons/ArrowLeft";
+
+const MotionArrowRight = motion(ArrowRight);
+const MotionArrowLeft = motion(ArrowLeft);
+const MotionLink = motion(Link);
 
 class PaginatedPosts extends Component {
   render() {
@@ -82,12 +88,7 @@ class PaginatedPosts extends Component {
                   >
                     Read More
                   </motion.span>
-                  <motion.svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
+                  <MotionArrowRight
                     className="text-gray-lightest"
                     variants={{
                       rest: { x: 0 },
@@ -97,15 +98,7 @@ class PaginatedPosts extends Component {
                       type: "spring",
                       stiffness: 300,
                     }}
-                  >
-                    <path
-                      d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
-                      stroke="white"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </motion.svg>
+                  />
                 </motion.button>
               </div>
             </div>
@@ -113,28 +106,26 @@ class PaginatedPosts extends Component {
         ))}
         <div className="flex justify-center w-72 x:w-84 sm:w-100 h-8 mt-12 mx-auto">
           {/* Previous Button */}
-          <Link
-            className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85"
+          <MotionLink
+            className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
             to={previousUri}
             aria-label="Previous"
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
           >
-            <svg
-              width="6"
-              height="10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5 1L1 5l4 4"
-                stroke="#000"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+            <MotionArrowLeft
+              className="w-4 h-4 text-black"
+              variants={{
+                rest: { x: 0 },
+                hover: { x: -3 },
+              }}
+              transition={{ type: "spring", stiffness: 300 }}
+            />
+          </MotionLink>
           <div className="flex justify-center items-center mx-4 px-4 rounded-full bg-gray-lighter opacity-85">
             {Array.from({ length: pageCount }).map((_, i) => (
-              <Link
+              <MotionLink
                 to={i === 0 ? "/" : `/page/${i + 1}`}
                 className={`inline-flex w-6 h-6 mr-2 text-sm x:text-base justify-center items-center no-underline rounded-full ${
                   currentPage === i + 1
@@ -142,31 +133,35 @@ class PaginatedPosts extends Component {
                     : "text-black"
                 }`}
                 key={i}
+                whileHover={{
+                  backgroundColor: "var(--color-purple-light)",
+                  color: "white",
+                  scale: 1.1,
+                }}
+                transition={{ duration: 0.2 }}
               >
                 {i + 1}
-              </Link>
+              </MotionLink>
             ))}
           </div>
           {/* Next Button */}
-          <Link
+          <MotionLink
             className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
             aria-label="Next"
             to={nextUri}
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
           >
-            <svg
-              width="6"
-              height="10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 9l4-4-4-4"
-                stroke="#000"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+            <MotionArrowRight
+              className="w-4 h-4 text-black"
+              variants={{
+                rest: { x: 0 },
+                hover: { x: 3 },
+              }}
+              transition={{ type: "spring", stiffness: 300 }}
+            />
+          </MotionLink>
         </div>
       </Layout>
     );

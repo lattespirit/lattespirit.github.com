@@ -8,6 +8,13 @@ import Disqus from "../components/Disqus";
 import UI from "../components/UI";
 import Carousel from "../components/Carousel";
 import Car from "../components/Car";
+import ArrowLeft from "../components/icons/ArrowLeft";
+import ArrowRight from "../components/icons/ArrowRight";
+import { motion } from "motion/react";
+
+const MotionArrowLeft = motion(ArrowLeft);
+const MotionArrowRight = motion(ArrowRight);
+const MotionLink = motion(Link);
 
 const Post = ({ data, pageContext, children }) => {
   const post = data.mdx;
@@ -16,10 +23,10 @@ const Post = ({ data, pageContext, children }) => {
   const nextText = next ? "下篇" : "未央";
   const prevUri = prev ? prev.fields.slug : post.fields.slug;
   const nextUri = next ? next.fields.slug : post.fields.slug;
-  const prevClass = `flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-${
+  const prevClass = `flex items-center w-24 h-8 text-sm mr-18 lg:mr-32 bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline transition-colors duration-300 cursor-${
     prev ? "pointer" : "not-allowed"
   }`;
-  const nextClass = `flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline cursor-${
+  const nextClass = `flex justify-end items-center w-24 h-8 text-sm bg-gray-lighter hover:bg-purple-light text-purple-dark hover:text-white opacity-85 rounded-full no-underline transition-colors duration-300 cursor-${
     next ? "pointer" : "not-allowed"
   }`;
   return (
@@ -43,38 +50,40 @@ const Post = ({ data, pageContext, children }) => {
       </div>
 
       <div className="flex justify-between x:justify-center h-6 box mt-8">
-        <Link className={prevClass} to={`/${prevUri}`}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="feather feather-chevrons-left w-4 h-4 stroke-current inline-block mx-3"
-          >
-            <polyline points="11 17 6 12 11 7" />
-            <polyline points="18 17 13 12 18 7" />
-          </svg>
+        <MotionLink
+          className={prevClass}
+          to={`/${prevUri}`}
+          whileHover="hover"
+          initial="rest"
+          animate="rest"
+        >
+          <MotionArrowLeft
+            className="w-4 h-4 stroke-current inline-block mx-3"
+            variants={{
+              rest: { x: 0 },
+              hover: { x: -3 },
+            }}
+            transition={{ type: "spring", stiffness: 300 }}
+          />
           <p>{prevText}</p>
-        </Link>
-        <Link className={nextClass} to={`/${nextUri}`}>
+        </MotionLink>
+        <MotionLink
+          className={nextClass}
+          to={`/${nextUri}`}
+          whileHover="hover"
+          initial="rest"
+          animate="rest"
+        >
           <p>{nextText}</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="feather feather-chevrons-right w-4 h-4 stroke-current inline-block mx-3"
-          >
-            <polyline points="13 17 18 12 13 7" />
-            <polyline points="6 17 11 12 6 7" />
-          </svg>
-        </Link>
+          <MotionArrowRight
+            className="w-4 h-4 stroke-current inline-block mx-3"
+            variants={{
+              rest: { x: 0 },
+              hover: { x: 3 },
+            }}
+            transition={{ type: "spring", stiffness: 300 }}
+          />
+        </MotionLink>
       </div>
       <Disqus
         disqus={{ slug: post.fields.slug, title: post.frontmatter.title }}
