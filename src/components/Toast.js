@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
 export default function Toast({ message = "👀 嘿，新的博文补给已经到达。" }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const data = useStaticQuery(graphql`
@@ -103,6 +103,7 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
             </AnimatePresence>
           </motion.div>
           <motion.button
+            layout
             className="absolute top-3 right-3 text-white bg-white/20 hover:bg-white/40 rounded-full p-1 cursor-pointer transition-colors"
             aria-label="Close"
             onClick={() => setShow(false)}

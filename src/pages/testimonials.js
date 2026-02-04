@@ -21,9 +21,9 @@ const Testimonials = () => {
       <p className="text-white text-center text-2xl md:text-3xl font-bold mt-4 md:mt-8">
         What People Said...
       </p>
-      <div className="bg-gray w-52 h-4 md:w-80 mx-auto mt-8 md:mt-12 rounded-t-lg" />
+      <div className="bg-gray w-52 h-4 md:w-80 mx-auto mt-8 rounded-t-lg" />
       <div className="bg-gray-light w-60 h-4 md:w-88 mx-auto rounded-t-lg" />
-      <div className="relative bg-gray-lighter w-68 md:w-96 mx-auto pt-8 pb-32 md:pb-40 rounded-lg mb-20 sm:mb-0">
+      <div className="relative bg-gray-lighter w-68 md:w-96 mx-auto pt-8 pb-32 md:pb-40 rounded-lg sm:mb-0">
         <div className="flex justify-center">
           <svg
             width="34"
