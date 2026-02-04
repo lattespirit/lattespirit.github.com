@@ -36,13 +36,22 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
   const latestPostDescription = latestPost?.frontmatter?.description;
   const latestPostTitle = latestPost?.frontmatter?.title;
 
+  const normalizedSlug = latestPostSlug?.startsWith("/")
+    ? latestPostSlug
+    : `/${latestPostSlug}`;
+
   useEffect(() => {
     const cachedSlug = localStorage.getItem("latestPostSlug");
-    if (cachedSlug && cachedSlug !== latestPostSlug) {
+    if (latestPostSlug && cachedSlug !== latestPostSlug) {
       setShow(true);
     }
-    localStorage.setItem("latestPostSlug", latestPostSlug);
   }, [latestPostSlug]);
+
+  const handleClose = (e) => {
+    e.stopPropagation();
+    setShow(false);
+    localStorage.setItem("latestPostSlug", latestPostSlug);
+  };
 
   return (
     <AnimatePresence>
@@ -88,7 +97,10 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
                   transition={{ duration: 0.3 }}
                 >
                   <Link
-                    to={latestPostSlug}
+                    to={normalizedSlug}
+                    onClick={() => {
+                      localStorage.setItem("latestPostSlug", latestPostSlug);
+                    }}
                     className="flex flex-col transition duration-300 no-underline gap-1"
                   >
                     <span className="text-pink-light">{latestPostTitle}</span>
@@ -106,7 +118,7 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
             layout
             className="absolute top-3 right-3 text-white bg-white/20 hover:bg-white/40 rounded-full p-1 cursor-pointer transition-colors"
             aria-label="Close"
-            onClick={() => setShow(false)}
+            onClick={handleClose}
           >
             <X size={16} />
           </motion.button>
