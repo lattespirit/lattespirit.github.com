@@ -103,7 +103,7 @@ const PaginatedPosts = ({ data }) => {
           </div>
         </div>
       ))}
-      <div className="flex justify-center w-72 x:w-84 sm:w-100 h-8 mt-12 mx-auto">
+      <div className="flex justify-center items-center w-72 x:w-84 sm:w-100 h-8 mt-12 mx-auto">
         {/* Previous Button */}
         <MotionLink
           className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
@@ -122,11 +122,11 @@ const PaginatedPosts = ({ data }) => {
             transition={{ type: "spring", stiffness: 300 }}
           />
         </MotionLink>
-        <div className="flex justify-center items-center mx-4 px-2 py-1 rounded-lg bg-gray-lighter opacity-85">
+        <div className="flex justify-center items-center h-10 mx-4 px-4 rounded-lg bg-gray-lighter opacity-85 gap-3">
           {Array.from({ length: pageCount }).map((_, i) => (
             <MotionLink
               to={i === 0 ? "/" : `/page/${i + 1}`}
-              className={`inline-flex w-8 h-8 mx-1 text-sm font-medium justify-center items-center no-underline rounded-md ${
+              className={`inline-flex w-8 h-8 font-medium justify-center items-center no-underline rounded-full ${
                 currentPage === i + 1
                   ? "bg-purple-light text-white shadow-sm"
                   : "text-gray-darkest"
