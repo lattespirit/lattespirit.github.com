@@ -20,6 +20,32 @@
   --color-orange-light: #e97848;
   --color-orange-dark: #ce522a;
 
+  /* Design tokens based on background.jpg - Sunset/Twilight Theme */
+  /* Deep Sky - Top of the gradient */
+  --color-twilight-deepest: #2d1b69;
+  --color-twilight-deeper: #3d2a7f;
+  --color-twilight-deep: #4a2d9a;
+  
+  /* Mid Sky - Purple gradient */
+  --color-twilight: #6b4ba1;
+  --color-twilight-light: #8b5cb5;
+  --color-twilight-lighter: #a267c8;
+  
+  /* Sunset Glow - Pink/Magenta */
+  --color-sunset-magenta: #d85a9c;
+  --color-sunset-pink: #ed6b9d;
+  --color-sunset-light: #f178a6;
+  
+  /* Horizon - Coral/Salmon */
+  --color-sunset-coral: #ff8aa0;
+  --color-sunset-salmon: #ffa0b0;
+  --color-sunset-lightest: #ffb4c0;
+  
+  /* Silhouettes - Dark Navy/Black */
+  --color-silhouette-darkest: #0a0614;
+  --color-silhouette-dark: #1a1228;
+  --color-silhouette: #2a2040;
+
   --breakpoint-x: 23.43rem;
   --breakpoint-sm: 40rem;
   --breakpoint-md: 48rem;
