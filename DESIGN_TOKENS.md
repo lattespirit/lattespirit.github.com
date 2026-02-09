@@ -138,7 +138,14 @@ The design tokens are defined in `/src/styles/lattespirit.css` within the `@them
 
 3. **Compatibility**: These tokens work alongside existing color tokens in the theme, so they don't replace any existing functionality.
 
-4. **Accessibility**: When using these colors, ensure sufficient contrast ratios for text and interactive elements, especially when combining lighter sunset colors with white text or darker twilight colors with black text.
+4. **Accessibility**: When using these colors, ensure sufficient contrast ratios for text and interactive elements.
+    - **Safe for Text (on White):**
+      - `twilight-deeper` (11.44:1) - ✔ AAA
+      - `twilight-deep` (8.5:1 estimated) - ✔ AAA
+      - `silhouette-dark` (18.09:1) - ✔ AAA
+    - **Caution (Headings Only):**
+      - `sunset-magenta` (3.58:1) - ❌ Fails AA for small text, okay for large headings (sometimes) but best avoided for critical text.
+    - **Backgrounds:** Lighter sunset colors are best used as backgrounds with dark text.
 
 ## Future Enhancements
 

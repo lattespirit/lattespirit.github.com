@@ -1,38 +1,58 @@
 import React from "react";
 
-const H1 = (props) => (
-  <h1 className="font-bold text-5xl text-purple-dark" {...props} />
+const H1 = ({ children, ...props }) => (
+  <h1 className="font-bold text-5xl text-twilight-deeper" {...props}>
+    {children}
+  </h1>
 );
-const H2 = (props) => (
-  <h2 className="font-bold text-4xl text-purple-dark" {...props} />
+const H2 = ({ children, ...props }) => (
+  <h2 className="font-bold text-4xl text-twilight-deeper" {...props}>
+    {children}
+  </h2>
 );
-const H3 = (props) => (
-  <h3 className="font-bold text-3xl text-purple-dark" {...props} />
+const H3 = ({ children, ...props }) => (
+  <h3 className="font-bold text-3xl text-twilight-deeper" {...props}>
+    {children}
+  </h3>
 );
-const H4 = (props) => (
-  <h4 className="font-bold text-2xl text-purple-dark" {...props} />
+const H4 = ({ children, ...props }) => (
+  <h4 className="font-bold text-2xl text-twilight-deeper" {...props}>
+    {children}
+  </h4>
 );
-const H5 = (props) => (
-  <h5 className="font-bold text-xl text-purple-dark" {...props} />
+const H5 = ({ children, ...props }) => (
+  <h5 className="font-bold text-xl text-twilight-deeper" {...props}>
+    {children}
+  </h5>
 );
-const H6 = (props) => (
-  <h6 className="font-bold text-base text-purple-dark" {...props} />
+const H6 = ({ children, ...props }) => (
+  <h6 className="font-bold text-base text-twilight-deeper" {...props}>
+    {children}
+  </h6>
 );
 
-const P = (props) => <p className="leading-relaxed" {...props} />;
+const P = (props) => (
+  <p className="leading-relaxed text-silhouette-dark" {...props} />
+);
 
 const UL = (props) => (
   <ul
-    className="my-2 md:my-3 pl-6 list-outside list-disc marker:text-purple-dark"
+    className="my-2 md:my-3 pl-6 list-outside list-disc marker:text-twilight-deeper"
     {...props}
   />
 );
 
-const LI = (props) => <li className="mb-1 md:mb-2" {...props} />;
+const LI = (props) => (
+  <li className="mb-1 md:mb-2 text-silhouette-dark" {...props} />
+);
 
-const Strong = (props) => <strong className="text-pink-dark" {...props} />;
+const Strong = (props) => (
+  <strong className="text-twilight-deep" {...props} />
+);
 
-const Img = (props) => <img className="mx-auto" {...props} />;
+const Img = ({ alt = "", ...props }) => (
+  <img className="mx-auto" alt={alt} {...props} />
+);
 
 const UI = {
   h1: H1,

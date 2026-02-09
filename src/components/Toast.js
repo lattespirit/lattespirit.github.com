@@ -42,8 +42,12 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
 
   useEffect(() => {
     const cachedSlug = localStorage.getItem("latestPostSlug");
-    if (latestPostSlug && cachedSlug !== latestPostSlug) {
-      setShow(true);
+    if (latestPostSlug) {
+      if (!cachedSlug) {
+        localStorage.setItem("latestPostSlug", latestPostSlug);
+      } else if (cachedSlug !== latestPostSlug) {
+        setShow(true);
+      }
     }
   }, [latestPostSlug]);
 
