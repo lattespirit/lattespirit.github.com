@@ -1,10 +1,6 @@
 import React from 'react';
 import Layout from './src/components/Layout';
-import './src/styles/lattespirit.css';
 
 export const wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>;
 };
-
-// eslint-disable-next-line import/prefer-default-export
-export const onServiceWorkerUpdateReady = () => window.location.reload(true);

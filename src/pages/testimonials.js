@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
 import Head from '../components/Head';
-import Layout from '../components/Layout';
 
 const Testimonials = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +15,7 @@ const Testimonials = () => {
   `);
 
   return (
-    <Layout>
+    <>
       <Head title="Testimonials" />
       <p className="text-white text-center text-2xl md:text-3xl font-bold mt-4 md:mt-8">
         What People Said...
@@ -79,7 +78,7 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

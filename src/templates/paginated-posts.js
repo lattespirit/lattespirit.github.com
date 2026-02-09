@@ -1,7 +1,6 @@
 import { graphql, Link, navigate } from "gatsby";
 import React from "react";
 import NewTag from "../components/NewTag";
-import Layout from "../components/Layout";
 import { motion } from "motion/react";
 import ArrowRight from "../components/icons/ArrowRight";
 import ArrowLeft from "../components/icons/ArrowLeft";
@@ -21,7 +20,7 @@ const PaginatedPosts = ({ data }) => {
     : `/page/${currentPage}`;
 
   return (
-    <Layout>
+    <>
       {/* Paginated Posts */}
       {posts.map(({ node }) => (
         <div
@@ -162,7 +161,7 @@ const PaginatedPosts = ({ data }) => {
           />
         </MotionLink>
       </div>
-    </Layout>
+    </>
   );
 };
 

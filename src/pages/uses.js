@@ -3,12 +3,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
 import Head from '../components/Head';
-import Layout from '../components/Layout';
 
 const Uses = ({ data }) => {
   const { edges } = data.allUsesJson;
   return (
-    <Layout>
+    <>
       <Head title="Uses" />
       <div className="box mt-4">
         <div className="p-4 sm:p-6 md:px-12 bg-gray-lighter opacity-85 rounded-lg">
@@ -73,7 +72,7 @@ const Uses = ({ data }) => {
           </span>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Head from '../components/Head';
-import Layout from '../components/Layout';
 
 const groupPostsByYear = (posts) => {
   return posts.reduce((acc, { node }) => {
@@ -16,7 +15,7 @@ const Archives = ({ data }) => {
   const postsByYear = groupPostsByYear(data.allMdx.edges);
 
   return (
-    <Layout>
+    <>
       <Head title="Archives" />
       <div className="flex flex-col box mt-4 p-6 md:p-10 bg-gray-lighter opacity-85 rounded-lg">
         {Object.keys(postsByYear)
@@ -45,7 +44,7 @@ const Archives = ({ data }) => {
             </div>
           ))}
       </div>
-    </Layout>
+    </>
   );
 };
 

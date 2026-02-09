@@ -3,7 +3,6 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import Head from "../components/Head";
-import Layout from "../components/Layout";
 import Disqus from "../components/Disqus";
 import UI from "../components/UI";
 import Carousel from "../components/Carousel";
@@ -30,7 +29,7 @@ const Post = ({ data, pageContext, children }) => {
     next ? "pointer" : "not-allowed"
   }`;
   return (
-    <Layout>
+    <>
       <Head title={post.frontmatter.title} />
       <div
         className="flex flex-col items-center box mt-4 px-4 md:px-8 lg:px-12 py-2 md:py-4 rounded-lg"
@@ -88,7 +87,7 @@ const Post = ({ data, pageContext, children }) => {
       <Disqus
         disqus={{ slug: post.fields.slug, title: post.frontmatter.title }}
       />
-    </Layout>
+    </>
   );
 };
 
