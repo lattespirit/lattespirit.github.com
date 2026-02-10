@@ -68,91 +68,120 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {open && (
-          <motion.div
-            className="fixed flex flex-col w-full h-full max-h-full inset-0 bg-purple-dark/95 backdrop-blur-md z-20"
-            variants={{
-              open: {
-                x: "0",
-                transition: {
-                  ease: [0.76, 0, 0.24, 1],
-                  duration: 0.2,
-                  staggerChildren: 0.1,
+          <>
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-20 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeMenu}
+            />
+            <motion.div
+              className="fixed top-0 right-0 h-full w-full md:w-[450px] bg-purple-dark/95 z-30"
+              variants={{
+                open: {
+                  x: "0%",
+                  transition: {
+                    duration: 0.55,
+                    ease: [0.76, 0, 0.24, 1],
+                  },
                 },
-              },
-              closed: {
-                x: "100%",
-                transition: {
-                  ease: [0.76, 0, 0.24, 1],
-                  duration: 0.2,
-                  staggerChildren: 0.1,
-                  staggerDirection: -1,
-                  delay: 0.1,
+                closed: {
+                  x: "100%",
+                  transition: {
+                    duration: 0.55,
+                    ease: [0.76, 0, 0.24, 1],
+                  },
                 },
-              },
-            }}
-            initial="closed"
-            animate="open"
-            exit="closed"
-          >
-            <header className="flex justify-end items-center box min-h-20">
-              <button
-                className="flex justify-center items-center py-6"
-                onClick={closeMenu}
-                role="link"
-                aria-label="Close menu"
-                tabIndex={0}
+              }}
+              initial="closed"
+              animate="open"
+              exit="closed"
+            >
+              <svg 
+                className="absolute top-0 -left-[99px] w-[100px] h-full fill-purple-dark/95 stroke-none" 
+                preserveAspectRatio="none" 
+                viewBox="0 0 100 100"
               >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-6 h-6 text-white feather feather-x"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </button>
-            </header>
-            <div className="w-20 mx-auto text-center">
-              {links.map((menu, index) => (
-                <MotionLink
-                  className="block font-bold text-white py-4 no-underline"
-                  to={menu.url}
-                  key={menu.title}
-                  onClick={closeMenu}
-                  whileTap={{ scale: 0.95 }}
-                  custom={index}
+                <motion.path 
                   variants={{
-                    open: (i) => ({
-                      x: 0,
-                      opacity: 1,
-                      transition: {
-                        duration: 0.5,
-                        ease: [0.76, 0, 0.24, 1],
-                        delay: 0.05 * i,
-                      },
-                    }),
-                    closed: (i) => ({
-                      x: 80,
-                      opacity: 0,
-                      transition: {
-                        duration: 0.5,
-                        ease: [0.76, 0, 0.24, 1],
-                        delay: 0.05 * i,
-                      },
-                    }),
+                    open: { 
+                      d: "M100 0 L100 100 C -75 100 -75 0 100 0",
+                      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] }
+                    },
+                    closed: { 
+                      d: "M100 0 L100 100 C 100 100 100 0 100 0",
+                      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] }
+                    }
                   }}
-                >
-                  {menu.title}
-                </MotionLink>
-              ))}
-            </div>
-          </motion.div>
+                  initial="closed"
+                  animate="open"
+                  exit="closed"
+                />
+              </svg>
+              
+              <div className="flex flex-col h-full box">
+                <header className="flex justify-end items-center min-h-20 py-6">
+                  <button
+                    className="flex justify-center items-center"
+                    onClick={closeMenu}
+                    role="link"
+                    aria-label="Close menu"
+                    tabIndex={0}
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6 text-white feather feather-x"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                  </button>
+                </header>
+                <div className="flex flex-col justify-center items-center gap-8 mt-20">
+                  {links.map((menu, index) => (
+                    <MotionLink
+                      className="block text-xl font-light text-white no-underline"
+                      to={menu.url}
+                      key={menu.title}
+                      onClick={closeMenu}
+                      whileTap={{ scale: 0.95 }}
+                      custom={index}
+                      variants={{
+                        open: (i) => ({
+                          x: 0,
+                          opacity: 1,
+                          transition: {
+                            duration: 0.5,
+                            ease: [0.76, 0, 0.24, 1],
+                            delay: 0.05 * i,
+                          },
+                        }),
+                        closed: (i) => ({
+                          x: 80,
+                          opacity: 0,
+                          transition: {
+                            duration: 0.5,
+                            ease: [0.76, 0, 0.24, 1],
+                            delay: 0.05 * i,
+                          },
+                        }),
+                      }}
+                    >
+                      {menu.title}
+                    </MotionLink>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
