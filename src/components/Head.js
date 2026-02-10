@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
-export default ({ title }) => {
+const Head = ({ title }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -18,3 +18,9 @@ export default ({ title }) => {
     : data.site.siteMetadata.title;
   return <Helmet title={caculatedTitle} />;
 };
+
+Head.propTypes = {
+  title: PropTypes.string
+};
+
+export default Head;

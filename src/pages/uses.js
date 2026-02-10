@@ -56,6 +56,7 @@ const Uses = ({ data }) => {
                           <img
                             className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-center object-cover ml-2 lg:ml-auto"
                             src={item.image.path.publicURL}
+                            alt={item.title}
                           />
                     )}
                   </div>

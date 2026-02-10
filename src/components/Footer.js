@@ -1,7 +1,7 @@
 import React from 'react';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 
-export default () => {
+const Footer = () => {
   const { author } = useSiteMetadata();
 
   return (
@@ -64,3 +64,5 @@ export default () => {
     </footer>
   );
 };
+
+export default Footer;

@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { globalHistory } from '@reach/router';
 
-export default ({ children }) => {
+const Typography = ({ children }) => {
   const menus = [
     {
       name: 'Logos',
@@ -58,3 +58,5 @@ export default ({ children }) => {
     </>
   );
 };
+
+export default Typography;

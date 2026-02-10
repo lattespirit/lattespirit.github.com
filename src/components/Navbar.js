@@ -17,7 +17,7 @@ const Navbar = () => {
     { title: "Archives", url: "/archives", showInLargeScreen: true },
     { title: "Uses", url: "/uses", showInLargeScreen: true },
     { title: "Testimonials", url: "/testimonials", showInLargeScreen: true },
-    { title: "Typography", url: "/logos", showInLargeScreen: false },
+    // { title: "Typography", url: "/logos", showInLargeScreen: false },
     { title: "About", url: "/about", showInLargeScreen: true },
   ];
 
@@ -50,6 +50,7 @@ const Navbar = () => {
         onClick={toggleMenu}
         role="link"
         tabIndex={0}
+        aria-label="Toggle menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +77,7 @@ const Navbar = () => {
                 x: "0",
                 transition: {
                   ease: [0.76, 0, 0.24, 1],
-                  duration: 0.38,
+                  duration: 0.2,
                   staggerChildren: 0.1,
                 },
               },
@@ -84,10 +85,10 @@ const Navbar = () => {
                 x: "100%",
                 transition: {
                   ease: [0.76, 0, 0.24, 1],
-                  duration: 0.3,
+                  duration: 0.2,
                   staggerChildren: 0.1,
                   staggerDirection: -1,
-                  delay: 0.4,
+                  delay: 0.1,
                 },
               },
             }}
@@ -100,6 +101,7 @@ const Navbar = () => {
                 className="flex justify-center items-center py-6"
                 onClick={closeMenu}
                 role="link"
+                aria-label="Close menu"
                 tabIndex={0}
               >
                 <svg
@@ -122,6 +124,7 @@ const Navbar = () => {
                   className="block font-bold text-white py-4 no-underline"
                   to={menu.url}
                   key={menu.title}
+                  onClick={closeMenu}
                   whileTap={{ scale: 0.95 }}
                   custom={index}
                   variants={{

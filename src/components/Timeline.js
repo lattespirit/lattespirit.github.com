@@ -197,7 +197,7 @@ class Timeline extends Component {
   }
 }
 
-export default () => (
+const TimelineWrapper = () => (
   <StaticQuery
     query={graphql`
       query EventsQuery {
@@ -241,3 +241,5 @@ export default () => (
     render={(data) => <Timeline data={data} />}
   />
 );
+
+export default TimelineWrapper;
