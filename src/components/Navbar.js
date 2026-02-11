@@ -108,11 +108,11 @@ const Navbar = () => {
                 <motion.path 
                   variants={{
                     open: { 
-                      d: "M100 0 L100 100 C -75 100 -75 0 100 0",
+                      d: "M100 0 L100 100 Q-100 50 100 0",
                       transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
                     },
                     closed: { 
-                      d: "M100 0 L100 100 C 100 100 100 0 100 0",
+                      d: "M100 0 L100 100 Q100 50 100 0",
                       transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
                     }
                   }}
