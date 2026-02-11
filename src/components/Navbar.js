@@ -68,7 +68,7 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {open && (
           <>
             <motion.div
