@@ -79,7 +79,7 @@ const Navbar = () => {
               onClick={closeMenu}
             />
             <motion.div
-              className="fixed top-0 right-0 h-full w-full md:w-[450px] bg-purple-dark/95 z-30"
+              className="fixed top-0 right-0 h-full w-full md:w-112.5 bg-purple-dark z-30"
               variants={{
                 open: {
                   x: "0%",
@@ -101,7 +101,7 @@ const Navbar = () => {
               exit="closed"
             >
               <svg 
-                className="absolute top-0 -left-[99px] w-[100px] h-full fill-purple-dark/95 stroke-none" 
+                className="absolute top-0 -left-24.75 w-25 h-full fill-purple-dark stroke-none" 
                 preserveAspectRatio="none" 
                 viewBox="0 0 100 100"
               >
