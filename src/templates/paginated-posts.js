@@ -1,5 +1,6 @@
 import { graphql, Link, navigate } from "gatsby";
 import React from "react";
+import PropTypes from "prop-types";
 import NewTag from "../components/NewTag";
 import { motion } from "motion/react";
 import ArrowRight from "../components/icons/ArrowRight";
@@ -13,11 +14,43 @@ const PaginatedPosts = ({ data }) => {
   const { edges: posts, pageInfo } = data.allMdx;
   const { currentPage, hasNextPage, hasPreviousPage, pageCount } = pageInfo;
 
-  const previousUri =
-    hasPreviousPage && currentPage !== 2 ? `/page/${currentPage - 1}` : "/";
-  const nextUri = hasNextPage
-    ? `/page/${currentPage + 1}`
-    : `/page/${currentPage}`;
+  const previousUri = currentPage - 1 === 1 ? "/" : `/page/${currentPage - 1}`;
+  const nextUri = `/page/${currentPage + 1}`;
+
+  const getPaginationItems = () => {
+    if (pageCount <= 7) {
+      return Array.from({ length: pageCount }, (_, index) => index + 1);
+    }
+
+    const items = [1];
+    let left = Math.max(2, currentPage - 1);
+    let right = Math.min(pageCount - 1, currentPage + 1);
+
+    if (currentPage <= 3) {
+      right = 4;
+    }
+
+    if (currentPage >= pageCount - 2) {
+      left = pageCount - 3;
+    }
+
+    if (left > 2) {
+      items.push("left-ellipsis");
+    }
+
+    for (let page = left; page <= right; page += 1) {
+      items.push(page);
+    }
+
+    if (right < pageCount - 1) {
+      items.push("right-ellipsis");
+    }
+
+    items.push(pageCount);
+    return items;
+  };
+
+  const paginationItems = getPaginationItems();
 
   return (
     <>
@@ -102,64 +135,99 @@ const PaginatedPosts = ({ data }) => {
           </div>
         </div>
       ))}
-      <div className="flex justify-center items-center w-72 x:w-84 sm:w-100 h-8 mt-12 mx-auto">
+      <div className="flex justify-center items-center w-full max-w-xs sm:max-w-md md:max-w-xl h-10 mt-12 mx-auto px-2">
         {/* Previous Button */}
-        <MotionLink
-          className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
-          to={previousUri}
-          aria-label="Previous"
-          whileHover="hover"
-          initial="rest"
-          animate="rest"
-        >
-          <MotionArrowLeft
-            className="w-4 h-4 text-black"
-            variants={{
-              rest: { x: 0 },
-              hover: { x: -3 },
-            }}
-            transition={{ type: "spring", stiffness: 300 }}
-          />
-        </MotionLink>
-        <div className="flex justify-center items-center h-10 mx-4 px-4 rounded-lg bg-gray-lighter opacity-85 gap-3">
-          {Array.from({ length: pageCount }).map((_, i) => (
-            <MotionLink
-              to={i === 0 ? "/" : `/page/${i + 1}`}
-              className={`inline-flex w-8 h-8 font-medium justify-center items-center no-underline rounded-full ${
-                currentPage === i + 1
-                  ? "bg-purple-light text-white shadow-sm"
-                  : "text-gray-darkest"
-              }`}
-              key={i}
-              whileHover={{
-                backgroundColor: "var(--color-purple-light)",
-                color: "white",
-                scale: 1.1,
+        {hasPreviousPage ? (
+          <MotionLink
+            className="inline-flex justify-center items-center w-9 h-9 rounded-full bg-gray-lighter opacity-85 text-black no-underline shrink-0"
+            to={previousUri}
+            aria-label="Previous"
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+          >
+            <MotionArrowLeft
+              className="w-4 h-4 text-black"
+              variants={{
+                rest: { x: 0 },
+                hover: { x: -3 },
               }}
-              transition={{ duration: 0.2 }}
-            >
-              {i + 1}
-            </MotionLink>
-          ))}
+              transition={{ type: "spring", stiffness: 300 }}
+            />
+          </MotionLink>
+        ) : (
+          <span
+            className="inline-flex justify-center items-center w-9 h-9 rounded-full bg-gray-lighter opacity-45 text-black shrink-0"
+            aria-hidden="true"
+          >
+            <ArrowLeft className="w-4 h-4" />
+          </span>
+        )}
+
+        <div className="flex justify-center items-center h-10 mx-2 sm:mx-4 px-2 sm:px-4 rounded-lg bg-gray-lighter opacity-85 gap-1 sm:gap-2 min-w-0">
+          {paginationItems.map((item) => {
+            if (typeof item !== "number") {
+              return (
+                <span
+                  className="inline-flex w-8 h-8 font-medium justify-center items-center text-gray-darkest"
+                  key={item}
+                  aria-hidden="true"
+                >
+                  …
+                </span>
+              );
+            }
+
+            return (
+              <MotionLink
+                to={item === 1 ? "/" : `/page/${item}`}
+                className={`inline-flex w-8 h-8 text-sm sm:text-base font-medium justify-center items-center no-underline rounded-full shrink-0 ${
+                  currentPage === item
+                    ? "bg-purple-light text-white shadow-sm"
+                    : "text-gray-darkest"
+                }`}
+                key={item}
+                whileHover={{
+                  backgroundColor: "var(--color-purple-light)",
+                  color: "white",
+                  scale: 1.08,
+                }}
+                transition={{ duration: 0.2 }}
+                aria-current={currentPage === item ? "page" : undefined}
+              >
+                {item}
+              </MotionLink>
+            );
+          })}
         </div>
+
         {/* Next Button */}
-        <MotionLink
-          className="inline-flex justify-center items-center w-8 h-8 rounded-full bg-gray-lighter opacity-85 text-black no-underline"
-          aria-label="Next"
-          to={nextUri}
-          whileHover="hover"
-          initial="rest"
-          animate="rest"
-        >
-          <MotionArrowRight
-            className="w-4 h-4 text-black"
-            variants={{
-              rest: { x: 0 },
-              hover: { x: 3 },
-            }}
-            transition={{ type: "spring", stiffness: 300 }}
-          />
-        </MotionLink>
+        {hasNextPage ? (
+          <MotionLink
+            className="inline-flex justify-center items-center w-9 h-9 rounded-full bg-gray-lighter opacity-85 text-black no-underline shrink-0"
+            aria-label="Next"
+            to={nextUri}
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+          >
+            <MotionArrowRight
+              className="w-4 h-4 text-black"
+              variants={{
+                rest: { x: 0 },
+                hover: { x: 3 },
+              }}
+              transition={{ type: "spring", stiffness: 300 }}
+            />
+          </MotionLink>
+        ) : (
+          <span
+            className="inline-flex justify-center items-center w-9 h-9 rounded-full bg-gray-lighter opacity-45 text-black shrink-0"
+            aria-hidden="true"
+          >
+            <ArrowRight className="w-4 h-4" />
+          </span>
+        )}
       </div>
     </>
   );
@@ -194,5 +262,19 @@ export const PaginatedPostsQuery = graphql`
     }
   }
 `;
+
+PaginatedPosts.propTypes = {
+  data: PropTypes.shape({
+    allMdx: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object).isRequired,
+      pageInfo: PropTypes.shape({
+        currentPage: PropTypes.number.isRequired,
+        hasNextPage: PropTypes.bool.isRequired,
+        hasPreviousPage: PropTypes.bool.isRequired,
+        pageCount: PropTypes.number.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default PaginatedPosts;
