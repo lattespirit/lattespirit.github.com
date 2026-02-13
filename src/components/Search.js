@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import { graphql, useStaticQuery, navigate } from "gatsby";
 import {
   Combobox,
@@ -27,6 +27,62 @@ const Empty = () => (
     <p className="mt-4">有几多青春美丽</p>
   </div>
 );
+
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const highlightText = (text, query) => {
+  const safeText = typeof text === "string" ? text : "";
+  const q = typeof query === "string" ? query.trim() : "";
+  if (!q) return safeText;
+
+  const regex = new RegExp(`(${escapeRegExp(q)})`, "ig");
+  const parts = safeText.split(regex);
+  const exactMatch = new RegExp(`^${escapeRegExp(q)}$`, "i");
+
+  return parts.map((part, index) => {
+    if (!part) return null;
+    if (exactMatch.test(part)) {
+      return (
+        <span
+          key={`${part}-${index}`}
+          className="bg-sunset-lightest/70 text-silhouette-darkest rounded-sm px-0.5"
+        >
+          {part}
+        </span>
+      );
+    }
+    return <React.Fragment key={`${part}-${index}`}>{part}</React.Fragment>;
+  });
+};
+
+const normalizeContent = (value) => {
+  const safeValue = typeof value === "string" ? value : "";
+  return safeValue.replace(/\s+/g, " ").trim();
+};
+
+const buildSnippet = ({ content, query, matchIndex }) => {
+  const raw = typeof content === "string" ? content : "";
+  if (!raw) return { text: "", hasLeadingEllipsis: false, hasTrailingEllipsis: false };
+
+  const q = typeof query === "string" ? query.trim() : "";
+  const before = 70;
+  const after = Math.max(90, q.length * 6);
+  const fallbackLength = 220;
+
+  let start = 0;
+  let end = Math.min(raw.length, fallbackLength);
+
+  if (q && typeof matchIndex === "number" && Number.isFinite(matchIndex)) {
+    start = Math.max(0, matchIndex - before);
+    end = Math.min(raw.length, matchIndex + q.length + after);
+  }
+
+  const hasLeadingEllipsis = start > 0;
+  const hasTrailingEllipsis = end < raw.length;
+
+  const text = normalizeContent(raw.slice(start, end));
+  return { text, hasLeadingEllipsis, hasTrailingEllipsis };
+};
 
 export default function Search() {
   const data = useStaticQuery(graphql`
@@ -64,22 +120,29 @@ export default function Search() {
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef(null);
 
-  const fuse = new Fuse(posts, {
-    shouldSort: true,
-    threshold: 0.6,
-    location: 0,
-    distance: 1000,
-    maxPatternLength: 32,
-    minMatchCharLength: 1,
-    keys: ["title", "content", "url"],
-  });
+  const fuse = useMemo(
+    () =>
+      new Fuse(posts, {
+        shouldSort: true,
+        threshold: 0.6,
+        location: 0,
+        distance: 1000,
+        maxPatternLength: 32,
+        minMatchCharLength: 1,
+        includeMatches: true,
+        findAllMatches: true,
+        keys: ["title", "content", "url"],
+      }),
+    [posts]
+  );
 
   const safeQuery = typeof query === "string" ? query : "";
 
-  const filteredOptions =
-    safeQuery.trim() === ""
-      ? posts
-      : fuse.search(safeQuery).map((result) => result.item);
+  const searchResults = useMemo(() => {
+    const q = safeQuery.trim();
+    if (q === "") return posts.map((item) => ({ item, matches: [] }));
+    return fuse.search(q);
+  }, [fuse, posts, safeQuery]);
 
   const ref = useClickAway(() => {
     setIsOpen(false);
@@ -113,11 +176,24 @@ export default function Search() {
   }, []);
 
   useEffect(() => {
+    const handleOpenSearch = () => {
+      setIsOpen(true);
+    };
+
+    window.addEventListener("open-search", handleOpenSearch);
+    return () => {
+      window.removeEventListener("open-search", handleOpenSearch);
+    };
+  }, []);
+
+  useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
+      setQuery("");
+      setSelectedPost(undefined);
     }
   }, [isOpen]);
 
@@ -126,6 +202,7 @@ export default function Search() {
       setSelectedPost(post);
       setQuery(post.title);
       navigate(post.url);
+      setIsOpen(false);
     }
   };
 
@@ -154,11 +231,11 @@ export default function Search() {
           initial="closed"
           animate="open"
           exit="closed"
-          className="hidden lg:block fixed inset-0 bg-purple-dark/40 backdrop-blur-md"
+          className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md z-40"
         >
           <div
             ref={ref}
-            className="relative w-1/2 mx-auto mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10 will-change-transform"
+            className="relative w-[calc(100%-1.5rem)] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-1/2 max-w-5xl mx-auto mt-4 sm:mt-8 md:mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10 will-change-transform"
           >
             <button
               className="absolute -top-4 -right-5 cursor-pointer"
@@ -193,39 +270,58 @@ export default function Search() {
                 <ComboboxOptions
                   data-open
                   transition
-                  className="origin-top transition duration-200 ease-out empty:invisible data-[closed]:scale-95 data-[closed]:opacity-0"
+                  className="origin-top transition duration-200 ease-out empty:invisible data-closed:scale-95 data-closed:opacity-0"
                   style={{ maxHeight: "60vh" }}
                 >
-                  {filteredOptions.map((post) => (
-                    <ComboboxOption
-                      key={post?.url}
-                      value={post}
-                      className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-[focus]:bg-purple-dark/30"
-                    >
-                      <div className="flex justify-between">
-                        <span className="text-purple-dark/80 font-bold">
-                          {post?.title || "Untitled"}
-                        </span>
-                        <span className="text-gray-darkest text-sm">
-                          {post?.date || ""}
-                        </span>
-                      </div>
-                      <div className="flex gap-4">
-                        <span className="text-sm text-purple-dark/70">
-                          {(post?.content || "").slice(0, 80)}...
-                        </span>
-                        <div className="w-4 h-4 ml-auto">
-                          <ArrowUturnRightIcon className="invisible size-5 ml-auto group-data-[focus]:visible" />
+                  {searchResults.map((result) => {
+                    const post = result?.item;
+                    const contentMatch = result?.matches?.find(
+                      (match) =>
+                        match?.key === "content" &&
+                        Array.isArray(match?.indices) &&
+                        match.indices.length > 0 &&
+                        Array.isArray(match.indices[0])
+                    );
+                    const matchIndex = contentMatch?.indices?.[0]?.[0];
+                    const snippet = buildSnippet({
+                      content: post?.content || "",
+                      query: safeQuery,
+                      matchIndex,
+                    });
+
+                    return (
+                      <ComboboxOption
+                        key={post?.url}
+                        value={post}
+                        className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-focus:bg-purple-dark/30"
+                      >
+                        <div className="flex justify-between">
+                          <span className="text-purple-dark/80 font-bold">
+                            {post?.title || "Untitled"}
+                          </span>
+                          <span className="text-gray-darkest text-sm">
+                            {post?.date || ""}
+                          </span>
                         </div>
-                      </div>
-                    </ComboboxOption>
-                  ))}
-                  {filteredOptions.length === 0 && <Empty />}
+                        <div className="flex gap-4">
+                          <span className="text-sm text-purple-dark/70">
+                            {snippet.hasLeadingEllipsis ? "…" : null}
+                            {highlightText(snippet.text, safeQuery)}
+                            {snippet.hasTrailingEllipsis ? "…" : null}
+                          </span>
+                          <div className="w-4 h-4 ml-auto">
+                            <ArrowUturnRightIcon className="invisible size-5 ml-auto group-data-focus:visible" />
+                          </div>
+                        </div>
+                      </ComboboxOption>
+                    );
+                  })}
+                  {searchResults.length === 0 && <Empty />}
                 </ComboboxOptions>
               </div>
             </Combobox>
 
-            <div className="absolute inset-x-0 px-4">
+            <div className="absolute inset-x-0 px-4 hidden lg:block">
               <div className="h-8 flex items-center gap-6 px-4 bg-pink-dark/80 rounded-lg">
                 <div className="flex items-center gap-1">
                   <ArrowUpCircleIcon className="size-6 text-white" />
