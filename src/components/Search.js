@@ -192,6 +192,8 @@ export default function Search() {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
+      setQuery("");
+      setSelectedPost(undefined);
     }
   }, [isOpen]);
 
@@ -295,7 +297,7 @@ export default function Search() {
                       >
                         <div className="flex justify-between">
                           <span className="text-purple-dark/80 font-bold">
-                            {highlightText(post?.title || "Untitled", safeQuery)}
+                            {post?.title || "Untitled"}
                           </span>
                           <span className="text-gray-darkest text-sm">
                             {post?.date || ""}
@@ -319,7 +321,7 @@ export default function Search() {
               </div>
             </Combobox>
 
-            <div className="absolute inset-x-0 px-4">
+            <div className="absolute inset-x-0 px-4 hidden lg:block">
               <div className="h-8 flex items-center gap-6 px-4 bg-pink-dark/80 rounded-lg">
                 <div className="flex items-center gap-1">
                   <ArrowUpCircleIcon className="size-6 text-white" />

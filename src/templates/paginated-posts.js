@@ -181,7 +181,7 @@ const PaginatedPosts = ({ data }) => {
             return (
               <MotionLink
                 to={item === 1 ? "/" : `/page/${item}`}
-                className={`inline-flex w-8 h-8 text-sm sm:text-base font-medium justify-center items-center no-underline rounded-full shrink-0 ${
+                className={`inline-flex w-7 h-7 sm:w-8 sm:h-8 text-sm sm:text-base font-medium justify-center items-center no-underline rounded-full shrink-0 ${
                   currentPage === item
                     ? "bg-purple-light text-white shadow-sm"
                     : "text-gray-darkest"
