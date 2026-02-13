@@ -58,6 +58,25 @@ const Navbar = () => {
   const { open: openTransition, closed: closedTransition } =
     animationProfiles[animationProfile];
 
+  const curveProfiles = {
+    soft: {
+      open: "M100 0 L100 100 Q-40 50 100 0",
+      closed: "M100 0 L100 100 Q240 50 100 0",
+    },
+    gentle: {
+      open: "M100 0 L100 100 Q-30 50 100 0",
+      closed: "M100 0 L100 100 Q230 50 100 0",
+    },
+    light: {
+      open: "M100 0 L100 100 Q-20 50 100 0",
+      closed: "M100 0 L100 100 Q220 50 100 0",
+    },
+  };
+
+  const curveProfile = "soft";
+  const { open: openCurvePath, closed: closedCurvePath } =
+    curveProfiles[curveProfile];
+
   return (
     <header className="flex justify-between items-center box py-6 min-h-20">
       <Link
@@ -151,11 +170,11 @@ const Navbar = () => {
                 <motion.path 
                   variants={{
                     open: { 
-                      d: "M100 0 L100 100 Q-100 50 100 0",
+                      d: openCurvePath,
                       transition: openTransition,
                     },
                     closed: { 
-                      d: "M100 0 L100 100 Q100 50 100 0",
+                      d: closedCurvePath,
                       transition: closedTransition,
                     }
                   }}
