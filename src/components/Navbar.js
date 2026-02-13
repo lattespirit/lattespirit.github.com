@@ -21,6 +21,43 @@ const Navbar = () => {
     { title: "About", url: "/about", showInLargeScreen: true },
   ];
 
+  const animationProfiles = {
+    balanced: {
+      open: {
+        duration: 0.7,
+        ease: [0.76, 0, 0.24, 1],
+      },
+      closed: {
+        duration: 0.6,
+        ease: [0.76, 0, 0.24, 1],
+      },
+    },
+    symmetric: {
+      open: {
+        duration: 0.8,
+        ease: [0.76, 0, 0.24, 1],
+      },
+      closed: {
+        duration: 0.8,
+        ease: [0.76, 0, 0.24, 1],
+      },
+    },
+    classic: {
+      open: {
+        duration: 1,
+        ease: [0.76, 0, 0.24, 1],
+      },
+      closed: {
+        duration: 0.8,
+        ease: [0.76, 0, 0.24, 1],
+      },
+    },
+  };
+
+  const animationProfile = "balanced";
+  const { open: openTransition, closed: closedTransition } =
+    animationProfiles[animationProfile];
+
   return (
     <header className="flex justify-between items-center box py-6 min-h-20">
       <Link
@@ -89,17 +126,11 @@ const Navbar = () => {
               variants={{
                 open: {
                   x: "0%",
-                  transition: {
-                    duration: 0.7,
-                    ease: [0.33, 1, 0.68, 1],
-                  },
+                  transition: openTransition,
                 },
                 closed: {
                   x: "100%",
-                  transition: {
-                    duration: 0.6,
-                    ease: [0.33, 1, 0.68, 1],
-                  },
+                  transition: closedTransition,
                 },
               }}
               initial="closed"
@@ -121,11 +152,11 @@ const Navbar = () => {
                   variants={{
                     open: { 
                       d: "M100 0 L100 100 Q-100 50 100 0",
-                      transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
+                      transition: openTransition,
                     },
                     closed: { 
                       d: "M100 0 L100 100 Q100 50 100 0",
-                      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
+                      transition: closedTransition,
                     }
                   }}
                   initial="closed"
