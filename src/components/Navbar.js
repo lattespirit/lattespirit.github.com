@@ -68,7 +68,7 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {open && (
           <>
             <motion.div
@@ -80,7 +80,12 @@ const Navbar = () => {
             />
             <motion.div
               className="fixed top-0 right-0 h-full w-full md:w-112.5 bg-purple-dark z-30"
-              style={{ willChange: 'transform' }}
+              style={{
+                willChange: 'transform',
+                transform: 'translate3d(0, 0, 0)',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+              }}
               variants={{
                 open: {
                   x: "0%",
@@ -105,17 +110,22 @@ const Navbar = () => {
                 className="absolute top-0 -left-24.75 w-25 h-full fill-purple-dark stroke-none" 
                 preserveAspectRatio="none" 
                 viewBox="0 0 100 100"
-                style={{ willChange: 'auto' }}
+                shapeRendering="geometricPrecision"
+                style={{
+                  transform: 'translate3d(0, 0, 0)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                }}
               >
                 <motion.path 
                   variants={{
                     open: { 
                       d: "M100 0 L100 100 Q-100 50 100 0",
-                      transition: { duration: 0.7, ease: [0.33, 1, 0.68, 1] }
+                      transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
                     },
                     closed: { 
                       d: "M100 0 L100 100 Q100 50 100 0",
-                      transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1] }
+                      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
                     }
                   }}
                   initial="closed"
