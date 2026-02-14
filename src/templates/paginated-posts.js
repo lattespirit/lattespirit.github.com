@@ -6,9 +6,9 @@ import { motion } from "motion/react";
 import ArrowRight from "../components/icons/ArrowRight";
 import ArrowLeft from "../components/icons/ArrowLeft";
 
-const MotionArrowRight = motion(ArrowRight);
-const MotionArrowLeft = motion(ArrowLeft);
-const MotionLink = motion(Link);
+const MotionArrowRight = motion.create(ArrowRight);
+const MotionArrowLeft = motion.create(ArrowLeft);
+const MotionLink = motion.create(Link);
 
 const PaginatedPosts = ({ data }) => {
   const { edges: posts, pageInfo } = data.allMdx;

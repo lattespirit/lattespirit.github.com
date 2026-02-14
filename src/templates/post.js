@@ -11,9 +11,9 @@ import ArrowLeft from "../components/icons/ArrowLeft";
 import ArrowRight from "../components/icons/ArrowRight";
 import { motion } from "motion/react";
 
-const MotionArrowLeft = motion(ArrowLeft);
-const MotionArrowRight = motion(ArrowRight);
-const MotionLink = motion(Link);
+const MotionArrowLeft = motion.create(ArrowLeft);
+const MotionArrowRight = motion.create(ArrowRight);
+const MotionLink = motion.create(Link);
 
 const Post = ({ data, pageContext, children }) => {
   const post = data.mdx;

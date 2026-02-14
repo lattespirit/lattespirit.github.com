@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "motion/react";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
