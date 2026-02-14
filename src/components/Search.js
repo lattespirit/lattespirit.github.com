@@ -13,6 +13,7 @@ import {
   ArrowDownCircleIcon,
   ArrowUpCircleIcon,
   XCircleIcon,
+  TrashIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 import { useClickAway } from "@uidotdev/usehooks";
@@ -29,6 +30,15 @@ const Empty = () => (
 );
 
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const countOccurrences = (text, query) => {
+  const source = typeof text === "string" ? text : "";
+  const q = typeof query === "string" ? query.trim() : "";
+  if (!source || !q) return 0;
+
+  const matches = source.match(new RegExp(escapeRegExp(q), "ig"));
+  return matches ? matches.length : 0;
+};
 
 const highlightText = (text, query) => {
   const safeText = typeof text === "string" ? text : "";
@@ -55,12 +65,74 @@ const highlightText = (text, query) => {
   });
 };
 
-const normalizeContent = (value) => {
-  const safeValue = typeof value === "string" ? value : "";
-  return safeValue.replace(/\s+/g, " ").trim();
+const highlightByRanges = (text, ranges = []) => {
+  const safeText = typeof text === "string" ? text : "";
+  if (!safeText || !Array.isArray(ranges) || ranges.length === 0) return safeText;
+
+  const normalizedRanges = ranges
+    .filter(
+      (range) =>
+        Array.isArray(range) &&
+        range.length === 2 &&
+        Number.isFinite(range[0]) &&
+        Number.isFinite(range[1]) &&
+        range[0] <= range[1]
+    )
+    .map(([start, end]) => [Math.max(0, start), Math.min(safeText.length - 1, end)])
+    .sort((a, b) => a[0] - b[0]);
+
+  if (normalizedRanges.length === 0) return safeText;
+
+  const mergedRanges = [];
+  normalizedRanges.forEach(([start, end]) => {
+    if (mergedRanges.length === 0) {
+      mergedRanges.push([start, end]);
+      return;
+    }
+    const last = mergedRanges[mergedRanges.length - 1];
+    if (start <= last[1] + 1) {
+      last[1] = Math.max(last[1], end);
+    } else {
+      mergedRanges.push([start, end]);
+    }
+  });
+
+  const parts = [];
+  let currentIndex = 0;
+
+  mergedRanges.forEach(([start, end], index) => {
+    if (currentIndex < start) {
+      parts.push(
+        <React.Fragment key={`text-${index}-${currentIndex}`}>
+          {safeText.slice(currentIndex, start)}
+        </React.Fragment>
+      );
+    }
+
+    parts.push(
+      <span
+        key={`highlight-${index}-${start}`}
+        className="bg-sunset-lightest/70 text-silhouette-darkest rounded-sm px-0.5"
+      >
+        {safeText.slice(start, end + 1)}
+      </span>
+    );
+
+    currentIndex = end + 1;
+  });
+
+  if (currentIndex < safeText.length) {
+    parts.push(
+      <React.Fragment key={`tail-${currentIndex}`}>
+        {safeText.slice(currentIndex)}
+      </React.Fragment>
+    );
+  }
+
+  return parts;
 };
 
-const buildSnippet = ({ content, query, matchIndex }) => {
+const buildSnippet = ({ content, query, matchIndex, matchRanges = [] }) => {
   const raw = typeof content === "string" ? content : "";
   if (!raw) return { text: "", hasLeadingEllipsis: false, hasTrailingEllipsis: false };
 
@@ -79,9 +151,25 @@ const buildSnippet = ({ content, query, matchIndex }) => {
 
   const hasLeadingEllipsis = start > 0;
   const hasTrailingEllipsis = end < raw.length;
+  const snippetRanges = Array.isArray(matchRanges)
+    ? matchRanges
+        .filter(
+          (range) =>
+            Array.isArray(range) &&
+            range.length === 2 &&
+            Number.isFinite(range[0]) &&
+            Number.isFinite(range[1]) &&
+            range[1] >= start &&
+            range[0] <= end
+        )
+        .map(([rangeStart, rangeEnd]) => [
+          Math.max(0, rangeStart - start),
+          Math.min(end - start - 1, rangeEnd - start),
+        ])
+    : [];
 
-  const text = normalizeContent(raw.slice(start, end));
-  return { text, hasLeadingEllipsis, hasTrailingEllipsis };
+  const text = raw.slice(start, end);
+  return { text, hasLeadingEllipsis, hasTrailingEllipsis, highlightRanges: snippetRanges };
 };
 
 export default function Search() {
@@ -107,13 +195,16 @@ export default function Search() {
     }
   `);
 
-  const posts =
-    data.allMdx.posts.map((post) => ({
-      title: post.frontmatter.title,
-      url: `/${post.fields.slug}`,
-      content: post.excerpt,
-      date: post.fields.date,
-    })) || [];
+  const posts = useMemo(
+    () =>
+      (data?.allMdx?.posts || []).map((post) => ({
+        title: post.frontmatter.title,
+        url: `/${post.fields.slug}`,
+        content: post.excerpt,
+        date: post.fields.date,
+      })),
+    [data?.allMdx?.posts]
+  );
 
   const [query, setQuery] = useState("");
   const [selectedPost, setSelectedPost] = useState();
@@ -124,14 +215,18 @@ export default function Search() {
     () =>
       new Fuse(posts, {
         shouldSort: true,
-        threshold: 0.6,
-        location: 0,
-        distance: 1000,
+        threshold: 0.35,
+        ignoreLocation: true,
         maxPatternLength: 32,
         minMatchCharLength: 1,
+        includeScore: true,
         includeMatches: true,
         findAllMatches: true,
-        keys: ["title", "content", "url"],
+        keys: [
+          { name: "title", weight: 0.45 },
+          { name: "content", weight: 0.5 },
+          { name: "url", weight: 0.05 },
+        ],
       }),
     [posts]
   );
@@ -141,7 +236,40 @@ export default function Search() {
   const searchResults = useMemo(() => {
     const q = safeQuery.trim();
     if (q === "") return posts.map((item) => ({ item, matches: [] }));
-    return fuse.search(q);
+
+    const fuseResults = fuse.search(q);
+    const fuseByUrl = new Map(
+      fuseResults.map((result) => [result?.item?.url, result])
+    );
+
+    const ranked = posts
+      .map((post) => {
+        const titleHits = countOccurrences(post?.title, q);
+        const contentHits = countOccurrences(post?.content, q);
+        const urlHits = countOccurrences(post?.url, q);
+        const totalHits = titleHits + contentHits + urlHits;
+        const fuseResult = fuseByUrl.get(post?.url);
+
+        if (!fuseResult && totalHits === 0) return null;
+
+        return {
+          item: post,
+          matches: fuseResult?.matches || [],
+          score: fuseResult?.score ?? 1,
+          titleHits,
+          contentHits,
+          totalHits,
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => {
+        if (a.titleHits !== b.titleHits) return b.titleHits - a.titleHits;
+        if (a.contentHits !== b.contentHits) return b.contentHits - a.contentHits;
+        if (a.totalHits !== b.totalHits) return b.totalHits - a.totalHits;
+        return a.score - b.score;
+      });
+
+    return ranked.map(({ item, matches }) => ({ item, matches }));
   }, [fuse, posts, safeQuery]);
 
   const ref = useClickAway(() => {
@@ -237,14 +365,6 @@ export default function Search() {
             ref={ref}
             className="relative w-[calc(100%-1.5rem)] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-1/2 max-w-5xl mx-auto mt-4 sm:mt-8 md:mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10 will-change-transform"
           >
-            <button
-              className="absolute -top-4 -right-5 cursor-pointer"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close search"
-            >
-              <XCircleIcon className="text-white size-8" />
-            </button>
-
             <Combobox value={selectedPost} onChange={handleSelect}>
               <div className="flex items-center rounded-lg px-4 py-3 bg-white/80 backdrop-blur-md shadow-sm">
                 <MagnifyingGlassIcon className="size-6 text-purple-dark" />
@@ -265,8 +385,28 @@ export default function Search() {
                     setQuery(event.target.value || "");
                   }}
                 />
+                <button
+                  type="button"
+                  className="cursor-pointer"
+                  onClick={() => {
+                    setQuery("");
+                    setSelectedPost(undefined);
+                    inputRef.current?.focus();
+                  }}
+                  aria-label="Clear search"
+                >
+                  <TrashIcon className="size-5 text-purple-dark/75" />
+                </button>
+                <button
+                  type="button"
+                  className="cursor-pointer ml-2"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Close search"
+                >
+                  <XCircleIcon className="size-6 text-purple-dark/75" />
+                </button>
               </div>
-              <div className="py-4 h-full overflow-auto mask-b-from-90%">
+              <div className="lg:py-4 h-full overflow-auto mask-b-from-90%">
                 <ComboboxOptions
                   data-open
                   transition
@@ -275,6 +415,12 @@ export default function Search() {
                 >
                   {searchResults.map((result) => {
                     const post = result?.item;
+                    const titleMatch = result?.matches?.find(
+                      (match) =>
+                        match?.key === "title" &&
+                        Array.isArray(match?.indices) &&
+                        match.indices.length > 0
+                    );
                     const contentMatch = result?.matches?.find(
                       (match) =>
                         match?.key === "content" &&
@@ -287,6 +433,7 @@ export default function Search() {
                       content: post?.content || "",
                       query: safeQuery,
                       matchIndex,
+                      matchRanges: contentMatch?.indices || [],
                     });
 
                     return (
@@ -295,23 +442,25 @@ export default function Search() {
                         value={post}
                         className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-focus:bg-purple-dark/30"
                       >
-                        <div className="flex justify-between">
+                        <div className="flex items-center justify-between">
                           <span className="text-purple-dark/80 font-bold">
-                            {post?.title || "Untitled"}
+                            {titleMatch?.indices?.length
+                              ? highlightByRanges(post?.title || "Untitled", titleMatch.indices)
+                              : highlightText(post?.title || "Untitled", safeQuery)}
                           </span>
                           <span className="text-gray-darkest text-sm">
                             {post?.date || ""}
                           </span>
                         </div>
-                        <div className="flex gap-4">
+                        <div className="flex items-center gap-4">
                           <span className="text-sm text-purple-dark/70">
                             {snippet.hasLeadingEllipsis ? "…" : null}
-                            {highlightText(snippet.text, safeQuery)}
+                            {snippet.highlightRanges?.length
+                              ? highlightByRanges(snippet.text, snippet.highlightRanges)
+                              : highlightText(snippet.text, safeQuery)}
                             {snippet.hasTrailingEllipsis ? "…" : null}
                           </span>
-                          <div className="w-4 h-4 ml-auto">
-                            <ArrowUturnRightIcon className="invisible size-5 ml-auto group-data-focus:visible" />
-                          </div>
+                          <ArrowUturnRightIcon className="hidden ml-auto w-5 h-5 shrink-0 lg:group-data-focus:block" />
                         </div>
                       </ComboboxOption>
                     );
