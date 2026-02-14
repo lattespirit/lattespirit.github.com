@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Head from '../components/Head';
+import SiteHead from '../components/Head';
 
 const groupPostsByYear = (posts) => {
   return posts.reduce((acc, { node }) => {
@@ -16,7 +16,6 @@ const Archives = ({ data }) => {
 
   return (
     <>
-      <Head title="Archives" />
       <div className="flex flex-col box mt-4 p-6 md:p-10 bg-gray-lighter opacity-85 rounded-lg">
         {Object.keys(postsByYear)
           .sort((a, b) => b - a)
@@ -47,6 +46,8 @@ const Archives = ({ data }) => {
     </>
   );
 };
+
+export const Head = () => <SiteHead title="Archives" />;
 
 export const query = graphql`
   query {

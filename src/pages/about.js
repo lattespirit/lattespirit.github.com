@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
-import Head from '../components/Head';
+import SiteHead from '../components/Head';
 import Timeline from '../components/Timeline';
 import Disqus from '../components/Disqus';
 
@@ -17,7 +17,6 @@ const About = () => {
   `);
   return (
     <>
-      <Head title="About" />
       <div className="w-64 mx-auto x:w-auto x:mx-10 mt-10 lg:flex lg:flex-row-reverse lg:w-180 lg:mx-auto">
         <GatsbyImage
           image={data.me.childImageSharp.gatsbyImageData}
@@ -108,5 +107,7 @@ const About = () => {
     </>
   );
 };
+
+export const Head = () => <SiteHead title="About" />;
 
 export default About;

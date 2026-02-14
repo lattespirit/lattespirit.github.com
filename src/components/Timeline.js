@@ -1,8 +1,6 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-danger */
 import "./timeline.css";
 import React, { Component } from "react";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import Fireworks from "./Fireworks";
 import NewTag from "./NewTag";
 
@@ -197,9 +195,8 @@ class Timeline extends Component {
   }
 }
 
-const TimelineWrapper = () => (
-  <StaticQuery
-    query={graphql`
+const TimelineWrapper = () => {
+  const data = useStaticQuery(graphql`
       query EventsQuery {
         allEventsJson {
           edges {
@@ -237,9 +234,9 @@ const TimelineWrapper = () => (
           publicURL
         }
       }
-    `}
-    render={(data) => <Timeline data={data} />}
-  />
-);
+    `);
+
+  return <Timeline data={data} />;
+};
 
 export default TimelineWrapper;

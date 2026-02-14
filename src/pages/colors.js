@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from '../components/Head';
+import SiteHead from '../components/Head';
 import Typography from '../components/Typography';
 
 const Colors = () => {
@@ -41,7 +41,6 @@ const Colors = () => {
   ];
   return (
     <Typography>
-      <Head title="Colors" />
       <div className="flex justify-between flex-wrap w-64 mx-auto md:mx-0 mt-6">
         {blackAndWhite.map((color) => (
           <div className="flex flex-col items-center mt-4" key={color.name}>
@@ -81,5 +80,7 @@ const Colors = () => {
     </Typography>
   );
 };
+
+export const Head = () => <SiteHead title="Colors" />;
 
 export default Colors;

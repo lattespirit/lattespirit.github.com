@@ -2,7 +2,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
-import Head from "../components/Head";
+import SiteHead from "../components/Head";
 import Disqus from "../components/Disqus";
 import UI from "../components/UI";
 import Carousel from "../components/Carousel";
@@ -30,7 +30,6 @@ const Post = ({ data, pageContext, children }) => {
   }`;
   return (
     <>
-      <Head title={post.frontmatter.title} />
       <div
         className="flex flex-col items-center box mt-4 px-4 md:px-8 lg:px-12 py-2 md:py-4 rounded-lg"
         style={{ backgroundColor: "rgba(237, 242, 247, 0.85)" }}
@@ -105,5 +104,9 @@ export const PostQuery = graphql`
     }
   }
 `;
+
+export const Head = ({ data }) => (
+  <SiteHead title={data?.mdx?.frontmatter?.title} />
+);
 
 export default Post;

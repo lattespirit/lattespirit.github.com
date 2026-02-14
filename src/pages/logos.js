@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Head from '../components/Head';
+import SiteHead from '../components/Head';
 import Typography from '../components/Typography';
 
 const Logos = () => {
@@ -17,7 +17,6 @@ const Logos = () => {
   const { black, white } = data;
   return (
     <Typography>
-      <Head title="Logos" />
       <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-white rounded-lg shadow-xl">
         <img src={black.publicURL} alt="logo-black" />
       </div>
@@ -46,5 +45,7 @@ const Logos = () => {
     </Typography>
   );
 };
+
+export const Head = () => <SiteHead title="Logos" />;
 
 export default Logos;

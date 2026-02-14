@@ -2,13 +2,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
-import Head from '../components/Head';
+import SiteHead from '../components/Head';
 
 const Uses = ({ data }) => {
   const { edges } = data.allUsesJson;
   return (
     <>
-      <Head title="Uses" />
       <div className="box mt-4">
         <div className="p-4 sm:p-6 md:px-12 bg-gray-lighter opacity-85 rounded-lg">
           <p className="text-xl lg:text-2xl font-bold text-center">装备</p>
@@ -76,6 +75,8 @@ const Uses = ({ data }) => {
     </>
   );
 };
+
+export const Head = () => <SiteHead title="Uses" />;
 
 export const UsesQuery = graphql`query UsesQuery {
   allUsesJson {

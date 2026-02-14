@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from '../components/Head';
+import SiteHead from '../components/Head';
 import Typography from '../components/Typography';
 
 const Hierarchy = () => {
@@ -14,7 +14,6 @@ const Hierarchy = () => {
 
   return (
     <Typography>
-      <Head title="Hierarchy" />
       <div className="my-4 md:my-8">
         {headings.map((heading) => (
           <p className={heading.class} key={heading.name}>
@@ -25,5 +24,7 @@ const Hierarchy = () => {
     </Typography>
   );
 };
+
+export const Head = () => <SiteHead title="Hierarchy" />;
 
 export default Hierarchy;

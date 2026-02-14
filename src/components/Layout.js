@@ -1,6 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import Head from "./Head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Search from "./Search";
@@ -48,11 +46,6 @@ const Layout = ({ children }) => {
           className="w-full h-full object-cover"
         />
       </motion.div>
-      
-      <Head />
-      <Helmet>
-        <html lang="zh" />
-      </Helmet>
 
       <Navbar />
 

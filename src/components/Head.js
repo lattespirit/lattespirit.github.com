@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
@@ -16,7 +15,7 @@ const Head = ({ title }) => {
   const caculatedTitle = title
     ? `${title} - ${data.site.siteMetadata.title}`
     : data.site.siteMetadata.title;
-  return <Helmet title={caculatedTitle} />;
+  return <title>{caculatedTitle}</title>;
 };
 
 Head.propTypes = {

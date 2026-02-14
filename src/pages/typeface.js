@@ -1,10 +1,9 @@
 import React from 'react';
-import Head from '../components/Head';
+import SiteHead from '../components/Head';
 import Typography from '../components/Typography';
 
 const Typeface = () => (
   <Typography>
-    <Head title="Typeface" />
     <p className="flex items-center w-60 mx-auto sm:w-90 my-6 md:my-8 py-2 border-l-4 border-purple-light bg-gray-lighter text-purple-light md:text-xl text-center">
       <svg
         viewBox="0 0 24 24"
@@ -60,5 +59,7 @@ const Typeface = () => (
     </div>
   </Typography>
 );
+
+export const Head = () => <SiteHead title="Typeface" />;
 
 export default Typeface;
