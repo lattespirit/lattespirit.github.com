@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { Suspense, useMemo } from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import SiteHead from "../components/Head";
 import Disqus from "../components/Disqus";
 import UI from "../components/UI";
-import Carousel from "../components/Carousel";
-import Car from "../components/Car";
 import ArrowLeft from "../components/icons/ArrowLeft";
 import ArrowRight from "../components/icons/ArrowRight";
 import { motion } from "motion/react";
@@ -15,9 +13,28 @@ const MotionArrowLeft = motion.create(ArrowLeft);
 const MotionArrowRight = motion.create(ArrowRight);
 const MotionLink = motion.create(Link);
 
+const LazyCarousel = React.lazy(() => import("../components/Carousel"));
+const LazyCar = React.lazy(() => import("../components/Car"));
+
 const Post = ({ data, pageContext, children }) => {
   const post = data.mdx;
   const { prev, next } = pageContext;
+  const mdxComponents = useMemo(
+    () => ({
+      ...UI,
+      Carousel: (props) => (
+        <Suspense fallback={null}>
+          <LazyCarousel {...props} />
+        </Suspense>
+      ),
+      Car: (props) => (
+        <Suspense fallback={null}>
+          <LazyCar {...props} />
+        </Suspense>
+      ),
+    }),
+    []
+  );
   const prevText = prev ? "上篇" : "未始";
   const nextText = next ? "下篇" : "未央";
   const prevUri = prev ? prev.fields.slug : post.fields.slug;
@@ -41,7 +58,7 @@ const Post = ({ data, pageContext, children }) => {
           {post.fields.date}
         </p>
         <div className="text-sm md:text-base paragraph">
-          <MDXProvider components={{ ...UI, Carousel, Car }}>
+          <MDXProvider components={mdxComponents}>
             {children}
           </MDXProvider>
         </div>

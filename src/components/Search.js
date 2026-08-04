@@ -177,7 +177,7 @@ export default function Search() {
     query sitePosts {
       allMdx(sort: { fields: { date: DESC } }) {
         posts: nodes {
-          excerpt(pruneLength: 10000)
+          excerpt(pruneLength: 400)
           frontmatter {
             title
           }
