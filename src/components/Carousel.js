@@ -43,7 +43,7 @@ class Carousel extends Component {
     const { children } = this.props;
     const settings = {
       infinite: true,
-      speed: 1000,
+      speed: 300,
       fade: true,
       lazyload: true,
       slidesToShow: 1,

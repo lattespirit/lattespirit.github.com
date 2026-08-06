@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Search from "./Search";
 import Toast from "./Toast";
 import { motion } from "motion/react";
+import { EASE_OUT, EASE_IN_OUT } from "../lib/motion.js";
 import { useLocation } from "@reach/router";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -14,12 +15,8 @@ const variants = {
   animate: {
     y: 0,
     transition: {
-      duration: 0.4,
-      type: "spring",
-      bounce: 0,
-      stiffness: 100,
-      damp: 20,
-      delay: 0.16,
+      duration: 0.3,
+      ease: EASE_OUT,
     },
   },
 };
@@ -34,7 +31,7 @@ const Layout = ({ children }) => {
         className="fixed top-0 left-0 w-full h-[100lvh] -z-10"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 0.56, ease: [0.25, 0.46, 0.45, 0.94] }}
+        transition={{ duration: 0.56, ease: EASE_IN_OUT }}
       >
         <StaticImage
           src="../images/background.jpg"

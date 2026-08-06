@@ -67,19 +67,50 @@
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 80rem;
 
-  --animate-breath: breath 2s linear infinite alternate;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --animate-breath: breath 2s var(--ease-in-out) infinite;
 
   @keyframes breath {
-    0% {
-      box-shadow: 0 0 5px var(--color-pink-dark);
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
 
-    100% {
-      box-shadow:
-        0 0 5px var(--color-pink-dark),
-        0 0 25px var(--color-pink-dark),
-        0 0 50px var(--color-pink-dark),
-        0 0 200px var(--color-pink-dark);
+    50% {
+      opacity: 0.75;
+      transform: scale(0.97);
+    }
+  }
+
+  --animate-card-enter: card-enter 0.4s var(--ease-out) both;
+
+  @keyframes card-enter {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    to {
+      /* ends at the card's design opacity (opacity-85 utility) so the
+         fill-mode: both animation does not override it permanently */
+      opacity: 0.85;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-fade-in: fade-in 0.2s var(--ease-out);
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
     }
   }
 }
@@ -150,4 +181,13 @@
 
 .typography-nav {
   @apply font-bold border-b-2 border-purple-light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* improve-animations: reduced-motion overrides */
+  .animate-breath,
+  .timeline-float,
+  .animate-card-enter {
+    animation: none;
+  }
 }

@@ -9,6 +9,9 @@ function Model(props) {
   const { actions, mixer } = useAnimations(animations, group);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
     Object.keys(actions).forEach((action) => {
       if ({}.hasOwnProperty.call(actions, action)) {
         actions[action].play();
@@ -16,8 +19,8 @@ function Model(props) {
     });
   });
 
-  useFrame(() => {
-    mixer.update(0.005);
+  useFrame((_, delta) => {
+    mixer.update(delta);
   });
 
   return (

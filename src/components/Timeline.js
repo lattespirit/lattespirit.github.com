@@ -59,10 +59,9 @@ class Timeline extends Component {
     return (
       <div className="flex justify-center items-center w-full h-full">
         <img
-          className="w-60"
+          className="w-60 timeline-float"
           src={selected.image.path.publicURL}
           alt="About"
-          style={{ animation: "general 1s linear 0s infinite alternate both" }}
         />
       </div>
     );
@@ -71,10 +70,9 @@ class Timeline extends Component {
   imageOfFirstLaunch = () => (
     <div className="relative w-80">
       <img
-        className="absolute bottom-0 rounded-sm object-contain"
+        className="absolute bottom-0 rounded-sm object-contain timeline-float timeline-float-v1 timeline-float-delayed"
         src={this.v1.publicURL}
         alt="About - Launch"
-        style={{ animation: "v1 2s linear 1s infinite alternate both" }}
       />
       <div>
         <Fireworks />
@@ -85,10 +83,9 @@ class Timeline extends Component {
   imageOfMovingToGithub = () => (
     <div className="relative w-80">
       <img
-        className="absolute bottom-0 rounded-sm"
+        className="absolute bottom-0 rounded-sm timeline-float timeline-float-v1 timeline-float-delayed"
         src={this.v2.publicURL}
         alt="About - Moving to GitHub Pages"
-        style={{ animation: "v1 2s linear 1s infinite alternate both" }}
       />
     </div>
   );
@@ -97,18 +94,14 @@ class Timeline extends Component {
     <div className="flex flex-col relative w-50 red">
       <Fireworks />
       <img
-        className="absolute bottom-0 rounded-sm"
+        className="absolute bottom-0 rounded-sm timeline-float timeline-float-typography"
         src={this.typography.publicURL}
         alt="About v3 Typography"
-        style={{
-          animation: "typography 2s linear 0s infinite alternate both",
-        }}
       />
       <img
-        className="absolute right-0 bottom-0 rounded-sm"
+        className="absolute right-0 bottom-0 rounded-sm timeline-float timeline-float-figma"
         src={this.figma.publicURL}
         alt="About v3 Figma"
-        style={{ animation: "figma 2s linear 0s infinite alternate both" }}
       />
       <Fireworks style={{ transform: "translate(300px)" }} />
     </div>
@@ -129,14 +122,17 @@ class Timeline extends Component {
               </p>
               <div className="w-full grow bg-gray-lighter lg:bg-transparent opacity-85 rounded-lg text-gray-darkest lg:text-white text-sm lg:text-base px-4 py-2 lg:p-0 lg:mt-4">
                 <p
-                  className="text-left font-bold"
+                  key={selected.date}
+                  className="text-left font-bold animate-fade-in"
                   dangerouslySetInnerHTML={{
                     __html: selected.content,
                   }}
                 />
               </div>
             </div>
-            <div className="flex w-100 h-80">{this.renderCarouselImage()}</div>
+            <div key={selected.date} className="flex w-100 h-80 animate-fade-in">
+              {this.renderCarouselImage()}
+            </div>
           </div>
         </div>
 
@@ -159,7 +155,7 @@ class Timeline extends Component {
                 />
               </div>
               <div
-                className={`hidden transition-transform duration-500 transform hover:scale-115 relative lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold ${
+                className={`hidden transition-transform duration-200 hover:scale-105 relative lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold ${
                   event.selected
                     ? "text-purple-light bg-gray-light"
                     : "text-white bg-purple-light"

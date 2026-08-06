@@ -6,7 +6,6 @@ import {
   ComboboxOption,
   ComboboxOptions,
 } from "@headlessui/react";
-import { motion, AnimatePresence } from "framer-motion";
 import Fuse from "fuse.js";
 import {
   ArrowUturnRightIcon,
@@ -335,32 +334,9 @@ export default function Search() {
   };
 
   return (
-    <AnimatePresence>
+    <>
       {isOpen && (
-        <motion.div
-          variants={{
-            open: {
-              opacity: 1,
-              scale: 1,
-              transition: {
-                duration: 0.24,
-                ease: "easeOut",
-              },
-            },
-            closed: {
-              opacity: 0,
-              scale: 0.95,
-              transition: {
-                duration: 0.24,
-                ease: "easeOut",
-              },
-            },
-          }}
-          initial="closed"
-          animate="open"
-          exit="closed"
-          className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md z-40"
-        >
+        <div className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md z-40">
           <div
             ref={ref}
             className="relative w-[calc(100%-1.5rem)] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-1/2 max-w-5xl mx-auto mt-4 sm:mt-8 md:mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10 will-change-transform"
@@ -491,8 +467,8 @@ export default function Search() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 }

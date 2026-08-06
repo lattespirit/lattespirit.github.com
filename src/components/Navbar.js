@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "motion/react";
 import useSiteMetadata from "../hooks/useSiteMetadata";
+import { EASE_OUT, EASE_DRAWER } from "../lib/motion.js";
 
 const MotionLink = motion.create(Link);
 
@@ -28,32 +29,12 @@ const Navbar = () => {
   const animationProfiles = {
     balanced: {
       open: {
-        duration: 0.7,
-        ease: [0.76, 0, 0.24, 1],
+        duration: 0.3,
+        ease: EASE_DRAWER,
       },
       closed: {
-        duration: 0.6,
-        ease: [0.76, 0, 0.24, 1],
-      },
-    },
-    symmetric: {
-      open: {
-        duration: 0.8,
-        ease: [0.76, 0, 0.24, 1],
-      },
-      closed: {
-        duration: 0.8,
-        ease: [0.76, 0, 0.24, 1],
-      },
-    },
-    classic: {
-      open: {
-        duration: 1,
-        ease: [0.76, 0, 0.24, 1],
-      },
-      closed: {
-        duration: 0.8,
-        ease: [0.76, 0, 0.24, 1],
+        duration: 0.25,
+        ease: EASE_DRAWER,
       },
     },
   };
@@ -66,14 +47,6 @@ const Navbar = () => {
     soft: {
       open: "M100 0 L100 100 Q-40 50 100 0",
       closed: "M100 0 L100 100 Q240 50 100 0",
-    },
-    gentle: {
-      open: "M100 0 L100 100 Q-30 50 100 0",
-      closed: "M100 0 L100 100 Q230 50 100 0",
-    },
-    light: {
-      open: "M100 0 L100 100 Q-20 50 100 0",
-      closed: "M100 0 L100 100 Q220 50 100 0",
     },
   };
 
@@ -139,14 +112,14 @@ const Navbar = () => {
         </button>
       </div>
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {open && (
           <>
             <motion.div
               className="fixed inset-0 bg-black/50 z-20 backdrop-blur-sm"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 0.2, ease: EASE_OUT } }}
+              exit={{ opacity: 0, transition: { duration: 0.15, ease: EASE_OUT } }}
               onClick={closeMenu}
             />
             <motion.div
@@ -236,18 +209,17 @@ const Navbar = () => {
                           x: 0,
                           opacity: 1,
                           transition: {
-                            duration: 0.7,
-                            ease: [0.76, 0, 0.24, 1],
-                            delay: 0.05 * i,
+                            duration: 0.3,
+                            ease: EASE_OUT,
+                            delay: Math.min(0.05 * i, 0.15),
                           },
                         }),
-                        closed: (i) => ({
+                        closed: () => ({
                           x: 80,
                           opacity: 0,
                           transition: {
-                            duration: 0.5,
-                            ease: [0.76, 0, 0.24, 1],
-                            delay: 0.05 * i,
+                            duration: 0.15,
+                            ease: EASE_OUT,
                           },
                         }),
                       }}

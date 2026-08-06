@@ -22,6 +22,9 @@ class Fireworks extends Component {
   }
 
   componentDidMount() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
     for (const flame of this.container.current.children) {
       gsap.to(flame, {
         duration: 1.5,

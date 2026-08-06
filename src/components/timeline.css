@@ -1,41 +1,55 @@
-@keyframes general {
+@keyframes float-general {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
     100% {
         transform: translateY(-20px);
     }
 }
 
-@keyframes v1 {
+@keyframes float-v1 {
     0% {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         transform: translate(80px, -70px) rotate(20deg) skew(20deg);
     }
     100% {
-        box-shadow: 0 50px 5px rgba(0, 0, 0, 0.1);
         transform: translate(80px, -90px) rotate(20deg) skew(20deg);
     }
 }
 
-@keyframes figma {
+@keyframes float-figma {
     0% {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         transform: translate(80px, -30px) rotate(20deg) skew(20deg);
     }
     100% {
-        box-shadow: 0 50px 5px rgba(0, 0, 0, 0.1);
         transform: translate(80px, -60px) rotate(20deg) skew(20deg);
     }
 }
 
-@keyframes typography {
+@keyframes float-typography {
     0% {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         transform: translate(160px, -110px) rotate(20deg) skew(20deg);
     }
     100% {
-        box-shadow: 0 50px 5px rgba(0, 0, 0, 0.1);
         transform: translate(160px, -80px) rotate(20deg) skew(20deg);
     }
+}
+
+.timeline-float {
+    animation: float-general 2s linear 0s infinite alternate both;
+}
+
+.timeline-float-v1 {
+    animation-name: float-v1;
+}
+
+.timeline-float-figma {
+    animation-name: float-figma;
+}
+
+.timeline-float-typography {
+    animation-name: float-typography;
+}
+
+.timeline-float-delayed {
+    animation-delay: 1s;
 }
