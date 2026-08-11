@@ -57,7 +57,7 @@ const Post = ({ data, pageContext, children }) => {
         <p className="text-sm x:text-base text-gray-darkest my-2">
           {post.fields.date}
         </p>
-        <div className="text-sm md:text-base paragraph">
+        <div className="text-sm md:text-base paragraph w-full">
           <MDXProvider components={mdxComponents}>
             {children}
           </MDXProvider>
