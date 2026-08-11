@@ -2,6 +2,7 @@ import { graphql, Link, navigate } from "gatsby";
 import React from "react";
 import PropTypes from "prop-types";
 import NewTag from "../components/NewTag";
+import SiteHead from "../components/Head";
 import { motion } from "motion/react";
 import ArrowRight from "../components/icons/ArrowRight";
 import ArrowLeft from "../components/icons/ArrowLeft";
@@ -9,6 +10,8 @@ import ArrowLeft from "../components/icons/ArrowLeft";
 const MotionArrowRight = motion.create(ArrowRight);
 const MotionArrowLeft = motion.create(ArrowLeft);
 const MotionLink = motion.create(Link);
+
+export const Head = () => <SiteHead />;
 
 const PaginatedPosts = ({ data }) => {
   const { edges: posts, pageInfo } = data.allMdx;
