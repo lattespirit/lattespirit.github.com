@@ -112,12 +112,12 @@ class Timeline extends Component {
     return (
       <div className="w-76 md:w-100 lg:w-240 mx-auto x:w-auto md:mx-auto x:mx-6 my-16">
         <div className="lg:w-200 mx-auto">
-          <p className="text-white text-center text-xl lg:text-3xl font-bold">
+          <p className="text-white text-center text-xl lg:text-3xl font-bold tracking-tight">
             这些年
           </p>
           <div className="hidden lg:flex justify-between items-center mt-16">
             <div className="flex flex-col w-80">
-              <p className="text-white text-left text-3xl font-bold">
+              <p className="text-white text-left text-3xl font-bold tabular-nums tracking-tight">
                 {selected.date}
               </p>
               <div className="w-full grow bg-gray-lighter lg:bg-transparent opacity-85 rounded-lg text-gray-darkest lg:text-white text-sm lg:text-base px-4 py-2 lg:p-0 lg:mt-4">
@@ -167,8 +167,8 @@ class Timeline extends Component {
                 <span
                   className={
                     event.selected
-                      ? "block text-purple-light text-5xl"
-                      : "block text-white text-5xl"
+                      ? "block text-purple-light text-5xl tabular-nums"
+                      : "block text-white text-5xl tabular-nums"
                   }
                 >
                   {event.day}
@@ -176,8 +176,8 @@ class Timeline extends Component {
                 <span
                   className={
                     event.selected
-                      ? "block text-purple-light text-lg"
-                      : "block text-white text-lg"
+                      ? "block text-purple-light text-lg tabular-nums"
+                      : "block text-white text-lg tabular-nums"
                   }
                 >
                   {event.year}-{event.month}

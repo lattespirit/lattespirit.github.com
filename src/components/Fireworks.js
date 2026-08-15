@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { gsap } from "gsap";
 import React, { Component } from "react";
 import { Physics2DPlugin } from "gsap/Physics2DPlugin";

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -10,14 +9,16 @@ const Uses = ({ data }) => {
     <>
       <div className="box mt-4">
         <div className="p-4 sm:p-6 md:px-12 bg-gray-lighter opacity-85 rounded-lg">
-          <p className="text-xl lg:text-2xl font-bold text-center">装备</p>
-          <p className="text-sm lg:text-lg my-2 lg:my-8 mx-2 lg:text-center">
+          <p className="text-xl lg:text-2xl font-bold text-center tracking-tight">
+            装备
+          </p>
+          <p className="text-sm lg:text-lg my-2 lg:my-8 mx-2 lg:text-center text-gray-darkest">
             欢迎来到我的使用装备页面，这里记录了我日常中用到的硬件与软件。
           </p>
 
           {edges.map((area) => (
             <div className="my-4" key={area.node.name}>
-              <p className="text-lg font-bold py-2 border-b-2 border-purple-light">
+              <p className="text-lg font-semibold py-2 border-b-2 border-purple-light tracking-tight">
                 {area.node.name}
               </p>
               {area.node.items.map((item) => {
@@ -25,7 +26,10 @@ const Uses = ({ data }) => {
                   ? 'text-purple-light text-sm md:text-lg font-bold'
                   : 'text-purple-light text-sm md:text-lg';
                 const itemTitle = item.link ? (
-                  <a className="text-purple-light" href={item.link}>
+                  <a
+                    className="text-purple-light hover:text-pink-dark transition-colors duration-200"
+                    href={item.link}
+                  >
                     {item.title}
                   </a>
                 ) : (
@@ -67,8 +71,8 @@ const Uses = ({ data }) => {
             最后更新于:
             {' '}
           </span>
-          <span className="w-48 px-2 py-1 rounded-full bg-purple-light font-bold text-gray-lightest text-xs lg:text-sm">
-            2023-05-09
+          <span className="w-48 px-2 py-1 rounded-md bg-purple-light font-bold text-gray-lightest text-xs lg:text-sm tabular-nums">
+            2026-07-18
           </span>
         </div>
       </div>

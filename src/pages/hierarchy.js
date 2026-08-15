@@ -16,7 +16,7 @@ const Hierarchy = () => {
     <Typography>
       <div className="my-4 md:my-8">
         {headings.map((heading) => (
-          <p className={heading.class} key={heading.name}>
+          <p className={`${heading.class} text-white`} key={heading.name}>
             {heading.name}
           </p>
         ))}

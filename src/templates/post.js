@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { Suspense, useMemo } from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
@@ -48,13 +47,12 @@ const Post = ({ data, pageContext, children }) => {
   return (
     <>
       <div
-        className="flex flex-col items-center box mt-4 px-4 md:px-8 lg:px-12 py-2 md:py-4 rounded-lg"
-        style={{ backgroundColor: "rgba(237, 242, 247, 0.85)" }}
+        className="flex flex-col items-center box mt-4 px-4 md:px-8 lg:px-12 py-2 md:py-4 rounded-lg bg-gray-lighter/85"
       >
-        <p className="text-lg x:text-xl md:text-2xl font-bold mt-4">
+        <p className="text-lg x:text-xl md:text-2xl font-bold mt-4 tracking-tight">
           {post.frontmatter.title}
         </p>
-        <p className="text-sm x:text-base text-gray-darkest my-2">
+        <p className="text-sm x:text-base text-gray-darkest my-2 tabular-nums">
           {post.fields.date}
         </p>
         <div className="text-sm md:text-base paragraph w-full">
@@ -114,6 +112,7 @@ export const PostQuery = graphql`
       frontmatter {
         title
       }
+      excerpt(pruneLength: 160)
       fields {
         slug
         date
@@ -123,7 +122,10 @@ export const PostQuery = graphql`
 `;
 
 export const Head = ({ data }) => (
-  <SiteHead title={data?.mdx?.frontmatter?.title} />
+  <SiteHead
+    title={data?.mdx?.frontmatter?.title}
+    description={data?.mdx?.excerpt?.replace(/<[^>]*>/g, "")}
+  />
 );
 
 export default Post;

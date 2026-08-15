@@ -19,23 +19,23 @@ const Colors = () => {
 
     {
       colors: [
-        { name: 'Gray Lightest', code: 'F7FAFC', class: 'bg-gray-lightest' },
-        { name: 'Gray Lighter', code: 'EDF2F7', class: 'bg-gray-lighter' },
+        { name: 'Gray Lightest', code: 'FAF6F3', class: 'bg-gray-lightest' },
+        { name: 'Gray Lighter', code: 'F4EDE9', class: 'bg-gray-lighter' },
         {
           name: '85 Opacity',
-          code: 'EDF2F7',
+          code: 'F4EDE9',
           class: 'bg-gray-lighter opacity-85',
         },
-        { name: 'Gray Light', code: 'E2E8F0', class: 'bg-gray-light' },
+        { name: 'Gray Light', code: 'E7DDD7', class: 'bg-gray-light' },
       ],
     },
 
     {
       colors: [
-        { name: 'Gray', code: 'CBD5E0', class: 'bg-gray' },
-        { name: 'Gray Dark', code: 'A0AEC0', class: 'bg-gray-dark' },
-        { name: 'Gray Darker', code: '718096', class: 'bg-gray-darker' },
-        { name: 'Gray Darkest', code: '4A5568', class: 'bg-gray-darkest' },
+        { name: 'Gray', code: 'D3C5BD', class: 'bg-gray' },
+        { name: 'Gray Dark', code: 'B29D95', class: 'bg-gray-dark' },
+        { name: 'Gray Darker', code: '8E756D', class: 'bg-gray-darker' },
+        { name: 'Gray Darkest', code: '5B4743', class: 'bg-gray-darkest' },
       ],
     },
   ];
@@ -45,13 +45,13 @@ const Colors = () => {
         {blackAndWhite.map((color) => (
           <div className="flex flex-col items-center mt-4" key={color.name}>
             <div
-              className={`w-24 h-24 rounded-full shadow-lg ${color.class}`}
+              className={`w-24 h-24 rounded-2xl shadow-lg shadow-purple-dark/30 ring-1 ring-white/15 ${color.class}`}
             />
-            <span className="text-black mt-3 mb-1 font-bold">
+            <span className="text-white mt-3 mb-1 font-bold tabular-nums">
               #
               {color.code}
             </span>
-            <span className="text-black">{color.name}</span>
+            <span className="text-white/70">{color.name}</span>
           </div>
         ))}
       </div>
@@ -66,13 +66,13 @@ const Colors = () => {
               key={color.name}
             >
               <div
-                className={`w-24 h-24 rounded-full shadow-lg ${color.class}`}
+                className={`w-24 h-24 rounded-2xl shadow-lg shadow-purple-dark/30 ring-1 ring-white/15 ${color.class}`}
               />
-              <span className="mt-3 mb-1 text-black font-bold">
+              <span className="mt-3 mb-1 text-white font-bold tabular-nums">
                 #
                 {color.code}
               </span>
-              <span className="text-black">{color.name}</span>
+              <span className="text-white/70">{color.name}</span>
             </div>
           ))}
         </div>

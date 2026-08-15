@@ -57,10 +57,11 @@ const PaginatedPosts = ({ data }) => {
 
   return (
     <>
+      <h1 className="sr-only">Jeffrey Yeung&apos;s Blog</h1>
       {/* Paginated Posts */}
       {posts.map(({ node }, index) => (
         <div
-          className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden animate-card-enter"
+          className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden animate-card-enter shadow-lg shadow-purple-dark/20 hover:shadow-purple-dark/40 transition-shadow duration-300"
           key={node.fields.slug}
           style={{ animationDelay: `${Math.min(index, 5) * 40}ms` }}
         >
@@ -85,7 +86,7 @@ const PaginatedPosts = ({ data }) => {
               <div className="flex justify-between items-center">
                 <h5>
                   <Link
-                    className="no-underline font-semibold text-purple-dark text-xl hover:text-purple-light"
+                    className="no-underline font-semibold text-purple-dark text-xl tracking-tight hover:text-pink-dark transition-colors duration-200"
                     to={`/${node.fields.slug}`}
                   >
                     {node.frontmatter.title}
@@ -93,15 +94,15 @@ const PaginatedPosts = ({ data }) => {
                 </h5>
                 {/* NewTag should show up when post is created in 15 days. */}
                 {Date.now() - new Date(node.fields.date) < 1296000000 && (
-                  <NewTag className="px-2 py-1 text-xs" />
+                  <NewTag className="px-2 py-1 text-[10px]" />
                 )}
               </div>
-              <p className="mt-2 text-gray-darkest text-sm x:text-base md:text-sm">
+              <p className="mt-2 text-gray-darkest text-sm x:text-base md:text-sm text-pretty">
                 {node.frontmatter.description}
               </p>
             </div>
             <div className="flex justify-between items-center mt-6">
-              <span className="text-purple-light font-bold text-sm">
+              <span className="text-purple-light font-bold text-sm tabular-nums">
                 {node.fields.date}
               </span>
               <motion.button

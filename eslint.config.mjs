@@ -16,6 +16,12 @@ export default defineConfig([
   },
   pluginReact.configs.flat.recommended,
   {
+    // react-three/fiber uses lowercase Three.js props (position, geometry, ...)
+    // that the generic JSX rule doesn't recognize.
+    files: ["src/components/Car.js"],
+    rules: { "react/no-unknown-property": "off" },
+  },
+  {
     settings: {
       react: {
         version: "detect",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
@@ -124,7 +124,7 @@ export default function Toast({ message = "👀 嘿，新的博文补给已经�
             aria-label="Close"
             onClick={handleClose}
           >
-            <X size={16} />
+            <XMarkIcon className="w-4 h-4" />
           </motion.button>
         </motion.div>
       )}

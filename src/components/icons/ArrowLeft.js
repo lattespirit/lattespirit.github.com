@@ -20,4 +20,6 @@ const ArrowLeft = forwardRef((props, ref) => (
   </svg>
 ));
 
+ArrowLeft.displayName = "ArrowLeft";
+
 export default ArrowLeft;

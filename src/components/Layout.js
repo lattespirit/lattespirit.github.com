@@ -26,7 +26,13 @@ const Layout = ({ children }) => {
 
   return (
     <div className="flex flex-col min-h-screen relative">
-      
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:rounded-md focus:bg-pink-dark focus:text-white focus:no-underline"
+      >
+        Skip to main content
+      </a>
+
       <motion.div 
         className="fixed top-0 left-0 w-full h-[100lvh] -z-10"
         initial={{ scale: 1.08 }}
@@ -44,6 +50,9 @@ const Layout = ({ children }) => {
         />
       </motion.div>
 
+      <div className="ambient-glow" aria-hidden="true" />
+      <div className="grain" aria-hidden="true" />
+
       <Navbar />
 
       <motion.main
@@ -51,6 +60,7 @@ const Layout = ({ children }) => {
         variants={variants}
         initial="initial"
         animate="animate"
+        id="main-content"
         className="mb-20 will-change-transform"
       >
         {children}

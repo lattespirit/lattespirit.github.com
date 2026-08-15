@@ -8,3 +8,11 @@ public/
 plans/
 .agents/
 .vscode/
+
+# Claude Code local settings
+.claude/settings.local.json
+.claude/*.local.*
+
+# Claude Code local/runtime data
+.claude/cache/
+.claude/logs/

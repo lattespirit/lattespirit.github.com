@@ -20,10 +20,10 @@ const About = () => {
       <div className="w-64 mx-auto x:w-auto x:mx-10 mt-10 lg:flex lg:flex-row-reverse lg:w-180 lg:mx-auto">
         <GatsbyImage
           image={data.me.childImageSharp.gatsbyImageData}
-          className="w-20 h-20 lg:w-40 lg:h-40 mx-auto rounded-full object-cover object-center shadow-2xl lg:mr-0" />
+          className="w-20 h-20 lg:w-40 lg:h-40 mx-auto rounded-2xl object-cover object-center shadow-2xl shadow-purple-dark/40 lg:mr-0" />
 
         <div className="mt-4 md:w-80 mx-auto lg:w-100">
-          <h1 className="text-center text-white lg:text-left lg:text-3xl font-bold">
+          <h1 className="text-center text-white lg:text-left lg:text-3xl font-bold tracking-tight">
             Jeffrey Yeung
           </h1>
           <p className="text-center text-gray-default text-xs lg:text-left lg:text-sm mt-2">
@@ -73,17 +73,20 @@ const About = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="w-12 h-12 lg:w-36 lg:h-36 text-white feather feather-coffee"
+            className="w-12 h-12 lg:w-36 lg:h-36 text-white/90"
           >
-            <path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3" />
+            <path d="M4 10.5h13v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-5Z" />
+            <path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" />
+            <path d="M7.5 3.2c-.9.7-.9 1.6 0 2.3" />
+            <path d="M11.5 3.2c-.9.7-.9 1.6 0 2.3" />
           </svg>
         </div>
         <div className="w-64 mx-auto x:w-72 x:mx-10 sm:w-auto lg:mx-0 lg:w-full lg:h-60 lg:flex lg:flex-col lg:justify-center lg:items-end">
           <div className="lg:w-80">
-            <p className="text-white text-xl lg:text-2xl text-center mt-6 lg:mt-0 font-bold">
+            <p className="text-white text-xl lg:text-2xl text-center mt-6 lg:mt-0 font-bold tracking-tight">
               关于 Lattespirit
             </p>
             <p className="text-gray-light text-sm lg:text-base mt-4">

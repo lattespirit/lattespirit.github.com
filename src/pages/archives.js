@@ -21,19 +21,22 @@ const Archives = ({ data }) => {
           .sort((a, b) => b - a)
           .map((year) => (
             <div key={year}>
-              <h2 className="text-lg md:text-xl font-bold first:mt-0 my-2">
+              <h2 className="text-lg md:text-xl font-bold first:mt-0 my-2 tracking-tight text-purple-dark">
                 {year}
               </h2>
               {postsByYear[year].map((post) => (
-                <div className="flex items-center gap-0.5 py-2" key={post.id}>
+                <div
+                  className="flex items-center gap-0.5 py-2 rounded-md px-2 -mx-2 hover:bg-white/50 transition-colors duration-200"
+                  key={post.id}
+                >
                   <time
-                    className="w-24 text-sm text-gray-darkest"
+                    className="w-24 text-sm text-gray-darker tabular-nums"
                     dateTime={post.fields.date}
                   >
                     {post.fields.date}
                   </time>
                     <Link
-                      className="flex-1 text-purple-dark no-underline font-semibold"
+                      className="flex-1 text-purple-dark no-underline font-semibold hover:text-pink-dark transition-colors duration-200"
                       to={`/${post.fields.slug}`}
                     >
                       {post.frontmatter.title}

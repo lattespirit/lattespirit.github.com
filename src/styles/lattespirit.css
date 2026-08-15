@@ -1,17 +1,9 @@
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Outfit';
   font-style: normal;
-  font-weight: 200 900;
+  font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Nunito-Variable.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: italic;
-  font-weight: 200 900;
-  font-display: swap;
-  src: url('/fonts/Nunito-Italic-Variable.ttf') format('truetype');
+  src: url('/fonts/Outfit-Variable.ttf') format('truetype');
 }
 
 @import "tailwindcss";
@@ -20,13 +12,16 @@
   --color-*: initial;
   --color-white: #fff;
   --color-black: #000;
-  --color-gray-lightest: #f7fafc;
-  --color-gray-lighter: #edf2f7;
-  --color-gray-light: #e2e8f0;
-  --color-gray-default: #cbd5e0;
-  --color-gray-dark: #a0aec0;
-  --color-gray-darker: #718096;
-  --color-gray-darkest: #4a5568;
+
+  /* Warm "latte paper" surfaces - tinted to harmonize with the sunset image */
+  --color-gray-lightest: #faf6f3;
+  --color-gray-lighter: #f4ede9;
+  --color-gray-light: #e7ddd7;
+  --color-gray-default: #d3c5bd;
+  --color-gray-dark: #b29d95;
+  --color-gray-darker: #8e756d;
+  --color-gray-darkest: #5b4743;
+
   --color-purple-light: #4f239f;
   --color-purple-dark: #21067a;
   --color-pink-light: #ed6b99;
@@ -60,6 +55,9 @@
   --color-silhouette-darkest: #0a0614;
   --color-silhouette-dark: #1a1228;
   --color-silhouette: #2a2040;
+
+  --font-sans: "Outfit", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Helvetica Neue", Arial, sans-serif;
 
   --breakpoint-x: 23.43rem;
   --breakpoint-sm: 40rem;
@@ -117,27 +115,96 @@
 
 @layer base {
   body {
-    font-family: Nunito, sans-serif;
+    font-family: var(--font-sans);
     display: flex;
     flex-direction: column;
     height: 100%;
     background-color: var(--color-twilight-deepest);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  a,
-  strong,
-  span {
-    color: #f14b90;
+  html {
+    scroll-behavior: smooth;
   }
 
   a {
+    color: var(--color-pink-dark);
     text-decoration-line: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: color 0.2s var(--ease-out);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sunset-light);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-sunset-pink);
+    color: var(--color-white);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
 @layer components {
   .paragraph :is(h1, h2, h3, h4, h5, h6) {
     margin: calc(var(--spacing) * 4) 0;
+  }
+
+  /* Ambient lighting - fixed glow + veil over the background photo */
+  .ambient-glow {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        52% 38% at 76% 4%,
+        rgba(255, 138, 160, 0.14),
+        transparent 70%
+      ),
+      radial-gradient(
+        42% 32% at 10% 22%,
+        rgba(107, 75, 161, 0.18),
+        transparent 72%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(13, 8, 26, 0.12),
+        rgba(13, 8, 26, 0.28)
+      );
+  }
+
+  /* Film grain - breaks digital flatness without stealing focus */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
 }
 
@@ -171,7 +238,7 @@
 
 @media (width >=theme(--breakpoint-lg)) {
   .box {
-    @apply w-180 mx-auto;
+    @apply w-200 mx-auto;
   }
 }
 
@@ -180,7 +247,7 @@
 }
 
 .typography-nav {
-  @apply font-bold border-b-2 border-purple-light;
+  @apply font-bold border-b-2 border-sunset-pink;
 }
 
 @media (prefers-reduced-motion: reduce) {

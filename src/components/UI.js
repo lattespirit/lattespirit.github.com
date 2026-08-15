@@ -1,17 +1,17 @@
 import React from "react";
 
 const H1 = ({ children, ...props }) => (
-  <h1 className="font-bold text-5xl text-twilight-deeper" {...props}>
+  <h1 className="font-bold text-5xl text-twilight-deeper tracking-tight" {...props}>
     {children}
   </h1>
 );
 const H2 = ({ children, ...props }) => (
-  <h2 className="font-bold text-4xl text-twilight-deeper" {...props}>
+  <h2 className="font-bold text-4xl text-twilight-deeper tracking-tight" {...props}>
     {children}
   </h2>
 );
 const H3 = ({ children, ...props }) => (
-  <h3 className="font-bold text-3xl text-twilight-deeper" {...props}>
+  <h3 className="font-bold text-3xl text-twilight-deeper tracking-tight" {...props}>
     {children}
   </h3>
 );
@@ -32,7 +32,7 @@ const H6 = ({ children, ...props }) => (
 );
 
 const P = (props) => (
-  <p className="leading-relaxed text-silhouette-dark" {...props} />
+  <p className="leading-relaxed text-silhouette-dark max-w-prose" {...props} />
 );
 
 const UL = (props) => (
@@ -47,7 +47,7 @@ const LI = (props) => (
 );
 
 const Strong = (props) => (
-  <strong className="text-twilight-deep" {...props} />
+  <strong className="text-twilight-deep font-semibold" {...props} />
 );
 
 const Img = ({ alt = "", ...props }) => (

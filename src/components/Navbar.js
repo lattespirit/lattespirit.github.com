@@ -1,7 +1,8 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "motion/react";
+import { useLocation } from "@reach/router";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 import { EASE_OUT, EASE_DRAWER } from "../lib/motion.js";
 
@@ -10,6 +11,7 @@ const MotionLink = motion.create(Link);
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { title } = useSiteMetadata();
+  const { pathname } = useLocation();
 
   const toggleMenu = () => setOpen(!open);
   const closeMenu = () => setOpen(false);
@@ -25,6 +27,9 @@ const Navbar = () => {
     // { title: "Typography", url: "/logos", showInLargeScreen: false },
     { title: "About", url: "/about", showInLargeScreen: true },
   ];
+
+  const isActive = (url) =>
+    url === "/" ? pathname === "/" : pathname.startsWith(url);
 
   const animationProfiles = {
     balanced: {
@@ -58,7 +63,7 @@ const Navbar = () => {
     <header className="flex justify-between items-center box py-6 min-h-20">
       <Link
         to="/"
-        className="text-white inline-block text-xl x:text-2xl font-semibold cursor-default no-underline"
+        className="text-white inline-block text-xl x:text-2xl font-semibold no-underline"
       >
         {title}
       </Link>
@@ -67,7 +72,11 @@ const Navbar = () => {
           (menu) =>
             menu.showInLargeScreen && (
               <Link
-                className="text-white inline-block no-underline hover:text-gray-dark"
+                className={`inline-block no-underline transition-colors duration-200 ${
+                  isActive(menu.url)
+                    ? "text-sunset-light"
+                    : "text-white hover:text-sunset-light"
+                }`}
                 to={menu.url}
                 key={menu.title}
               >
@@ -95,20 +104,7 @@ const Navbar = () => {
           tabIndex={0}
           aria-label="Toggle menu"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-white w-6 h-6 feather feather-menu"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
+          <Bars3Icon className="text-white w-6 h-6" />
         </button>
       </div>
 
@@ -181,24 +177,15 @@ const Navbar = () => {
                     aria-label="Close menu"
                     tabIndex={0}
                   >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-6 h-6 text-white feather feather-x"
-                    >
-                      <line x1="18" y1="6" x2="6" y2="18" />
-                      <line x1="6" y1="6" x2="18" y2="18" />
-                    </svg>
+                    <XMarkIcon className="w-6 h-6 text-white" />
                   </button>
                 </header>
                 <div className="flex flex-col justify-center items-center gap-8 mt-20">
                   {links.map((menu, index) => (
                     <MotionLink
-                      className="block text-xl font-light text-white no-underline"
+                      className={`block text-xl no-underline ${
+                        isActive(menu.url) ? "text-sunset-light" : "text-white"
+                      }`}
                       to={menu.url}
                       key={menu.title}
                       onClick={closeMenu}

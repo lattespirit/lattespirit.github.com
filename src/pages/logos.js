@@ -17,26 +17,26 @@ const Logos = () => {
   const { black, white } = data;
   return (
     <Typography>
-      <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-white rounded-lg shadow-xl">
+      <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-gray-lightest rounded-lg shadow-xl shadow-purple-dark/30">
         <img src={black.publicURL} alt="logo-black" />
       </div>
 
       <div className="flex justify-end my-2">
         <a
-          className="px-2 py-1 text-xs font-bold bg-white hover:bg-purple-dark text-black hover:text-white border border-gray rounded-full no-underline"
+          className="px-3 py-1 text-xs font-bold bg-white hover:bg-pink-dark text-gray-darkest hover:text-white border border-gray rounded-md no-underline transition-colors duration-200"
           href={black.publicURL}
         >
           logo-black.svg
         </a>
       </div>
 
-      <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-black rounded-lg shadow-xl">
+      <div className="flex justify-center items-center w-full h-40 md:h-80 lg:h-100 my-4 bg-silhouette-darkest rounded-lg shadow-xl shadow-purple-dark/40 ring-1 ring-white/10">
         <img src={white.publicURL} alt="logo-white" />
       </div>
 
       <div className="flex justify-end mt-2 mb-4 md:mb-8">
         <a
-          className="px-2 py-1 text-xs font-bold bg-white hover:bg-purple-dark text-black hover:text-white border border-gray rounded-full no-underline"
+          className="px-3 py-1 text-xs font-bold bg-white hover:bg-pink-dark text-gray-darkest hover:text-white border border-gray rounded-md no-underline transition-colors duration-200"
           href={white.publicURL}
         >
           logo-white.svg
