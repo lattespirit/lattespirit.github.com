@@ -149,6 +149,17 @@
     text-wrap: pretty;
   }
 
+  /* iOS Safari 26+ enables text-wrap: pretty and renders paragraphs with a
+     right-side gap; fall back to normal wrapping on iPhones/iPads while
+     keeping pretty where it renders correctly (e.g. desktop Chrome). */
+  @supports (text-wrap: pretty) and (-webkit-touch-callout: none) {
+    @media (max-width: 64rem) {
+      p {
+        text-wrap: wrap;
+      }
+    }
+  }
+
   :focus-visible {
     outline: 2px solid var(--color-sunset-light);
     outline-offset: 3px;
