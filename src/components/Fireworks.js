@@ -1,30 +1,34 @@
 import { gsap } from "gsap";
-import React, { Component } from "react";
+import React, { useEffect, useRef } from "react";
 import { Physics2DPlugin } from "gsap/Physics2DPlugin";
 
-class Fireworks extends Component {
-  constructor(props) {
-    super(props);
-    gsap.registerPlugin(Physics2DPlugin);
-    this.container = React.createRef();
-    this.colors = [
-      "#1fb6ff",
-      "#7e5bef",
-      "#ff49db",
-      "#ff7849",
-      "#13ce66",
-      "#ffc82c",
-      "#273444",
-      "#8492a6",
-      "#d3dce6",
-    ];
-  }
+const COLORS = [
+  "#1fb6ff",
+  "#7e5bef",
+  "#ff49db",
+  "#ff7849",
+  "#13ce66",
+  "#ffc82c",
+  "#273444",
+  "#8492a6",
+  "#d3dce6",
+];
 
-  componentDidMount() {
+const Fireworks = ({ style }) => {
+  const container = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(Physics2DPlugin);
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
-    for (const flame of this.container.current.children) {
+
+    if (!container.current) {
+      return;
+    }
+
+    for (const flame of container.current.children) {
       gsap.to(flame, {
         duration: 1.5,
         repeat: -1,
@@ -36,32 +40,23 @@ class Fireworks extends Component {
         opacity: 0,
       });
     }
-  }
+  }, []);
 
-  render() {
-    const children = [];
-    const { style } = this.props;
+  const children = Array.from({ length: 50 }, (_, index) => (
+    <div
+      key={index}
+      className="absolute w-1 h-1 rounded-full"
+      style={{
+        background: COLORS[Math.floor(Math.random() * COLORS.length)],
+      }}
+    />
+  ));
 
-    for (let i = 0; i < 50; i += 1) {
-      const color = this.colors[Math.floor(Math.random() * this.colors.length)];
-      children.push(
-        React.createElement("div", {
-          className: "absolute w-1 h-1 rounded-full",
-          key: i,
-          style: { background: color },
-        }),
-      );
-    }
-    return (
-      <div
-        className="relative w-2 h-2"
-        ref={this.container}
-        style={{ ...style }}
-      >
-        {children}
-      </div>
-    );
-  }
-}
+  return (
+    <div className="relative w-2 h-2" ref={container} style={{ ...style }}>
+      {children}
+    </div>
+  );
+};
 
 export default Fireworks;

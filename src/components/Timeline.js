@@ -1,238 +1,228 @@
-import "./timeline.css";
-import React, { Component } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Fireworks from "./Fireworks";
 import NewTag from "./NewTag";
+import "./timeline.css";
 
-class Timeline extends Component {
-  constructor(props) {
-    super(props);
-    const { edges } = props.data.allEventsJson;
-    const events = edges.map((node) => {
-      const { node: event } = node;
-      const datePattern = /^(\d{4})-(\d{2})-(\d{2})$/;
-      const [, year, month, day] = datePattern.exec(event.date);
-      return {
-        ...event,
-        year,
-        month,
-        day,
-        isNew: Date.now() - new Date(event.date) < 24 * 3600 * 30 * 1000,
-      };
-    });
-    this.v1 = props.data.v1;
-    this.v2 = props.data.v2;
-    this.disqus = props.data.disqus;
-    this.bootstrap = props.data.bootstrap;
-    this.typography = props.data.typography;
-    this.figma = props.data.figma;
-    this.gatsby = props.data.gatsby;
-    this.state = { events, selected: events[0] };
-  }
+const parseDate = (date) => {
+  const [, year, month, day] = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date) || [];
+  return { year, month, day };
+};
 
-  select = (hovered) => {
-    const { events } = this.state;
+const isNewPost = (date) => Date.now() - new Date(date) < 24 * 3600 * 30 * 1000;
 
-    const filteredEvents = events.map((event) => ({
-      ...event,
-      selected: event.date === hovered.date,
-    }));
+// Offset + frame for each floating screenshot, indexed by image position.
+const FLOAT_LAYOUTS = [
+  { right: "6%", top: "50%", width: "58%", y: "-50%" },
+  { right: "30%", top: "50%", width: "46%", y: "-42%" },
+  { right: "54%", top: "50%", width: "36%", y: "-58%" },
+];
 
-    this.setState({ events: filteredEvents, selected: hovered });
-  };
-
-  renderCarouselImage = () => {
-    const { selected } = this.state;
-
-    if (selected.date === "2012-07-25") {
-      return this.imageOfFirstLaunch();
-    }
-
-    if (selected.date === "2014-01-28") {
-      return this.imageOfMovingToGithub();
-    }
-
-    if (selected.date === "2019-12-29") {
-      return this.assetsOfRefactoringUI();
-    }
-
-    return (
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          className="w-60 timeline-float"
-          src={selected.image.path.publicURL}
-          alt="About"
-        />
-      </div>
-    );
-  };
-
-  imageOfFirstLaunch = () => (
-    <div className="relative w-80">
-      <img
-        className="absolute bottom-0 rounded-sm object-contain timeline-float timeline-float-v1 timeline-float-delayed"
-        src={this.v1.publicURL}
-        alt="About - Launch"
-      />
-      <div>
-        <Fireworks />
-      </div>
-    </div>
-  );
-
-  imageOfMovingToGithub = () => (
-    <div className="relative w-80">
-      <img
-        className="absolute bottom-0 rounded-sm timeline-float timeline-float-v1 timeline-float-delayed"
-        src={this.v2.publicURL}
-        alt="About - Moving to GitHub Pages"
-      />
-    </div>
-  );
-
-  assetsOfRefactoringUI = () => (
-    <div className="flex flex-col relative w-50 red">
-      <Fireworks />
-      <img
-        className="absolute bottom-0 rounded-sm timeline-float timeline-float-typography"
-        src={this.typography.publicURL}
-        alt="About v3 Typography"
-      />
-      <img
-        className="absolute right-0 bottom-0 rounded-sm timeline-float timeline-float-figma"
-        src={this.figma.publicURL}
-        alt="About v3 Figma"
-      />
-      <Fireworks style={{ transform: "translate(300px)" }} />
-    </div>
-  );
-
-  render() {
-    const { selected, events } = this.state;
-    return (
-      <div className="w-76 md:w-100 lg:w-240 mx-auto x:w-auto md:mx-auto x:mx-6 my-16">
-        <div className="lg:w-200 mx-auto">
-          <p className="text-white text-center text-xl lg:text-3xl font-bold tracking-tight">
-            这些年
-          </p>
-          <div className="hidden lg:flex justify-between items-center mt-16">
-            <div className="flex flex-col w-80">
-              <p className="text-white text-left text-3xl font-bold tabular-nums tracking-tight">
-                {selected.date}
-              </p>
-              <div className="w-full grow bg-gray-lighter lg:bg-transparent opacity-85 rounded-lg text-gray-darkest lg:text-white text-sm lg:text-base px-4 py-2 lg:p-0 lg:mt-4">
-                <p
-                  key={selected.date}
-                  className="text-left font-bold animate-fade-in"
-                  dangerouslySetInnerHTML={{
-                    __html: selected.content,
-                  }}
-                />
-              </div>
-            </div>
-            <div key={selected.date} className="flex w-100 h-80 animate-fade-in">
-              {this.renderCarouselImage()}
-            </div>
-          </div>
-        </div>
-
-        <div className="lg:flex lg:justify-between mt-8 text-white">
-          {events.map((event) => (
-            <div
-              className="flex mt-4 lg:mt-0"
-              key={event.date}
-              onMouseEnter={() => this.select(event)}
-              role="link"
-              tabIndex={0}
-            >
-              <div className="lg:hidden flex w-full">
-                <span className="w-28 text-white text-xs text-left x:mr-4">
-                  {event.date}
-                </span>
-                <div
-                  className="w-full grow bg-gray-lighter opacity-85 rounded-lg text-xs text-left text-gray-darkest px-4 py-2"
-                  dangerouslySetInnerHTML={{ __html: event.content }}
-                />
-              </div>
-              <div
-                className={`hidden transition-transform duration-200 hover:scale-105 relative lg:flex flex-col justify-center items-center w-32 py-4 rounded-lg cursor-default font-bold ${
-                  event.selected
-                    ? "text-purple-light bg-gray-light"
-                    : "text-white bg-purple-light"
-                }`}
-              >
-                {event.isNew && (
-                  <NewTag className="absolute px-1 top-0 right-0 mt-2 mr-2 text-xs" />
-                )}
-                <span
-                  className={
-                    event.selected
-                      ? "block text-purple-light text-5xl tabular-nums"
-                      : "block text-white text-5xl tabular-nums"
-                  }
-                >
-                  {event.day}
-                </span>
-                <span
-                  className={
-                    event.selected
-                      ? "block text-purple-light text-lg tabular-nums"
-                      : "block text-white text-lg tabular-nums"
-                  }
-                >
-                  {event.year}-{event.month}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-}
-
-const TimelineWrapper = () => {
+const Timeline = () => {
   const data = useStaticQuery(graphql`
-      query EventsQuery {
-        allEventsJson {
-          edges {
-            node {
-              content
-              date
-              selected
-              image {
-                path {
-                  publicURL
-                }
+    query TimelineQuery {
+      allEventsJson {
+        edges {
+          node {
+            date
+            content
+            effects
+            images {
+              alt
+              path {
+                publicURL
               }
             }
           }
         }
-        v1: file(relativePath: { eq: "about/v1.png" }) {
-          publicURL
-        }
-        v2: file(relativePath: { eq: "about/v2.png" }) {
-          publicURL
-        }
-        disqus: file(relativePath: { eq: "about/disqus.png" }) {
-          publicURL
-        }
-        bootstrap: file(relativePath: { eq: "about/bootstrap.svg" }) {
-          publicURL
-        }
-        typography: file(relativePath: { eq: "about/v3-typography.png" }) {
-          publicURL
-        }
-        figma: file(relativePath: { eq: "about/v3-figma.png" }) {
-          publicURL
-        }
-        gatsby: file(relativePath: { eq: "about/gatsby.svg" }) {
-          publicURL
-        }
       }
-    `);
+    }
+  `);
 
-  return <Timeline data={data} />;
+  const events = useMemo(
+    () =>
+      data.allEventsJson.edges
+        .map(({ node }) => ({
+          ...node,
+          ...parseDate(node.date),
+          isNew: isNewPost(node.date),
+        }))
+        .sort((a, b) => a.date.localeCompare(b.date)),
+    [data],
+  );
+
+  const [selectedDate, setSelectedDate] = useState(events[0]?.date);
+  const selected =
+    events.find((event) => event.date === selectedDate) ?? events[0];
+
+  const hoverTimer = useRef(null);
+
+  useEffect(() => () => clearTimeout(hoverTimer.current), []);
+
+  const handleTileEnter = (date) => {
+    clearTimeout(hoverTimer.current);
+    hoverTimer.current = setTimeout(() => setSelectedDate(date), 200);
+  };
+
+  const handleTileLeave = () => {
+    clearTimeout(hoverTimer.current);
+  };
+
+  const renderFloatingImages = () => {
+    const images = selected?.images ?? [];
+    const hasFireworks = selected?.effects?.includes("fireworks");
+
+    if (!images.length) return null;
+
+    return (
+      <div className="relative w-full h-80">
+        {images.map((image, index) => (
+          <div
+            key={image.path.publicURL}
+            className="absolute"
+            style={{
+              ...FLOAT_LAYOUTS[index % FLOAT_LAYOUTS.length],
+              transform: `translateY(${FLOAT_LAYOUTS[index % FLOAT_LAYOUTS.length].y}) rotate(${
+                index % 2 === 0 ? -2 : 2
+              }deg)`,
+            }}
+          >
+            <img
+              src={image.path.publicURL}
+              alt={image.alt ?? ""}
+              className="timeline-float w-full h-auto object-contain rounded-lg"
+            />
+          </div>
+        ))}
+
+        {hasFireworks && (
+          <>
+            <Fireworks
+              style={{ position: "absolute", left: "62%", top: "38%" }}
+            />
+            <Fireworks
+              style={{ position: "absolute", left: "78%", top: "56%" }}
+            />
+          </>
+        )}
+      </div>
+    );
+  };
+
+  const handleKeySelect = (event, date) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      setSelectedDate(date);
+    }
+  };
+
+  return (
+    <div className="w-76 md:w-100 lg:w-240 mx-auto x:w-auto md:mx-auto x:mx-6 my-16">
+      <div className="lg:w-200 mx-auto animate-fade-in">
+        <p className="text-white text-center text-xl lg:text-3xl font-bold tracking-tight">
+          这些年
+        </p>
+
+        <div className="hidden lg:flex justify-between items-center mt-16">
+          <div className="flex flex-col w-80">
+            <p className="text-white text-left text-3xl font-bold tabular-nums tracking-tight">
+              {selected?.date}
+            </p>
+            <div className="w-full grow lg:bg-transparent lg:mt-4">
+              <p
+                key={selected?.date}
+                className="text-left text-white font-bold timeline-detail"
+                dangerouslySetInnerHTML={{ __html: selected?.content }}
+              />
+            </div>
+          </div>
+
+          <div
+            key={selected?.date}
+            className="flex w-100 h-80 timeline-detail"
+          >
+            {renderFloatingImages()}
+          </div>
+        </div>
+
+        <div className="lg:flex lg:flex-wrap lg:justify-center lg:gap-3 mt-8 text-white">
+          {events.map((event) => {
+            const isActive = event.date === selected?.date;
+
+            return (
+              <div
+                className="flex mt-4 lg:mt-0"
+                key={event.date}
+                onMouseEnter={() => handleTileEnter(event.date)}
+                onMouseLeave={handleTileLeave}
+                onFocus={() => setSelectedDate(event.date)}
+                onKeyDown={(e) => handleKeySelect(e, event.date)}
+                role="link"
+                tabIndex={0}
+              >
+                {/* Mobile: content card with a translucent image on the right */}
+                <div className="lg:hidden flex w-full">
+                  <span className="w-28 text-white text-xs text-left x:mr-4">
+                    {event.date}
+                  </span>
+                  <div className="relative w-full grow bg-gray-lighter opacity-85 rounded-lg text-xs text-left text-gray-darkest px-4 py-2 overflow-hidden">
+                    {event.images?.[0]?.path?.publicURL && (
+                      <img
+                        src={event.images[0].path.publicURL}
+                        alt=""
+                        aria-hidden="true"
+                        className="pointer-events-none absolute right-0 top-0 h-full w-1/2 object-cover object-center opacity-15"
+                      />
+                    )}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-gray-lighter/95 via-gray-lighter/40 to-transparent" />
+                    <div
+                      className="relative"
+                      dangerouslySetInnerHTML={{ __html: event.content }}
+                    />
+                  </div>
+                </div>
+
+                {/* Desktop: selectable tile */}
+                <div
+                  className={`group hidden relative lg:flex flex-col items-center justify-center w-32 py-4 rounded-xl transition-colors duration-200 ${
+                    isActive
+                      ? "bg-gradient-to-b from-gray-light to-gray-lighter text-purple-light shadow-xl shadow-purple-dark/30 ring-1 ring-sunset-light/50"
+                      : "bg-white/10 ring-1 ring-white/20 hover:bg-white/15 hover:ring-sunset-light/50"
+                  }`}
+                >
+                  <span
+                    className={`block text-2xl tabular-nums font-bold tracking-tight transition-colors duration-200 ${
+                      isActive
+                        ? "text-purple-light"
+                        : "text-white group-hover:text-sunset-light"
+                    }`}
+                  >
+                    {event.year}-{event.month}
+                  </span>
+                  <span
+                    className={`block text-lg font-bold tabular-nums transition-colors duration-200 ${
+                      isActive
+                        ? "text-purple-dark/90"
+                        : "text-white/70 group-hover:text-sunset-light"
+                    }`}
+                  >
+                    {event.day}
+                  </span>
+
+                  {isActive && (
+                    <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-1 w-8 rounded-full bg-sunset-pink shadow" />
+                  )}
+                  {event.isNew && (
+                    <NewTag className="absolute top-0 right-0 mt-2 mr-2 text-xs" />
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default TimelineWrapper;
+export default Timeline;

@@ -265,6 +265,8 @@
   /* improve-animations: reduced-motion overrides */
   .animate-breath,
   .timeline-float,
+  .animate-fade-in,
+  .timeline-detail,
   .animate-card-enter {
     animation: none;
   }

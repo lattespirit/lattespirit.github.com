@@ -1,55 +1,27 @@
 @keyframes float-general {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
-
-@keyframes float-v1 {
-    0% {
-        transform: translate(80px, -70px) rotate(20deg) skew(20deg);
-    }
-    100% {
-        transform: translate(80px, -90px) rotate(20deg) skew(20deg);
-    }
-}
-
-@keyframes float-figma {
-    0% {
-        transform: translate(80px, -30px) rotate(20deg) skew(20deg);
-    }
-    100% {
-        transform: translate(80px, -60px) rotate(20deg) skew(20deg);
-    }
-}
-
-@keyframes float-typography {
-    0% {
-        transform: translate(160px, -110px) rotate(20deg) skew(20deg);
-    }
-    100% {
-        transform: translate(160px, -80px) rotate(20deg) skew(20deg);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 .timeline-float {
-    animation: float-general 2s linear 0s infinite alternate both;
+  animation: float-general 2s linear 0s infinite alternate both;
 }
 
-.timeline-float-v1 {
-    animation-name: float-v1;
+@keyframes timeline-detail {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.timeline-float-figma {
-    animation-name: float-figma;
-}
-
-.timeline-float-typography {
-    animation-name: float-typography;
-}
-
-.timeline-float-delayed {
-    animation-delay: 1s;
+.timeline-detail {
+  animation: timeline-detail 0.6s var(--ease-out) both;
 }
