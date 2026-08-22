@@ -267,7 +267,8 @@
   .timeline-float,
   .animate-fade-in,
   .timeline-detail,
-  .animate-card-enter {
+  .animate-card-enter,
+  .timeline-arrow {
     animation: none;
   }
 }

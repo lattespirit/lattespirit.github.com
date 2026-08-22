@@ -25,3 +25,32 @@
 .timeline-detail {
   animation: timeline-detail 0.6s var(--ease-out) both;
 }
+
+/* Horizontal journey strip — one drag/scroll line on desktop */
+.timeline-strip {
+  scrollbar-width: none;
+}
+
+.timeline-strip::-webkit-scrollbar {
+  display: none;
+}
+
+/* Curved connector between timeline nodes */
+.timeline-arrow {
+  opacity: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px rgba(237, 107, 157, 0.55));
+  animation: timeline-arrow-in 0.6s var(--ease-out) both;
+}
+
+@keyframes timeline-arrow-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
