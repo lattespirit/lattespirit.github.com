@@ -331,7 +331,7 @@ const Timeline = () => {
         </p>
 
         <div className="hidden lg:flex justify-between items-center mt-16">
-          <div className="flex flex-col w-80">
+          <div className="flex flex-col w-3/5">
             <p className="text-white text-left text-3xl font-bold tabular-nums tracking-tight">
               {selected?.date}
             </p>
@@ -344,10 +344,7 @@ const Timeline = () => {
             </div>
           </div>
 
-          <div
-            key={selected?.date}
-            className="flex w-100 h-80 timeline-detail"
-          >
+          <div key={selected?.date} className="flex w-2/5 h-80 timeline-detail">
             {renderFloatingImages()}
           </div>
         </div>
