@@ -16,3 +16,11 @@ plans/
 # Claude Code local/runtime data
 .claude/cache/
 .claude/logs/
+
+# Agent tooling installs — reproducible from skills-lock.json via the skill
+# installer; keep the lock, omit the runtime copies.
+.claude/skills/impeccable/
+.codex/
+.github/agents/
+.github/hooks/
+.github/skills/

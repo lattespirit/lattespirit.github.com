@@ -47,7 +47,7 @@ const Post = ({ data, pageContext, children }) => {
   return (
     <>
       <div
-        className="flex flex-col items-center box mt-4 px-4 md:px-8 lg:px-12 py-2 md:py-4 rounded-lg bg-gray-lighter/85"
+        className="soft-panel flex flex-col items-center box mt-4 px-4 md:px-8 lg:px-12 py-2 md:py-4 rounded-2xl bg-gray-lighter"
       >
         <p className="text-lg x:text-xl md:text-2xl font-bold mt-4 tracking-tight">
           {post.frontmatter.title}

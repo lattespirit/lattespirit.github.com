@@ -298,7 +298,7 @@ const Timeline = () => {
         <span className="w-28 text-white text-xs text-left x:mr-4">
           {event.date}
         </span>
-        <div className="relative w-full grow bg-gray-lighter opacity-85 rounded-lg text-xs text-left text-gray-darkest px-4 py-2 overflow-hidden">
+        <div className="soft-panel relative w-full grow bg-gray-lighter rounded-lg text-xs text-left text-gray-darkest px-4 py-2 overflow-hidden">
           {event.images?.[0]?.path?.publicURL && (
             <img
               src={event.images[0].path.publicURL}

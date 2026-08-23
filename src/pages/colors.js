@@ -34,7 +34,7 @@ const Colors = () => {
       colors: [
         { name: 'Gray', code: 'D3C5BD', class: 'bg-gray' },
         { name: 'Gray Dark', code: 'B29D95', class: 'bg-gray-dark' },
-        { name: 'Gray Darker', code: '8E756D', class: 'bg-gray-darker' },
+        { name: 'Gray Darker', code: '75605A', class: 'bg-gray-darker' },
         { name: 'Gray Darkest', code: '5B4743', class: 'bg-gray-darkest' },
       ],
     },

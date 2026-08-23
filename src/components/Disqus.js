@@ -47,7 +47,7 @@ const Disqus = ({ disqus }) => {
   }
 
   return (
-    <div className="box mt-20 p-4 md:p-6 bg-gray-lighter opacity-85 rounded-lg">
+    <div className="soft-panel box mt-20 p-4 md:p-6 bg-gray-lighter rounded-2xl">
       {shouldRender ? (
         <Suspense fallback={LoadingComponent}>
           <DiscussionEmbed {...config} />

@@ -19,7 +19,7 @@ const Testimonials = () => {
       <p className="text-white text-center text-2xl md:text-3xl font-bold mt-4 md:mt-8 tracking-tight">
         What People Said...
       </p>
-      <div className="w-68 md:w-96 mx-auto mt-8 rounded-2xl bg-gray-lighter/90 shadow-xl shadow-purple-dark/30 p-6 md:p-10">
+      <div className="soft-panel w-68 md:w-96 mx-auto mt-8 rounded-2xl bg-gray-lighter p-6 md:p-10">
         <svg
           width="34"
           height="25"

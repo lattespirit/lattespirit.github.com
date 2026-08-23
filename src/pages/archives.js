@@ -16,7 +16,7 @@ const Archives = ({ data }) => {
 
   return (
     <>
-      <div className="flex flex-col box mt-4 p-6 md:p-10 bg-gray-lighter opacity-85 rounded-lg">
+      <div className="soft-panel flex flex-col box mt-4 p-6 md:p-10 bg-gray-lighter rounded-2xl">
         {Object.keys(postsByYear)
           .sort((a, b) => b - a)
           .map((year) => (

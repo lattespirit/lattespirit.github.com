@@ -63,7 +63,7 @@ const PaginatedPosts = ({ data }) => {
         const hasImage = node.frontmatter.featuredImage !== null;
         return (
           <div
-            className={`relative w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg opacity-85 overflow-hidden animate-card-enter shadow-lg shadow-purple-dark/20 hover:shadow-purple-dark/40 transition-shadow duration-300 ${
+            className={`soft-panel relative w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 overflow-hidden rounded-2xl animate-card-enter ${
               hasImage ? "bg-silhouette-dark" : "bg-gray-lighter"
             }`}
             key={node.fields.slug}
@@ -104,6 +104,12 @@ const PaginatedPosts = ({ data }) => {
                   }}
                 />
               </>
+            )}
+            {hasImage && (
+              <div
+                className="soft-recess absolute inset-0 rounded-[inherit] pointer-events-none"
+                aria-hidden="true"
+              />
             )}
             <div
               className={`relative flex flex-col gap-6 px-4 py-6 sm:px-5 md:px-6 ${
@@ -150,8 +156,8 @@ const PaginatedPosts = ({ data }) => {
                 <motion.button
                   className={`flex items-center gap-1.5 rounded-full text-xs x:text-sm px-3 py-1 text-center no-underline cursor-pointer ${
                     hasImage
-                      ? "bg-white/15 text-white border border-white/25 backdrop-blur-sm"
-                      : "bg-purple-dark text-gray-lighter"
+                      ? "bg-white/15 text-white border border-white/25 backdrop-blur-sm shadow-[0_2px_6px_rgba(13,8,26,0.18)]"
+                      : "bg-purple-dark text-gray-lighter shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-1px_2px_rgba(10,6,20,0.32),0_2px_5px_rgba(13,8,26,0.24)]"
                   }`}
                   whileHover="hover"
                   whileTap={{ scale: 0.95 }}
