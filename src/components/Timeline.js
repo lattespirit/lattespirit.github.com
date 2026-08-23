@@ -36,8 +36,8 @@ const TimelineArrow = ({ index }) => {
   return (
     <svg
       aria-hidden="true"
-      className="timeline-arrow shrink-0 mx-0.5 w-12 h-7 lg:w-14 lg:h-8"
-      viewBox="0 0 56 28"
+      className="timeline-arrow shrink-0 mx-1.5 w-8 h-5 lg:w-10 lg:h-6"
+      viewBox="0 0 36 24"
       fill="none"
       style={{ animationDelay: `${index * 70}ms` }}
     >
@@ -55,11 +55,17 @@ const TimelineArrow = ({ index }) => {
           markerHeight="5.5"
           orient="auto"
         >
-          <path d="M0 0 L10 5 L0 10 Z" fill="#ff8aa0" />
+          <path
+            d="M0 0 L10 5 L0 10 Z"
+            fill="#ff8aa0"
+            stroke="#ff8aa0"
+            strokeWidth="1"
+            strokeLinejoin="round"
+          />
         </marker>
       </defs>
       <path
-        d="M3 21 C 16 5 40 5 53 21"
+        d="M2 20 C 5 1 27 12 34 20"
         stroke={`url(#${gradId})`}
         strokeWidth="3"
         strokeLinecap="round"
