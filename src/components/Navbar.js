@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import React, { useState } from "react";
 import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "motion/react";
@@ -27,6 +27,11 @@ const Navbar = () => {
     // { title: "Typography", url: "/logos", showInLargeScreen: false },
     { title: "About", url: "/about", showInLargeScreen: true },
   ];
+
+  const openTypography = (e) => {
+    e.preventDefault();
+    navigate("/logos");
+  };
 
   const isActive = (url) =>
     url === "/" ? pathname === "/" : pathname.startsWith(url);
@@ -64,6 +69,7 @@ const Navbar = () => {
       <Link
         to="/"
         className="text-white inline-block text-xl x:text-2xl font-semibold no-underline"
+        onContextMenu={openTypography}
       >
         {title}
       </Link>

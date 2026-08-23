@@ -28,7 +28,7 @@ const Typography = ({ children }) => {
           {menus.map((menu) => {
             const classes = globalHistory.location.pathname === menu.path
               ? 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg typography-nav'
-              : 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg';
+              : 'md:py-8 md:border-b-0 md:text-lg';
             return (
               <div className={classes} key={menu.path}>
                 <Link
