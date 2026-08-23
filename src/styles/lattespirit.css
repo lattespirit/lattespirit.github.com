@@ -282,9 +282,6 @@
     @apply w-8 h-8;
   }
 
-  .typography-nav {
-    @apply border-l-2;
-  }
 }
 
 @media (width >=theme(--breakpoint-lg)) {
@@ -299,6 +296,27 @@
 
 .typography-nav {
   @apply font-bold border-b-2 border-sunset-pink;
+}
+
+/* Desktop active marker — a centered half-height accent bar on the left,
+   so only the left edge is highlighted and never a full-height border. */
+@media (width >=theme(--breakpoint-md)) {
+  .typography-nav {
+    position: relative;
+    border-bottom-width: 0;
+  }
+
+  .typography-nav::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 3px;
+    border-radius: 9999px;
+    background-color: var(--color-sunset-pink);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

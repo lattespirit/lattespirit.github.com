@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { globalHistory } from '@reach/router';
+import { useLocation } from '@reach/router';
 
 const Typography = ({ children }) => {
+  const { pathname } = useLocation();
+
   const menus = [
     {
       name: 'Logos',
@@ -21,26 +23,36 @@ const Typography = ({ children }) => {
       path: '/hierarchy',
     },
   ];
+
+  const isActive = (path) => {
+    const current = pathname.replace(/\/+$/, '') || '/';
+    const target = path.replace(/\/+$/, '') || '/';
+    return current === target;
+  };
+
   return (
     <>
       <div className="md:flex md:justify-center md:gap-10 px-4 md:px-0">
-        <div className="flex justify-between md:block md:w-20 my-4 md:my-0">
+        <nav
+          className="flex justify-between md:block md:w-20 my-4 md:my-0"
+          aria-label="Typography pages"
+        >
           {menus.map((menu) => {
-            const classes = globalHistory.location.pathname === menu.path
-              ? 'md:py-8 md:border-b-0 md:border-l-2 md:text-lg typography-nav'
-              : 'md:py-8 md:border-b-0 md:text-lg';
+            const active = isActive(menu.path);
             return (
-              <div className={classes} key={menu.path}>
-                <Link
-                  className="md:px-8 text-white no-underline hover:text-sunset-light transition-colors duration-200"
-                  to={menu.path}
-                >
-                  {menu.name}
-                </Link>
-              </div>
+              <Link
+                className={`md:block md:py-8 md:px-8 md:text-lg text-white no-underline hover:text-sunset-light transition-colors duration-200 ${
+                  active ? 'typography-nav' : ''
+                }`}
+                to={menu.path}
+                key={menu.path}
+                aria-current={active ? 'page' : undefined}
+              >
+                {menu.name}
+              </Link>
             );
           })}
-        </div>
+        </nav>
         <div className="w-72 x:w-80 md:w-200 mx-auto md:mx-0 md:px-12 lg:px-20">
           {children}
         </div>

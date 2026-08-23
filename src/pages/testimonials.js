@@ -21,6 +21,7 @@ const Testimonials = () => {
       </p>
       <div className="soft-panel w-68 md:w-96 mx-auto mt-8 rounded-2xl bg-gray-lighter p-6 md:p-10">
         <svg
+          className="mx-auto block"
           width="34"
           height="25"
           fill="none"
