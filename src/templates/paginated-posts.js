@@ -59,87 +59,140 @@ const PaginatedPosts = ({ data }) => {
     <>
       <h1 className="sr-only">Jeffrey Yeung&apos;s Blog</h1>
       {/* Paginated Posts */}
-      {posts.map(({ node }, index) => (
-        <div
-          className="md:flex w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg bg-gray-lighter opacity-85 overflow-hidden animate-card-enter shadow-lg shadow-purple-dark/20 hover:shadow-purple-dark/40 transition-shadow duration-300"
-          key={node.fields.slug}
-          style={{ animationDelay: `${Math.min(index, 5) * 40}ms` }}
-        >
-          {node.frontmatter.featuredImage !== null && (
-            <div className="md:shrink-0 md:w-30">
-              <img
-                className="w-full h-40 md:h-full object-cover object-center"
-                src={
-                  node.frontmatter.featuredImage.childImageSharp
-                    .gatsbyImageData.images.fallback.src
-                }
-                srcSet={
-                  node.frontmatter.featuredImage.childImageSharp
-                    .gatsbyImageData.images.sources.srcSet
-                }
-                alt={node.frontmatter.title}
-              />
-            </div>
-          )}
-          <div className="w-full p-4 py-6 md:p-6">
-            <div>
-              <div className="flex justify-between items-center">
-                <h5>
-                  <Link
-                    className="no-underline font-semibold text-purple-dark text-xl tracking-tight hover:text-pink-dark transition-colors duration-200"
-                    to={`/${node.fields.slug}`}
-                  >
-                    {node.frontmatter.title}
-                  </Link>
-                </h5>
-                {/* NewTag should show up when post is created in 15 days. */}
-                {Date.now() - new Date(node.fields.date) < 1296000000 && (
-                  <NewTag className="px-2 py-1 text-[10px]" />
-                )}
-              </div>
-              <p className="mt-2 text-gray-darkest text-sm x:text-base md:text-sm text-pretty">
-                {node.frontmatter.description}
-              </p>
-            </div>
-            <div className="flex justify-between items-center mt-6">
-              <span className="text-purple-light font-bold text-sm tabular-nums">
-                {node.fields.date}
-              </span>
-              <motion.button
-                className="flex items-center gap-1 rounded-sm text-gray-lighter text-xs x:text-sm px-2 py-1 text-center no-underline bg-purple-dark cursor-pointer"
-                whileHover="hover"
-                whileTap={{ scale: 0.95 }}
-                initial="rest"
-                animate="rest"
-                variants={{
-                  hover: { background: "var(--color-purple-light)", scale: 1.02},
-                }}
-                onClick={() => navigate(`/${node.fields.slug}`)}
-              >
-                <motion.span
-                  className="text-gray-light"
-                  variants={{
-                    hover: { color: "var(--color-gray-lightest)" },
-                  }}
-                >
-                  Read More
-                </motion.span>
-                <MotionArrowRight
-                  className="text-gray-lightest"
-                  variants={{
-                    rest: { x: 0 },
-                    hover: { x: 6 },
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
+      {posts.map(({ node }, index) => {
+        const hasImage = node.frontmatter.featuredImage !== null;
+        return (
+          <div
+            className={`relative w-72 x:w-84 sm:w-100 md:w-120 mx-auto mt-8 rounded-lg opacity-85 overflow-hidden animate-card-enter shadow-lg shadow-purple-dark/20 hover:shadow-purple-dark/40 transition-shadow duration-300 ${
+              hasImage ? "bg-silhouette-dark" : "bg-gray-lighter"
+            }`}
+            key={node.fields.slug}
+            style={{ animationDelay: `${Math.min(index, 5) * 40}ms` }}
+          >
+            {hasImage && (
+              <>
+                <img
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  src={
+                    node.frontmatter.featuredImage.childImageSharp
+                      .gatsbyImageData.images.fallback.src
+                  }
+                  srcSet={
+                    node.frontmatter.featuredImage.childImageSharp
+                      .gatsbyImageData.images.sources.srcSet
+                  }
+                  alt={node.frontmatter.title}
+                  loading="lazy"
+                />
+                {/* Readability veil — darkest at the bottom (over the glass),
+                    lighter toward the top so white copy reads on any image */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(10,6,20,0.85) 0%, rgba(38,24,62,0.44) 36%, rgba(38,24,62,0.26) 66%, rgba(38,24,62,0.16) 100%)",
                   }}
                 />
-              </motion.button>
+                {/* Frosted-glass blur that fades out toward the top */}
+                <div
+                  className="absolute inset-x-0 bottom-0 h-2/5 pointer-events-none backdrop-blur-[7px]"
+                  style={{
+                    WebkitMaskImage:
+                      "linear-gradient(to top, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 100%)",
+                    maskImage:
+                      "linear-gradient(to top, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 100%)",
+                  }}
+                />
+              </>
+            )}
+            <div
+              className={`relative flex flex-col gap-6 px-4 py-6 sm:px-5 md:px-6 ${
+                hasImage ? "justify-end min-h-52" : "justify-between"
+              }`}
+            >
+              <div>
+                <div className="flex justify-between items-center gap-2">
+                  <h5>
+                    <Link
+                      className={`no-underline font-semibold text-xl leading-snug tracking-tight transition-colors duration-200 ${
+                        hasImage
+                          ? "text-white hover:text-sunset-light [text-shadow:0_1px_2px_rgba(10,6,20,0.6),0_2px_18px_rgba(10,6,20,0.45)]"
+                          : "text-purple-dark hover:text-pink-dark"
+                      }`}
+                      to={`/${node.fields.slug}`}
+                    >
+                      {node.frontmatter.title}
+                    </Link>
+                  </h5>
+                  {/* NewTag should show up when post is created in 15 days. */}
+                  {Date.now() - new Date(node.fields.date) < 1296000000 && (
+                    <NewTag className="px-2 py-1 text-[10px]" />
+                  )}
+                </div>
+                <p
+                  className={`mt-2 text-sm leading-relaxed x:text-base md:text-sm text-pretty ${
+                    hasImage
+                      ? "text-gray-light [text-shadow:0_1px_8px_rgba(10,6,20,0.55)]"
+                      : "text-gray-darkest"
+                  }`}
+                >
+                  {node.frontmatter.description}
+                </p>
+              </div>
+              <div className="flex justify-between items-center">
+                <span
+                  className={`font-bold text-sm tabular-nums ${
+                    hasImage ? "text-pink-light" : "text-purple-light"
+                  }`}
+                >
+                  {node.fields.date}
+                </span>
+                <motion.button
+                  className={`flex items-center gap-1.5 rounded-full text-xs x:text-sm px-3 py-1 text-center no-underline cursor-pointer ${
+                    hasImage
+                      ? "bg-white/15 text-white border border-white/25 backdrop-blur-sm"
+                      : "bg-purple-dark text-gray-lighter"
+                  }`}
+                  whileHover="hover"
+                  whileTap={{ scale: 0.95 }}
+                  initial="rest"
+                  animate="rest"
+                  variants={{
+                    hover: hasImage
+                      ? {
+                          backgroundColor: "rgba(255,255,255,0.28)",
+                          borderColor: "rgba(255,255,255,0.5)",
+                          scale: 1.02,
+                        }
+                      : { backgroundColor: "var(--color-purple-light)", scale: 1.02 },
+                  }}
+                  onClick={() => navigate(`/${node.fields.slug}`)}
+                >
+                  <motion.span
+                    className={hasImage ? "text-white" : "text-gray-light"}
+                    variants={{
+                      hover: { color: "var(--color-gray-lightest)" },
+                    }}
+                  >
+                    Read More
+                  </motion.span>
+                  <MotionArrowRight
+                    className="text-gray-lightest"
+                    variants={{
+                      rest: { x: 0 },
+                      hover: { x: 6 },
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                    }}
+                  />
+                </motion.button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
       <div className="flex justify-center items-center w-full max-w-xs sm:max-w-md md:max-w-xl h-10 mt-12 mx-auto px-2">
         {/* Previous Button */}
         {hasPreviousPage ? (
