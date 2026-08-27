@@ -6,6 +6,7 @@ import Disqus from "../components/Disqus";
 import UI from "../components/UI";
 import ArrowLeft from "../components/icons/ArrowLeft";
 import ArrowRight from "../components/icons/ArrowRight";
+import { useToast } from "../components/Toast";
 import { motion } from "motion/react";
 
 const MotionArrowLeft = motion.create(ArrowLeft);
@@ -18,6 +19,7 @@ const LazyCar = React.lazy(() => import("../components/Car"));
 const Post = ({ data, pageContext, children }) => {
   const post = data.mdx;
   const { prev, next } = pageContext;
+  const { toast } = useToast();
   const mdxComponents = useMemo(
     () => ({
       ...UI,
@@ -66,9 +68,18 @@ const Post = ({ data, pageContext, children }) => {
         <MotionLink
           className={prevClass}
           to={`/${prevUri}`}
-          whileHover="hover"
+          whileHover={prev ? "hover" : undefined}
           initial="rest"
           animate="rest"
+          onClick={(e) => {
+            if (!prev) {
+              e.preventDefault();
+              toast({
+                message: "已经是第一篇博文了哦",
+                duration: 3000,
+              });
+            }
+          }}
         >
           <MotionArrowLeft
             className="w-4 h-4 stroke-current inline-block mx-3"
@@ -83,9 +94,18 @@ const Post = ({ data, pageContext, children }) => {
         <MotionLink
           className={nextClass}
           to={`/${nextUri}`}
-          whileHover="hover"
+          whileHover={next ? "hover" : undefined}
           initial="rest"
           animate="rest"
+          onClick={(e) => {
+            if (!next) {
+              e.preventDefault();
+              toast({
+                message: "已经是最后一篇博文了哦",
+                duration: 3000,
+              });
+            }
+          }}
         >
           <p>{nextText}</p>
           <MotionArrowRight
