@@ -136,7 +136,7 @@ const PaginatedPosts = ({ data }) => {
                   )}
                 </div>
                 <p
-                  className={`mt-2 text-sm leading-relaxed x:text-base md:text-sm text-pretty ${
+                  className={`mt-2 text-sm leading-relaxed x:text-base md:text-sm ${
                     hasImage
                       ? "text-gray-light [text-shadow:0_1px_8px_rgba(10,6,20,0.55)]"
                       : "text-gray-darkest"

@@ -32,7 +32,7 @@ const H6 = ({ children, ...props }) => (
 );
 
 const P = (props) => (
-  <p className="leading-relaxed text-silhouette-dark max-w-prose" {...props} />
+  <p className="leading-relaxed text-silhouette-dark" {...props} />
 );
 
 const UL = (props) => (
