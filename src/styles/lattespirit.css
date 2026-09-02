@@ -242,6 +242,52 @@
       inset 0 -1px 2px rgb(13 8 26 / 0.3),
       inset 0 -8px 16px -12px rgb(13 8 26 / 0.26);
   }
+
+  /* Gear list cards — shared hover lift + tint */
+  .gear-card {
+    transition:
+      background-color 0.3s var(--ease-out),
+      box-shadow 0.3s var(--ease-out),
+      transform 0.3s var(--ease-out),
+      opacity 0.35s var(--ease-out),
+      filter 0.35s var(--ease-out);
+  }
+
+  @media (hover: hover) {
+    .gear-card:hover {
+      background-color: rgb(255 255 255 / 0.55);
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Retired / legacy gear — a muted "memory" state, restored on hover */
+  .gear-retired {
+    position: relative;
+    opacity: 0.66;
+    filter: grayscale(0.92);
+  }
+
+  .gear-retired::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: var(--color-gray-lighter);
+    opacity: 0.42;
+    transition: opacity 0.35s var(--ease-out);
+    pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    .gear-retired:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    .gear-retired:hover::after {
+      opacity: 0;
+    }
+  }
 }
 
 .box {
@@ -316,6 +362,12 @@
   }
 
   .soft-panel {
+    transition: none;
+  }
+
+  .gear-card,
+  .gear-retired,
+  .gear-retired::after {
     transition: none;
   }
 }

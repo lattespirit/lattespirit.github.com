@@ -6,41 +6,44 @@
         "title": "LG 27UL500",
         "description": "作为外接显示器，效果中规中矩，写代码足够而已",
         "link": "https://www.lg.com/us/monitors/lg-27UL500-W-4k-uhd-led-monitor",
-        "image": {
-          "path": "../images/uses/lg27u500.png"
-        }
+        "image": "../images/uses/lg27u500.png"
       },
       {
-        "title": "Bose QC35 II",
-        "description": "尝试的第一款降噪耳机",
-        "link": "https://www.bose.cn/zh_cn/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html",
-        "image": {
-          "path": "../images/uses/boseqc35II.png"
-        }
-      },
-      {
-        "title": "MacBook Pro (15-inch)",
-        "description": "目前主力开发机，有些年月了",
+        "title": "Magic Keyboard",
+        "description": "主要是想体验一下",
         "link": "",
-        "image": {
-          "path": ""
-        }
-      },
-      {
-        "title": "IKBC Poker II & Magic Keyboard",
-        "description": "前者是使用的第一款机械键盘，服役中, 后者主要是想体验一下",
-        "link": "",
-        "image": {
-          "path": ""
-        }
+        "image": "../images/uses/magic_keyboard.png"
       },
       {
         "title": "Magic Mouse 2 - Silver",
         "description": "连同 Magic Keyboard 一起体验了",
         "link": "",
-        "image": {
-          "path": ""
-        }
+        "image": "../images/uses/magic_mouse.png"
+      },
+      {
+        "title": "Mac Mini M4",
+        "description": "主力开发机",
+        "link": "",
+        "image": "../images/uses/mac-mini-2024.png"
+      },
+      {
+        "title": "MacBook Pro (15-inch)",
+        "description": "历史主力开发机，不知不觉已经过了 10 年，依然能正常使用",
+        "link": "",
+        "retired": true
+      },
+      {
+        "title": "Bose QC35 II",
+        "description": "尝试的第一款降噪耳机",
+        "link": "https://www.bose.cn/zh_cn/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html",
+        "image": "../images/uses/boseqc35II.png",
+        "retired": true
+      },
+      {
+        "title": "IKBC Poker II",
+        "description": "使用的第一款机械键盘，躺平中",
+        "link": "",
+        "retired": true
       }
     ]
   },
@@ -48,116 +51,54 @@
     "name": "开发",
     "items": [
       {
-        "title": "Sublime Text 3",
+        "title": "Sublime Text 4",
         "description": "使用很多年了，在编辑器大战中，仍然是运行很快的编辑器",
         "link": "https://www.sublimetext.com/",
-        "image": {
-          "path": "../images/uses/sublime_text.png"
-        }
+        "image": "../images/uses/sublime_text.png"
       },
       {
-        "title": "Sublime Merge",
-        "description": "Git Client, 常用来查看 Git 分支和 Blame 一些文件",
-        "link": "https://www.sublimemerge.com/",
-        "image": {
-          "path": "../images/uses/sublime_merge.png"
-        }
-      },
-      {
-        "title": "VS Code",
-        "description": "在前端项目中用的比较多，开箱即用的代码提示和格式化等特性比 ST3 优秀，生态圈繁荣昌盛",
+        "title": "Visual Studio Code",
+        "description": "没啥好说的，使用最广泛的编辑器，插件生态丰富",
         "link": "https://code.visualstudio.com/",
-        "image": {
-          "path": "../images/uses/vscode.png"
-        }
-      },
-      {
-        "title": "Vim",
-        "description": "最早用到的编辑器，极其受到该光标移动方式影响，以至于让我在每个开发环境中都要开启 Vim 模拟器",
-        "link": "https://www.vim.org/",
-        "image": {
-          "path": "../images/uses/vim.svg"
-        }
+        "image": "../images/uses/vscode.png"
       },
       {
         "title": "NeoVim",
         "description": "由 Vim 叛逃至 NeoVim，目前众多定制好的配置已经非常好用了，降低了使用门槛",
         "link": "https://neovim.io/",
-        "image": {
-          "path": "../images/uses/neovim.svg"
-        }
+        "image": "../images/uses/neovim.svg"
+      },
+      {
+        "title": "AstroNvim",
+        "description": "使用 NeoVim 更加便携",
+        "link": "https://astronvim.com/",
+        "image": "../images/uses/astronvim.svg"
+      },
+      {
+        "title": "DBeaver",
+        "description": "查询关系性数据库主力",
+        "link": "https://dbeaver.io/",
+        "image": "../images/uses/dbeaver.png"
+      },
+      {
+        "title": "TablePro",
+        "description": "轻量级项目中使用",
+        "link": "https://tablepro.app/",
+        "image": "../images/uses/tablepro.png"
       },
       {
         "title": "PHPStorm",
         "description": "开发 PHP 必不可少的 IDE，没有 Editor 和 IDE 的争论，主要看个人对项目和框架的熟悉程度，对于陌生的项目会选择用",
         "link": "https://www.jetbrains.com/phpstorm/",
-        "image": {
-          "path": "../images/uses/phpstorm.svg"
-        }
+        "image": "../images/uses/phpstorm.svg",
+        "retired": true
       },
       {
         "title": "IntelliJ IDEA Ultimate",
         "description": "Java 开发目前还是离不开",
         "link": "https://www.jetbrains.com/idea/",
-        "image": {
-          "path": "../images/uses/intellij.svg"
-        }
-      },
-      {
-        "title": "TablePlus",
-        "description": "发展和更新都比较迅速的数据库管理工具，支持 PostgreSQL，MySQL, Redis, SQLite 等多种数据库",
-        "link": "https://tableplus.com/",
-        "image": {
-          "path": "../images/uses/tableplus.png"
-        }
-      },
-      {
-        "title": "iTerm 2",
-        "description": "macOS 下必备系列",
-        "link": "https://iterm2.com/",
-        "image": {
-          "path": "../images/uses/iterm2.png"
-        }
-      },
-      {
-        "title": "Postman",
-        "description": "发起 HTTP 请求常用的工具，设置环境变量，生成代码，调试等功能应有尽有",
-        "link": "https://www.getpostman.com/",
-        "image": {
-          "path": "../images/uses/postman.png"
-        }
-      },
-      {
-        "title": "Altair",
-        "description": "尝试过众多的 GraphQL 客户端和 Playground 后最终选择的一款，设置变量，压缩和美化查询等大家有的功能都有，比较出众的特性是上传文件和从文档中能直接生成查询",
-        "link": "https://altair.sirmuel.design/",
-        "image": {
-          "path": "../images/uses/altair.png"
-        }
-      },
-      {
-        "title": "Oh My Zsh",
-        "description": "用过的都说好",
-        "link": "https://ohmyz.sh/",
-        "image": {
-          "path": "../images/uses/ohmyzsh.png"
-        }
-      },
-      {
-        "title": "Powerlevel10k",
-        "description": "一个 zsh 终端主题，起到美化终端的作用",
-        "link": "https://github.com/romkatv/powerlevel10k",
-        "image": {
-          "path": ""
-        }
-      },
-      {
-        "title": "Alfred",
-        "description": "天天用系列，快速切换应用，一些插件更能提高生产力",
-        "link": "https://www.alfredapp.com/",
-        "image": {
-          "path": "../images/uses/alfred.png"
-        }
+        "image": "../images/uses/intellij.svg",
+        "retired": true
       }
     ]
   },
@@ -165,60 +106,44 @@
     "name": "主题/字体",
     "items": [
       {
-        "title": "Material Theme",
-        "description": "普及范围比较广的一款主题，支持的编辑器和 IDE 也非常多",
-        "link": "https://www.material-theme.com/",
-        "image": {
-          "path": "../images/uses/material-oceanic.svg"
-        }
-      },
-      {
         "title": "Tokyo Night",
         "description": "在众多的 IDE、编辑器、终端都有实现，Storm 主题比较养眼",
-        "link": "https://github.com/folke/tokyonight.nvim",
-        "image": {
-          "path": ""
-        }
+        "link": "https://tokyonight.org/",
+        "image": "../images/uses/tokyonight.png"
       },
       {
-        "title": "Rainglow",
-        "description": "众多的 Color Scheme 可供选择",
-        "link": "https://github.com/rainglow",
-        "image": {
-          "path": "../images/uses/rainglow.png"
-        }
+        "title": "GitHub Theme",
+        "description": "黑与白，Day and Night",
+        "link": "https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme",
+        "image": "../images/uses/github_theme.png"
+      },
+      {
+        "title": "Dank Mono",
+        "description": "同样是很多人询问名字的字体，最有特点的是字母 f 的设计",
+        "link": "https://dank.sh/"
+      },
+      {
+        "title": "Monolisa",
+        "description": "舒适感十足",
+        "link": "https://www.monolisa.dev/"
       },
       {
         "title": "Fira Code",
         "description": "用得最早的一款字体，开源，使用群体也很庞大",
         "link": "https://github.com/tonsky/FiraCode",
-        "image": {
-          "path": ""
-        }
+        "retired": true
       },
       {
         "title": "Operator Mono",
         "description": "最开始在 Jeffrey Way 的视频中看到，也看到很多人求其名字的字体，价格感人",
         "link": "https://www.typography.com/fonts/operator/styles",
-        "image": {
-          "path": ""
-        }
-      },
-      {
-        "title": "Dank Mono",
-        "description": "同样是很多人询问名字的字体，最有特点的是字母 f 的设计",
-        "link": "https://dank.sh/",
-        "image": {
-          "path": ""
-        }
+        "retired": true
       },
       {
         "title": "Cascadia Code",
         "description": "最近在用的字体，star 数也很高",
         "link": "https://github.com/microsoft/cascadia-code",
-        "image": {
-          "path": ""
-        }
+        "retired": true
       }
     ]
   },
@@ -229,65 +154,49 @@
         "title": "Canon 6D",
         "description": "LanternD 推荐的机子，感谢极具价值的建议，庆幸我入门摄影的机子就是 6D，也陪伴了我四年的时光，拍出一些满意的照片，美丽仍在继续",
         "link": "https://global.canon/en/c-museum/product/dslr813.html",
-        "image": {
-          "path": "../images/uses/canon6d.png"
-        }
+        "image": "../images/uses/canon6d.png"
       },
       {
         "title": "百诺 (Benro) 三脚架 it25",
         "description": "陪伴我去过很多地方，拍摄延时的照片，功不可没",
         "link": "http://www.benro.cn/product/581.html",
-        "image": {
-          "path": "../images/uses/benro.png"
-        }
-      },
-      {
-        "title": "莱思 (Lacie) 移动硬盘",
-        "description": "主要存储照片和视频",
-        "link": "",
-        "image": {
-          "path": ""
-        }
+        "image": "../images/uses/benro.png"
       },
       {
         "title": "Figma",
         "description": "设计和排版原型稿，制作基本 SVG 会用到",
         "link": "https://www.figma.com/",
-        "image": {
-          "path": "../images/uses/figma.png"
-        }
+        "image": "../images/uses/figma.png"
       },
       {
         "title": "Dribbble",
         "description": "非常喜欢里面大部分的作品，给了我很多的灵感",
         "link": "https://dribbble.com/",
-        "image": {
-          "path": "../images/uses/dribbble.png"
-        }
+        "image": "../images/uses/dribbble.png"
       },
       {
         "title": "Pinterest",
         "description": "可以作为一个素材来源，其 More like this 版块的关联素材总能让你有更多精彩的发现",
         "link": "https://www.pinterest.com/",
-        "image": {
-          "path": "../images/uses/pinterest.png"
-        }
+        "image": "../images/uses/pinterest.png"
+      },
+      {
+        "title": "Rive",
+        "description": "动效之旅",
+        "link": "https://rive.app/",
+        "image": "../images/uses/rive.svg"
       },
       {
         "title": "Blender",
         "description": "2020 年开始 3D 之旅",
         "link": "https://www.blender.org/",
-        "image": {
-          "path": "../images/uses/blender.png"
-        }
+        "image": "../images/uses/blender.png"
       },
       {
-        "title": "Obsidian",
-        "description": "作笔记，写 TODO，GTD 等等",
-        "link": "https://obsidian.md/",
-        "image": {
-          "path": "../images/uses/obsidian.png"
-        }
+        "title": "HugeIcons",
+        "description": "颜值在线的选择",
+        "link": "https://hugeicons.com/",
+        "image": "../images/uses/hugeicons.svg"
       }
     ]
   },
@@ -298,17 +207,7 @@
         "title": "IINA",
         "description": "开源高颜值的视频播放器",
         "link": "https://iina.io/",
-        "image": {
-          "path": "../images/uses/iina.png"
-        }
-      },
-      {
-        "title": "VOX Music Player",
-        "description": "LanternD 推荐的音乐播放器，爱上了",
-        "link": "https://vox.rocks/",
-        "image": {
-          "path": "../images/uses/vox.png"
-        }
+        "image": "../images/uses/iina.png"
       }
     ]
   },
@@ -318,26 +217,12 @@
       {
         "title": "SVGOMG",
         "description": "压缩 SVG 常用的在线服务",
-        "link": "https://jakearchibald.github.io/svgomg/",
-        "image": {
-          "path": ""
-        }
-      },
-      {
-        "title": "SVGR",
-        "description": "将 SVG 生成 React Component 的网站",
-        "link": "https://react-svgr.com",
-        "image": {
-          "path": ""
-        }
+        "link": "https://jakearchibald.github.io/svgomg/"
       },
       {
         "title": "glTF Viewer",
         "description": "在线浏览 gltf 的网站",
-        "link": "https://gltf-viewer.donmccurdy.com/",
-        "image": {
-          "path": ""
-        }
+        "link": "https://gltf-viewer.donmccurdy.com/"
       }
     ]
   }
