@@ -9,6 +9,12 @@
         "image": "../images/uses/lg27u500.png"
       },
       {
+        "title": "Mac mini M4(2024)",
+        "description": "主力开发机",
+        "link": "https://support.apple.com/en-us/121555",
+        "image": "../images/uses/mac-mini-2024.png"
+      },
+      {
         "title": "Magic Keyboard",
         "description": "主要是想体验一下",
         "link": "",
@@ -21,15 +27,10 @@
         "image": "../images/uses/magic_mouse.png"
       },
       {
-        "title": "Mac Mini M4",
-        "description": "主力开发机",
-        "link": "",
-        "image": "../images/uses/mac-mini-2024.png"
-      },
-      {
-        "title": "MacBook Pro (15-inch)",
+        "title": "MacBook Pro (Retina, 15-inch, Mid 2015)",
         "description": "历史主力开发机，不知不觉已经过了 10 年，依然能正常使用",
-        "link": "",
+        "link": "https://support.apple.com/en-us/111955",
+        "image": "../images/uses/mbp_retina.png",
         "retired": true
       },
       {
@@ -43,6 +44,7 @@
         "title": "IKBC Poker II",
         "description": "使用的第一款机械键盘，躺平中",
         "link": "",
+        "image": "../images/uses/ikbc.png",
         "retired": true
       }
     ]
@@ -63,6 +65,12 @@
         "image": "../images/uses/vscode.png"
       },
       {
+        "title": "ChatGPT",
+        "description": "选择自己顺手的即可",
+        "link": "",
+        "image": "../images/uses/openai.svg"
+      },
+      {
         "title": "NeoVim",
         "description": "由 Vim 叛逃至 NeoVim，目前众多定制好的配置已经非常好用了，降低了使用门槛",
         "link": "https://neovim.io/",
@@ -76,7 +84,7 @@
       },
       {
         "title": "DBeaver",
-        "description": "查询关系性数据库主力",
+        "description": "查询数据库主力",
         "link": "https://dbeaver.io/",
         "image": "../images/uses/dbeaver.png"
       },
@@ -187,16 +195,17 @@
         "image": "../images/uses/rive.svg"
       },
       {
-        "title": "Blender",
-        "description": "2020 年开始 3D 之旅",
-        "link": "https://www.blender.org/",
-        "image": "../images/uses/blender.png"
-      },
-      {
         "title": "HugeIcons",
         "description": "颜值在线的选择",
         "link": "https://hugeicons.com/",
         "image": "../images/uses/hugeicons.svg"
+      },
+      {
+        "title": "Blender",
+        "description": "2020 年开始 3D 之旅",
+        "link": "https://www.blender.org/",
+        "image": "../images/uses/blender.png",
+        "retired": true
       }
     ]
   },
