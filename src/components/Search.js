@@ -1,5 +1,6 @@
-import React, { useMemo, useState, useEffect, useRef } from "react";
+import React, { useMemo, useState, useEffect, useLayoutEffect, useRef } from "react";
 import { graphql, useStaticQuery, navigate } from "gatsby";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import {
   Combobox,
   ComboboxInput,
@@ -16,6 +17,7 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 import { useClickAway } from "@uidotdev/usehooks";
+import { EASE_OUT } from "../lib/motion.js";
 
 const Empty = () => (
   <div className="rounded-lg my-6 text-sm sm:text-base text-center">
@@ -209,6 +211,9 @@ export default function Search() {
   const [selectedPost, setSelectedPost] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef(null);
+  const resultsRef = useRef(null);
+  const queryRef = useRef("");
+  const [resultsHeight, setResultsHeight] = useState(0);
 
   const fuse = useMemo(
     () =>
@@ -271,16 +276,48 @@ export default function Search() {
     return ranked.map(({ item, matches }) => ({ item, matches }));
   }, [fuse, posts, safeQuery]);
 
+  // Measure the results' natural height so the panel grows/shrinks smoothly as
+  // the result set changes (instead of jumping straight to the new height). We
+  // animate the real height, not a transform, so content reflows cleanly and
+  // never gets squished. The options list only mounts when the query is
+  // non-empty, so every mount/resize is tracked by these deps. We read the child
+  // listbox's offsetHeight (not the container's scrollHeight) — on an
+  // overflow-hidden, height-animated box, scrollHeight returns
+  // max(clientHeight, contentHeight), so a shrink to a smaller result set would
+  // be masked by the current height and the panel would stay stuck. The child's
+  // offsetHeight always reflects the real content box, independent of the
+  // animated container height.
+  useLayoutEffect(() => {
+    if (!isOpen) return;
+    const el = resultsRef.current;
+    if (!el) return;
+    const content = el.firstElementChild;
+    setResultsHeight(content ? content.offsetHeight : 0);
+  }, [searchResults, safeQuery, isOpen]);
+
   const ref = useClickAway(() => {
     setIsOpen(false);
   });
+
+  const clearSearch = () => {
+    setQuery("");
+    setSelectedPost(undefined);
+    if (inputRef.current) {
+      inputRef.current.value = "";
+      inputRef.current.focus();
+    }
+  };
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (document.activeElement.tagName === "INPUT") {
         if (event.key === "Escape") {
           event.preventDefault();
-          setIsOpen(false);
+          if (queryRef.current.trim() !== "") {
+            clearSearch();
+          } else {
+            setIsOpen(false);
+          }
         }
         return;
       }
@@ -301,6 +338,10 @@ export default function Search() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+
+  useEffect(() => {
+    queryRef.current = query;
+  }, [query]);
 
   useEffect(() => {
     const handleOpenSearch = () => {
@@ -333,14 +374,88 @@ export default function Search() {
     }
   };
 
+  const prefersReducedMotion = useReducedMotion();
+
+  // Scrim: a gentle opacity fade (+ blur materialize for the glass layer).
+  const overlayTransition = prefersReducedMotion
+    ? { duration: 0.2 }
+    : { duration: 0.26, ease: EASE_OUT };
+
+  const overlayVariants = prefersReducedMotion
+    ? { hidden: { opacity: 0 }, visible: { opacity: 1 }, exit: { opacity: 0 } }
+    : {
+        hidden: { opacity: 0, backdropFilter: "blur(0px) saturate(100%)" },
+        visible: { opacity: 1, backdropFilter: "blur(12px) saturate(100%)" },
+        exit: { opacity: 0, backdropFilter: "blur(0px) saturate(100%)" },
+      };
+
+  // Panel: critically damped spring (no overshoot) that materializes the glass,
+  // scaling/blurring in as it settles from just above. Anchored at the search
+  // field (top-center) so it reads as Spotlight emerging from its source rather
+  // than a whole-window zoom. Enter and exit travel the same path. Reduced
+  // motion falls back to a plain opacity cross-fade.
+  const panelTransition = prefersReducedMotion
+    ? { duration: 0.2, ease: "easeOut" }
+    : { type: "spring", bounce: 0, duration: 0.4 };
+
+  const panelVariants = prefersReducedMotion
+    ? { hidden: { opacity: 0 }, visible: { opacity: 1 }, exit: { opacity: 0 } }
+    : {
+        hidden: {
+          opacity: 0,
+          scale: 0.96,
+          y: -10,
+          backdropFilter: "blur(0px) saturate(100%)",
+        },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          backdropFilter: "blur(20px) saturate(160%)",
+        },
+        exit: {
+          opacity: 0,
+          scale: 0.96,
+          y: -10,
+          backdropFilter: "blur(0px) saturate(100%)",
+        },
+      };
+
+  // Results: the Tahoe Spotlight signature — the result rows emerge out from
+  // under the search field with a slightly delayed spring, then retract back up
+  // into the field on the way out. We animate the measured height so the panel
+  // grows and shrinks smoothly (no jump) without distorting the content.
+  const resultsTransition = prefersReducedMotion
+    ? { duration: 0.2, ease: "easeOut" }
+    : {
+        height: { type: "spring", bounce: 0, duration: 0.5 },
+        opacity: { type: "spring", bounce: 0, duration: 0.4 },
+        filter: { duration: 0.3 },
+      };
+
   return (
     <>
-      {isOpen && (
-        <div className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md z-40">
-          <div
-            ref={ref}
-            className="relative w-[calc(100%-1.5rem)] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-1/2 max-w-5xl mx-auto mt-4 sm:mt-8 md:mt-12 bg-white/70 backdrop-blur-lg rounded-lg shadow-lg p-4 pb-10 will-change-transform"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="search-overlay"
+            className="fixed inset-0 bg-purple-dark/40 backdrop-blur-md z-40 will-change-[opacity,backdrop-filter]"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={overlayVariants}
+            transition={overlayTransition}
           >
+            <motion.div
+              ref={ref}
+              className="relative w-[calc(100%-1.5rem)] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-1/2 max-w-5xl mx-auto mt-4 sm:mt-8 md:mt-12 bg-white/60 backdrop-blur-lg border-t border-white/50 rounded-lg shadow-2xl p-4 pb-10 will-change-transform"
+              style={{ transformOrigin: "50% 8%" }}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={panelVariants}
+              transition={panelTransition}
+            >
             <Combobox value={selectedPost} onChange={handleSelect}>
               <div className="flex items-center rounded-lg px-4 py-3 bg-white/80 backdrop-blur-md shadow-sm">
                 <MagnifyingGlassIcon className="size-6 text-purple-dark" />
@@ -364,11 +479,7 @@ export default function Search() {
                 <button
                   type="button"
                   className="cursor-pointer"
-                  onClick={() => {
-                    setQuery("");
-                    setSelectedPost(undefined);
-                    inputRef.current?.focus();
-                  }}
+                  onClick={clearSearch}
                   aria-label="Clear search"
                 >
                   <TrashIcon className="size-5 text-purple-dark/75" />
@@ -382,13 +493,35 @@ export default function Search() {
                   <XCircleIcon className="size-6 text-purple-dark/75" />
                 </button>
               </div>
-              <div className="lg:py-4 h-full overflow-auto mask-b-from-90%">
-                <ComboboxOptions
-                  data-open
-                  transition
-                  className="origin-top transition duration-200 ease-out empty:invisible data-closed:scale-95 data-closed:opacity-0"
-                  style={{ maxHeight: "60vh" }}
+              <div className="lg:py-4 mask-b-from-90%">
+                <motion.div
+                  ref={resultsRef}
+                  className="overflow-hidden"
+                  style={{ transformOrigin: "50% 0%" }}
+                  initial={
+                    prefersReducedMotion
+                      ? { opacity: 0 }
+                      : { height: 0, opacity: 0, filter: "blur(8px)" }
+                  }
+                  animate={
+                    prefersReducedMotion
+                      ? { opacity: 1 }
+                      : {
+                          height: safeQuery.trim() !== "" ? resultsHeight || 0 : 0,
+                          opacity: 1,
+                          filter: "blur(0px)",
+                        }
+                  }
+                  transition={resultsTransition}
                 >
+                  {safeQuery.trim() !== "" && (
+                      <ComboboxOptions
+                        key={safeQuery}
+                        data-open
+                        transition
+                        className="origin-top overflow-auto transition-opacity duration-200 ease-out empty:invisible data-closed:opacity-0"
+                        style={{ maxHeight: "60vh" }}
+                      >
                   {searchResults.map((result) => {
                     const post = result?.item;
                     const titleMatch = result?.matches?.find(
@@ -416,10 +549,14 @@ export default function Search() {
                       <ComboboxOption
                         key={post?.url}
                         value={post}
-                        className="group flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg data-focus:bg-purple-dark/30"
+                        className="group relative flex flex-col gap-2 px-4 py-2 cursor-pointer rounded-lg transition-colors duration-150 data-focus:bg-purple-dark/25"
                       >
+                        <span
+                          aria-hidden="true"
+                          className="absolute left-0 top-1/2 -translate-y-1/2 h-6 w-0.5 rounded-full bg-pink-dark opacity-0 transition-opacity duration-150 group-data-focus:opacity-100"
+                        />
                         <div className="flex items-center justify-between">
-                          <span className="text-purple-dark/80 font-bold">
+                          <span className="text-purple-dark/80 font-bold transition-colors duration-150 group-data-focus:text-purple-dark">
                             {titleMatch?.indices?.length
                               ? highlightByRanges(post?.title || "Untitled", titleMatch.indices)
                               : highlightText(post?.title || "Untitled", safeQuery)}
@@ -429,20 +566,24 @@ export default function Search() {
                           </span>
                         </div>
                         <div className="flex items-center gap-4">
-                          <span className="text-sm text-purple-dark/70">
+                          <span className="min-w-0 flex-1 text-sm text-purple-dark/70 transition-colors duration-150 group-data-focus:text-purple-dark/85">
                             {snippet.hasLeadingEllipsis ? "…" : null}
                             {snippet.highlightRanges?.length
                               ? highlightByRanges(snippet.text, snippet.highlightRanges)
                               : highlightText(snippet.text, safeQuery)}
                             {snippet.hasTrailingEllipsis ? "…" : null}
                           </span>
-                          <ArrowUturnRightIcon className="hidden ml-auto w-5 h-5 shrink-0 lg:group-data-focus:block" />
+                          <span className="hidden lg:flex w-5 shrink-0 items-center justify-center">
+                            <ArrowUturnRightIcon className="w-5 h-5 opacity-0 scale-75 transition-all duration-150 group-data-focus:opacity-100 group-data-focus:scale-100" />
+                          </span>
                         </div>
                       </ComboboxOption>
                     );
                   })}
                   {searchResults.length === 0 && <Empty />}
-                </ComboboxOptions>
+                      </ComboboxOptions>
+                    )}
+                </motion.div>
               </div>
             </Combobox>
 
@@ -466,9 +607,10 @@ export default function Search() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
