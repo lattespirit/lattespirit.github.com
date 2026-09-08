@@ -1,5 +1,6 @@
 import React, {
   createContext,
+  forwardRef,
   useCallback,
   useContext,
   useEffect,
@@ -47,14 +48,17 @@ export function useToast() {
   return ctx;
 }
 
-function ToastItem({
-  message,
-  content,
-  onClick,
-  onClose,
-  avatar,
-  shakeId,
-}) {
+const ToastItem = forwardRef(function ToastItem(
+  {
+    message,
+    content,
+    onClick,
+    onClose,
+    avatar,
+    shakeId,
+  },
+  ref,
+) {
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
   const prefersReducedMotion = useReducedMotion();
@@ -118,57 +122,60 @@ function ToastItem({
 
   return (
     <motion.div
+      ref={ref}
+      layout="position"
       initial={{ opacity: 0, y: 20, scale: 0.9 }}
       animate={controls}
       exit={{ opacity: 0, y: 20, scale: 0.9 }}
-      transition={{ type: "spring", stiffness: 500, damping: 20 }}
+      transition={{
+        default: { type: "spring", stiffness: 500, damping: 20 },
+        layout: prefersReducedMotion
+          ? { duration: 0 }
+          : { duration: 0.35, ease: [0.23, 1, 0.32, 1] },
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleBodyClick}
       role="status"
-      className="relative origin-top cursor-pointer pointer-events-auto"
+      style={{
+        height: cardHeight ? `${cardHeight}px` : "auto",
+        transition: prefersReducedMotion
+          ? "none"
+          : "height 0.35s cubic-bezier(0.23, 1, 0.32, 1)",
+      }}
+      className="relative origin-top cursor-pointer pointer-events-auto overflow-hidden rounded-xl flex items-center pl-4 pr-12 py-2 bg-white/20 backdrop-blur-md shadow-lg border border-white/20 text-sm md:text-base"
     >
+      <div className="shrink-0">{avatar || brandAvatar}</div>
       <div
-        style={{
-          height: cardHeight ? `${cardHeight}px` : "auto",
-          transition: prefersReducedMotion
-            ? "none"
-            : "height 0.35s cubic-bezier(0.23, 1, 0.32, 1)",
-        }}
-        className="relative overflow-hidden rounded-xl flex items-center pl-4 pr-12 py-2 bg-white/20 backdrop-blur-md shadow-lg border border-white/20 text-sm md:text-base origin-top"
+        ref={textRef}
+        className="flex flex-col w-56 md:w-64 relative ml-3"
       >
-        <div className="shrink-0">{avatar || brandAvatar}</div>
-        <div
-          ref={textRef}
-          className="flex flex-col w-56 md:w-64 relative ml-3"
-        >
-          <AnimatePresence mode="popLayout" initial={false}>
-            {!isHovered || !content ? (
-              <motion.div
-                key="message"
-                layout
-                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
-                transition={{ duration: 0.3 }}
-                className="text-pink-light block"
-              >
-                {message}
-              </motion.div>
-            ) : (
-              <motion.div
-                key="content"
-                layout
-                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
-                transition={{ duration: 0.3 }}
-              >
-                {content}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+        <AnimatePresence mode="popLayout" initial={false}>
+          {!isHovered || !content ? (
+            <motion.div
+              key="message"
+              layout
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
+              transition={{ duration: 0.3 }}
+              className="text-pink-light block"
+            >
+              {message}
+            </motion.div>
+          ) : (
+            <motion.div
+              key="content"
+              layout
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
+              transition={{ duration: 0.3 }}
+            >
+              {content}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <button
         className="absolute top-3 right-3 text-white bg-white/20 hover:bg-white/40 rounded-full p-1 cursor-pointer transition-colors"
@@ -182,11 +189,12 @@ function ToastItem({
       </button>
     </motion.div>
   );
-}
+});
 
 export default function ToastProvider({ children }) {
   const [toasts, setToasts] = useState([]);
   const timers = useRef({});
+  const toastSequence = useRef(0);
 
   const removeToast = useCallback((id) => {
     setToasts((prev) => prev.filter((t) => t.id !== id));
@@ -212,6 +220,8 @@ export default function ToastProvider({ children }) {
       const toastId =
         id ?? (typeof message === "string" ? message : `toast-${Date.now()}`);
 
+      const toastKey = ++toastSequence.current;
+
       setToasts((prev) => {
         const existing = prev.find((t) => t.id === toastId);
         if (existing) {
@@ -230,6 +240,7 @@ export default function ToastProvider({ children }) {
           );
         }
         const fresh = {
+          key: toastKey,
           id: toastId,
           message,
           content,
@@ -288,9 +299,9 @@ export default function ToastProvider({ children }) {
         aria-live="polite"
         className="fixed top-6 right-0 md:right-6 z-[70] flex flex-col items-end gap-2 pr-4 md:pr-0 max-w-[calc(100vw-2rem)] pointer-events-none"
       >
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout">
           {toasts.map((t) => (
-            <ToastItem key={t.id} {...t} onClose={() => handleClose(t)} />
+            <ToastItem key={t.key} {...t} onClose={() => handleClose(t)} />
           ))}
         </AnimatePresence>
       </div>
