@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const remarkGfm = require("remark-gfm");
+
 module.exports = {
   siteMetadata: {
     url: process.env.SITE_URL,
@@ -31,7 +33,9 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".md", ".mdx"],
-        remarkPlugins: ["remark-gfm"],
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-images",
