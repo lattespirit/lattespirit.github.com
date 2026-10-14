@@ -22,6 +22,31 @@ const variants = {
   },
 };
 
+let latestPostSlugFallback;
+
+const getLatestPostSlug = () => {
+  if (typeof window === "undefined") return latestPostSlugFallback;
+
+  try {
+    return window.localStorage.getItem("latestPostSlug");
+  } catch {
+    return latestPostSlugFallback;
+  }
+};
+
+const setLatestPostSlug = (slug) => {
+  latestPostSlugFallback = slug;
+
+  if (typeof window === "undefined") return;
+
+  try {
+    window.localStorage.setItem("latestPostSlug", slug);
+  } catch {
+    // Storage can be unavailable or full; the in-memory value still prevents
+    // duplicate notifications during the current page session.
+  }
+};
+
 const LayoutInner = ({ children }) => {
   const location = useLocation();
   const { toast, removeToast } = useToast();
@@ -53,16 +78,16 @@ const LayoutInner = ({ children }) => {
     : `/${latestPostSlug}`;
 
   useEffect(() => {
-    const cachedSlug = localStorage.getItem("latestPostSlug");
+    const cachedSlug = getLatestPostSlug();
     if (latestPostSlug) {
       if (!cachedSlug) {
-        localStorage.setItem("latestPostSlug", latestPostSlug);
+        setLatestPostSlug(latestPostSlug);
       } else if (cachedSlug !== latestPostSlug) {
         toast({
           id: "new-post",
           message: "👀 嘿，新的博文补给已经到达。",
           onClick: () => {
-            localStorage.setItem("latestPostSlug", latestPostSlug);
+            setLatestPostSlug(latestPostSlug);
             removeToast("new-post");
             navigate(normalizedSlug);
           },
@@ -71,7 +96,7 @@ const LayoutInner = ({ children }) => {
               to={normalizedSlug}
               onClick={(e) => {
                 e.stopPropagation();
-                localStorage.setItem("latestPostSlug", latestPostSlug);
+                setLatestPostSlug(latestPostSlug);
                 removeToast("new-post");
               }}
               className="flex flex-col transition duration-300 no-underline gap-1"
@@ -85,7 +110,7 @@ const LayoutInner = ({ children }) => {
             </Link>
           ),
           onDismiss: () => {
-            localStorage.setItem("latestPostSlug", latestPostSlug);
+            setLatestPostSlug(latestPostSlug);
           },
         });
       }
